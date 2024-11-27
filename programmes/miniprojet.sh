@@ -205,6 +205,12 @@ while read -r line ; do
 
 			# On génère le dump de contexte (2 lignes)
 			grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
+
+			# Lien vers le fichier contexte
+			context_cell="<a href=\"../${OUTPUT_CTX}\">${OUTPUT_CTX}</a>"
+		else
+			# Pas de contexte si pas de match ;).
+			context_cell="<span class=\"has-text-danger\">N/A</span>"
 		fi
 	else
 		# On veut faire ressortir les erreurs
@@ -235,7 +241,7 @@ while read -r line ; do
 								<td><a href="../${OUTPUT_HTML}">${OUTPUT_HTML}</a></td>
 								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
 								<td>${match_count}</td>
-								<td><a href="../${OUTPUT_CTX}">${OUTPUT_CTX}</a></td>
+								<td>${context_cell}</td>
 							</tr>
 EoS
 
