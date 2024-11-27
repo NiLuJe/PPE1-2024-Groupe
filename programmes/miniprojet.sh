@@ -5,6 +5,9 @@ set -euo pipefail
 # Debugging
 #set -x
 
+# TODO: uconv
+# TODO: concordancier (potentiellement via un script dédié si c'ets trop bordélique)
+
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
 	UCONV_BIN="/opt/homebrew/opt/icu4c/bin/uconv"
