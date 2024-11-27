@@ -110,11 +110,13 @@ while read -r line ; do
 
 	# On teste une requête GET via cURL (en suivant les redirections),
 	# et on lui demande de nous écrire le code HTTP et la valeur de l'en-tête Content-Type en toute fin de sortie, sur une ligne dédiée.
+	OUTPUT_HTML="aspirations/${TABLE_LANG}-${line_nb}.html"
+	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${line_nb}.txt"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
 	set +e
-	curl_out="$(curl -L -f -w "\n%{http_code}\t%{content_type}\n" -s "${line}")"
+	curl_out="$(curl -L -f -w "\n%{http_code}\t%{content_type}\n" -s "${line}" -o "${OUTPUT_HTML}")"
 	curl_ret="$?"
 	set -e
 
@@ -129,9 +131,6 @@ while read -r line ; do
 		page_encoding="N/A"
 	fi
 
-	# (BSD head ne gère pas les arguments négatifs -_-")
-	curl_data="$(echo "${curl_out}" | ${HEAD_BIN} -n -1)"
-
 	if [ ${curl_ret} -ne 0 ] ; then
 		# Si cURL s'est méchamment rétamé, on veut en garder la trace
 		is_integer "${http_status}" || http_status="N/A"
@@ -141,26 +140,25 @@ while read -r line ; do
 	# le charset spécifié par le serveur dans l'en-tête Content-Type est optionel,
 	# et souvent peu pertinent (et ce malgré le fait qu'il soit censé avoir la priorité...).
 	word_count="N/A"
-	page_text="N/A"
 	status_color="success"
 	# On va avoir besoin de gratter le code de la page pour ces deux là,
 	# ce qui implique qu'on ait bien réussi à récupérer une page (i.e., un code HTTP 2xx)...
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
 		# On commence par vérifier si on est pas tombé sur du XHTML pur...
-		if echo "${curl_data}" | head -n 1 | grep -Eq "^<\?xml" ; then
-			page_encoding="$(echo "${curl_data}" | head -n 1 | sed -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+		if head -n 1 "${OUTPUT_HTML}" | grep -Eq "^<\?xml" ; then
+			page_encoding="$(head -n 1 "${OUTPUT_HTML}" | sed -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		else
 			# On va garder le premier (vu que la balise devrait être dans le bloc head)
 			# charset= qu'on croise dans le code et croiser les doigts ;p.
 			# c.f., https://www.w3.org/International/questions/qa-html-encoding-declarations.var
 			#     & https://www.w3schools.com/html/html_charset.asp
-			page_encoding="$(echo "${curl_data}" | grep charset | head -n 1 | sed -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			page_encoding="$(grep charset "${OUTPUT_HTML}" | head -n 1 | sed -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		fi
 
 		# On va laisser à lynx le job d'interpréter le HTML pour qu'il ne nous reste que le texte
-		page_text="$(echo "${curl_data}" | lynx -display_charset=UTF-8 -dump -nolist -stdin)"
+		lynx -display_charset=UTF-8 -dump -nolist "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
 		# GNU wc pour éviter l'indentation de BSD wc...
-		word_count="$(echo "${page_text}" | ${WC_BIN} -w)"
+		word_count="$(${WC_BIN} -w "${OUTPUT_TXT}" | cut -f1 -d" ")"
 	else
 		# On veut faire ressortir les erreurs
 		status_color="danger"
