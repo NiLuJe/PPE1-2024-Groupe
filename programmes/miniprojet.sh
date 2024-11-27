@@ -38,13 +38,42 @@ if ! [ -r "${INPUT_URL_LIST}" ] ; then
 	exit 1
 fi
 
-# Le mot étudié
-MOT="foo"
-
 # On va chopper le code ISO de la langue depuis le nom de fichier
 TABLE_LANG="${INPUT_URL_LIST##*/}"	# i.e., basename
 TABLE_LANG="${TABLE_LANG%%.*}"		# i.e., strip file extensions
 TABLE_LANG="${TABLE_LANG^^}"		# i.e., tr '[:lower:]' '[:upper:]' (mais Bash 4+ only)
+
+# Le mot étudié
+declare -a LANG_ARRAY
+LANG_ARRAY=(
+	"FR"
+	"EN"
+	"RU"
+)
+declare -a WORD_ARRAY
+WORD_ARRAY=(
+	"bébé"
+	"baby"
+	"Alèd Eliza!"
+)
+MOT=""
+
+# On va chopper le mot dans la langue de la liste d'URL automagiquement
+for i in "${!LANG_ARRAY[@]}" ; do
+	lang="${LANG_ARRAY[${i}]}"
+
+	if [ "${lang}" = "${TABLE_LANG}" ] ; then
+		MOT="${WORD_ARRAY[${i}]}"
+	fi
+done
+
+if [ -z "${MOT}" ] ; then
+	>&2 echo "Impossible de trouver le mot cible dans la langue donnée!"
+	exit 1
+fi
+
+# Roulez jeunesse (sur stderr pour pa pourrir notre tableau ^^)!
+>&2 echo "Traitement du mot ${MOT} en ${TABLE_LANG}"
 
 # On va avoir besoin de s'assurer que notre code HTTP est bien un entier...
 is_integer()
@@ -149,7 +178,7 @@ while read -r line ; do
 	# et souvent peu pertinent (et ce malgré le fait qu'il soit censé avoir la priorité...).
 	word_count="N/A"
 	status_color="success"
-	match_count="N/A"
+	match_count="0"
 	# On va avoir besoin de gratter le code de la page pour ces deux là,
 	# ce qui implique qu'on ait bien réussi à récupérer une page (i.e., un code HTTP 2xx)...
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
@@ -169,11 +198,14 @@ while read -r line ; do
 		# GNU wc pour éviter l'indentation de BSD wc...
 		word_count="$(${WC_BIN} -w "${OUTPUT_TXT}" | cut -f1 -d" ")"
 
-		# On compte le nombre d'occurrences
-		match_count="$(grep -c "${MOT}" "${OUTPUT_TXT}")"
+		# Grep retourne un code d'erreur si le mot n'est pas identifié!
+		if grep -q "${MOT}" "${OUTPUT_TXT}" ; then
+			# On compte le nombre d'occurrences
+			match_count="$(grep -c "${MOT}" "${OUTPUT_TXT}")"
 
-		# On génère le dump de contexte (2 lignes)
-		grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
+			# On génère le dump de contexte (2 lignes)
+			grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
+		fi
 	else
 		# On veut faire ressortir les erreurs
 		status_color="danger"
