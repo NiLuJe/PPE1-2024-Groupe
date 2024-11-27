@@ -7,9 +7,11 @@ set -euo pipefail
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
+	UCONV_BIN="/opt/homebrew/opt/icu4c/bin/uconv"
 	HEAD_BIN="ghead"
 	WC_BIN="gwc"
 else
+	UCONV_BIN="uconv"
 	HEAD_BIN="head"
 	WC_BIN="wc"
 fi
