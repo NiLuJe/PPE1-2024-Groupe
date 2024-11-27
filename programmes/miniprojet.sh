@@ -101,6 +101,7 @@ cat << EoS
 								<th>HTML</th>
 								<th>Texte Brut</th>
 								<th>Compte</th>
+								<th>Contexte</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -118,6 +119,7 @@ while read -r line ; do
 	# et on lui demande de nous écrire le code HTTP et la valeur de l'en-tête Content-Type en toute fin de sortie, sur une ligne dédiée.
 	OUTPUT_HTML="aspirations/${TABLE_LANG}-${line_nb}.html"
 	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${line_nb}.txt"
+	OUTPUT_CTX="contextes/${TABLE_LANG}-${line_nb}.txt"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
@@ -169,6 +171,9 @@ while read -r line ; do
 
 		# On compte le nombre d'occurrences
 		match_count="$(grep -c "${MOT}" "${OUTPUT_TXT}")"
+
+		# On génère le dump de contexte (2 lignes)
+		grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
 	else
 		# On veut faire ressortir les erreurs
 		status_color="danger"
