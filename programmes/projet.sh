@@ -12,8 +12,6 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
 # TODO: uconv
 # TODO: Merge bigram
-# TODO: Passer par des templates pour le header & footer ici aussi (rien que pour gagner en clarté et faciliter le travail en groupe).
-#       Et aussi dédupliquer ce footer ;p.
 # FIXME: Gestion des flexions (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
