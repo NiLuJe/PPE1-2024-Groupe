@@ -5,11 +5,10 @@ set -euo pipefail
 # Debugging
 #set -x
 
-# Tous nos chemins sont relatifs à la racine du dépôt, donc on va aller se placer dans ce répertoire, si ce n'est pas déjà la cas...
+# Tous nos chemins sont relatifs à la racine du dépôt, on va assurer en les rendant absolus automagiquement...
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-REPO_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
-# C'est potentiellement pas top vu que l'arguent est un chemin aussi, maaaaais bon.
-pushd "${REPO_DIR}" >/dev/null
+# On sait que ce script est à un répertoire de profondeur de la racine.
+BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
 # TODO: uconv
 # FIXME: Gestion des flexions (concordancier en particulier?
@@ -39,7 +38,7 @@ fi
 
 # On va aussi vérifier qu'on puisse accéder au fichier, tant qu'à faire
 if ! [ -f "${INPUT_URL_LIST}" ] ; then
-	>&2 echo "Impossible d'accéder au fichier '${INPUT_URL_LIST}' (problème de chemin? [Il doit être relatif à la racine du dépôt])"
+	>&2 echo "Impossible d'accéder au fichier '${INPUT_URL_LIST}' (problème de chemin?)"
 	exit 1
 fi
 if ! [ -r "${INPUT_URL_LIST}" ] ; then
@@ -149,7 +148,7 @@ EoS
 # On passe par un template pour gérer la création de nos concordanciers sans que ça soit *trop* illisible ;p.
 # Mais pour que notre template reste humainement lisible,
 # on va devoir échapper les tab & LF (et les guillemets) pour que sed comprenne ce qui lui arrive ;p.
-CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "concordances/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
+CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "${BASE_DIR}/concordances/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
 
 # On va avoir besoin de tenir un compte des lignes parcourues
 line_nb=1
@@ -162,10 +161,14 @@ while read -r line ; do
 	# On teste une requête GET via cURL (en suivant les redirections),
 	# et on lui demande de nous écrire le code HTTP et la valeur de l'en-tête Content-Type en toute fin de sortie, sur une ligne dédiée.
 	file_idx="$(printf "%02d" "${line_nb}")"
-	OUTPUT_HTML="aspirations/${TABLE_LANG}-${file_idx}.html"
-	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${file_idx}.txt"
-	OUTPUT_CTX="contextes/${TABLE_LANG}-${file_idx}.txt"
-	OUTPUT_CON="concordances/${TABLE_LANG}-${file_idx}.html"
+	OUTPUT_HTML_REL="aspirations/${TABLE_LANG}-${file_idx}.html"
+	OUTPUT_HTML="${BASE_DIR}/${OUTPUT_HTML_REL}"
+	OUTPUT_TXT_REL="dumps-text/${TABLE_LANG}-${file_idx}.txt"
+	OUTPUT_TXT="${BASE_DIR}/${OUTPUT_TXT_REL}"
+	OUTPUT_CTX_REL="contextes/${TABLE_LANG}-${file_idx}.txt"
+	OUTPUT_CTX="${BASE_DIR}/${OUTPUT_CTX_REL}"
+	OUTPUT_CON_REL="concordances/${TABLE_LANG}-${file_idx}.html"
+	OUTPUT_CON="${BASE_DIR}/${OUTPUT_CON_REL}"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
@@ -224,19 +227,19 @@ while read -r line ; do
 			grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
 
 			# Lien vers le fichier contexte
-			context_cell="<a href=\"../${OUTPUT_CTX}\">${OUTPUT_CTX}</a>"
+			context_cell="<a href=\"../${OUTPUT_CTX_REL}\">${OUTPUT_CTX_REL}</a>"
 
 			# Création du concordancier
-			concordance_cell="<a href="../${OUTPUT_CON}">${OUTPUT_CON}</a>"
+			concordance_cell="<a href="../${OUTPUT_CON_REL}">${OUTPUT_CON_REL}</a>"
 			# Header
-			cat "concordances/concordancier.head.tpl" > "${OUTPUT_CON}"
+			cat "${BASE_DIR}/concordances/concordancier.head.tpl" > "${OUTPUT_CON}"
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
 			# Body (à partir du template)
 			CONC_RE_PATTERN="(.{0,50})(${MOT})(.{0,50})"
 			grep -Eo "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
 			# Footer
-			cat "concordances/concordancier.foot.tpl" >> "${OUTPUT_CON}"
+			cat "${BASE_DIR}/concordances/concordancier.foot.tpl" >> "${OUTPUT_CON}"
 		else
 			# Pas de contexte si pas de match ;).
 			context_cell="<span class=\"has-text-danger\">N/A</span>"
@@ -268,8 +271,8 @@ while read -r line ; do
 								<td><span class="has-text-${status_color}">${http_status}</span></td>
 								<td>${page_encoding}</td>
 								<td>${word_count}</td>
-								<td><a href="../${OUTPUT_HTML}">${OUTPUT_HTML}</a></td>
-								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
+								<td><a href="../${OUTPUT_HTML_REL}">${OUTPUT_HTML_REL}</a></td>
+								<td><a href="../${OUTPUT_TXT_REL}">${OUTPUT_TXT_REL}</a></td>
 								<td>${match_count}</td>
 								<td>${context_cell}</td>
 								<td>${concordance_cell}</td>
