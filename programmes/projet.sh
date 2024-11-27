@@ -5,8 +5,13 @@ set -euo pipefail
 # Debugging
 #set -x
 
+# Tous nos chemins sont relatifs à la racine du dépôt, donc on va aller se placer dans ce répertoire, si ce n'est pas déjà la cas...
+SCRIPT_NAME="${BASH_SOURCE[0]}"
+REPO_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
+# C'est potentiellement pas top vu que l'arguent est un chemin aussi, maaaaais bon.
+pushd "${REPO_DIR}" >/dev/null
+
 # TODO: uconv
-# FIXME: Bail out if we're not in the same dir as the script (or fix paths)
 # FIXME: Gestion des flexions (concordancier en particulier?
 
 # On préfère certains outils GNU sous macOS...
@@ -22,23 +27,23 @@ fi
 
 # Validation basique du paramètre
 if [ $# -ne 1 ] ; then
-	echo "usage: ${0} <liste_url>"
+	>&2 echo "usage: ${0} <liste_url>"
 	exit 1
 fi
 
 INPUT_URL_LIST="${1}"
 if [ -z "${INPUT_URL_LIST}" ] ; then
-	echo "La liste d'URLs ne peut pas être une chaîne vide."
+	>&2 echo "La liste d'URLs ne peut pas être une chaîne vide."
 	exit 1
 fi
 
 # On va aussi vérifier qu'on puisse accéder au fichier, tant qu'à faire
 if ! [ -f "${INPUT_URL_LIST}" ] ; then
-	echo "Impossible d'accéder au fichier '${INPUT_URL_LIST}' (problème de chemin?)"
+	>&2 echo "Impossible d'accéder au fichier '${INPUT_URL_LIST}' (problème de chemin? [Il doit être relatif à la racine du dépôt])"
 	exit 1
 fi
 if ! [ -r "${INPUT_URL_LIST}" ] ; then
-	echo "Impossible de lire le fichier '${INPUT_URL_LIST}' (problème de permissions?)"
+	>&2 echo "Impossible de lire le fichier '${INPUT_URL_LIST}' (problème de permissions?)"
 	exit 1
 fi
 
