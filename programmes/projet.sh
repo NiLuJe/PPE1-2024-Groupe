@@ -140,6 +140,11 @@ cat << EoS
 						<tbody>
 EoS
 
+# On passe par un template pour gérer la création de nos concordanciers sans qe ça soit *trop* illisible ;p.
+# Mais pour que notre template reste humainement lisible,
+# on va devoir échapper les tab & LF (et les guillemets) pour que sed comprenne ce qui lui arrive ;p.
+CONC_ROW_TEMPLATE="$(${SED_BIN} -e "s/\t/\\\t/g" "concordances/concordancier.row.tpl" | ${SED_BIN} -z "s/\n/\\\n/g" | ${SED_BIN} 's/"/\\"/g')"
+
 # On va avoir besoin de tenir un compte des lignes parcourues
 line_nb=1
 while read -r line ; do
@@ -220,9 +225,9 @@ while read -r line ; do
 			# Header
 			cat "concordances/concordancier.head.tpl" > "${OUTPUT_CON}"
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
-			# Body (FIXME: Maaaaybe worth splitting that in more steps to make it more readable :D)
+			# Body (à partir du template)
 			grep -Eo "(.{0,50})(${MOT})(.{0,50})" "${OUTPUT_TXT}" | \
-				${SED_BIN} -re "s#(.{0,50})(${MOT})(.{0,50})#\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<td class=\"has-text-right\"><span class=\"is-family-monospace\">\1</span></td>\n\t\t\t\t\t\t\t\t<td class=\"has-text-centered\"><span class=\"has-text-link is-family-monospace\">\2</span></td>\n\t\t\t\t\t\t\t\t<td class=\"has-text-left\"><span class=\"is-family-monospace\">\3</span></td>\n\t\t\t\t\t\t\t</tr>#g" >> "${OUTPUT_CON}"
+				${SED_BIN} -re "s#(.{0,50})(${MOT})(.{0,50})#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
 			# Footer
 			cat "concordances/concordancier.foot.tpl" >> "${OUTPUT_CON}"
 		else
