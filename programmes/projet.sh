@@ -151,7 +151,7 @@ EoS
 # On passe par un template pour gérer la création de nos concordanciers sans que ça soit *trop* illisible ;p.
 # Mais pour que notre template reste humainement lisible,
 # on va devoir échapper les tab & LF (et les guillemets) pour que sed comprenne ce qui lui arrive ;p.
-CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "${BASE_DIR}/concordances/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
+CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "${BASE_DIR}/templates/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
 
 # On va avoir besoin de tenir un compte des lignes parcourues
 line_nb=1
@@ -235,14 +235,14 @@ while read -r line ; do
 			# Création du concordancier
 			concordance_cell="<a href="../${OUTPUT_CON_REL}">${OUTPUT_CON_REL}</a>"
 			# Header
-			cat "${BASE_DIR}/concordances/concordancier.head.tpl" > "${OUTPUT_CON}"
+			cat "${BASE_DIR}/templates/concordancier.head.tpl" > "${OUTPUT_CON}"
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
 			# Body (à partir du template)
 			CONC_RE_PATTERN="(.{0,50})(${MOT})(.{0,50})"
 			grep -Eo "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
 			# Footer
-			cat "${BASE_DIR}/concordances/concordancier.foot.tpl" >> "${OUTPUT_CON}"
+			cat "${BASE_DIR}/templates/concordancier.foot.tpl" >> "${OUTPUT_CON}"
 		else
 			# Pas de contexte si pas de match ;).
 			context_cell="<span class=\"has-text-danger\">N/A</span>"
