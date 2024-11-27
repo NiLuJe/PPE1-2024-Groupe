@@ -95,6 +95,8 @@ cat << EoS
 								<th>Code HTTP</th>
 								<th>Encodage</th>
 								<th>Nombre de mots</th>
+								<th>HTML</th>
+								<th>Texte Brut</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -185,6 +187,8 @@ while read -r line ; do
 								<td><span class="has-text-${status_color}">${http_status}</span></td>
 								<td>${page_encoding}</td>
 								<td>${word_count}</td>
+								<td><a href="../${OUTPUT_HTML}">${OUTPUT_HTML}</a></td>
+								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
 							</tr>
 EoS
 
