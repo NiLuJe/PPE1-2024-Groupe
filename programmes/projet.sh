@@ -6,15 +6,17 @@ set -euo pipefail
 #set -x
 
 # TODO: uconv
-# TODO: concordancier (potentiellement via un script dédié si c'ets trop bordélique)
+# FIXME: Bail out if we're not in the same dir as the script (or fix paths)
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
 	UCONV_BIN="/opt/homebrew/opt/icu4c/bin/uconv"
 	WC_BIN="gwc"
+	SED_BIN="gsed"
 else
 	UCONV_BIN="uconv"
 	WC_BIN="wc"
+	SED_BIN="sed"
 fi
 
 # Validation basique du paramètre
@@ -132,6 +134,7 @@ cat << EoS
 								<th>Texte Brut</th>
 								<th>Compte</th>
 								<th>Contexte</th>
+								<th>Concordancier</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -151,6 +154,7 @@ while read -r line ; do
 	OUTPUT_HTML="aspirations/${TABLE_LANG}-${file_idx}.html"
 	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${file_idx}.txt"
 	OUTPUT_CTX="contextes/${TABLE_LANG}-${file_idx}.txt"
+	OUTPUT_CON="concordances/${TABLE_LANG}-${file_idx}.html"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
@@ -186,13 +190,13 @@ while read -r line ; do
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
 		# On commence par vérifier si on est pas tombé sur du XHTML pur...
 		if head -n 1 "${OUTPUT_HTML}" | grep -Eq "^<\?xml" ; then
-			page_encoding="$(head -n 1 "${OUTPUT_HTML}" | sed -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			page_encoding="$(head -n 1 "${OUTPUT_HTML}" | ${SED_BIN} -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		else
 			# On va garder le premier (vu que la balise devrait être dans le bloc head)
 			# charset= qu'on croise dans le code et croiser les doigts ;p.
 			# c.f., https://www.w3.org/International/questions/qa-html-encoding-declarations.var
 			#     & https://www.w3schools.com/html/html_charset.asp
-			page_encoding="$(grep charset "${OUTPUT_HTML}" | head -n 1 | sed -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			page_encoding="$(grep charset "${OUTPUT_HTML}" | head -n 1 | ${SED_BIN} -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		fi
 
 		# On va laisser à lynx le job d'interpréter le HTML pour qu'il ne nous reste que le texte
@@ -210,9 +214,21 @@ while read -r line ; do
 
 			# Lien vers le fichier contexte
 			context_cell="<a href=\"../${OUTPUT_CTX}\">${OUTPUT_CTX}</a>"
+
+			# Création du concordancier
+			concordance_cell="<a href="../${OUTPUT_CON}">${OUTPUT_CON}</a>"
+			# Header
+			cat "concordances/concordancier.head.tpl" > "${OUTPUT_CON}"
+			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
+			# Body (FIXME: Maaaaybe worth splitting that in more steps to make it more readable :D)
+			grep -Eo "(.{0,50})(${MOT})(.{0,50})" "${OUTPUT_TXT}" | \
+				${SED_BIN} -re "s#(.{0,50})(${MOT})(.{0,50})#\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<td class=\"has-text-right\"><span class=\"is-family-monospace\">\1</span></td>\n\t\t\t\t\t\t\t\t<td class=\"has-text-centered\"><span class=\"has-text-link is-family-monospace\">\2</span></td>\n\t\t\t\t\t\t\t\t<td class=\"has-text-left\"><span class=\"is-family-monospace\">\3</span></td>\n\t\t\t\t\t\t\t</tr>#g" >> "${OUTPUT_CON}"
+			# Footer
+			cat "concordances/concordancier.foot.tpl" >> "${OUTPUT_CON}"
 		else
 			# Pas de contexte si pas de match ;).
 			context_cell="<span class=\"has-text-danger\">N/A</span>"
+			concordance_cell="<span class=\"has-text-danger\">N/A</span>"
 		fi
 	else
 		# On veut faire ressortir les erreurs
@@ -244,6 +260,7 @@ while read -r line ; do
 								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
 								<td>${match_count}</td>
 								<td>${context_cell}</td>
+								<td>${concordance_cell}</td>
 							</tr>
 EoS
 
