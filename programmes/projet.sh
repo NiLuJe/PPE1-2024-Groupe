@@ -147,9 +147,10 @@ while read -r line ; do
 
 	# On teste une requête GET via cURL (en suivant les redirections),
 	# et on lui demande de nous écrire le code HTTP et la valeur de l'en-tête Content-Type en toute fin de sortie, sur une ligne dédiée.
-	OUTPUT_HTML="aspirations/${TABLE_LANG}-${line_nb}.html"
-	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${line_nb}.txt"
-	OUTPUT_CTX="contextes/${TABLE_LANG}-${line_nb}.txt"
+	file_idx="$(printf "%02d" "${line_nb}")"
+	OUTPUT_HTML="aspirations/${TABLE_LANG}-${file_idx}.html"
+	OUTPUT_TXT="dumps-text/${TABLE_LANG}-${file_idx}.txt"
+	OUTPUT_CTX="contextes/${TABLE_LANG}-${file_idx}.txt"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
