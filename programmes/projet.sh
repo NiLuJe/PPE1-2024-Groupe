@@ -143,7 +143,7 @@ EoS
 # On passe par un template pour gérer la création de nos concordanciers sans qe ça soit *trop* illisible ;p.
 # Mais pour que notre template reste humainement lisible,
 # on va devoir échapper les tab & LF (et les guillemets) pour que sed comprenne ce qui lui arrive ;p.
-CONC_ROW_TEMPLATE="$(${SED_BIN} -e "s/\t/\\\t/g" "concordances/concordancier.row.tpl" | ${SED_BIN} -z "s/\n/\\\n/g" | ${SED_BIN} 's/"/\\"/g')"
+CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "concordances/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
 
 # On va avoir besoin de tenir un compte des lignes parcourues
 line_nb=1
