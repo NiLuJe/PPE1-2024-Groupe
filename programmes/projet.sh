@@ -7,6 +7,7 @@ set -euo pipefail
 
 # TODO: uconv
 # FIXME: Bail out if we're not in the same dir as the script (or fix paths)
+# FIXME: Gestion des flexions (concordancier en particulier?
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
