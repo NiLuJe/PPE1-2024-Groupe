@@ -95,58 +95,7 @@ is_integer()
 }
 
 ## Début du HTML
-cat << EoS
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Projet PPE1 2024-2025 - Tableau ${TABLE_LANG}</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
-	</head>
-	<body>
-		<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
-			<div id="navbar-ppe" class="navbar-menu">
-				<div class="navbar-start">
-					<a class="navbar-item" href="../index.html"> Accueil </a>
-					<a class="navbar-item is-active" href=""> Tableaux </a>
-				</div>
-			</div>
-		</nav>
-
-		<section class="section">
-			<div class="container">
-				<div class="hero has-text-centered">
-					<div class="hero-body">
-						<h1 class="title">Projet PPE1 2024-2025</h1>
-					</div>
-				</div>
-				<nav class="tabs is-centered">
-					<ul>
-						<li><a href="tableau-fr.html">FR</a></li>
-						<li><a href="tableau-en.html">EN</a></li>
-						<li><a href="tableau-ru.html">RU</a></li>
-					</ul>
-				</nav>
-				<div class="box">
-					<table class="table is-bordered is-striped is-hoverable mx-auto">
-						<thead>
-							<tr>
-								<th>Ligne</th>
-								<th>URL</th>
-								<th>Code HTTP</th>
-								<th>Encodage</th>
-								<th>Nombre de mots</th>
-								<th>HTML</th>
-								<th>Texte Brut</th>
-								<th>Compte</th>
-								<th>Contexte</th>
-								<th>Concordancier</th>
-							</tr>
-						</thead>
-						<tbody>
-EoS
+${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" "${BASE_DIR}/templates/tableau.head.tpl"
 
 # On passe par un template pour gérer la création de nos concordanciers sans que ça soit *trop* illisible ;p.
 # Mais pour que notre template reste humainement lisible,
@@ -242,7 +191,8 @@ while read -r line ; do
 			grep -Eo "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
 			# Footer
-			cat "${BASE_DIR}/templates/concordancier.foot.tpl" >> "${OUTPUT_CON}"
+			cat "${BASE_DIR}/templates/table.foot.tpl" >> "${OUTPUT_CON}"
+			cat "${BASE_DIR}/templates/footer.tpl" >> "${OUTPUT_CON}"
 		else
 			# Pas de contexte si pas de match ;).
 			context_cell="<span class=\"has-text-danger\">N/A</span>"
@@ -287,25 +237,5 @@ EoS
 done < "${INPUT_URL_LIST}"
 
 ## Fin du HTML
-cat << EoS
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</section>
-
-		<footer class="footer">
-			<div class="content has-text-centered">
-				<span class="icon-text">
-					<span class="icon">
-						<i class="fas fa-brands fa-github"></i>
-					</span>
-					<span>
-						<a href="https://github.com/NiLuJe">NiLuJe</a>
-					</span>
-				</span>
-			</div>
-		</footer>
-	</body>
-</html>
-EoS
+cat "${BASE_DIR}/templates/table.foot.tpl"
+cat "${BASE_DIR}/templates/footer.tpl"
