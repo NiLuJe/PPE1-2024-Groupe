@@ -38,6 +38,9 @@ if ! [ -r "${INPUT_URL_LIST}" ] ; then
 	exit 1
 fi
 
+# Le mot étudié
+MOT="foo"
+
 # On va chopper le code ISO de la langue depuis le nom de fichier
 TABLE_LANG="${INPUT_URL_LIST##*/}"	# i.e., basename
 TABLE_LANG="${TABLE_LANG%%.*}"		# i.e., strip file extensions
@@ -97,6 +100,7 @@ cat << EoS
 								<th>Nombre de mots</th>
 								<th>HTML</th>
 								<th>Texte Brut</th>
+								<th>Compte</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -143,6 +147,7 @@ while read -r line ; do
 	# et souvent peu pertinent (et ce malgré le fait qu'il soit censé avoir la priorité...).
 	word_count="N/A"
 	status_color="success"
+	match_count="N/A"
 	# On va avoir besoin de gratter le code de la page pour ces deux là,
 	# ce qui implique qu'on ait bien réussi à récupérer une page (i.e., un code HTTP 2xx)...
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
@@ -161,6 +166,9 @@ while read -r line ; do
 		lynx -display_charset=UTF-8 -dump -nolist "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
 		# GNU wc pour éviter l'indentation de BSD wc...
 		word_count="$(${WC_BIN} -w "${OUTPUT_TXT}" | cut -f1 -d" ")"
+
+		# On compte le nombre d'occurrences
+		match_count="$(grep -c "${MOT}" "${OUTPUT_TXT}")"
 	else
 		# On veut faire ressortir les erreurs
 		status_color="danger"
@@ -189,6 +197,7 @@ while read -r line ; do
 								<td>${word_count}</td>
 								<td><a href="../${OUTPUT_HTML}">${OUTPUT_HTML}</a></td>
 								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
+								<td>${match_count}</td>
 							</tr>
 EoS
 
