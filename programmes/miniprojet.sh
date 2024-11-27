@@ -203,6 +203,7 @@ while read -r line ; do
 								<td><a href="../${OUTPUT_HTML}">${OUTPUT_HTML}</a></td>
 								<td><a href="../${OUTPUT_TXT}">${OUTPUT_TXT}</a></td>
 								<td>${match_count}</td>
+								<td><a href="../${OUTPUT_CTX}">${OUTPUT_CTX}</a></td>
 							</tr>
 EoS
 
