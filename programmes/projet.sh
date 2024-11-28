@@ -13,6 +13,7 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 # TODO: uconv
 # TODO: Merge bigram
 # FIXME: Gestion des flexions (concordancier en particulier?)
+# FIXME: Casse? Frontières? Flexions?
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
