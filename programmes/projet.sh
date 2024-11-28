@@ -64,7 +64,7 @@ declare -a WORD_ARRAY
 WORD_ARRAY=(
 	"bébé"
 	"baby"
-	"Alèd Eliza!"
+	"Alèd Elisa!"
 )
 MOT=""
 
