@@ -66,6 +66,7 @@ WORD_ARRAY=(
 	"Alèd Elisa!"
 )
 declare -a RE_WORD_ARRAY
+# Le motif RE pour chopper les flexions & cie...
 RE_WORD_ARRAY=(
 	"\<(bébés?)\>"
 	"\<(bab(y|ies)|babes?)\>"
