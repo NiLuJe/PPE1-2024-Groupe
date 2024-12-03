@@ -10,7 +10,6 @@ SCRIPT_NAME="${BASH_SOURCE[0]}"
 # On sait que ce script est à un répertoire de profondeur de la racine.
 BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
-# TODO: uconv
 # TODO: Merge bigram
 # FIXME: Gestion des flexions (concordancier en particulier?)
 # FIXME: Casse? Frontières? Flexions?
@@ -163,6 +162,22 @@ while read -r line ; do
 			#     & https://www.w3schools.com/html/html_charset.asp
 			page_encoding="$(grep charset "${OUTPUT_HTML}" | head -n 1 | ${SED_BIN} -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		fi
+
+		# Si la page n'est pas en UTF-8, on convertit
+		if [ "${page_encoding^^}" != "UTF-8" ] ; then
+			>&2 echo "Transcodage de ${page_encoding^^} vers UTF-8 pour la page ${line}"
+			${UCONV_BIN} -f "${page_encoding}" -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv"
+		else
+			# Même si elle est en UTF-8, on la valide & normalise pour assurer les traitements suivants
+			# (Normalement, on devrait déjà être en NFC, c.f., https://www.w3.org/TR/charmod-norm/#unicodeNormalization)
+			${UCONV_BIN} -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv"
+			# Si un changement a vraiment été opéré, on va l'indiquer au cas où ça nous joue des tours plus tard...
+			if [ "$(md5sum "${OUTPUT_HTML}" | cut -f1 -d" ")" != "$(md5sum "${OUTPUT_HTML}.uconv" | cut -f1 -d" ")" ] ; then
+				>&2 echo "Normalisation effectuée pour la page ${line}"
+			fi
+		fi
+		# On garde l'UTF-8 uniquement
+		mv "${OUTPUT_HTML}.uconv" "${OUTPUT_HTML}"
 
 		# On va laisser à lynx le job d'interpréter le HTML pour qu'il ne nous reste que le texte
 		lynx -display_charset=UTF-8 -dump -nolist "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
