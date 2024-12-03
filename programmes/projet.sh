@@ -65,7 +65,14 @@ WORD_ARRAY=(
 	"baby"
 	"Alèd Elisa!"
 )
+declare -a RE_WORD_ARRAY
+RE_WORD_ARRAY=(
+	"(bébés?)"
+	"(bab(y|ies)|babes?)"
+	"Alèd Elisa!"
+)
 MOT=""
+RE_MOT=""
 
 # On va chopper le mot dans la langue de la liste d'URL automagiquement
 for i in "${!LANG_ARRAY[@]}" ; do
@@ -73,6 +80,7 @@ for i in "${!LANG_ARRAY[@]}" ; do
 
 	if [ "${lang}" = "${TABLE_LANG}" ] ; then
 		MOT="${WORD_ARRAY[${i}]}"
+		RE_MOT="${RE_WORD_ARRAY[${i}]}"
 	fi
 done
 
@@ -185,12 +193,12 @@ while read -r line ; do
 		word_count="$(${WC_BIN} -w "${OUTPUT_TXT}" | cut -f1 -d" ")"
 
 		# Grep retourne un code d'erreur si le mot n'est pas identifié!
-		if grep -q "${MOT}" "${OUTPUT_TXT}" ; then
+		if grep -Eq "${RE_MOT}" "${OUTPUT_TXT}" ; then
 			# On compte le nombre d'occurrences
-			match_count="$(grep -c "${MOT}" "${OUTPUT_TXT}")"
+			match_count="$(grep -Ec "${RE_MOT}" "${OUTPUT_TXT}")"
 
 			# On génère le dump de contexte (2 lignes)
-			grep -C 2 "${MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
+			grep -EC 2 "${RE_MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
 
 			# Lien vers le fichier contexte
 			context_cell="<a href=\"../${OUTPUT_CTX_REL}\">${OUTPUT_CTX_REL}</a>"
@@ -201,7 +209,7 @@ while read -r line ; do
 			cat "${BASE_DIR}/templates/concordancier.head.tpl" > "${OUTPUT_CON}"
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
 			# Body (à partir du template)
-			CONC_RE_PATTERN="(.{0,50})(${MOT})(.{0,50})"
+			CONC_RE_PATTERN="(.{0,50})${RE_MOT}(.{0,50})"
 			grep -Eo "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
 			# Footer
@@ -216,7 +224,7 @@ while read -r line ; do
 		# On veut faire ressortir les erreurs
 		status_color="danger"
 		>&2 echo "* Impossible d'accèder à la page ${line}"
-		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout.
+		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout
 	fi
 
 	# Besoin de l'option -e pour qu'echo gère les caractères de controle en version échappée
