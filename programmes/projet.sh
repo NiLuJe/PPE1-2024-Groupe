@@ -12,7 +12,6 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
 # TODO: Merge bigram
 # FIXME: Gestion des flexions (concordancier en particulier?)
-# FIXME: Casse? Frontières? Flexions?
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
@@ -194,12 +193,12 @@ while read -r line ; do
 		word_count="$(${WC_BIN} -w "${OUTPUT_TXT}" | cut -f1 -d" ")"
 
 		# Grep retourne un code d'erreur si le mot n'est pas identifié!
-		if grep -Eq "${RE_MOT}" "${OUTPUT_TXT}" ; then
+		if grep -Eiq "${RE_MOT}" "${OUTPUT_TXT}" ; then
 			# On compte le nombre d'occurrences
-			match_count="$(grep -Ec "${RE_MOT}" "${OUTPUT_TXT}")"
+			match_count="$(grep -Eic "${RE_MOT}" "${OUTPUT_TXT}")"
 
 			# On génère le dump de contexte (2 lignes)
-			grep -EC 2 "${RE_MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
+			grep -EiC 2 "${RE_MOT}" "${OUTPUT_TXT}" > "${OUTPUT_CTX}"
 
 			# Lien vers le fichier contexte
 			context_cell="<a href=\"../${OUTPUT_CTX_REL}\">${OUTPUT_CTX_REL}</a>"
@@ -211,8 +210,8 @@ while read -r line ; do
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
 			# Body (à partir du template)
 			CONC_RE_PATTERN="(.{0,50})${RE_MOT}(.{0,50})"
-			grep -Eo "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
-				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#g" >> "${OUTPUT_CON}"
+			grep -Eio "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
+				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#gi" >> "${OUTPUT_CON}"
 			# Footer
 			cat "${BASE_DIR}/templates/table.foot.tpl" >> "${OUTPUT_CON}"
 			cat "${BASE_DIR}/templates/footer.tpl" >> "${OUTPUT_CON}"
