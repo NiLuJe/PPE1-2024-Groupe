@@ -11,7 +11,7 @@ SCRIPT_NAME="${BASH_SOURCE[0]}"
 BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
 # TODO: Merge bigram
-# FIXME: Gestion des flexions (concordancier en particulier?)
+# FIXME: Gestion des flexions et/ou mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
