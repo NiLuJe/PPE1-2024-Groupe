@@ -216,6 +216,7 @@ while read -r line ; do
 		# On veut faire ressortir les erreurs
 		status_color="danger"
 		>&2 echo "* Impossible d'accèder à la page ${line}"
+		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout.
 	fi
 
 	# Besoin de l'option -e pour qu'echo gère les caractères de controle en version échappée
