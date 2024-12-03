@@ -67,8 +67,8 @@ WORD_ARRAY=(
 )
 declare -a RE_WORD_ARRAY
 RE_WORD_ARRAY=(
-	"(bébés?)"
-	"(bab(y|ies)|babes?)"
+	"\<(bébés?)\>"
+	"\<(bab(y|ies)|babes?)\>"
 	"Alèd Elisa!"
 )
 MOT=""
