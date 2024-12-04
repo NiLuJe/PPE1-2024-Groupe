@@ -37,5 +37,9 @@ OUTPUT_CTX_REL="contextes/${LANG}-*.txt"
 OUTPUT_CTX="${BASE_DIR}/${OUTPUT_CTX_REL}"
 
 # Tokenization
+>&2 echo "Tokenization des dumps texte en ${LANG}"
 # FIXME: C'est plutôt bof la gestion des phrases... (la répétition foireuse c'est pour laisser les middle name US tranquilles, mais ça laisse quand même passer quelques abréviations...)
 cat ${OUTPUT_TXT} | ${SED_BIN} -re 's/(\w{2,}\b)([.?!])/\1 %EoS%/g' | ${GREP_BIN} -Po "\b[-\p{l}]+\b" | sed "s/EoS//"
+
+# Rebelotte pour les contextes
+>&2 echo "Tokenization des contextes en ${LANG}"
