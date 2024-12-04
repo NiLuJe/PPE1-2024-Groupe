@@ -62,14 +62,14 @@ declare -a WORD_ARRAY
 WORD_ARRAY=(
 	"bébé"
 	"baby"
-	"Alèd Elisa!"
+	"ребёнок"
 )
 declare -a RE_WORD_ARRAY
 # Le motif RE pour chopper les flexions & cie (pas besoin de gérer la casse)...
 RE_WORD_ARRAY=(
 	"\<(bébés?)\>"
 	"\<(bab(y|ies|es?))\>"
-	"Alèd Elisa!"
+	"\<(ребён(o|(к|(a|у|ом|е))к))\>"
 )
 MOT=""
 RE_MOT=""
