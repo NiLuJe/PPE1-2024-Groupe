@@ -69,7 +69,7 @@ declare -a RE_WORD_ARRAY
 RE_WORD_ARRAY=(
 	"\<(bébés?)\>"
 	"\<(bab(y|ies|es?))\>"
-	"\<(ребён(o|(к|(a|у|ом|е))к))\>"
+	"\<(ребён(oк|(к(a|у|ом|е))))\>"
 )
 MOT=""
 RE_MOT=""
