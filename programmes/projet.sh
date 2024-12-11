@@ -218,7 +218,9 @@ while read -r line ; do
 			${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" -i "${OUTPUT_CON}"
 			# Body (à partir du template)
 			CONC_RE_PATTERN="(.{0,50})${RE_MOT}(.{0,50})"
-			grep -Eio "${CONC_RE_PATTERN}" "${OUTPUT_TXT}" | \
+			# On supprime les sauts de lignes pour chopper le contexte des lignes qui précèdent la ligne où se trouve le match
+			cat "${OUTPUT_TXT}" | tr "\n" " " | \
+				grep -Eio "${CONC_RE_PATTERN}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#gi" >> "${OUTPUT_CON}"
 			# Footer
 			cat "${BASE_DIR}/templates/table.foot.tpl" >> "${OUTPUT_CON}"
