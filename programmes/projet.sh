@@ -219,7 +219,7 @@ while read -r line ; do
 			# Body (à partir du template)
 			CONC_RE_PATTERN="(.{0,50})${RE_MOT}(.{0,50})"
 			# On supprime les sauts de lignes pour chopper le contexte des lignes qui précèdent la ligne où se trouve le match
-			cat "${OUTPUT_TXT}" | tr "\n" " " | \
+			tr "\n" " " < "${OUTPUT_TXT}" | \
 				grep -Eio "${CONC_RE_PATTERN}" | \
 				${SED_BIN} -re "s#${CONC_RE_PATTERN}#${CONC_ROW_TEMPLATE}#gi" >> "${OUTPUT_CON}"
 			# Footer
