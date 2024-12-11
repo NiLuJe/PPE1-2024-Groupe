@@ -189,6 +189,7 @@ while read -r line ; do
 
 		# On va laisser à lynx le job d'interpréter le HTML pour qu'il ne nous reste que le texte
 		#lynx -display_charset=utf-8 -assume_charset=utf-8 -assume_local_charset=utf-8 -assume_unrec_charset=utf-8 -dump -nolist "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
+		#lynx -dump -nolist "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
 		# Et on va même utiliser links, paceque lynx fait n'importe quoi avec l'UTF-8 sous macOS...
 		links -dump "${OUTPUT_HTML}" > "${OUTPUT_TXT}"
 		# GNU wc pour éviter l'indentation de BSD wc...
