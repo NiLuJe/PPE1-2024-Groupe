@@ -11,6 +11,7 @@ SCRIPT_NAME="${BASH_SOURCE[0]}"
 BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 
 # TODO: Merge bigram
+# TODO: PALS
 # FIXME: Gestion des flexions et/ou mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
