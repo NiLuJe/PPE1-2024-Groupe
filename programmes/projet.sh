@@ -9,10 +9,11 @@ set -euo pipefail
 SCRIPT_NAME="${BASH_SOURCE[0]}"
 # On sait que ce script est à un répertoire de profondeur de la racine.
 BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
+# Répertoire avec les différents scripts
+PROG_DIR="${BASE_DIR}/programmes"
 
 # TODO: Merge bigram
-# TODO: PALS
-# FIXME: Gestion des flexions et/ou mots composés (concordancier en particulier?)
+# NOTE: Quid de la gestion des mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
 if [ "$(uname -s)" == "Darwin" ] ; then
@@ -68,9 +69,9 @@ WORD_ARRAY=(
 declare -a RE_WORD_ARRAY
 # Le motif RE pour chopper les flexions & cie (pas besoin de gérer la casse)...
 RE_WORD_ARRAY=(
-	"\<(bébés?)\>"
-	"\<(bab(y|ies|es?))\>"
-	"\<(ребён(oк|(к(a|у|ом|е)))|дет(и|ей|ям|ьми|ях))\>"
+	"\b(bébés?)\b"
+	"\b(bab(y|ies|es?))\b"
+	"\b(ребён(oк|(к(a|у|ом|е)))|дет(и|ей|ям|ьми|ях))\b"
 )
 MOT=""
 RE_MOT=""
@@ -282,3 +283,14 @@ done < "${INPUT_URL_LIST}"
 ## Fin du HTML
 cat "${BASE_DIR}/templates/table.foot.tpl"
 cat "${BASE_DIR}/templates/footer.tpl"
+
+## On va aussi générer le corpus PALS pour cette langue...
+"${PROG_DIR}/make_pals_corpus.sh" "${TABLE_LANG}"
+
+## Et on finit par lancer le script PALS sur nos corpus...
+TXT_PAL_INPUT="${BASE_DIR}/pals/dumps-text-${TABLE_LANG}.txt"
+TXT_PAL_OUTPUT="${BASE_DIR}/pals/processed-dumps-text-${TABLE_LANG}.txt"
+CTX_PAL_INPUT="${BASE_DIR}/pals/contextes-${TABLE_LANG}.txt"
+CTX_PAL_OUTPUT="${BASE_DIR}/pals/processed-contextes-${TABLE_LANG}.txt"
+python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${TXT_PAL_INPUT}" > "${TXT_PAL_OUTPUT}"
+python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${CTX_PAL_INPUT}" > "${CTX_PAL_OUTPUT}"
