@@ -1,0 +1,22 @@
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+   Link: modulepreload
+
+                                     RoboTy
+
+   synthèse vocale en Teochew
+
+   Texte à générer
+   _____________________
+   générer
+
+   Voix de Ty Eng Lim, initialement enregistrée pour WhatTCSay
+
+   système créé par Pierre Magistry et Ilaine Wang (Inalco, ERTIM) article de
+   présentation du système

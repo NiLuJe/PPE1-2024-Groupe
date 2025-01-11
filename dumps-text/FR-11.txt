@@ -1,0 +1,367 @@
+   EDP Sciences logo
+     * Journals
+     * Books
+     * Conferences
+   0
+     * English (UK)
+     * Français (FR)
+   Subscriber Authentication Point
+     * Sign in with login/password
+     * Your subscription
+   EDPS Account
+     * Login
+   médecine/sciences
+     * All issues
+     * Thematic issues
+     * Special edition
+     * Series
+   Search
+   Menu
+     * Browse
+          * All issues
+          * Thematic issues
+          * Special edition
+          * m/s series
+          * m/s videos
+     * About m/s
+          * History
+          * Aims and Scope
+          * Editorial team and Scientific board
+          * Indexed in
+          * Permission to reuse
+          * Hosted and distributed by
+     * Author information
+          * Instruction for authors
+          * Online submission
+          * Copyright transfer
+     * Reader's services
+     * Subscriber information
+     * Seen by medecine/sciences
+   _____________________ [ search ]
+   Advanced Search
+   Home All issues Volume 37 / No 4 (Avril 2021) Med Sci (Paris), 37 4 (2021)
+   317-319 Full HTML
+     * Browse
+          * All issues
+          * Thematic issues
+          * Special edition
+          * m/s series
+          * m/s videos
+     * About m/s
+          * History
+          * Aims and Scope
+          * Editorial team and Scientific board
+          * Indexed in
+          * Permission to reuse
+          * Hosted and distributed by
+     * Author information
+          * Instruction for authors
+          * Online submission
+          * Copyright transfer
+     * Reader's services
+     * Subscriber information
+     * Seen by medecine/sciences
+   Open Access
+
+   Issue              Med Sci (Paris)                        
+                      Volume 37, Number 4, Avril 2021        
+   Page(s)            317 - 319                              
+   Section            Le Magazine                            
+   DOI                https://doi.org/10.1051/medsci/2021023 
+   Published online   28 April 2021                          
+
+     * Haut de page
+     * Liens d’intérêt
+     * Références
+     * Liste des figures
+   Med Sci (Paris) 2021 ; 37 : 317–319
+
+À l’âge de 8 mois, les bébés ont déjà intégré la grammaire de leur langue
+maternelle
+
+  Word frequency is a cue to lexical category for 8-month-old infants
+
+   Caterina Marino^1^a, Carline Bernard^2^b et Judit Gervain^1^c
+
+   ^1 Centre de neurosciences intégratives et cognition – CNRS UMR 8002, 45
+   rue des Saints Pères, 75006 Paris, France.
+   ^2 Centre hospitalier Charles Perrens, 121 rue de la Béchade, 33000
+   Bordeaux, France.
+
+   ^a cateemar@gmail.com
+   ^b carline.bernard@gmail.com
+   ^c judit.gervain@parisdescartes.fr
+
+   L’apprentissage de l’ordre des mots est l’un des premiers exploits
+   accomplis par les nourrissons au cours de l’acquisition du langage parlé.
+   Différentes études ont montré que les enfants connaissent l’ordre correct
+   de leur langue native quand ils commencent à produire leurs premières
+   phrases, à un âge compris entre 2 et 3 ans [1]. Mais comment et quand les
+   enfants commencent-ils à acquérir cet ordre des mots ? Et quelles sont les
+   caractéristiques de la langue qui les aident dans cet apprentissage ?
+
+   Une caractéristique universelle du langage humain est la distinction et
+   l’agencement entre les « mots de fonction » (les articles et autres
+   déterminants, les pronoms, et les prépositions, tels que le, il, en, sur,
+   etc.), qui marquent la structure grammaticale, et des « mots de contenu »
+   (les noms, les verbes, les adjectifs, et les adverbes, comme arc-en-ciel,
+   manger, beau, simplement, etc.), qui portent le sens lexical. Pour les
+   nourrissons, l’identification des mots de fonction constitue une première
+   étape cruciale dans l’acquisition de la grammaire de leur langue native.
+   Les mots de fonction sont très fréquents, tandis que les mots de contenu
+   le sont moins. D’où l’hypothèse que les nourrissons s’appuieraient sur la
+   fréquence d’occurrence des mots pour établir ces catégories lexicales de
+   base [2-4]. Cependant, les preuves directes font toujours défaut. On ne
+   sait pas exactement comment et à quel âge les nourrissons utilisent pour
+   la première fois ces éléments de base du langage pour en extraire les
+   modèles grammaticaux pertinents.
+
+   La majorité des langues naturelles sont configurées de deux manières
+   possibles, selon que les mots de fonction précèdent ou suivent les mots de
+   contenu. Ainsi, l’agencement de ces deux types de mots (qui forment
+   ensemble l’unité syntaxique, ou syntagme) varie selon les langues. En
+   français ou en anglais par exemple, les mots de fonction apparaissent en
+   début de syntagme (e.g., à Paris, in London), alors qu’en japonais ou en
+   basque, les mots de fonction apparaissent en fin de syntagme (e.g., Tokyo
+   ni, garren atzean). Il a été proposé que les nourrissons utilisaient les
+   mots de fonction du signal de parole comme point d’ancrage, codant la
+   position des autres mots par rapport à eux [5, 6]. Comme la différence de
+   fréquence d’occurrence entre les mots de fonction et les mots de contenu
+   est universelle d’une langue à l’autre, le mécanisme d’amorçage
+   (« bootstrapping ») fondé sur la fréquence de ces catégories lexicales
+   pourrait fournir un outil puissant pour que les nourrissons puissent
+   intégrer les règles de leur langue. Pour tester cette hypothèse, nous
+   avons utilisé cette caractéristique distinctive des mots de fonction et
+   des mots de contenu comme outil diagnostique.
+
+   De plus, les mots de contenu forment des classes ouvertes : nous ajoutons
+   fréquemment de nouveaux mots à notre lexique (e.g., iPad, Brexit, etc.),
+   tandis que les mots de fonction constituent des classes fermées, dans
+   lesquelles de nouveaux éléments ne peuvent pas être ajoutés sans entraîner
+   une modification radicale de la langue. Si les représentations
+   linguistiques des nourrissons sont telles que les mots fréquents y
+   constituent des classes fermées et les mots non fréquents des classes
+   ouvertes, cela signifie qu’ils sont déjà sensibles à l’une des
+   caractéristiques qui différencient les mots de fonction des mots de
+   contenu.
+
+   Les enfants sont-ils déjà sensibles à cette information à l’âge de 8 mois
+   ? Pour le savoir, nous avons utilisé, chez des enfants francophones de 7 à
+   9 mois, une tâche d’apprentissage d’une mini-langue inventée. Les
+   résultats de cette étude ont été publiés dans la revue Current Biology
+   [7]. Nous avons ainsi familiarisé six groupes d’enfants avec la même
+   langue artificielle, dans laquelle les mots fréquents, représentant les
+   mots de fonctions de notre langue naturelle, alternaient strictement avec
+   les mots non fréquents, représentant les mots de contenu
+   (…gekafimugenafifogebi…), un paradigme précédemment utilisé par d’autres
+   chercheurs [4, 8]. Ainsi, les bébés écoutaient un flux sonore dans cette
+   mini-langue pendant 4 minutes, mais l’intensité sonore augmentait
+   progressivement pendant les 15 premières secondes et diminuait pendant les
+   15 dernières secondes, de façon à rendre ambiguë la structure de la langue
+   artificielle (la perception de l’agencement initial et final des mots de
+   fonction par rapport aux mots de contenu devenait impossible). Nous avons
+   réalisé six expériences, avec six groupes de bébés ; ils ont tous été
+   familiarisés avec la même mini-langue, mais les items tests différaient
+   dans chaque groupe, selon la nouveauté ou la familiarité des mots de
+   fonction et des mots de contenu (Figure 1B). Pour tous les groupes, nous
+   avons présenté aux bébés des courtes « phrases » (items tests) dans cette
+   langue artificielle, dont la moitié suivait l’ordre des mots du français
+   (mot fréquent initial), et l’autre moitié l’ordre des mots du japonais
+   (mot fréquent final). Nous avons évalué la réaction des enfants à ces
+   phrases en utilisant une procédure de préférence par le regard (headturn
+   preference paradigm, HPP) fondée sur une mesure des temps de regard
+   relatifs aux items-tests (Figure 1A).
+
+             Figure 1.                                                        
+                                                                              
+   thumbnail Phases de familiarisation et de test. A. Exemple d’un enfant en  
+             train d’effectuer la tâche d’apprentissage de notre mini-langue  
+             inventée. B. Tâche de grammaire artificielle utilisée dans les   
+             six expériences.                                                 
+
+   Les résultats de cette expérience ont montré, d’une part, que les bébés de
+   8 mois ont une préférence (temps de regard plus longs) pour les phrases
+   comportant un ordre des mots typique du français, et d’autre part, qu’ils
+   peuvent utiliser la fréquence des mots pour identifier la catégorie à
+   laquelle appartient un mot spécifique. En effet, ils « n’acceptent pas »
+   de nouveaux mots fréquents, mais s’adaptent facilement aux nouveaux mots
+   infréquents (Figure 2). Ces résultats viennent compléter les données de la
+   littérature chez les nourrissons concernant d’autres caractéristiques
+   distinctives de ces deux classes de mots, telles que leurs différentes
+   formes phonologiques [9] et leurs différences fonctionnelles [4, 10, 11].
+   Ils apportent d’autres preuves de la capacité des nourrissons à distinguer
+   ces deux classes lexicales, en montrant que ces derniers sont capables, à
+   partir de la fréquence des mots dans une langue artificielle, d’extraire
+   des informations importantes concernant 1) leur position : la langue
+   française place les mots fréquents au début des syntagmes (e.g., à Paris,
+   le chat, je vais…), alors que la langue japonaise les place en position
+   finale (e.g., « Tokyo kara », que l’on peut traduire littéralement par
+   « Tokyo de »), et 2) leur fonction : de nouveaux mots de contenu
+   apparaissent dans la langue presque chaque jour (e.g., iPhone, courriel,
+   etc.), tandis qu’il n’est pas possible d’y ajouter un nouveau mot de
+   fonction (impossible, par exemple, d’inventer une nouvelle préposition ou
+   un nouveau déterminant).
+
+             Figure 2.                                                        
+                                                                              
+             Temps de regard (looking time), en secondes (s), obtenus selon   
+   thumbnail l’ordre des phrases de la phase de test, pour les six            
+             expériences. Les barres horizontales représentent la moyenne du  
+             groupe ; les points connectés représentent les résultats         
+             individuels pour chaque bébé participant. NS : non significatif. 
+
+   Nous avons donc montré que les bébés ont des connaissances des bases de la
+   grammaire de leur langue native plusieurs mois avant de produire leurs
+   premiers mots. Les bébés francophones de 8 mois savent déjà que les mots
+   fréquents sont des mots grammaticaux qui apparaissent en début de syntagme
+   en français, et qui ne peuvent pas être remplacés par de nouveaux
+   éléments, tandis qu’ils acceptent volontiers un nouveau mot en tant que
+   mot de contenu. L’apprentissage de la grammaire commence donc plus tôt que
+   ce que l’on croyait, parallèlement à l’apprentissage des sons et des mots,
+   bien avant les premières productions vocales de mots par l’enfant.
+
+Liens d’intérêt
+
+   Les auteures déclarent n’avoir aucun lien d’intérêt concernant les données
+   publiées dans cet article.
+
+Références
+
+    1. Brown RW. A first language: the early stages 1973 ; Cambridge: Harvard
+       University Press 438 p [Google Scholar] 
+    2. Braine MD. Learning the positions of words relative to a marker
+       element. J Exp Psychol 1966 ; 72 : 532–540. [CrossRef] [PubMed]
+       [Google Scholar] 
+    3. Morgan JM, Newport EL. The role of constituent structure in the
+       induction of an artificial language. J Verbal Learn Verbal Behav 1981
+       ; 20 : 67–85. [Google Scholar] 
+    4. Gervain J, Nespor M, Mazuka R, et al. Bootstrapping word order in
+       prelexical infants: a Japanese-Italian cross- linguistic study. Cognit
+       Psychol 2008 ; 57 : 56–74. [Google Scholar] 
+    5. Valian V, Levitt A. Prosody and adults’ learning of syntactic
+       structure. J Mem Lang 1996 ; 35 : 497–516. [Google Scholar] 
+    6. Morgan JL, Meier RP, Newport EL. Structural packaging in the input to
+       language learning: contributions of prosodic and morphological marking
+       of phrases to the acquisition of language. Cognit Psychol 1987 ; 19 :
+       498–550. [Google Scholar] 
+    7. Marino C, Bernard C, Gervain J. Word frequency is a cue to lexical
+       category for 8-month-old infants. Curr Biol 2020; 30 : 1380–6.
+       [CrossRef] [PubMed] [Google Scholar] 
+    8. Bernard C, Gervain J. Prosodic cues to word order: what level of
+       representation?. Front Psychol 2012 ; 3 : 451. [CrossRef] [PubMed]
+       [Google Scholar] 
+    9. Shi R, Werker JF, Morgan JL. Newborn infants’ sensitivity to
+       perceptual cues to lexical and grammatical words. Cognition 1999 ; 72
+       : B11–B21. [CrossRef] [PubMed] [Google Scholar] 
+   10. Hochmann JR, Endress AD, Mehler J. Word frequency as a cue for
+       identifying function words in infancy. Cognition 2010 ; 115 : 444–457.
+       [CrossRef] [PubMed] [Google Scholar] 
+   11. Hochmann JR. Word frequency, function words and the second gavagai
+       problem. Cognition 2013 ; 128 : 13–25. [CrossRef] [PubMed]
+       [Google Scholar]
+
+   © 2021 médecine/sciences – Inserm
+
+   Licence Creative CommonsArticle publié sous les conditions définies par la
+   licence Creative Commons Attribution License CC-BY
+   (https://creativecommons.org/licenses/by/4.0), qui autorise sans
+   restrictions l'utilisation, la diffusion, et la reproduction sur quelque
+   support que ce soit, sous réserve de citation correcte de la publication
+   originale.
+
+Liste des figures
+
+             Figure 1.                                                        
+                                                                              
+   thumbnail Phases de familiarisation et de test. A. Exemple d’un enfant en  
+             train d’effectuer la tâche d’apprentissage de notre mini-langue  
+             inventée. B. Tâche de grammaire artificielle utilisée dans les   
+             six expériences.                                                 
+   Dans le texte
+
+             Figure 2.                                                        
+                                                                              
+             Temps de regard (looking time), en secondes (s), obtenus selon   
+   thumbnail l’ordre des phrases de la phase de test, pour les six            
+             expériences. Les barres horizontales représentent la moyenne du  
+             groupe ; les points connectés représentent les résultats         
+             individuels pour chaque bébé participant. NS : non significatif. 
+   Dans le texte
+
+   Current usage metrics About article metrics Return to article
+
+   Current usage metrics show cumulative count of Article Views (full-text
+   article views including HTML views, PDF and ePub downloads, according to
+   the available data) and Abstracts Views on Vision4Press platform.
+
+   Data correspond to usage on the plateform after 2015. The current usage
+   metrics is available 48-96 hours after online publication and is updated
+   daily on week days.
+
+   Initial download of the metrics may take a while.
+
+   Homepage
+   Table of Contents
+   Previous articleNext article
+
+Article contents
+
+     * Abstract
+     * Full HTML
+     * PDF (3.928 MB)
+     * References
+
+Database links
+
+     * PubMed Record
+
+Metrics
+
+     * Show article metrics
+
+Services
+
+     * Same authors
+       - Google Scholar
+       - EDP Sciences database
+       - PubMed
+     * Recommend this article
+     * Send to my Kindle
+     * Download citation
+
+Related Articles
+
+   Eveil de la conscience grammaticale chez un enfant français entre 18 mois
+   et 3 ans
+   CMLF 2010, 104 (2010)
+   L’enfant, la connaissance et les savoirs scolaires — Un exemple : à propos
+   de la lecture
+   Perspectives Psy, Vol. 53, n°3, juillet-septembre 2014, p. 245–252
+   Quand les élèves définissent la phrase…
+   SHS Web of Conferences 27, 07002 (2016)
+   More
+
+Bookmarking
+
+     * *  *  *  * * Reader's services
+     * Email-alert
+
+  médecine/sciences
+
+   Chief editor: Anna Salvetti - Deputy-chief editor: Thierry Jouault
+   Chief copy editor: François Flori - Associate editor: Jean-Pierre Hardelin
+   - Editorial board
+   ISSN: 0767-0974 - eISSN: 1958-5381
+   © médecine/sciences - Inserm
+   All rights reserved
+
+     * Youtube channel
+     * Follow us on LinkedIn
+     * Access our RSS feeds
+     * Register to the journal email alert
+   EDP Sciences
+     * Mentions légales
+     * Advertisers information
+     * Contact us
+     * Privacy policy
+   A Vision4Press website

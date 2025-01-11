@@ -1,0 +1,255 @@
+   Link: alternate
+   Link: canonical
+   Link: license
+   Aller au contenu
+   [ ] Menu principal
+   Menu principal
+   Navigation
+     * Accueil
+     * Portails thématiques
+     * Article au hasard
+     * Contact
+   Contribuer
+     * Débuter sur Wikipédia
+     * Aide
+     * Communauté
+     * Modifications récentes
+   [IMG] Wikipédia l'encyclopédie libre
+   Rechercher
+   _____________________
+   Rechercher
+   [ ] Apparence
+     * Faire un don
+     * Créer un compte
+     * Se connecter
+   [ ] Outils personnels
+     * Faire un don
+     * Créer un compte
+     * Se connecter
+   Pages pour les contributeurs déconnectés en savoir plus
+     * Contributions
+     * Discussion
+
+Sommaire
+
+     * Début
+     * 1 Usages
+     * 2 Exemples
+     * 3 Notes et références
+     * 4 Voir aussi
+          * 4.1 Articles connexes
+          * 4.2 Liens externes
+   [ ] Basculer la table des matières
+
+                        Protocole d'exclusion des robots
+
+   [ ] 27 langues
+     * العربية
+     * Azərbaycanca
+     * Boarisch
+     * Català
+     * Čeština
+     * Dansk
+     * Deutsch
+     * English
+     * Español
+     * فارسی
+     * Suomi
+     * Galego
+     * עברית
+     * Bahasa Indonesia
+     * Italiano
+     * 日本語
+     * 한국어
+     * Nederlands
+     * Polski
+     * Português
+     * Русский
+     * Simple English
+     * Српски / srpski
+     * Svenska
+     * Türkçe
+     * Українська
+     * 中文
+   Modifier les liens
+     * Article
+     * Discussion
+   [ ] français
+     * Lire
+     * Modifier
+     * Modifier le code
+     * Voir l’historique
+   [ ] Outils
+   Outils
+   Actions
+     * Lire
+     * Modifier
+     * Modifier le code
+     * Voir l’historique
+   Général
+     * Pages liées
+     * Suivi des pages liées
+     * Téléverser un fichier
+     * Pages spéciales
+     * Lien permanent
+     * Informations sur la page
+     * Citer cette page
+     * Obtenir l'URL raccourcie
+     * Télécharger le code QR
+   Imprimer / exporter
+     * Créer un livre
+     * Télécharger comme PDF
+     * Version imprimable
+   Dans d’autres projets
+     * Wikimedia Commons
+     * Élément Wikidata
+   Apparence
+   Un article de Wikipédia, l'encyclopédie libre.
+   [IMG]Le protocole d'exclusion des robots
+
+   Le protocole d'exclusion des robots souvent nommé robots.txt, est une
+   ressource de format texte qui peut être placée à la racine d'un site web,
+   et qui contient une liste des ressources du site qui ne sont pas censées
+   être indexées par les robots d'indexation des moteurs de recherche. Par
+   convention, les robots consultent le fichier texte nommé robots.txt avant
+   d'indexer un site Web. Ce protocole a été proposé par Martijn Koster en
+   1994 et il a été rapidement adopté comme un standard de facto du web.
+
+Usages
+
+   [modifier | modifier le code]
+
+   L'usage de robots.txt permet d'éviter que des ressources sans intérêt
+   public se retrouvent dans la page de résultats d'un moteur de recherche.
+   En outre, le fait que les robots n'accèdent pas à ces ressources allège le
+   travail du serveur HTTP et le trafic sur le réseau informatique.
+
+   Il est important de comprendre qu’il ne s’agit là que d’une indication sur
+   ce que doivent faire les robots bienveillants, ce n’est en aucun cas un
+   élément de sécurité. En effet, certains robots ignorent ce fichier, soit
+   délibérément parce qu’ils cherchent des informations privées (des adresses
+   électroniques par exemple, pour y envoyer du courrier indésirable), soit
+   parce que le robot est trop simple pour gérer ce standard.
+
+   De manière facultative, ce fichier peut contenir l'adresse d'un plan du
+   site consacré aux moteurs de recherche appelé « sitemap » dont le format
+   est le XML.
+
+   Le 1^er juillet 2019, Google a indiqué vouloir standardiser
+   l’interprétation du fichier robots.txt tout en précisant que sa
+   proposition respecte le brouillon initial de son créateur Martijn
+   Koster (en) et est donc rétrocompatible. En septembre 2022, la
+   RFC 9309^[1] est publiée. Elle s’applique à tous les protocoles qui
+   permettent d’accéder à des ressources à partir d’URIs, c’est-à-dire plus
+   uniquement à HTTP mais également à FTP, CoAP, etc.
+
+Exemples
+
+   [modifier | modifier le code]
+
+   Autoriser tous les robots à accéder au site :
+
+ User-agent: *
+ Allow:
+
+   Interdire l'accès au site à tous les robots :
+
+ User-agent: *
+ Disallow: /
+
+   Pour interdire à tous les robots, sauf Googlebot, l'accès à un dossier en
+   particulier, par exemple http://example.org/forum/.
+
+ User-agent: *
+ Disallow: /forum
+
+ User-agent: googlebot
+ Disallow:
+
+Notes et références
+
+   [modifier | modifier le code]
+    1. ↑ (en) Martijn Koster et al., « Robots Exclusion Protocol », Request
+       for comments n^o 9309, septembre 2022
+
+Voir aussi
+
+   [modifier | modifier le code]
+
+  Articles connexes
+
+   [modifier | modifier le code]
+     * Humans.txt
+     * Security.txt
+     * User agent
+
+  Liens externes
+
+   [modifier | modifier le code]
+     * (fr) Robots.txt (robots-txt.com) : ressources en français sur le
+       protocole d'exclusion des robots.
+
+   v · m               
+   Optimisation pour les moteurs de recherche
+                         * Protocole d'exclusion des robots   
+   Exclusion standards   * Élément meta                       
+                         * nofollow                           
+                         * Search engine marketing            
+                         * Social media optimization          
+                         * Answer Engine Optimization         
+   Search marketing      * Online identity management (en)    
+                         * Paid inclusion (en)                
+                         * Coût par clic                      
+                         * Bombardement Google                
+                         * Spamdexing                         
+                         * Web scraping                       
+   Spam                  * Scraper site                       
+                         * Ferme de liens                     
+                         * Netlinking                         
+                         * Lien retour                        
+   Linking               * Netlinking                         
+                         * Échange de liens                   
+                         * Organic linking (en)               
+                         * Danny Sullivan (en)                
+                         * Matt Cutts                         
+   Gens                  * Vanessa Fox (en)                   
+                         * Barry Schwartz (en)                
+                         * Olivier Andrieu                    
+                         * Ciblage géographique               
+                         * PageRank                           
+   Autre                 * Mot vide                           
+                         * Poison words (en)                  
+                         * Ferme de contenus                  
+
+     * icône décorative Portail de l’informatique
+   Ce document provient de
+   « https://fr.wikipedia.org/w/index.php?title=Protocole_d%27exclusion_des_robots&oldid=218966773 ».
+   Catégories :
+     * Moteur de recherche
+     * Référencement
+   Catégories cachées :
+     * Article contenant un appel à traduction en anglais
+     * Portail:Informatique/Articles liés
+     * Portail:Technologies/Articles liés
+     * La dernière modification de cette page a été faite le 27 septembre
+       2024 à 10:13.
+     * Droit d'auteur : les textes sont disponibles sous licence Creative
+       Commons attribution, partage dans les mêmes conditions ; d’autres
+       conditions peuvent s’appliquer. Voyez les conditions d’utilisation
+       pour plus de détails, ainsi que les crédits graphiques. En cas de
+       réutilisation des textes de cette page, voyez comment citer les
+       auteurs et mentionner la licence.
+       Wikipedia® est une marque déposée de la Wikimedia Foundation, Inc.,
+       organisation de bienfaisance régie par le paragraphe 501(c)(3) du code
+       fiscal des États-Unis.
+     * Politique de confidentialité
+     * À propos de Wikipédia
+     * Avertissements
+     * Contact
+     * Code de conduite
+     * Développeurs
+     * Statistiques
+     * Déclaration sur les témoins (cookies)
+     * Version mobile
+     * Wikimedia Foundation
+     * Powered by MediaWiki
