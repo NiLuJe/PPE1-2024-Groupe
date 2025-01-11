@@ -163,19 +163,28 @@ while read -r line ; do
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
 		# On commence par vérifier si on est pas tombé sur du XHTML pur...
 		if head -n 1 "${OUTPUT_HTML}" | grep -Eq "^<\?xml" ; then
-			page_encoding="$(head -n 1 "${OUTPUT_HTML}" | ${SED_BIN} -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			page_charset="$(head -n 1 "${OUTPUT_HTML}" | ${SED_BIN} -re "s/.*encoding\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 		else
 			# On va garder le premier (vu que la balise devrait être dans le bloc head)
 			# charset= qu'on croise dans le code et croiser les doigts ;p.
 			# c.f., https://www.w3.org/International/questions/qa-html-encoding-declarations.var
 			#     & https://www.w3schools.com/html/html_charset.asp
-			page_encoding="$(grep charset "${OUTPUT_HTML}" | head -n 1 | ${SED_BIN} -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			# NOTE: head can be annoying w/ pipefail...
+			set +o pipefail
+			page_charset="$(grep charset "${OUTPUT_HTML}" | head -n 1 | ${SED_BIN} -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
+			set -o pipefail
+		fi
+		# Si on a trouvé un encodage dans le code de la page, on le préfère.
+		if [ -n "${page_charset}" ] ; then
+			page_encoding="${page_charset}"
 		fi
 
 		# Si la page n'est pas en UTF-8, on convertit
 		if [ "${page_encoding^^}" != "UTF-8" ] ; then
 			>&2 echo "Transcodage de ${page_encoding^^} vers UTF-8 pour la page ${line}"
-			${UCONV_BIN} -f "${page_encoding}" -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv"
+			# Si la conversion échoue en tantant d'honore l'encodage cible, on va laisser uconv se débrouiller sans le préciser...
+			${UCONV_BIN} -f "${page_encoding}" -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv" ||
+			${UCONV_BIN} -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv"
 		else
 			# Même si elle est en UTF-8, on la valide & normalise pour assurer les traitements suivants
 			# (Normalement, on devrait déjà être en NFC, c.f., https://www.w3.org/TR/charmod-norm/#unicodeNormalization)
