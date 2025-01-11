@@ -169,7 +169,7 @@ while read -r line ; do
 			# charset= qu'on croise dans le code et croiser les doigts ;p.
 			# c.f., https://www.w3.org/International/questions/qa-html-encoding-declarations.var
 			#     & https://www.w3schools.com/html/html_charset.asp
-			# NOTE: head can be annoying w/ pipefail...
+			# NOTE: bash/zsh est un peu tatillon avec head & pipefail (c.f., http://www.pixelbeat.org/programming/sigpipe_handling.html)...
 			set +o pipefail
 			page_charset="$(grep charset "${OUTPUT_HTML}" | head -n 1 | ${SED_BIN} -re "s/.*charset\s*=\s*[\'\"]?([-_:[:alnum:]]+)[\'\"]?.*/\1/")"
 			set -o pipefail
