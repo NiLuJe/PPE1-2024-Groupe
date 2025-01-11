@@ -42,6 +42,9 @@ OUTPUT_CTX_PAL="${BASE_DIR}/pals/contextes-${LANG}.txt"
 >&2 echo "Tokenization des dumps texte en ${LANG}"
 # NOTE: C'est plutôt bof la gestion des phrases... (la répétition foireuse c'est pour laisser les middle name US tranquilles, mais ça laisse quand même passer quelques abréviations...)
 # TODO: pymorphy2? udpipe? Unitex?
+# NOTE: On peut se poser la question de quoi faire avec les apostrophes pour la tokenization...
+#       (e.g., on a *beaucoup* de formes p'tit/p'tite dans le corpus FR qui se font dézinguer en deux tokens P + tit(e)...).
+#       Mais si on solidarise ce genre de choss, on solidarise aussi tous les articles contractés...
 cat ${OUTPUT_TXT} | ${SED_BIN} -re 's/(\w{2,}\b)([.?!])/\1 %EoS%/g' | ${GREP_BIN} -Po "\b[-\p{l}]+\b" | sed "s/EoS//" > "${OUTPUT_TXT_PAL}"
 
 # Rebelotte pour les contextes
