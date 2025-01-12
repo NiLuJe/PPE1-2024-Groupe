@@ -6,3 +6,14 @@ On commence les choses sérieuses! Du coup adaptation des scripts pour stocker l
 ## Semaine 10
 
 La fin est proche! Crunch final, ça ira mieux dans deux semaines…
+
+## Semaine Argh
+
+Le crunch, c'est bon, mangez-en!
+Après des "vacances" plus compliquées que prévues, on reprend le taureau par les cornes pour:
+  - Finaliser les scripts (bon, ça va, il ne manquait pas grand chose)
+  - Finaliser le site web
+  - Finaliser & valider les corpus
+  - Conclure!
+
+Et peut-etre, dormir. Un jour. Bientôt. :D.
