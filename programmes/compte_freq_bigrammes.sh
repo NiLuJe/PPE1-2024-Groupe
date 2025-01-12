@@ -21,10 +21,12 @@ if [ "$(uname -s)" == "Darwin" ] ; then
 	GREP_BIN="ggrep"
 	SED_BIN="gsed"
 	WC_BIN="gwc"
+	UNIQ_BIN="guniq"
 else
 	GREP_BIN="grep"
 	SED_BIN="sed"
 	WC_BIN="wc"
+	UNIQ_BIN="uniq"
 fi
 
 # Un mot par ligne
@@ -51,7 +53,7 @@ RELEVANT_BIGRAM_COUNT="$(${GREP_BIN} -Ei "${PATTERN}" "${OUTPUT_PATH}" | ${WC_BI
 
 # Tri par fréquence comme dans compt_freq.sh
 ${GREP_BIN} -Ei "${PATTERN}" "${OUTPUT_PATH}" |	\
-	sort | uniq -c | sort -nr |					\
+	sort | ${UNIQ_BIN} -c | sort -nr |					\
 	head -n "${LINES}" \
 	> "${OUTPUT_PATH}.freq"
 mv "${OUTPUT_PATH}.freq" "${OUTPUT_PATH}"
