@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Fail early, fail often.
+set -euo pipefail
+
 if [ $# -lt 1 ] ; then
 	echo "usage: ${0} <fichier> [lignes]"
 	exit 1
@@ -11,6 +14,15 @@ LINES="${2:-25}"
 SCRIPT_NAME="${BASH_SOURCE[0]}"
 SCRIPT_BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}")"
 
+# On préfère certains outils GNU sous macOS...
+if [ "$(uname -s)" == "Darwin" ] ; then
+	GREP_BIN="ggrep"
+	SED_BIN="gsed"
+else
+	GREP_BIN="grep"
+	SED_BIN="sed"
+fi
+
 # Un mot par ligne
 # Tout en minuscule
 # On double les mots (toujours un par ligne),
@@ -18,14 +30,14 @@ SCRIPT_BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}")"
 # on laisse paste combiner les paires, une paire par ligne, chaque mot séparé par un espace,
 # on dégage la dernière ligne pour éviter le dernier mot orphelin dû à notre désynchro initiale,
 # et on trie par fréquence comme dans compt_freq.sh
-cat "${INPUT}" | \
-	grep -Eo "\<\w+\>" | \
-	tr "[:upper:]" "[:lower:]" | \
-	sed -re 's/^(.*)$/\1\n\1/' |	\
-	sed '1d' |						\
-	paste -s -d ' \n' - |			\
-	sed '$d' |						\
-	sort | uniq -c | sort -nr |		\
+cat "${INPUT}" |						\
+	${GREP_BIN} -Po "\b[-\p{l}]+\b" |	\
+	tr "[:upper:]" "[:lower:]" |		\
+	${SED_BIN} -re 's/^(.*)$/\1\n\1/' |	\
+	${SED_BIN} '1d' |					\
+	paste -s -d ' \n' - |				\
+	${SED_BIN} '$d' |					\
+	sort | uniq -c | sort -nr |			\
 	head -n "${LINES}"
 
 # NOTE: Parceque la manpage de paste m'a un peu cassé le cerveau
