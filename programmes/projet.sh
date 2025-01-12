@@ -12,7 +12,6 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 # Répertoire avec les différents scripts
 PROG_DIR="${BASE_DIR}/programmes"
 
-# TODO: Wordcloud!
 # NOTE: Quid de la gestion des mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
@@ -321,3 +320,7 @@ for f in "${TXT_PAL_OUTPUT_FREQ}" "${CTX_PAL_OUTPUT_FREQ}" ; do
 	((start_line--))
 	${SED_BIN} -e "1,${start_line}d" -i "${f}"
 done
+
+## Une fois qu'on a nos données PALs, on peut générer notre nuage
+CLOUD_OUTPUT="${BASE_DIR}/res/cloud-${TABLE_LANG}.png"
+python3 "${PROG_DIR}/cloudy.py" "${CTX_PAL_OUTPUT}" "${CLOUD_OUTPUT}"
