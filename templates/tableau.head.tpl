@@ -43,6 +43,9 @@
 								<th>HTML</th>
 								<th>Texte Brut</th>
 								<th>Compte</th>
+								<th>Nombre de bigrammes</th>
+								<th>Bigrammes avec le mot</th>
+								<th>Fréquence des bigrammes</th>
 								<th>Contexte</th>
 								<th>Concordancier</th>
 							</tr>

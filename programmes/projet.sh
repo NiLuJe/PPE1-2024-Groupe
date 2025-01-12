@@ -136,6 +136,9 @@ while read -r line ; do
 	OUTPUT_CTX="${BASE_DIR}/${OUTPUT_CTX_REL}"
 	OUTPUT_CON_REL="concordances/${TABLE_LANG}-${file_idx}.html"
 	OUTPUT_CON="${BASE_DIR}/${OUTPUT_CON_REL}"
+	OUTPUT_BIGRAM_REL="contextes/${TABLE_LANG}-${file_idx}-bigram-freq.txt"
+	OUTPUT_BIGRAM="${BASE_DIR}/${OUTPUT_CTX_REL}"
+	bigram_cell="<a href=\"../${OUTPUT_BIGRAM_REL}\">${OUTPUT_BIGRAM_REL}</a>"
 
 	# On va avoir besoin de la sortie de cURL...
 	# (curl peut retourner une erreur, donc on va tempérer set -e pour cet appel)
@@ -160,12 +163,14 @@ while read -r line ; do
 		is_integer "${http_status}" || http_status="N/A"
 	fi
 
+	word_count="N/A"
+	match_count="N/A"
+	bigram_count="N/A"
+	match_bigram_count="N/A"
+	status_color="success"
 	# On va préferer le charset spécifié dans la page:
 	# le charset spécifié par le serveur dans l'en-tête Content-Type est optionel,
 	# et souvent peu pertinent (et ce malgré le fait qu'il soit censé avoir la priorité...).
-	word_count="N/A"
-	status_color="success"
-	match_count="0"
 	# On va avoir besoin de gratter le code de la page pour ces deux là,
 	# ce qui implique qu'on ait bien réussi à récupérer une page (i.e., un code HTTP 2xx)...
 	if [ "${http_status}" != "N/A" ] && [ "${http_status}" -ge 200 ] && [ "${http_status}" -lt 300 ] ; then
@@ -243,10 +248,16 @@ while read -r line ; do
 			# Footer
 			cat "${BASE_DIR}/templates/table.foot.tpl" >> "${OUTPUT_CON}"
 			cat "${BASE_DIR}/templates/footer.tpl" >> "${OUTPUT_CON}"
+
+			# On finit par gérer les bigrammes
+			bigram_res="$("${PROG_DIR}/compte_freq_bigrammes.sh" "${OUTPUT_TXT}" "${RE_MOT}" "${OUTPUT_BIGRAM}")"
+			bigram_count="$(echo "${bigram_res}" | cut -f1 -d',')"
+			match_bigram_count="$(echo "${bigram_res}" | cut -f2 -d',')"
 		else
 			# Pas de contexte si pas de match ;).
 			context_cell="${ERROR_CELL}"
 			concordance_cell="${ERROR_CELL}"
+			bigram_cell="${ERROR_CELL}"
 		fi
 	else
 		# On veut faire ressortir les erreurs
@@ -257,6 +268,7 @@ while read -r line ; do
 		dump_cell="${ERROR_CELL}"
 		context_cell="${ERROR_CELL}"
 		concordance_cell="${ERROR_CELL}"
+		bigram_cell="${ERROR_CELL}"
 		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout
 	fi
 
@@ -283,6 +295,9 @@ while read -r line ; do
 								<td>${scraping_cell}</td>
 								<td>${dump_cell}</a></td>
 								<td>${match_count}</td>
+								<td>${bigram_count}</td>
+								<td>${match_bigram_count}</td>
+								<td>${bigram_cell}</td>
 								<td>${context_cell}</td>
 								<td>${concordance_cell}</td>
 							</tr>
