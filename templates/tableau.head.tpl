@@ -12,7 +12,7 @@
 			<div id="navbar-ppe" class="navbar-menu">
 				<div class="navbar-start">
 					<a class="navbar-item" href="../index.html"> Accueil </a>
-					<a class="navbar-item is-active" href=""> Tableaux </a>
+					<a class="navbar-item is-active" href="index.html"> Tableaux </a>
 				</div>
 			</div>
 		</nav>
