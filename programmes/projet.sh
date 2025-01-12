@@ -308,7 +308,16 @@ cat "${BASE_DIR}/templates/footer.tpl"
 ## Et on finit par lancer le script PALS sur nos corpus...
 TXT_PAL_INPUT="${BASE_DIR}/pals/dumps-text-${TABLE_LANG}.txt"
 TXT_PAL_OUTPUT="${BASE_DIR}/pals/processed-dumps-text-${TABLE_LANG}.txt"
+TXT_PAL_OUTPUT_FREQ="${BASE_DIR}/pals/processed-freq-dumps-text-${TABLE_LANG}.txt"
 CTX_PAL_INPUT="${BASE_DIR}/pals/contextes-${TABLE_LANG}.txt"
 CTX_PAL_OUTPUT="${BASE_DIR}/pals/processed-contextes-${TABLE_LANG}.txt"
-python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${TXT_PAL_INPUT}" > "${TXT_PAL_OUTPUT}"
-python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${CTX_PAL_INPUT}" > "${CTX_PAL_OUTPUT}"
+CTX_PAL_OUTPUT_FREQ="${BASE_DIR}/pals/processed-freq-contextes-${TABLE_LANG}.txt"
+python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${TXT_PAL_INPUT}" > "${TXT_PAL_OUTPUT}" 2> "${TXT_PAL_OUTPUT_FREQ}"
+python3 "${PROG_DIR}/PALS/cooccurrents.py" --target "${RE_MOT}" --match-mode "regex" "${CTX_PAL_INPUT}" > "${CTX_PAL_OUTPUT}" 2> "${CTX_PAL_OUTPUT_FREQ}"
+
+# On va dégager le satus de progression pleine de CR...
+for f in "${TXT_PAL_OUTPUT_FREQ}" "${CTX_PAL_OUTPUT_FREQ}" ; do
+	start_line="$(grep -Eno "^target	frequency$" "${f}" | head -n 1 | cut -d':' -f1)"
+	((start_line--))
+	${SED_BIN} -e "1,${start_line}d" -i "${f}"
+done
