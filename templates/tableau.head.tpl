@@ -13,6 +13,7 @@
 				<div class="navbar-start">
 					<a class="navbar-item" href="../index.html"> Accueil </a>
 					<a class="navbar-item is-active" href="index.html"> Tableaux </a>
+					<a class="navbar-item" href="../wordcloud/index.html"> Nuages </a>
 					<a class="navbar-item" href="../code.html"> Scripts </a>
 					<a class="navbar-item" href="../conclusion.html"> Bilan </a>
 					<a class="navbar-item" href="../team.html"> Équipe </a>

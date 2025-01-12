@@ -12,7 +12,7 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 # Répertoire avec les différents scripts
 PROG_DIR="${BASE_DIR}/programmes"
 
-# TODO: Wordcloud
+# TODO: Wordcloud!
 # NOTE: Quid de la gestion des mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
