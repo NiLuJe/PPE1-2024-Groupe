@@ -11,12 +11,16 @@ LINES="${2:-25}"
 SCRIPT_NAME="${BASH_SOURCE[0]}"
 SCRIPT_BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}")"
 
+# Un mot par ligne
+# Tout en minuscule
 # On double les mots (toujours un par ligne),
 # on dégage la première ligne pour éviter le doublon initial et ainsi désynchroniser les paires (i.e., 1 2 -> 2 3 au lieu de 1 1 -> 2 2),
 # on laisse paste combiner les paires, une paire par ligne, chaque mot séparé par un espace,
 # on dégage la dernière ligne pour éviter le dernier mot orphelin dû à notre désynchro initiale,
 # et on trie par fréquence comme dans compt_freq.sh
-"${SCRIPT_BASE_DIR}"/nettoyage_texte_pg.sh "${INPUT}" | \
+cat "${INPUT}" | \
+	grep -Eo "\<\w+\>" | \
+	tr "[:upper:]" "[:lower:]" | \
 	sed -re 's/^(.*)$/\1\n\1/' |	\
 	sed '1d' |						\
 	paste -s -d ' \n' - |			\
