@@ -1,0 +1,7 @@
+target	frequency
+regex=\b(bab(y|ies|es?))\b	1201
+baby	705
+babies	427
+babe	56
+babes	13
+
