@@ -9,9 +9,9 @@ import sys
 
 # Correspondance ISO <-> English pour NLTK...
 LANG_NAMES = {
-	"FR": "French",
-	"EN": "English",
-	"RU": "Russian"
+	"FR": "french",
+	"EN": "english",
+	"RU": "russian"
 }
 
 def main(pals_ctx: str | Path, image: str | Path):
