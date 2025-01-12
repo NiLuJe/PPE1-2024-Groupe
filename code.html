@@ -58,11 +58,11 @@
 						Linux, en forçant l'utilisation d'outils GNU sous macOS, à la place des outils BSD de base.
 					</p>
 					<p>
-						On va automatiser/auto-détecter un maximum de chose, en fonction du nom du fichier avec la liste
-						d'URLs passé au script, ce qui nous permet de gérer des variables spécifiques à une langue plus
-						facilement. En particulier, comme on va avoir besoin de gérer diverses flexions pour trouver
-						notre mot dans le corpus, on va utiliser une regexp, qui sera plus ou moins complexe selon la
-						langue (miam, les déclinaisons!). Elles sont renseignées dans le tableau
+						On va automatiser/auto-détecter un maximum de choses, en fonction du nom du fichier avec la
+						liste d'URLs passé au script, ce qui nous permet de gérer des variables spécifiques à une langue
+						plus facilement. En particulier, comme on va avoir besoin de gérer diverses flexions pour
+						trouver notre mot dans le corpus, on va utiliser une regexp, qui sera plus ou moins complexe
+						selon la langue (miam, les déclinaisons!). Elles sont renseignées dans le tableau
 						<span class="is-family-monospace">RE_WORD_ARRAY</span>.
 					</p>
 					<p>
@@ -106,10 +106,10 @@
 					</p>
 					<p>
 						Si on trouve notre mot dans la page (ce qui devrait être le cas, idéalement :D), on peut
-						commencer à procéder à nos analyses. On va donc compter les occurrences, générer le conttexte et
+						commencer à procéder à nos analyses. On va donc compter les occurrences, générer le contexte et
 						le concordancier grâce à divers appels de <span class="is-family-monospace">grep</span> et/ou
 						<span class="is-family-monospace">sed</span>. Pour le concordancier, on choisit une fenêtre de
-						50 cractères de chaque côté du mot. Comme indiqué précédemment, il y a un petit peu de
+						50 caractères de chaque côté du mot. Comme indiqué précédemment, il y a un petit peu de
 						gymnastique en plus pour générer le motif <span class="is-family-monospace">sed</span> à partir
 						de notre template ;).
 					</p>
