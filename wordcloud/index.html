@@ -36,8 +36,46 @@
 						<li><a href="cloud-ru.html">RU</a></li>
 					</ul>
 				</nav>
-				<div class="box">
-					<p>Barbapapa!</p>
+				<div class="box content">
+					<p class="title is-3">Script WordCloud</p>
+					<p class="subtitle is-5">Génération via PALS ou non</p>
+					<p>
+						Pour générer nos nuages en fonction des résultats du script PALS, on a créé un tout petit
+						front-end au module python wordcloud. Il est disponible ici:
+						<a
+							href="https://github.com/NiLuJe/PPE1-2024-Groupe/blob/master/programmes/cloudy.py"
+							target="_blank"
+							rel="noreferrer noopener"
+							>cloudy.py</a
+						>.
+					</p>
+					<p>
+						Qui dit Python en 2024, dit environnement virtuel. On va donc avoir besoin de
+						créer/activer/remplir notre venv avec tous les modules dont on va avoir besoin (en gros,
+						wordcloud & NLTK).
+					</p>
+					<pre>
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -U -r requirements.txt</pre
+					>
+					<p>
+						On utilise NLTK pour récupérer une liste de mot à exclure adaptée à la langue (les
+						<span class="is-family-monospace">stopwords</span>).
+					</p>
+					<p>
+						On va ensuite tout simplement parser nos résultats PALS pour construire un dictionaire token:
+						frequence, et, après avoir instantié un objet
+						<span class="is-family-monospace">WordCloud</span>, on peut tout simplement utiliser la méthode
+						<span class="is-family-monospace">generate_from_frequencies</span>, au lieu de la méthode
+						<span class="is-family-monospace">generate</span>, afin d'utiliser nos résultats au lieu d'avoir
+						recours à l'algorithme interne du module WordCloud.
+					</p>
+					<p>
+						Histoire d'apprécier les différences entre ces deux approches, vous trouverez pour chaque langue
+						deux nuages différents: le premier est généré à partir des résultats PALS, le second via
+						l'algorithme interne de WordCloud.
+					</p>
 				</div>
 			</div>
 		</section>
