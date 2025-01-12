@@ -13,6 +13,9 @@
 				<div class="navbar-start">
 					<a class="navbar-item" href="../index.html"> Accueil </a>
 					<a class="navbar-item" href="../tableaux/index.html"> Tableaux </a>
+					<a class="navbar-item" href="../code.html"> Scripts </a>
+					<a class="navbar-item" href="../conclusion.html"> Bilan </a>
+					<a class="navbar-item" href="../team.html"> Équipe </a>
 				</div>
 			</div>
 		</nav>
