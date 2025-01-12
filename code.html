@@ -29,7 +29,120 @@
 					</div>
 				</div>
 				<div class="box">
-					<p>Du code kiléjoli.</p>
+					<p class="title is-3">Script principal</p>
+					<p class="subtitle is-5">Itération, aspiration & tableaux</p>
+					<p>
+						Le voici dans toute sa splendeur, abondamment commenté:
+						<a
+							href="https://github.com/NiLuJe/PPE1-2024-Groupe/blob/master/programmes/projet.sh"
+							target="_blank"
+							rel="noreferrer noopener"
+							>projet.sh</a
+						>.
+					</p>
+					<p>
+						Comme abordé en cours, on va avoir besoin d'un peu plus de fonctionalités qu'un shell POSIX,
+						donc on utilise Bash (idéalement v4+, donc, sous macOS, à installer via homebrew, par exemple).
+						On demande aussi à Bash, via <span class="is-family-monospace">set -euo pipefail</span>, de
+						s'arrêter immédiatement si n'importe quelle commande retourne une erreur non gérée, même en
+						milieu de pipeline, afin de s'assurer que rien ne passe au travers des mailles du filet...
+					</p>
+					<p>
+						Pour éviter les soucis de chemins absolus/relatifs, on va calculer des chemins absolus relatifs
+						à la position du fichier script lui-même, avec un petit peu de magie Bash, via le tableau
+						interne <span class="is-family-monospace">BASH_SOURCE</span> et l'outil
+						<span class="is-family-monospace">readlink</span>.
+					</p>
+					<p>
+						On fait ensuite en sorte que la chose ait une vague chance de fonctionner et sous macOS, et sous
+						Linux, en forçant l'utilisation d'outils GNU sous macOS, à la place des outils BSD de base.
+					</p>
+					<p>
+						On va automatiser/auto-détecter un maximum de chose, en fonction du nom du fichier avec la liste
+						d'URLs passé au script, ce qui nous permet de gérer des variables spécifiques à une langue plus
+						facilement. En particulier, comme on va avoir besoin de gérer diverses flexions pour trouver
+						notre mot dans le corpus, on va utiliser une regexp, qui sera plus ou moins complexe selon la
+						langue (miam, les déclinaisons!). Elles sont renseignées dans le tableau
+						<span class="is-family-monospace">RE_WORD_ARRAY</span>.
+					</p>
+					<p>
+						Afin d'éviter des séries infâmes d'<span class="is-family-monospace">echo</span> ou de
+						<span class="is-family-monospace">cat</span> mélangées au code, les pages HTML sont générées en
+						segments, via des fichiers patrons, tous stockés dans le dossier
+						<span class="is-family-monospace">templates/</span> du dépôt. C'est en général plutôt clair,
+						mais pour le concordiancier, qui est généré via <span class="is-family-monospace">sed</span>,
+						cela nécessite un tout petit peu de gymnastique pour garder un template lisible, et générer du
+						code HTML tout autant lisible (i.e., avec des sauts de lignes et des tabulations), alors que
+						<span class="is-family-monospace">sed</span> n'opère que ligne par ligne... On y arrive grâce à
+						un pipeline de <span class="is-family-monospace">sed</span> en série pour "applatir" le patron
+						en une seule ligne (<span class="is-family-monospace">CONC_ROW_TEMPLATE</span>).
+					</p>
+					<p>
+						On peut ensuite commencer à parcourir notre fichier URL. On utilise un seul appel cURL par
+						fichier, comme indiqué en cours (on a besoin de temporairement calmer Bash sur les abandons en
+						cas d'erreur, car on veut que cURL puisse échouer, et comme on capture sa sortie standard, on ne
+						peut pas vraiment gérer son code de sortie immédiatement sans faire des trucs moches,
+						probablement à base de subshell).
+					</p>
+					<p>
+						On vérifie bien que l'on ait réussi à aspirer une page (i.e., reçu un code HTTP 2xx, la plage
+						entière des codes "OK"). Sinon, on génère du contenu par défaut pour indiquer l'échec dans notre
+						ligne du tableau.
+					</p>
+					<p>
+						On essaye ensuite de sortir l'encodage spécifié dans les entêtes HTTP (s'il y en a un), mais on
+						va quand même préférer sortir celui inclus dans la page (encore une fois, s'il y en un), en
+						prenant en compte la possibilité de tomber sur du XHTML strict...
+					</p>
+					<p>
+						Afin de ne pas avoir de surprises plus tard, on va obligatoirement normaliser le contenu aspiré
+						en UTF-8, en ayant recours à <span class="is-family-monospace">uconv</span>.
+					</p>
+					<p>
+						Pour récupérer le contenu textuel de la page, on va utiliser un navigateur en ligne de commande.
+						Ici, on va préférer <span class="is-family-monospace">links</span> à
+						<span class="is-family-monospace">lynx</span>, car ce dernier faisait complètement n'importe
+						quoi avec ses conversions d'encodage forcées (c.f., commentaires dans le script) sous macOS...
+					</p>
+					<p>
+						Si on trouve notre mot dans la page (ce qui devrait être le cas, idéalement :D), on peut
+						commencer à procéder à nos analyses. On va donc compter les occurrences, générer le conttexte et
+						le concordancier grâce à divers appels de <span class="is-family-monospace">grep</span> et/ou
+						<span class="is-family-monospace">sed</span>. Pour le concordancier, on choisit une fenêtre de
+						50 cractères de chaque côté du mot. Comme indiqué précédemment, il y a un petit peu de
+						gymnastique en plus pour générer le motif <span class="is-family-monospace">sed</span> à partir
+						de notre template ;).
+					</p>
+					<p>
+						Pour tout ce qui a trait aux bigrammes, on fait appel à un petit script tiers, basé sur celui
+						qui avait initialement été préparé en milieu de semestre:
+						<a
+							href="https://github.com/NiLuJe/PPE1-2024-Groupe/blob/master/programmes/compte_freq_bigrammes.sh"
+							target="_blank"
+							rel="noreferrer noopener"
+							>compte_freq_bigrammes.sh</a
+						>. Encore une fois, un pipeline de <span class="is-family-monospace">grep</span>,
+						<span class="is-family-monospace">sed</span>, <span class="is-family-monospace">tr</span> &
+						<span class="is-family-monospace">paste</span> afin de tokenizer et formater le tout proprement.
+						Plus de détails dans les commentaires de ce script, notamment en ce qui concerne l'utilisation
+						de la commande <span class="is-family-monospace">paste</span>...
+					</p>
+					<p>
+						Retour à notre script principal, qui peut maintenant s'occuper de générer la ligne du tableau,
+						maintenant que toutes les informations nécessaires ont été collectées!
+					</p>
+					<p>En sortie de boucle, on a juste à inserer le pied de page pour finaliser notre page HTML!</p>
+					<p>
+						Et enfin, on termine par générer les corpus pour le sript PALS, et stocker les sorties de
+						celui-ci. On passe cette fois-ci par un autre petit script tier pour procéder à la tokenization
+						adéquate:
+						<a
+							href="https://github.com/NiLuJe/PPE1-2024-Groupe/blob/master/programmes/make_pals_corpus.sh"
+							target="_blank"
+							rel="noreferrer noopener"
+							>make_pals_corpus.sh</a
+						>. Le script PALS en lui-même est appelé via un sous-module git du dépôt.
+					</p>
 				</div>
 			</div>
 		</section>
