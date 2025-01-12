@@ -110,6 +110,9 @@ ${SED_BIN} -re "s/%LANG%/${TABLE_LANG}/" "${BASE_DIR}/templates/tableau.head.tpl
 # on va devoir échapper les tab & LF (et les guillemets) pour que sed comprenne ce qui lui arrive ;p.
 CONC_ROW_TEMPLATE="$(${SED_BIN} -e 's/\t/\\t/g' "${BASE_DIR}/templates/concordancier.row.tpl" | ${SED_BIN} -z 's/\n/\\n/g' | ${SED_BIN} 's/"/\\"/g')"
 
+# Cellule par défaut en cas d'erreur
+ERROR_CELL="<span class=\"has-text-danger\">N/A</span>"
+
 # On va avoir besoin de tenir un compte des lignes parcourues
 line_nb=1
 while read -r line ; do
@@ -123,8 +126,10 @@ while read -r line ; do
 	file_idx="$(printf "%02d" "${line_nb}")"
 	OUTPUT_HTML_REL="aspirations/${TABLE_LANG}-${file_idx}.html"
 	OUTPUT_HTML="${BASE_DIR}/${OUTPUT_HTML_REL}"
+	scraping_cell="<a href=\"../${OUTPUT_HTML_REL}\">${OUTPUT_HTML_REL}</a>"
 	OUTPUT_TXT_REL="dumps-text/${TABLE_LANG}-${file_idx}.txt"
 	OUTPUT_TXT="${BASE_DIR}/${OUTPUT_TXT_REL}"
+	dump_cell="<a href=\"../${OUTPUT_TXT_REL}\">${OUTPUT_TXT_REL}</a>"
 	OUTPUT_CTX_REL="contextes/${TABLE_LANG}-${file_idx}.txt"
 	OUTPUT_CTX="${BASE_DIR}/${OUTPUT_CTX_REL}"
 	OUTPUT_CON_REL="concordances/${TABLE_LANG}-${file_idx}.html"
@@ -238,13 +243,18 @@ while read -r line ; do
 			cat "${BASE_DIR}/templates/footer.tpl" >> "${OUTPUT_CON}"
 		else
 			# Pas de contexte si pas de match ;).
-			context_cell="<span class=\"has-text-danger\">N/A</span>"
-			concordance_cell="<span class=\"has-text-danger\">N/A</span>"
+			context_cell="${ERROR_CELL}"
+			concordance_cell="${ERROR_CELL}"
 		fi
 	else
 		# On veut faire ressortir les erreurs
 		status_color="danger"
 		>&2 echo "* Impossible d'accèder à la page ${line}"
+		# Et pas de données non plus, du coup...
+		scraping_cell="${ERROR_CELL}"
+		dump_cell="${ERROR_CELL}"
+		context_cell="${ERROR_CELL}"
+		concordance_cell="${ERROR_CELL}"
 		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout
 	fi
 
@@ -268,8 +278,8 @@ while read -r line ; do
 								<td><span class="has-text-${status_color}">${http_status}</span></td>
 								<td>${page_encoding}</td>
 								<td>${word_count}</td>
-								<td><a href="../${OUTPUT_HTML_REL}">${OUTPUT_HTML_REL}</a></td>
-								<td><a href="../${OUTPUT_TXT_REL}">${OUTPUT_TXT_REL}</a></td>
+								<td>${scraping_cell}</td>
+								<td>${dump_cell}</a></td>
 								<td>${match_count}</td>
 								<td>${context_cell}</td>
 								<td>${concordance_cell}</td>
