@@ -33,7 +33,7 @@ def main(pals_ctx: str | Path, image: str | Path):
 		dialect = csv.Sniffer().sniff(f.read(1024))
 		f.seek(0)
 
-		# Et on replit notre dico ligne à ligne
+		# Et on remplit notre dico ligne à ligne
 		reader = csv.DictReader(f, dialect=dialect)
 		for row in reader:
 			freqs[row["token"]] = float(row["specificity"])
@@ -53,6 +53,7 @@ def main(pals_ctx: str | Path, image: str | Path):
 	wc.to_file(image)
 
 	# Pour le fun, on en génère un second avec l'algo de base ;).
+	# MVP pathlib ^^.
 	wc = WordCloud(background_color="black", width=800, height=400, scale=2, max_words=200, stopwords=stop_words)
 	wc.generate(pals_ctx.with_name(pals_ctx.name.replace("processed-", "")).read_text())
 	wc.to_file(image.with_name("std-" + image.name))
