@@ -1,5 +1,5 @@
 target	frequency
-regex=\b(bébés?)\b	970
-bébé	814
-bébés	156
+regex=\b(bébés?)\b	831
+bébé	686
+bébés	145
 

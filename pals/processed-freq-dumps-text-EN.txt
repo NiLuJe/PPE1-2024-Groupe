@@ -1,7 +1,7 @@
 target	frequency
-regex=\b(bab(y|ies|es?))\b	1201
-baby	705
-babies	427
-babe	56
+regex=\b(bab(y|ies|es?))\b	963
+baby	724
+babies	160
+babe	66
 babes	13
 
