@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Projet PPE1 2024-2025 - Tableau EN</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+	</head>
+	<body>
+		<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+			<div id="navbar-ppe" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="../index.html"> Accueil </a>
+					<a class="navbar-item is-active" href="index.html"> Tableaux </a>
+					<a class="navbar-item" href="../wordcloud/index.html"> Nuages </a>
+					<a class="navbar-item" href="../code.html"> Scripts </a>
+					<a class="navbar-item" href="../conclusion.html"> Bilan </a>
+					<a class="navbar-item" href="../team.html"> Équipe </a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="section">
+			<div class="container">
+				<div class="hero has-text-centered">
+					<div class="hero-body">
+						<h1 class="title">Projet PPE1 2024-2025</h1>
+					</div>
+				</div>
+				<nav class="tabs is-centered">
+					<ul>
+						<li><a href="tableau-fr.html">FR</a></li>
+						<li><a href="tableau-en.html">EN</a></li>
+						<li><a href="tableau-ru.html">RU</a></li>
+					</ul>
+				</nav>
+				<div class="box">
+					<table class="table is-bordered is-striped is-hoverable mx-auto">
+						<thead>
+							<tr>
+								<th>Ligne</th>
+								<th>URL</th>
+								<th>Code HTTP</th>
+								<th>Encodage</th>
+								<th>HTML</th>
+								<th>Texte Brut</th>
+								<th>Mots</th>
+								<th>Bigrammes</th>
+								<th>Fréquence</th>
+								<th>Contexte</th>
+								<th>Concordancier</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><a href="https://www.babycenter.com/baby">https://www.babycenter.com/baby</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-01.html">aspirations/EN-01.html</a></td>
+								<td><a href="../dumps-text/EN-01.txt">dumps-text/EN-01.txt</a></a></td>
+								<td>109 / 2045</td>
+								<td>228 / 1723</td>
+								<td><a href="../contextes/EN-01-bigram-freq.txt">contextes/EN-01-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-01.txt">contextes/EN-01.txt</a></td>
+								<td><a href=../concordances/EN-01.html>concordances/EN-01.html</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><a href="https://www.nhs.uk/conditions/baby/">https://www.nhs.uk/conditions/baby/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-02.html">aspirations/EN-02.html</a></td>
+								<td><a href="../dumps-text/EN-02.txt">dumps-text/EN-02.txt</a></a></td>
+								<td>8 / 287</td>
+								<td>16 / 242</td>
+								<td><a href="../contextes/EN-02-bigram-freq.txt">contextes/EN-02-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-02.txt">contextes/EN-02.txt</a></td>
+								<td><a href=../concordances/EN-02.html>concordances/EN-02.html</a></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><a href="https://www.ssa.gov/oact/babynames/">https://www.ssa.gov/oact/babynames/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-03.html">aspirations/EN-03.html</a></td>
+								<td><a href="../dumps-text/EN-03.txt">dumps-text/EN-03.txt</a></a></td>
+								<td>6 / 406</td>
+								<td>12 / 325</td>
+								<td><a href="../contextes/EN-03-bigram-freq.txt">contextes/EN-03-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-03.txt">contextes/EN-03.txt</a></td>
+								<td><a href=../concordances/EN-03.html>concordances/EN-03.html</a></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><a href="https://www.babybunting.com.au/">https://www.babybunting.com.au/</a></td>
+								<td><span class="has-text-danger">403</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><a href="https://www.babycenter.com/">https://www.babycenter.com/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-05.html">aspirations/EN-05.html</a></td>
+								<td><a href="../dumps-text/EN-05.txt">dumps-text/EN-05.txt</a></a></td>
+								<td>305 / 9458</td>
+								<td>621 / 9423</td>
+								<td><a href="../contextes/EN-05-bigram-freq.txt">contextes/EN-05-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-05.txt">contextes/EN-05.txt</a></td>
+								<td><a href=../concordances/EN-05.html>concordances/EN-05.html</a></td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx">https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-06.html">aspirations/EN-06.html</a></td>
+								<td><a href="../dumps-text/EN-06.txt">dumps-text/EN-06.txt</a></a></td>
+								<td>50 / 1620</td>
+								<td>100 / 1305</td>
+								<td><a href="../contextes/EN-06-bigram-freq.txt">contextes/EN-06-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-06.txt">contextes/EN-06.txt</a></td>
+								<td><a href=../concordances/EN-06.html>concordances/EN-06.html</a></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><a href="https://www.bbc.com/news/articles/cj6z61807zjo">https://www.bbc.com/news/articles/cj6z61807zjo</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-07.html">aspirations/EN-07.html</a></td>
+								<td><a href="../dumps-text/EN-07.txt">dumps-text/EN-07.txt</a></a></td>
+								<td>10 / 1042</td>
+								<td>20 / 896</td>
+								<td><a href="../contextes/EN-07-bigram-freq.txt">contextes/EN-07-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-07.txt">contextes/EN-07.txt</a></td>
+								<td><a href=../concordances/EN-07.html>concordances/EN-07.html</a></td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><a href="https://www.bellababyphotography.com/">https://www.bellababyphotography.com/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-08.html">aspirations/EN-08.html</a></td>
+								<td><a href="../dumps-text/EN-08.txt">dumps-text/EN-08.txt</a></a></td>
+								<td>8 / 291</td>
+								<td>20 / 254</td>
+								<td><a href="../contextes/EN-08-bigram-freq.txt">contextes/EN-08-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-08.txt">contextes/EN-08.txt</a></td>
+								<td><a href=../concordances/EN-08.html>concordances/EN-08.html</a></td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><a href="https://www.nhs.uk/start-for-life/baby/">https://www.nhs.uk/start-for-life/baby/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-09.html">aspirations/EN-09.html</a></td>
+								<td><a href="../dumps-text/EN-09.txt">dumps-text/EN-09.txt</a></a></td>
+								<td>18 / 418</td>
+								<td>36 / 405</td>
+								<td><a href="../contextes/EN-09-bigram-freq.txt">contextes/EN-09-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-09.txt">contextes/EN-09.txt</a></td>
+								<td><a href=../concordances/EN-09.html>concordances/EN-09.html</a></td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><a href="https://www.unicef.org.uk/babyfriendly/">https://www.unicef.org.uk/babyfriendly/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-10.html">aspirations/EN-10.html</a></td>
+								<td><a href="../dumps-text/EN-10.txt">dumps-text/EN-10.txt</a></a></td>
+								<td>17 / 636</td>
+								<td>34 / 572</td>
+								<td><a href="../contextes/EN-10-bigram-freq.txt">contextes/EN-10-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-10.txt">contextes/EN-10.txt</a></td>
+								<td><a href=../concordances/EN-10.html>concordances/EN-10.html</a></td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td><a href="https://www.bbc.co.uk/news/articles/cvglgzw7r73o">https://www.bbc.co.uk/news/articles/cvglgzw7r73o</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>N/A</td>
+								<td><a href="../aspirations/EN-11.html">aspirations/EN-11.html</a></td>
+								<td><a href="../dumps-text/EN-11.txt">dumps-text/EN-11.txt</a></a></td>
+								<td>10 / 3348</td>
+								<td>20 / 3229</td>
+								<td><a href="../contextes/EN-11-bigram-freq.txt">contextes/EN-11-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-11.txt">contextes/EN-11.txt</a></td>
+								<td><a href=../concordances/EN-11.html>concordances/EN-11.html</a></td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td><a href="https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20044438">https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20044438</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-12.html">aspirations/EN-12.html</a></td>
+								<td><a href="../dumps-text/EN-12.txt">dumps-text/EN-12.txt</a></a></td>
+								<td>58 / 2410</td>
+								<td>126 / 2240</td>
+								<td><a href="../contextes/EN-12-bigram-freq.txt">contextes/EN-12-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-12.txt">contextes/EN-12.txt</a></td>
+								<td><a href=../concordances/EN-12.html>concordances/EN-12.html</a></td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td><a href="https://www.babyssb.co.jp/">https://www.babyssb.co.jp/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-13.html">aspirations/EN-13.html</a></td>
+								<td><a href="../dumps-text/EN-13.txt">dumps-text/EN-13.txt</a></a></td>
+								<td>30 / 732</td>
+								<td>63 / 837</td>
+								<td><a href="../contextes/EN-13-bigram-freq.txt">contextes/EN-13-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-13.txt">contextes/EN-13.txt</a></td>
+								<td><a href=../concordances/EN-13.html>concordances/EN-13.html</a></td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td><a href="https://www.ksat.com/news/local/2025/01/10/man-charged-in-road-rage-shooting-tried-to-purchase-baby-harvest-organs-sapd-says/">https://www.ksat.com/news/local/2025/01/10/man-charged-in-road-rage-shooting-tried-to-purchase-baby-harvest-organs-sapd-says/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-14.html">aspirations/EN-14.html</a></td>
+								<td><a href="../dumps-text/EN-14.txt">dumps-text/EN-14.txt</a></a></td>
+								<td>6 / 1600</td>
+								<td>12 / 1373</td>
+								<td><a href="../contextes/EN-14-bigram-freq.txt">contextes/EN-14-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-14.txt">contextes/EN-14.txt</a></td>
+								<td><a href=../concordances/EN-14.html>concordances/EN-14.html</a></td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td><a href="https://www.cdc.gov/ncbddd/actearly/milestones/milestones-9mo.html">https://www.cdc.gov/ncbddd/actearly/milestones/milestones-9mo.html</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-15.html">aspirations/EN-15.html</a></td>
+								<td><a href="../dumps-text/EN-15.txt">dumps-text/EN-15.txt</a></a></td>
+								<td>37 / 2292</td>
+								<td>78 / 2037</td>
+								<td><a href="../contextes/EN-15-bigram-freq.txt">contextes/EN-15-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-15.txt">contextes/EN-15.txt</a></td>
+								<td><a href=../concordances/EN-15.html>concordances/EN-15.html</a></td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td><a href="https://my.clevelandclinic.org/health/articles/7247-fetal-development-stages-of-growth">https://my.clevelandclinic.org/health/articles/7247-fetal-development-stages-of-growth</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-16.html">aspirations/EN-16.html</a></td>
+								<td><a href="../dumps-text/EN-16.txt">dumps-text/EN-16.txt</a></a></td>
+								<td>7 / 4047</td>
+								<td>14 / 3890</td>
+								<td><a href="../contextes/EN-16-bigram-freq.txt">contextes/EN-16-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-16.txt">contextes/EN-16.txt</a></td>
+								<td><a href=../concordances/EN-16.html>concordances/EN-16.html</a></td>
+							</tr>
+							<tr>
+								<td>17</td>
+								<td><a href="https://www.mayoclinic.org/diseases-conditions/colic/symptoms-causes/syc-20371074">https://www.mayoclinic.org/diseases-conditions/colic/symptoms-causes/syc-20371074</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-17.html">aspirations/EN-17.html</a></td>
+								<td><a href="../dumps-text/EN-17.txt">dumps-text/EN-17.txt</a></a></td>
+								<td>9 / 1784</td>
+								<td>18 / 1592</td>
+								<td><a href="../contextes/EN-17-bigram-freq.txt">contextes/EN-17-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-17.txt">contextes/EN-17.txt</a></td>
+								<td><a href=../concordances/EN-17.html>concordances/EN-17.html</a></td>
+							</tr>
+							<tr>
+								<td>18</td>
+								<td><a href="https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Flying-with-Baby.aspx">https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Flying-with-Baby.aspx</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-18.html">aspirations/EN-18.html</a></td>
+								<td><a href="../dumps-text/EN-18.txt">dumps-text/EN-18.txt</a></a></td>
+								<td>52 / 2582</td>
+								<td>106 / 2450</td>
+								<td><a href="../contextes/EN-18-bigram-freq.txt">contextes/EN-18-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-18.txt">contextes/EN-18.txt</a></td>
+								<td><a href=../concordances/EN-18.html>concordances/EN-18.html</a></td>
+							</tr>
+							<tr>
+								<td>19</td>
+								<td><a href="https://www.carel-paris.com/collections/babies">https://www.carel-paris.com/collections/babies</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-19.html">aspirations/EN-19.html</a></td>
+								<td><a href="../dumps-text/EN-19.txt">dumps-text/EN-19.txt</a></a></td>
+								<td>455 / 9256</td>
+								<td>950 / 6652</td>
+								<td><a href="../contextes/EN-19-bigram-freq.txt">contextes/EN-19-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-19.txt">contextes/EN-19.txt</a></td>
+								<td><a href=../concordances/EN-19.html>concordances/EN-19.html</a></td>
+							</tr>
+							<tr>
+								<td>20</td>
+								<td><a href="https://en.wikipedia.org/wiki/Babe_(film)">https://en.wikipedia.org/wiki/Babe_(film)</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-20.html">aspirations/EN-20.html</a></td>
+								<td><a href="../dumps-text/EN-20.txt">dumps-text/EN-20.txt</a></a></td>
+								<td>80 / 6654</td>
+								<td>161 / 5318</td>
+								<td><a href="../contextes/EN-20-bigram-freq.txt">contextes/EN-20-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-20.txt">contextes/EN-20.txt</a></td>
+								<td><a href=../concordances/EN-20.html>concordances/EN-20.html</a></td>
+							</tr>
+							<tr>
+								<td>21</td>
+								<td><a href="https://en.wikipedia.org/wiki/Babe_(Serbian_band)">https://en.wikipedia.org/wiki/Babe_(Serbian_band)</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-21.html">aspirations/EN-21.html</a></td>
+								<td><a href="../dumps-text/EN-21.txt">dumps-text/EN-21.txt</a></a></td>
+								<td>28 / 2165</td>
+								<td>57 / 1999</td>
+								<td><a href="../contextes/EN-21-bigram-freq.txt">contextes/EN-21-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-21.txt">contextes/EN-21.txt</a></td>
+								<td><a href=../concordances/EN-21.html>concordances/EN-21.html</a></td>
+							</tr>
+							<tr>
+								<td>22</td>
+								<td><a href="https://thatveganbabe.com/about-2/">https://thatveganbabe.com/about-2/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-22.html">aspirations/EN-22.html</a></td>
+								<td><a href="../dumps-text/EN-22.txt">dumps-text/EN-22.txt</a></a></td>
+								<td>4 / 963</td>
+								<td>8 / 878</td>
+								<td><a href="../contextes/EN-22-bigram-freq.txt">contextes/EN-22-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-22.txt">contextes/EN-22.txt</a></td>
+								<td><a href=../concordances/EN-22.html>concordances/EN-22.html</a></td>
+							</tr>
+							<tr>
+								<td>23</td>
+								<td><a href="https://www.dailykeeper.com/joke-of-the-day/">https://www.dailykeeper.com/joke-of-the-day/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-23.html">aspirations/EN-23.html</a></td>
+								<td><a href="../dumps-text/EN-23.txt">dumps-text/EN-23.txt</a></a></td>
+								<td>N/A / 62</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>24</td>
+								<td><a href="https://swimsuit.si.com/video/kate-upton-total-babe">https://swimsuit.si.com/video/kate-upton-total-babe</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-24.html">aspirations/EN-24.html</a></td>
+								<td><a href="../dumps-text/EN-24.txt">dumps-text/EN-24.txt</a></a></td>
+								<td>2 / 304</td>
+								<td>4 / 253</td>
+								<td><a href="../contextes/EN-24-bigram-freq.txt">contextes/EN-24-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-24.txt">contextes/EN-24.txt</a></td>
+								<td><a href=../concordances/EN-24.html>concordances/EN-24.html</a></td>
+							</tr>
+							<tr>
+								<td>25</td>
+								<td><a href="https://www.bustle.com/p/who-is-taylor-swifts-new-song-about-the-babe-lyrics-heavily-hint-at-cheating-8849947">https://www.bustle.com/p/who-is-taylor-swifts-new-song-about-the-babe-lyrics-heavily-hint-at-cheating-8849947</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-25.html">aspirations/EN-25.html</a></td>
+								<td><a href="../dumps-text/EN-25.txt">dumps-text/EN-25.txt</a></a></td>
+								<td>10 / 997</td>
+								<td>20 / 984</td>
+								<td><a href="../contextes/EN-25-bigram-freq.txt">contextes/EN-25-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-25.txt">contextes/EN-25.txt</a></td>
+								<td><a href=../concordances/EN-25.html>concordances/EN-25.html</a></td>
+							</tr>
+							<tr>
+								<td>26</td>
+								<td><a href="https://fluentslang.com/babe-meaning/">https://fluentslang.com/babe-meaning/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-26.html">aspirations/EN-26.html</a></td>
+								<td><a href="../dumps-text/EN-26.txt">dumps-text/EN-26.txt</a></a></td>
+								<td>58 / 1553</td>
+								<td>118 / 1479</td>
+								<td><a href="../contextes/EN-26-bigram-freq.txt">contextes/EN-26-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-26.txt">contextes/EN-26.txt</a></td>
+								<td><a href=../concordances/EN-26.html>concordances/EN-26.html</a></td>
+							</tr>
+							<tr>
+								<td>27</td>
+								<td><a href="https://themodsbabe.com/">https://themodsbabe.com/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-27.html">aspirations/EN-27.html</a></td>
+								<td><a href="../dumps-text/EN-27.txt">dumps-text/EN-27.txt</a></a></td>
+								<td>N/A / 65</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>28</td>
+								<td><a href="https://en.wikipedia.org/wiki/Babe_Siebert">https://en.wikipedia.org/wiki/Babe_Siebert</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-28.html">aspirations/EN-28.html</a></td>
+								<td><a href="../dumps-text/EN-28.txt">dumps-text/EN-28.txt</a></a></td>
+								<td>14 / 2665</td>
+								<td>28 / 2186</td>
+								<td><a href="../contextes/EN-28-bigram-freq.txt">contextes/EN-28-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-28.txt">contextes/EN-28.txt</a></td>
+								<td><a href=../concordances/EN-28.html>concordances/EN-28.html</a></td>
+							</tr>
+							<tr>
+								<td>29</td>
+								<td><a href="https://www.villagevoice.com/sex-and-dating-babe-onlyfans/">https://www.villagevoice.com/sex-and-dating-babe-onlyfans/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-29.html">aspirations/EN-29.html</a></td>
+								<td><a href="../dumps-text/EN-29.txt">dumps-text/EN-29.txt</a></a></td>
+								<td>41 / 4576</td>
+								<td>88 / 4202</td>
+								<td><a href="../contextes/EN-29-bigram-freq.txt">contextes/EN-29-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-29.txt">contextes/EN-29.txt</a></td>
+								<td><a href=../concordances/EN-29.html>concordances/EN-29.html</a></td>
+							</tr>
+							<tr>
+								<td>30</td>
+								<td><a href="https://en.wikipedia.org/wiki/Death_and_funeral_of_Babe_Ruth">https://en.wikipedia.org/wiki/Death_and_funeral_of_Babe_Ruth</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-30.html">aspirations/EN-30.html</a></td>
+								<td><a href="../dumps-text/EN-30.txt">dumps-text/EN-30.txt</a></a></td>
+								<td>44 / 2996</td>
+								<td>92 / 2645</td>
+								<td><a href="../contextes/EN-30-bigram-freq.txt">contextes/EN-30-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-30.txt">contextes/EN-30.txt</a></td>
+								<td><a href=../concordances/EN-30.html>concordances/EN-30.html</a></td>
+							</tr>
+							<tr>
+								<td>31</td>
+								<td><a href="https://en.wikipedia.org/wiki/Emmett_%22Babe%22_Wallace">https://en.wikipedia.org/wiki/Emmett_%22Babe%22_Wallace</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-31.html">aspirations/EN-31.html</a></td>
+								<td><a href="../dumps-text/EN-31.txt">dumps-text/EN-31.txt</a></a></td>
+								<td>10 / 944</td>
+								<td>22 / 780</td>
+								<td><a href="../contextes/EN-31-bigram-freq.txt">contextes/EN-31-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-31.txt">contextes/EN-31.txt</a></td>
+								<td><a href=../concordances/EN-31.html>concordances/EN-31.html</a></td>
+							</tr>
+							<tr>
+								<td>32</td>
+								<td><a href="https://www.askdifference.com/babe-vs-bae/">https://www.askdifference.com/babe-vs-bae/</a></td>
+								<td><span class="has-text-danger">500</span></td>
+								<td>UTF-8</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>33</td>
+								<td><a href="https://www.healthline.com/health/baby/baby-development-stages">https://www.healthline.com/health/baby/baby-development-stages</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-33.html">aspirations/EN-33.html</a></td>
+								<td><a href="../dumps-text/EN-33.txt">dumps-text/EN-33.txt</a></a></td>
+								<td>55 / 2292</td>
+								<td>120 / 2245</td>
+								<td><a href="../contextes/EN-33-bigram-freq.txt">contextes/EN-33-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-33.txt">contextes/EN-33.txt</a></td>
+								<td><a href=../concordances/EN-33.html>concordances/EN-33.html</a></td>
+							</tr>
+							<tr>
+								<td>34</td>
+								<td><a href="https://www.bbc.co.uk/tiny-happy-people/baby-development">https://www.bbc.co.uk/tiny-happy-people/baby-development</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>N/A</td>
+								<td><a href="../aspirations/EN-34.html">aspirations/EN-34.html</a></td>
+								<td><a href="../dumps-text/EN-34.txt">dumps-text/EN-34.txt</a></a></td>
+								<td>92 / 1463</td>
+								<td>194 / 1360</td>
+								<td><a href="../contextes/EN-34-bigram-freq.txt">contextes/EN-34-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-34.txt">contextes/EN-34.txt</a></td>
+								<td><a href=../concordances/EN-34.html>concordances/EN-34.html</a></td>
+							</tr>
+							<tr>
+								<td>35</td>
+								<td><a href="https://www.webmd.com/parenting/baby/default.htm">https://www.webmd.com/parenting/baby/default.htm</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-35.html">aspirations/EN-35.html</a></td>
+								<td><a href="../dumps-text/EN-35.txt">dumps-text/EN-35.txt</a></a></td>
+								<td>46 / 1206</td>
+								<td>93 / 1032</td>
+								<td><a href="../contextes/EN-35-bigram-freq.txt">contextes/EN-35-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-35.txt">contextes/EN-35.txt</a></td>
+								<td><a href=../concordances/EN-35.html>concordances/EN-35.html</a></td>
+							</tr>
+							<tr>
+								<td>36</td>
+								<td><a href="https://nurse.org/news/nurse-abused-premature-nicu-babies/">https://nurse.org/news/nurse-abused-premature-nicu-babies/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-36.html">aspirations/EN-36.html</a></td>
+								<td><a href="../dumps-text/EN-36.txt">dumps-text/EN-36.txt</a></a></td>
+								<td>11 / 3625</td>
+								<td>24 / 3275</td>
+								<td><a href="../contextes/EN-36-bigram-freq.txt">contextes/EN-36-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-36.txt">contextes/EN-36.txt</a></td>
+								<td><a href=../concordances/EN-36.html>concordances/EN-36.html</a></td>
+							</tr>
+							<tr>
+								<td>37</td>
+								<td><a href="https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/infant-development/art-20047086">https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/infant-development/art-20047086</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-37.html">aspirations/EN-37.html</a></td>
+								<td><a href="../dumps-text/EN-37.txt">dumps-text/EN-37.txt</a></a></td>
+								<td>56 / 2395</td>
+								<td>116 / 2188</td>
+								<td><a href="../contextes/EN-37-bigram-freq.txt">contextes/EN-37-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-37.txt">contextes/EN-37.txt</a></td>
+								<td><a href=../concordances/EN-37.html>concordances/EN-37.html</a></td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td><a href="https://www.cdc.gov/rsv/infants-young-children/index.html">https://www.cdc.gov/rsv/infants-young-children/index.html</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-38.html">aspirations/EN-38.html</a></td>
+								<td><a href="../dumps-text/EN-38.txt">dumps-text/EN-38.txt</a></a></td>
+								<td>4 / 1118</td>
+								<td>8 / 973</td>
+								<td><a href="../contextes/EN-38-bigram-freq.txt">contextes/EN-38-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-38.txt">contextes/EN-38.txt</a></td>
+								<td><a href=../concordances/EN-38.html>concordances/EN-38.html</a></td>
+							</tr>
+							<tr>
+								<td>39</td>
+								<td><a href="https://www.openbible.info/topics/babies">https://www.openbible.info/topics/babies</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-39.html">aspirations/EN-39.html</a></td>
+								<td><a href="../dumps-text/EN-39.txt">dumps-text/EN-39.txt</a></a></td>
+								<td>10 / 4793</td>
+								<td>20 / 4489</td>
+								<td><a href="../contextes/EN-39-bigram-freq.txt">contextes/EN-39-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-39.txt">contextes/EN-39.txt</a></td>
+								<td><a href=../concordances/EN-39.html>concordances/EN-39.html</a></td>
+							</tr>
+							<tr>
+								<td>40</td>
+								<td><a href="https://en.wikipedia.org/wiki/1000_Babies">https://en.wikipedia.org/wiki/1000_Babies</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-40.html">aspirations/EN-40.html</a></td>
+								<td><a href="../dumps-text/EN-40.txt">dumps-text/EN-40.txt</a></a></td>
+								<td>18 / 1399</td>
+								<td>36 / 1161</td>
+								<td><a href="../contextes/EN-40-bigram-freq.txt">contextes/EN-40-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-40.txt">contextes/EN-40.txt</a></td>
+								<td><a href=../concordances/EN-40.html>concordances/EN-40.html</a></td>
+							</tr>
+							<tr>
+								<td>41</td>
+								<td><a href="https://www.babes.org.sg/babes-your-friend/our-board/">https://www.babes.org.sg/babes-your-friend/our-board/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-41.html">aspirations/EN-41.html</a></td>
+								<td><a href="../dumps-text/EN-41.txt">dumps-text/EN-41.txt</a></a></td>
+								<td>12 / 1375</td>
+								<td>31 / 1291</td>
+								<td><a href="../contextes/EN-41-bigram-freq.txt">contextes/EN-41-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-41.txt">contextes/EN-41.txt</a></td>
+								<td><a href=../concordances/EN-41.html>concordances/EN-41.html</a></td>
+							</tr>
+							<tr>
+								<td>42</td>
+								<td><a href="https://wrnbhd2.com/playlist/hottest-womens-college-basketball-player/">https://wrnbhd2.com/playlist/hottest-womens-college-basketball-player/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-42.html">aspirations/EN-42.html</a></td>
+								<td><a href="../dumps-text/EN-42.txt">dumps-text/EN-42.txt</a></a></td>
+								<td>4 / 1265</td>
+								<td>8 / 1088</td>
+								<td><a href="../contextes/EN-42-bigram-freq.txt">contextes/EN-42-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-42.txt">contextes/EN-42.txt</a></td>
+								<td><a href=../concordances/EN-42.html>concordances/EN-42.html</a></td>
+							</tr>
+							<tr>
+								<td>43</td>
+								<td><a href="https://www.gq.com/gallery/year-in-babes">https://www.gq.com/gallery/year-in-babes</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-43.html">aspirations/EN-43.html</a></td>
+								<td><a href="../dumps-text/EN-43.txt">dumps-text/EN-43.txt</a></a></td>
+								<td>1 / 2462</td>
+								<td>2 / 2389</td>
+								<td><a href="../contextes/EN-43-bigram-freq.txt">contextes/EN-43-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-43.txt">contextes/EN-43.txt</a></td>
+								<td><a href=../concordances/EN-43.html>concordances/EN-43.html</a></td>
+							</tr>
+							<tr>
+								<td>44</td>
+								<td><a href="https://www.setforset.com/blogs/news/female-fitness-models">https://www.setforset.com/blogs/news/female-fitness-models</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-44.html">aspirations/EN-44.html</a></td>
+								<td><a href="../dumps-text/EN-44.txt">dumps-text/EN-44.txt</a></a></td>
+								<td>2 / 6519</td>
+								<td>4 / 5170</td>
+								<td><a href="../contextes/EN-44-bigram-freq.txt">contextes/EN-44-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-44.txt">contextes/EN-44.txt</a></td>
+								<td><a href=../concordances/EN-44.html>concordances/EN-44.html</a></td>
+							</tr>
+							<tr>
+								<td>45</td>
+								<td><a href="https://babiesandbeyondwi.org/">https://babiesandbeyondwi.org/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-45.html">aspirations/EN-45.html</a></td>
+								<td><a href="../dumps-text/EN-45.txt">dumps-text/EN-45.txt</a></a></td>
+								<td>29 / 1155</td>
+								<td>58 / 979</td>
+								<td><a href="../contextes/EN-45-bigram-freq.txt">contextes/EN-45-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-45.txt">contextes/EN-45.txt</a></td>
+								<td><a href=../concordances/EN-45.html>concordances/EN-45.html</a></td>
+							</tr>
+							<tr>
+								<td>46</td>
+								<td><a href="https://en.wikipedia.org/wiki/Infant_baptism">https://en.wikipedia.org/wiki/Infant_baptism</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-46.html">aspirations/EN-46.html</a></td>
+								<td><a href="../dumps-text/EN-46.txt">dumps-text/EN-46.txt</a></a></td>
+								<td>17 / 8342</td>
+								<td>34 / 7635</td>
+								<td><a href="../contextes/EN-46-bigram-freq.txt">contextes/EN-46-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-46.txt">contextes/EN-46.txt</a></td>
+								<td><a href=../concordances/EN-46.html>concordances/EN-46.html</a></td>
+							</tr>
+							<tr>
+								<td>47</td>
+								<td><a href="https://grammarhow.com/babys-or-babies/">https://grammarhow.com/babys-or-babies/</a></td>
+								<td><span class="has-text-danger">555</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>48</td>
+								<td><a href="https://www.cdc.gov/child-development/positive-parenting-tips/infants.html">https://www.cdc.gov/child-development/positive-parenting-tips/infants.html</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-48.html">aspirations/EN-48.html</a></td>
+								<td><a href="../dumps-text/EN-48.txt">dumps-text/EN-48.txt</a></a></td>
+								<td>37 / 1777</td>
+								<td>80 / 1675</td>
+								<td><a href="../contextes/EN-48-bigram-freq.txt">contextes/EN-48-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-48.txt">contextes/EN-48.txt</a></td>
+								<td><a href=../concordances/EN-48.html>concordances/EN-48.html</a></td>
+							</tr>
+							<tr>
+								<td>49</td>
+								<td><a href="https://www.momjunction.com/articles/concussion-in-baby_00396596/">https://www.momjunction.com/articles/concussion-in-baby_00396596/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/EN-49.html">aspirations/EN-49.html</a></td>
+								<td><a href="../dumps-text/EN-49.txt">dumps-text/EN-49.txt</a></a></td>
+								<td>123 / 4881</td>
+								<td>249 / 4621</td>
+								<td><a href="../contextes/EN-49-bigram-freq.txt">contextes/EN-49-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-49.txt">contextes/EN-49.txt</a></td>
+								<td><a href=../concordances/EN-49.html>concordances/EN-49.html</a></td>
+							</tr>
+							<tr>
+								<td>50</td>
+								<td><a href="https://www.parents.com/baby/development/">https://www.parents.com/baby/development/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/EN-50.html">aspirations/EN-50.html</a></td>
+								<td><a href="../dumps-text/EN-50.txt">dumps-text/EN-50.txt</a></a></td>
+								<td>133 / 1909</td>
+								<td>364 / 1734</td>
+								<td><a href="../contextes/EN-50-bigram-freq.txt">contextes/EN-50-bigram-freq.txt</a></td>
+								<td><a href="../contextes/EN-50.txt">contextes/EN-50.txt</a></td>
+								<td><a href=../concordances/EN-50.html>concordances/EN-50.html</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fas fa-brands fa-github"></i>
+					</span>
+					<span>
+						<a href="https://github.com/NiLuJe/PPE1-2024-Groupe">Dépôt GH du projet</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fas fa-brands fa-github"></i>
+					</span>
+					<span>
+						<a href="https://github.com/NiLuJe">NiLuJe</a>
+					</span>
+				</span>
+			</div>
+		</footer>
+	</body>
+</html>
