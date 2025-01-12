@@ -37,19 +37,20 @@
 					</ul>
 				</nav>
 				<div class="box">
+					<div class="table-container">
 					<table class="table is-bordered is-striped is-hoverable mx-auto">
 						<thead>
 							<tr>
-								<th>Ligne</th>
+								<th><abbr title="Numéro de ligne">N°</abbr></th>
 								<th>URL</th>
-								<th>Code HTTP</th>
+								<th><abbr title="Code HTTP">HTTP</abbr></th>
 								<th>Encodage</th>
-								<th>HTML</th>
-								<th>Texte Brut</th>
-								<th>Mots</th>
-								<th>Bigrammes</th>
-								<th>Fréquence</th>
-								<th>Contexte</th>
+								<th><abbr title="Code HTML de la page">HTML</abbr></th>
+								<th><abbr title="Texte brut de la page">Texte</abbr></th>
+								<th><abbr title="Compte des mots (pertinents / total)">Mots</abbr></th>
+								<th><abbr title="Compte des bigrammes (pertinents / total)">Bigrammes</abbr></th>
+								<th><abbr title="Fréquence d'occurrence des bigrammes">Fréquence</abbr></th>
+								<th><abbr title="Occurrences en contexte">Contexte</abbr></th>
 								<th>Concordancier</th>
 							</tr>
 						</thead>
