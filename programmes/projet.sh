@@ -13,6 +13,7 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 PROG_DIR="${BASE_DIR}/programmes"
 
 # TODO: Merge bigram
+# TODO: Link vers les résultats PALS depuis tableaux/index.html?
 # NOTE: Quid de la gestion des mots composés (concordancier en particulier?)
 
 # On préfère certains outils GNU sous macOS...
