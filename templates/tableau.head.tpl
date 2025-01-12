@@ -39,13 +39,13 @@
 								<th>URL</th>
 								<th>Code HTTP</th>
 								<th>Encodage</th>
-								<th>Nombre de mots</th>
 								<th>HTML</th>
 								<th>Texte Brut</th>
-								<th>Compte</th>
-								<th>Nombre de bigrammes</th>
-								<th>Bigrammes avec le mot</th>
-								<th>Fréquence des bigrammes</th>
+								<th>Mots</th>
+								<th>Pertinents</th>
+								<th>Bigrammes</th>
+								<th>Pertinents</th>
+								<th>Fréquence</th>
 								<th>Contexte</th>
 								<th>Concordancier</th>
 							</tr>

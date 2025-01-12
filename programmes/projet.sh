@@ -290,9 +290,9 @@ while read -r line ; do
 								<td><a href="${url}">${line}</a></td>
 								<td><span class="has-text-${status_color}">${http_status}</span></td>
 								<td>${page_encoding}</td>
-								<td>${word_count}</td>
 								<td>${scraping_cell}</td>
 								<td>${dump_cell}</a></td>
+								<td>${word_count}</td>
 								<td>${match_count}</td>
 								<td>${bigram_count}</td>
 								<td>${match_bigram_count}</td>
