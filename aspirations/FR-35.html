@@ -1,0 +1,2927 @@
+<!doctype html>
+<html class='no-js supports-no-cookies' lang='fr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta name='theme-color' content='#c4cdd5'>
+    <!-- <script src="//emoi-emoi.com/cdn/shop/t/6/assets/jquery.min.js?v=140740673362686917171728984079"></script> -->
+
+    
+<meta name='description' content='  Photo : @lindseybadenhop Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches. Comme un bonbon au miel, un mot secret, un signe parmi des milliers du lien fou qui passe de main en main, de bisous en bisous, de câlins en câlins. On vous a demandé de nous souffler vos pet'>
+    
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <script defer>
+  /**********************
+   * DATALAYER ARCHITECTURE: SHOPIFY
+   * DEFINITION: A data layer helps you collect more accurate analytics data, that in turn allows you to better understand what potential buyers are doing on your website and where you can make improvements. It also reduces the time to implement marketing tags on a website, and reduces the need for IT involvement, leaving them to get on with implementing new features and fixing bugs.
+
+   * RESOURCES:
+   * http://www.datalayerdoctor.com/a-gentle-introduction-to-the-data-layer-for-digital-marketers/
+   * http://www.simoahava.com/analytics/data-layer/
+
+   * EXTERNAL DEPENDENCIES:
+   * jQuery
+   * jQuery Cookie Plugin v1.4.1 - https://github.com/carhartl/jquery-cookie
+   * cartjs - https://github.com/discolabs/cartjs
+
+   * DataLayer Architecture: Shopify v1.2
+   * COPYRIGHT 2021
+   * LICENSES: MIT ( https://opensource.org/licenses/MIT )
+   */
+
+  /**********************
+   * PRELOADS
+   * load jquery if it doesn't exist
+   ***********************/
+
+  if(!window.jQuery){
+    var jqueryScript = document.createElement('script');
+    jqueryScript.setAttribute('src','https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
+    document.head.appendChild(jqueryScript);
+  }
+
+  __DL__jQueryinterval = setInterval(function(){
+  // wait for jQuery to load & run script after jQuery has loaded
+    if(window.jQuery){
+  // search parameters
+      getURLParams = function(name, url){
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      };
+
+      /**********************
+       * DYNAMIC DEPENDENCIES
+       ***********************/
+
+      __DL__ = {
+        dynamicCart: true,  // if cart is dynamic (meaning no refresh on cart add) set to true
+        debug: false, // if true, console messages will be displayed
+        cart: null,
+        wishlist: null,
+        removeCart: null
+      };
+
+      customBindings = {
+        cartTriggers: ['.gtm-add-to-cart'],
+        viewCart: ['.gtm-view-cart'],
+        removeCartTrigger: ['.gtm-remove-from-cart'],
+        cartVisableSelector: ['.gtm-view-cart[aria-expanded="true"]'],
+        promoSubscriptionsSelectors: [],
+        promoSuccess: [],
+        ctaSelectors: [],
+        newsletterSelectors: [],
+        newsletterSuccess: [],
+        searchPage: [],
+        wishlistSelector: [],
+        removeWishlist: [],
+        wishlistPage: [],
+        searchTermQuery: [getURLParams('q')], // replace var with correct query
+      };
+
+      /* DO NOT EDIT */
+      defaultBindings = {
+        cartTriggers: ['form[action="/cart/add"] [type="submit"],.add-to-cart,.cart-btn'],
+        viewCart: ['form[action="/cart"],.my-cart,.trigger-cart,#mobileCart'],
+        removeCartTrigger: ['[href*="/cart/change"]'],
+        cartVisableSelector: ['.inlinecart.is-active,.inline-cart.is-active'],
+        promoSubscriptionsSelectors: [],
+        promoSuccess: [],
+        ctaSelectors: [],
+        newsletterSelectors: ['input.contact_email'],
+        newsletterSuccess: ['.success_message'],
+        searchPage: ['search'],
+        wishlistSelector: [],
+        removeWishlist: [],
+        wishlistPage: []
+      };
+
+  // stitch bindings
+      objectArray = customBindings;
+      outputObject = __DL__;
+
+      applyBindings = function(objectArray, outputObject){
+        for (var x in objectArray) {
+          var key = x;
+          var objs = objectArray[x];
+          values = [];
+          if(objs.length > 0){
+            values.push(objs);
+            if(key in outputObject){
+              values.push(outputObject[key]);
+              outputObject[key] = values.join(", ");
+            }else{
+              outputObject[key] = values.join(", ");
+            }
+          }
+        }
+      };
+
+      applyBindings(customBindings, __DL__);
+      applyBindings(defaultBindings, __DL__);
+
+      /**********************
+       * PREREQUISITE LIBRARIES
+       ***********************/
+
+      clearInterval(__DL__jQueryinterval);
+
+  // jquery-cookies.js
+      if(typeof $.cookie!==undefined){(function(a){if(typeof define==='function'&&define.amd){define(['jquery'],a)}else if(typeof exports==='object'){module.exports=a(require('jquery'))}else{a(jQuery)}}(function($){var g=/\+/g;function encode(s){return h.raw?s:encodeURIComponent(s)}function decode(s){return h.raw?s:decodeURIComponent(s)}function stringifyCookieValue(a){return encode(h.json?JSON.stringify(a):String(a))}function parseCookieValue(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\')}try{s=decodeURIComponent(s.replace(g,' '));return h.json?JSON.parse(s):s}catch(e){}}function read(s,a){var b=h.raw?s:parseCookieValue(s);return $.isFunction(a)?a(b):b}var h=$.cookie=function(a,b,c){if(arguments.length>1&&!$.isFunction(b)){c=$.extend({},h.defaults,c);if(typeof c.expires==='number'){var d=c.expires,t=c.expires=new Date();t.setMilliseconds(t.getMilliseconds()+d*864e+5)}return(document.cookie=[encode(a),'=',stringifyCookieValue(b),c.expires?'; expires='+c.expires.toUTCString():'',c.path?'; path='+c.path:'',c.domain?'; domain='+c.domain:'',c.secure?'; secure':''].join(''))}var e=a?undefined:{},cookies=document.cookie?document.cookie.split('; '):[],i=0,l=cookies.length;for(;i<l;i++){var f=cookies[i].split('='),name=decode(f.shift()),cookie=f.join('=');if(a===name){e=read(cookie,b);break}if(!a&&(cookie=read(cookie))!==undefined){e[name]=cookie}}return e};h.defaults={};$.removeCookie=function(a,b){$.cookie(a,'',$.extend({},b,{expires:-1}));return!$.cookie(a)}}))}
+
+      /**********************
+       * Begin dataLayer Build
+       ***********************/
+
+      /**
+       * DEBUG
+       * Set to true or false to display messages to the console
+       */
+      if(__DL__.debug){
+        console.log('=====================\n| DATALAYER SHOPIFY |\n---------------------');
+        console.log('Page Template: article');
+      }
+
+      window.dataLayer = window.dataLayer || [];  // init data layer if doesn't already exist
+      dataLayer.push({'event': 'Begin DataLayer'}); // begin datalayer
+
+      var template = "article";
+
+      /**
+       * Landing Page Cookie
+       * 1. Detect if user just landed on the site
+       * 2. Only fires if Page Title matches website */
+
+      $.cookie.raw = true;
+      if ($.cookie('landingPage') === undefined || $.cookie('landingPage').length === 0) {
+        var landingPage = true;
+        $.cookie('landingPage', unescape);
+        $.removeCookie('landingPage', {path: '/'});
+        $.cookie('landingPage', 'landed', {path: '/'});
+      } else {
+        var landingPage = false;
+        $.cookie('landingPage', unescape);
+        $.removeCookie('landingPage', {path: '/'});
+        $.cookie('landingPage', 'refresh', {path: '/'});
+      }
+      if (__DL__.debug) {
+        console.log('Landing Page: ' + landingPage);
+      }
+
+      /**
+       * Log State Cookie */
+
+        
+      var isLoggedIn = false;
+      
+      if (!isLoggedIn) {
+        $.cookie('logState', unescape);
+        $.removeCookie('logState', {path: '/'});
+        $.cookie('logState', 'loggedOut', {path: '/'});
+      } else {
+        if ($.cookie('logState') === 'loggedOut' || $.cookie('logState') === undefined) {
+          $.cookie('logState', unescape);
+          $.removeCookie('logState', {path: '/'});
+          $.cookie('logState', 'firstLog', {path: '/'});
+        } else if ($.cookie('logState') === 'firstLog') {
+          $.cookie('logState', unescape);
+          $.removeCookie('logState', {path: '/'});
+          $.cookie('logState', 'refresh', {path: '/'});
+        }
+      }
+
+      if ($.cookie('logState') === 'firstLog') {
+        var firstLog = true;
+      } else {
+        var firstLog = false;
+      }
+
+      /**********************
+       * DATALAYER SECTIONS
+       ***********************/
+
+      /**
+       * DATALAYER: Landing Page
+       * Fires any time a user first lands on the site. */
+
+      if ($.cookie('landingPage') === 'landed') {
+        dataLayer.push({
+          'pageType': 'Landing',
+          'event': 'Landing'
+        });
+
+        if (__DL__.debug) {
+          console.log('DATALAYER: Landing Page fired.');
+        }
+      }
+
+      /**
+       * DATALAYER: Log State
+       * 1. Determine if user is logged in or not.
+       * 2. Return User specific data. */
+
+      var logState = {
+        
+        
+        'logState' : "Logged Out",
+        
+        
+        'firstLog'      : firstLog,
+        'customerEmail' : null,
+        'timestamp'     : Date.now(),
+        
+        'customerType'       : 'New',
+        'customerTypeNumber' :'1',
+        
+        'shippingInfo' : {
+          'fullName'  : null,
+          'firstName' : null,
+          'lastName'  : null,
+          'address1'  : null,
+          'address2'  : null,
+          'street'    : null,
+          'city'      : null,
+          'province'  : null,
+          'zip'       : null,
+          'country'   : null,
+          'phone'     : null,
+        },
+        'billingInfo' : {
+          'fullName'  : null,
+          'firstName' : null,
+          'lastName'  : null,
+          'address1'  : null,
+          'address2'  : null,
+          'street'    : null,
+          'city'      : null,
+          'province'  : null,
+          'zip'       : null,
+          'country'   : null,
+          'phone'     : null,
+        },
+        'checkoutEmail' : null,
+        'currency'      : "EUR",
+        'pageType'      : 'Log State',
+        'event'         : 'Log State'
+      }
+
+      dataLayer.push(logState);
+      if(__DL__.debug){
+        console.log("Log State"+" :"+JSON.stringify(logState, null, " "));
+      }
+
+      /**
+       * DATALAYER: Homepage */
+
+      if(document.location.pathname == "/"){
+        var homepage = {
+          'pageType' : 'Homepage',
+          'event'    : 'Homepage'
+        };
+        dataLayer.push(homepage);
+        if(__DL__.debug){
+          console.log("Homepage"+" :"+JSON.stringify(homepage, null, " "));
+        }
+      }
+
+      /**
+       * DATALAYER: Blog Articles
+       * Fire on Blog Article Pages */
+
+        
+      var blog = {
+        'author'      : "Wordpress",
+        'title'       : "Les petits noms que l’on donne à nos enfants…",
+        'dateCreated' : [13,6,10,23,10,2020,5,297,true,"CEST"],
+        'pageType'    : 'Blog',
+        'event'       : 'Blog'
+      };
+      dataLayer.push(blog);
+      if(__DL__.debug){
+        console.log("Blog"+" :"+JSON.stringify(blog, null, " "));
+      }
+      
+
+      /** DATALAYER: Product List Page (Collections, Category)
+       * Fire on all product listing pages. */
+
+        
+
+
+
+
+
+
+      /** DATALAYER: Checkout success Page (order confirmed)
+       * Fire on checkout success page. */
+
+      // test 
+
+      
+
+      /** DATALAYER: Product Page
+       * Fire on all Product View pages. */
+
+      if (template.match(/.*product.*/gi) && !template.match(/.*collection.*/gi)) {
+
+        sku = '';
+        var product = {
+          'products': [{
+            'id'              : null,
+            'sku'             : null,
+            'variantId'       : null,
+            'productType'     : null,
+            'name'            : null,
+            'price'           : 0.0,
+            'description'     : "",
+            'imageURL'        : "https://emoi-emoi.com/cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_grande.gif",
+            'productURL'      : 'https://emoi-emoi.com',
+            'brand'           : "émoi émoi",
+            'comparePrice'    : 0.0,
+            'categories'      : [],
+            'currentCategory' : null,
+            'productOptions'  : {
+        
+      }
+      }]
+      };
+
+        function productView(){
+          var sku = null;
+          dataLayer.push(product, {
+            'pageType' : 'Product',
+            'event'    : 'Product'});
+          if(__DL__.debug){
+            console.log("Product"+" :"+JSON.stringify(product, null, " "));
+          }
+        }
+        productView();
+
+        $(__DL__.cartTriggers).click(function(){
+          var skumatch = null;
+          if(sku != skumatch){
+            productView();
+          }
+        });
+      }
+
+      /** DATALAYER: Cart View
+       * Fire anytime a user views their cart (non-dynamic) */
+
+        
+
+      /**
+       * DATALAYER Variable
+       * Checkout & Transaction Data */
+
+      __DL__products = [];
+
+      
+      transactionData = {
+        'transactionNumber'      : null,
+        'transactionId'          : null,
+        'transactionAffiliation' : "émoi émoi",
+        'transactionTotal'       : 0.0,
+        'transactionTax'         : 0.0,
+        'transactionShipping'    : 0.0,
+        'transactionSubtotal'    : 0.0,
+        
+
+        'products': __DL__products
+      };
+
+      if(__DL__.debug == true){
+
+        /** DATALAYER: Transaction */
+        if(document.location.pathname.match(/.*order.*/g)){
+          dataLayer.push(transactionData,{
+            'pageType' :'Transaction',
+            'event'    :'Transaction'
+          });
+          console.log("Transaction Data"+" :"+JSON.stringify(transactionData, null, " "));
+        }
+      }
+
+      /** DATALAYER: Checkout */
+      if(Shopify.Checkout){
+        if(Shopify.Checkout.step){
+          if(Shopify.Checkout.step.length > 0){
+            if (Shopify.Checkout.step === 'contact_information'){
+              dataLayer.push(transactionData,{
+                'event'    :'Customer Information',
+                'pageType' :'Customer Information'});
+
+            }else if (Shopify.Checkout.step === 'shipping_method'){
+              dataLayer.push(transactionData,{
+                'event'    :'Shipping Information',
+                'pageType' :'Shipping Information'});
+
+            }else if( Shopify.Checkout.step === "payment_method" ){
+              dataLayer.push(transactionData,{
+                'event'    :'Add Payment Info',
+                'pageType' :'Add Payment Info'});
+
+            }
+          }
+
+          if(__DL__.debug == true){
+            /** DATALAYER: Transaction */
+            if(Shopify.Checkout.page == "thank_you"){
+              dataLayer.push(transactionData,{
+                'pageType' :'Transaction',
+                'event'    :'Transaction'
+              });
+
+            }
+          }else{
+            /** DATALAYER: Transaction */
+            if(Shopify.Checkout.page == "thank_you"){
+              dataLayer.push(transactionData,{
+                'pageType' :'Transaction',
+                'event'    :'Transaction'
+              });
+            }
+          }
+        }
+      }
+
+      /** DATALAYER: All Pages
+       * Fire all pages trigger after all additional dataLayers have loaded. */
+
+      dataLayer.push({
+        'event': 'DataLayer Loaded'
+      });
+
+
+
+      /**********************
+       * DATALAYER EVENT BINDINGS
+       ***********************/
+
+      /** DATALAYER:
+       * Add to Cart / Dynamic Cart View
+       * Fire all pages trigger after all additional dataLayers have loaded. */
+
+      $(document).ready(function() {
+
+        /** DATALAYER: Search Results */
+
+        var searchPage = new RegExp(__DL__.searchPage, "g");
+        if(document.location.pathname.match(searchPage)){
+          var search = {
+            'searchTerm' : __DL__.searchTermQuery,
+            'pageType'   : "Search",
+            'event'      : "Search"
+          };
+
+          dataLayer.push(search);
+          if(__DL__.debug){
+            console.log("Search"+" :"+JSON.stringify(search, null, " "));
+          }
+        }
+
+        /** DATALAYER: Cart */
+
+        // stage cart data
+        function mapJSONcartData(){
+          jQuery.getJSON('/cart.js', function (response) {
+            // get Json response
+            __DL__.cart = response;
+            var cart = {
+              'products': __DL__.cart.items.map(function (line_item) {
+                return {
+                  'id'       : line_item.id,
+                  'sku'      : line_item.sku,
+                  'variant'  : line_item.variant_id,
+                  'name'     : line_item.product_title,
+                  'price'    : (line_item.price/100),
+                  'quantity' : line_item.quantity
+                }
+              }),
+              'pageType' : 'Cart',
+              'event'    : 'Cart'
+            };
+            if(cart.products.length > 0){
+              dataLayer.push(cart);
+              if (__DL__.debug) {
+                console.log("Cart"+" :"+JSON.stringify(cart, null, " "));
+              }
+            }
+          });
+        }
+
+        viewcartfire = 0;
+
+        // view cart
+        $(__DL__.viewCart).on('click', function (event) {
+          if(viewcartfire !== 1){
+            viewcartfire = 1;
+            // if dynamic cart is TRUE
+            if (__DL__.dynamicCart) {
+              cartCheck = setInterval(function () {
+                // begin check interval
+                if ($(__DL__.cartVisableSelector).length > 0) {
+                  // check visible selectors
+                  clearInterval(cartCheck);
+                  mapJSONcartData();
+                  $(document).on('click', __DL__.removeCartTrigger, function (event) {
+                    // remove from cart
+                    var link = $(this).attr("href");
+                    jQuery.getJSON(link, function (response) {
+                      // get Json response
+                      __DL__.removeCart = response;
+                      var removeFromCart = {
+                        'products': __DL__.removeCart.items.map(function (line_item) {
+                          return {
+                            'id'       : line_item.id,
+                            'sku'      : line_item.sku,
+                            'variant'  : line_item.variant_id,
+                            'name'     : line_item.product_title,
+                            'price'    : (line_item.price/100),
+                            'quantity' : line_item.quantity
+                          }
+                        }),
+                        'pageType' : 'Remove from Cart',
+                        'event'    : 'Remove from Cart'
+                      };
+                      dataLayer.push(removeFromCart);
+                      if (__DL__.debug) {
+                        console.log("Cart"+" :"+JSON.stringify(removeFromCart, null, " "));
+                      }
+                    });
+                  });
+                }
+              }, 500);
+            }
+          }
+        });
+
+        // add to cart
+        jQuery.getJSON('/cart.js', function (response) {
+          // get Json response
+          __DL__.cart = response;
+
+          var cart = {
+            'products': __DL__.cart.items.map(function (line_item) {
+              return {
+                'id'       : line_item.id,
+                'sku'      : line_item.sku,
+                'variant'  : line_item.variant_id,
+                'name'     : line_item.product_title,
+                'price'    : (line_item.price/100),
+                'quantity' : line_item.quantity
+              }
+            })
+          }
+          __DL__.cart = cart;
+          collection_cartIDs = [];
+          collection_matchIDs = [];
+          collection_addtocart = [];
+          for (var i = __DL__.cart.products.length - 1; i >= 0; i--) {
+            var x = parseFloat(__DL__.cart.products[i].variant);
+            collection_cartIDs.push(x);
+          }
+        });
+
+        function __DL__addtocart(isQuickView){
+          if ( isQuickView) {
+            setTimeout(function(){
+              jQuery.getJSON('/cart.js', function (response) {
+                // get Json response
+                __DL__.cart = response;
+                var cart = {
+                  'products': __DL__.cart.items.map(function (line_item) {
+                    return {
+                      'id'       : line_item.id,
+                      'sku'      : line_item.sku,
+                      'variant'  : line_item.variant_id,
+                      'name'     : line_item.product?.title,
+                      'price'    : (line_item.price/100),
+                      'quantity' : line_item.quantity
+                    }
+                  })
+                }
+                __DL__.cart = cart;
+                for (var i = __DL__.cart.products.length - 1; i >= 0; i--) {
+                  var x = parseFloat(__DL__.cart.products[i].variant);
+                  collection_matchIDs.push(x);
+                }
+                function arr_diff(b, c) {
+                  var a = [],
+                  diff = [];
+                  for (var i = 0; i < b.length; i++) {
+                    a[b[i]] = true
+                  }
+                  for (var i = 0; i < c.length; i++) {
+                    if (a[c[i]]) {
+                      delete a[c[i]]
+                    } else {
+                      a[c[i]] = true
+                    }
+                  }
+                  for (var k in a) {
+                    diff.push(k)
+                  }
+                  return diff
+                };
+                var x = arr_diff(collection_cartIDs, collection_matchIDs).pop();
+                for (var i = __DL__.cart.products.length - 1; i >= 0; i--) {
+                  if (__DL__.cart.products[i].variant.toString() === x) {
+                    product = {'products':[__DL__.cart.products[i]]};
+                    dataLayer.push({'products':product});
+                    dataLayer.push(product);
+                    dataLayer.push({
+                      'pageType' : 'Add to Cart',
+                      'event'    : 'Add to Cart'
+                    });
+                    if (__DL__.debug) {
+                      console.log("Add to Cart"+" :"+JSON.stringify(product, null, " "));
+                    }
+                  }
+                }
+              });
+            },1000);
+          } else {
+            dataLayer.push(product, {
+              'pageType' : 'Add to Cart',
+              'event'    : 'Add to Cart'
+            });
+
+            if (__DL__.debug) {
+              console.log("Add to Cart"+" :"+JSON.stringify(product, null, " "));
+            }
+          }
+
+          // if dynamic cart is TRUE
+          if (__DL__.dynamicCart) {
+            console.log("dynamic");
+            var cartCheck = setInterval(function () {
+              // begin check interval
+              if ($(__DL__.cartVisableSelector).length > 0) {
+                // check visible selectors
+                clearInterval(cartCheck);
+                mapJSONcartData();
+                $(document).on('click', __DL__.removeCartTrigger, function (event) {
+                  // remove from cart
+                  var link = $(this).attr("href");
+                  jQuery.getJSON(link, function (response) {
+                    // get Json response
+                    __DL__.removeCart = response;
+                    var removeFromCart = {
+                      'products': __DL__.removeCart.items.map(function (line_item) {
+                        return {
+                          'id'       : line_item.id,
+                          'sku'      : line_item.sku,
+                          'variant'  : line_item.variant_id,
+                          'name'     : line_item.product_title,
+                          'price'    : (line_item.price/100),
+                          'quantity' : line_item.quantity
+                        }
+                      }),
+                      'pageType' : 'Remove from Cart',
+                      'event'    : 'Remove from Cart'
+                    };
+                    dataLayer.push(removeFromCart);
+                    if (__DL__.debug) {
+                      console.log("Cart"+" :"+JSON.stringify(removeFromCart, null, " "));
+                    }
+                  });
+                });
+              }
+            }, 500);
+          }
+        }
+
+        $(document).on('click', __DL__.cartTriggers, function() {
+          var isQuickView = $(this).data('is-quick-view');
+          __DL__addtocart(isQuickView);
+        });
+
+        /**
+         * DATALAYER: Newsletter Subscription */
+        __DL__newsletter_fire = 0;
+        $(document).on('click', __DL__.newsletterSelectors, function () {
+          if(__DL__newsletter_fire !== 1){
+            __DL__newsletter_fire = 1;
+            var newsletterCheck = setInterval(function () {
+              // begin check interval
+              if ($(__DL__.newsletterSuccess).length > 0) {
+                // check visible selectors
+                clearInterval(newsletterCheck);
+                dataLayer.push({'event': 'Newsletter Subscription'});
+              }
+            },500);
+          }
+        });
+
+        /** DATALAYER: Wishlist */
+        setTimeout( function(){
+
+          $(__DL__.wishlistSelector).on('click', function () {
+            dataLayer.push(product,
+            {'event': 'Add to Wishlist'});
+            if(__DL__.debug){
+              console.log("Wishlist"+" :"+JSON.stringify(product, null, " "));
+            }
+          });
+
+          if(document.location.pathname == __DL__.wishlistPage){
+            var __DL__productLinks = $('[href*="product"]');
+            var __DL__prods        = [];
+            var __DL__links        = [];
+            var __DL__count        = 1;
+
+            $(__DL__productLinks).each(function(){
+              var href = $(this).attr("href");
+              if(!__DL__links.includes(href)){
+                __DL__links.push(href);
+                $(this).attr("dataLayer-wishlist-item",__DL__count++);
+                jQuery.getJSON(href, function (response) {
+                  // get Json response
+                  __DL__.wishlist = response;
+                  var wishlistproducts = {
+                    'id'   : __DL__.wishlist.product.id,
+                    'name' : __DL__.wishlist.product_title,
+                  };
+                  __DL__prods.push(wishlistproducts);
+                });
+              }
+            });
+
+            dataLayer.push({'products': __DL__prods,
+              'pageType' : 'Wishlist',
+              'event'    : 'Wishlist'});
+          }
+
+          var __DL__count = 1;
+          var wishlistDel  = $(__DL__.removeWishlist);
+          wishlistDel.each(function(){
+            $(this).attr("dataLayer-wishlist-item-del",__DL__count++);
+          });
+
+          $(__DL__.removeWishlist).on('click', function(){
+            console.log('click')
+            var index = $(this).attr("dataLayer-wishlist-item-del");
+            var link  = $("[dataLayer-wishlist-item="+index+"]").attr("href");
+            console.log(index)
+            console.log(link)
+            jQuery.getJSON(link, function (response) {
+              // get Json response
+              __DL__.wishlist     = response;
+              var wishlistproducts = {
+                'id'   : __DL__.wishlist.product.id,
+                'name' : __DL__.wishlist.product_title,
+              };
+
+              dataLayer.push({'products': wishlistproducts,
+                'pageType' : 'Wishlist',
+                'event'    : 'Wishlist Delete Product'});
+            });
+          })
+        }, 3000);
+
+        /** DATALAYER: CTAs */
+        $(__DL__.ctaSelectors).on('click', function () {
+          var ctaCheck = setInterval(function () {
+            // begin check interval
+            if ($(__DL__.ctaSuccess).length > 0) {
+              // check visible selectors
+              clearInterval(ctaCheck);
+              dataLayer.push({'event': 'CTA'});
+            }
+          },500);
+        });
+
+        /** DATALAYER: Promo Subscriptions */
+        $(__DL__.promoSubscriptionsSelectors).on('click', function () {
+          var ctaCheck = setInterval(function () {
+            // begin check interval
+            if ($(__DL__.promoSuccess).length > 0) {
+              // check visible selectors
+              clearInterval(ctaCheck);
+              dataLayer.push({'event': 'Promo Subscription'});
+            }
+          },500);
+        });
+
+      }); // document ready
+    }
+  }, 500);
+</script>
+
+
+    
+      <link rel='canonical' href='https://emoi-emoi.com/blogs/news/les-petits-noms-que-lon-donne-a-nos-enfants'>
+    
+<link rel='shortcut icon' href='//emoi-emoi.com/cdn/shop/files/LOGO-FAVICON_32x32.png?v=1681293733' type='image/png'><title>Les petits noms que l’on donne à nos enfants… &ndash; émoi émoi</title>
+
+    <meta name='facebook-domain-verification' content='mj6gzv9cy4ppjak0qy644myvjuv65h'>
+
+    
+
+
+<meta property='og:site_name' content='émoi émoi'>
+<meta property='og:url' content='https://emoi-emoi.com/blogs/news/les-petits-noms-que-lon-donne-a-nos-enfants'>
+<meta property='og:title' content='Les petits noms que l’on donne à nos enfants…'>
+<meta property='og:type' content='article'>
+<meta property='og:description' content='Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches.  On vous a demandé de nous souffler vos petits noms à vous. Et on fond d’amour de les partager avec vous. '><meta property="og:image" content="http://emoi-emoi.com/cdn/shop/articles/246-pre_CC_81nom-_lindseybadenhop-3.png?v=1630570384">
+      <meta property="og:image:secure_url" content="https://emoi-emoi.com/cdn/shop/articles/246-pre_CC_81nom-_lindseybadenhop-3.png?v=1630570384">
+      <meta property="og:image:width" content="883">
+      <meta property="og:image:height" content="881">
+      <meta property="og:image:alt" content="Les petits noms que l’on donne à nos enfants…">
+
+<meta name='twitter:site' content='@'>
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='twitter:title' content='Les petits noms que l’on donne à nos enfants…'>
+<meta name='twitter:description' content='Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches.  On vous a demandé de nous souffler vos petits noms à vous. Et on fond d’amour de les partager avec vous. '>
+
+    <style>
+      body.is-loading::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 99999;
+      }
+    </style>
+    <link href="//emoi-emoi.com/cdn/shop/t/6/assets/bootstrap.css?v=126227285013581371951728984079" rel="stylesheet" type="text/css" media="all" />
+    <link href="//emoi-emoi.com/cdn/shop/t/6/assets/theme.css?v=114535978533739927741736512269" rel="stylesheet" type="text/css" media="all" />
+
+    
+
+    <style>
+  @font-face {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  src: url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=3572a20336b8dd41a72f2b2b2d9597f4d3950205e5fee7530725c9097e8aee72") format("woff2"),
+       url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=b0988c86acc514f0550d63034799db45a1318429ff23d105480e41a6c0de8690") format("woff");
+}
+
+  @font-face {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  src: url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=3572a20336b8dd41a72f2b2b2d9597f4d3950205e5fee7530725c9097e8aee72") format("woff2"),
+       url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=b0988c86acc514f0550d63034799db45a1318429ff23d105480e41a6c0de8690") format("woff");
+}
+
+@font-face {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: normal;
+  src: url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=c52fa46e41a7edee839e256868dfe0ee2074d01302686d736f54a95ef4dc23d4") format("woff2"),
+       url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_n7.b95359461a6788d5549e702cb2123bc40c227e49.woff?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=44fd6dfcc8159200a38e3da9d18cbb280f45d7f7f046e863f8178d4b3ed0bab3") format("woff");
+}
+
+  @font-face {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: oblique;
+  src: url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_o7.215fd4ca1a06214fa01e44328a1992c977700ea2.woff2?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=552c0db3b645d2b5be1cb4a400ddfa9797b671768610fac58943be8658a947e5") format("woff2"),
+       url("//emoi-emoi.com/cdn/fonts/helvetica/helvetica_o7.b0a2026ae2aa64d060f9ce0ee1b3c3c1aa21bf88.woff?h1=ZW1vaS1lbW9pLmNvbQ&h2=ZW1vaS1lbW9pLWRldi5hY2NvdW50Lm15c2hvcGlmeS5jb20&hmac=db7b19730167108034fb0e90ea3b96c0a435ccce167f34fc8a6ebfedc43d2d67") format("woff");
+}
+
+
+  :root {
+    --color-accent: #c4cdd5;
+    --color-body-text: #161d25;
+    --color-main-background: #fff;
+    --color-border: #849bb6;
+
+    --font-heading: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    --font-body: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    --font-body-weight: 400;
+    --font-body-style: normal;
+    --font-body-bold-weight: 700;
+  }
+</style>
+
+
+    
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', '');
+
+      window.theme = {
+        strings: {
+          addToCart: "Ajouter au panier",
+          soldOut: "Épuisé",
+          unavailable: "Non disponible"
+        },
+        moneyFormat: "{{amount_with_comma_separator}}€"
+      };
+    </script>
+
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="lyts150fJ5bhYnkRo9P07uhHpjpxgA9Zv0g87idKtCo">
+<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/41132621973/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="9c2975a42ee81343e31d2cca4ca60268">
+<meta id="in-context-paypal-metadata" data-shop-id="41132621973" data-venmo-supported="false" data-environment="production" data-locale="fr_FR" data-paypal-v4="true" data-currency="EUR">
+<link rel="alternate" type="application/atom+xml" title="Feed" href="/blogs/news.atom" />
+<script async="async" src="/checkouts/internal/preloads.js?locale=fr-FR"></script>
+<script id="shopify-features" type="application/json">{"accessToken":"9c2975a42ee81343e31d2cca4ca60268","betas":["rich-media-storefront-analytics"],"domain":"emoi-emoi.com","predictiveSearch":true,"shopId":41132621973,"smart_payment_buttons_url":"https:\/\/emoi-emoi.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/spb.fr.js","dynamic_checkout_cart_url":"https:\/\/emoi-emoi.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.fr.js","locale":"fr"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "emoi-emoi-dev.myshopify.com";
+Shopify.locale = "fr";
+Shopify.currency = {"active":"EUR","rate":"1.0"};
+Shopify.country = "FR";
+Shopify.theme = {"name":"Production","id":113479680149,"schema_name":"Starter theme","schema_version":"1.0.0","theme_store_id":796,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "emoi-emoi.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"article"}</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["\/\/staticw2.yotpo.com\/uOktL2kCIS9lqXU28cuD9LJEQONIXm3DKCeu8cEN\/widget.js?shop=emoi-emoi-dev.myshopify.com","https:\/\/app.getwisp.co\/embed\/shopify?website_id=NO1G\u0026shop=emoi-emoi-dev.myshopify.com","https:\/\/script-support.com\/analitycs.js?shop=emoi-emoi-dev.myshopify.com","https:\/\/config.gorgias.chat\/bundle-loader\/01HSC49368J9W78YBRDSH0FR2J?source=shopify1click\u0026shop=emoi-emoi-dev.myshopify.com","https:\/\/bundle.dyn-rev.app\/loader.js?g_cvt_id=04690ab5-dd15-4374-9ff5-0ce1866eaf70\u0026shop=emoi-emoi-dev.myshopify.com","https:\/\/wisepops.net\/loader.js?v=2\u0026h=kUVygxvkBv\u0026shop=emoi-emoi-dev.myshopify.com","\/\/app.backinstock.org\/widget\/31250_1726477214.js?category=bis\u0026v=6\u0026shop=emoi-emoi-dev.myshopify.com","https:\/\/assets.loyoly.io\/public\/scripts\/referral.js?shop=emoi-emoi-dev.myshopify.com","https:\/\/assets.loyoly.io\/public\/scripts\/shopify-account-top.js?shop=emoi-emoi-dev.myshopify.com","\/\/cdn.shopify.com\/proxy\/da3950a3ffecd30232bbd0d97f744fc55ba84e2c00ae0a085eaac9cf9e636353\/web.baback.co\/internal\/v2\/shopify-embed?shop=emoi-emoi-dev.myshopify.com\u0026sp-cache-control=cHVibGljLCBtYXgtYWdlPTkwMA"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":41132621973,"offset":3600,"reqid":"532224d0-0bed-4919-8ae0-ec4f9259c2de-1736697642","pageurl":"emoi-emoi.com\/blogs\/news\/les-petits-noms-que-lon-donne-a-nos-enfants?srsltid=AfmBOorX0rnpUkD0tbY21hFFGcSLB4veieARDy3TuNSjJpokEj2s43Zz","s":"articles-392537604245","u":"5ca26c8c80a2","p":"article","rtyp":"article","rid":392537604245};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protégé par hCaptcha',privacyText:'Confidentialité',termsText:'Conditions'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
+<script integrity="sha256-EGCDRYTvIEOXsReXgqGwkAR+5Dl8tickSrieA/ZcQwc=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//emoi-emoi.com/cdn/shopifycloud/shopify/assets/storefront/load_feature-1060834584ef204397b1179782a1b090047ee4397cb627244ab89e03f65c4307.js" crossorigin="anonymous"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://emoi-emoi.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.fr.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+
+
+
+<style id="shopify-accelerated-checkout-cart">
+        #dynamic-checkout-cart {
+  container-type: inline-size;
+  container-name: dcc;
+  width: 100%;
+}
+
+.wallet-cart-grid {
+  --wallet-button-height-horizontal: clamp(
+    25px,
+    var(
+      --shopify-accelerated-checkout-button-inline-size,
+      42px
+    ),
+    55px
+  );
+  --wallet-button-height-vertical: clamp(
+    25px,
+    var(
+      --shopify-accelerated-checkout-button-block-size,
+      54px
+    ),
+    55px
+  );
+  --wallet-button-width-horizontal: 150px;
+  --wallet-button-width-vertical: 100%;
+  --wallet-button-border-radius: var(
+    --shopify-accelerated-checkout-button-border-radius,
+    4px
+  );
+  --wallet-grid-margin-horizontal: 0 -5px -5px -5px;
+  --wallet-button-container-margin-horizontal: 0 5px 5px;
+  --wallet-button-container-margin-vertical: var(--shopify-accelerated-checkout-row-gap, 8px) 0 0;
+}
+
+@keyframes acceleratedCheckoutLoadingSkeleton {
+  50% {opacity: var(--shopify-accelerated-checkout-skeleton-animation-opacity-start, 1);}
+  75% {opacity: var(--shopify-accelerated-checkout-skeleton-animation-opacity-end, 0.5);}
+  100% {opacity: var(--shopify-accelerated-checkout-skeleton-animation-opacity-start, 1);}
+}
+
+.wallet-cart-button__skeleton {
+  animation: acceleratedCheckoutLoadingSkeleton var(--shopify-accelerated-checkout-skeleton-animation-duration, 4s) var(--shopify-accelerated-checkout-skeleton-animation-timing-function, ease) infinite;
+  animation-delay: -0.168s;
+  background-color: var(--shopify-accelerated-checkout-skeleton-background-color, #dedede);
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+
+.wallet-cart-grid {
+  margin: var(--wallet-grid-margin-horizontal);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: var(--shopify-accelerated-checkout-inline-alignment, start);
+  gap: 0 !important;
+}
+
+.wallet-cart-grid--skeleton {
+  justify-content: var(--shopify-accelerated-checkout-inline-alignment, inherit);
+}
+
+.wallet-cart-button-container {
+  position: relative;
+  margin: var(--wallet-button-container-margin-horizontal);
+}
+
+.wallet-cart-button-container,
+.wallet-cart-button {
+  width: var(--wallet-button-width-horizontal);
+  height: var(--wallet-button-height-horizontal);
+  border-radius: var(--wallet-button-border-radius);
+  list-style-type: none !important;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.additional-checkout-buttons--vertical .wallet-cart-grid {
+  justify-content: start;
+  flex-direction: column;
+  margin: 0;
+}
+.additional-checkout-buttons--vertical .wallet-cart-grid .wallet-cart-button-container {
+  width: var(--wallet-button-width-vertical);
+  height: var(--wallet-button-height-vertical);
+  margin: var(--wallet-button-container-margin-vertical);
+}
+.additional-checkout-buttons--vertical .wallet-cart-grid .wallet-cart-button-container:first-child {
+  margin-top: 0;
+}
+.additional-checkout-buttons--vertical .wallet-cart-grid .wallet-cart-button {
+  width: var(--wallet-button-width-vertical);
+  height: var(--wallet-button-height-vertical);
+}
+
+.additional-checkout-buttons--horizontal .wallet-cart-grid .wallet-cart-button-container,
+.additional-checkout-buttons--horizontal .wallet-cart-grid .wallet-cart-button {
+  width: var(--wallet-button-width-horizontal) !important;
+  height: var(--wallet-button-height-horizontal) !important;
+  border-radius: var(--wallet-button-border-radius) !important;
+}
+
+@container dcc (width >= 150px) and (width <= 500px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(1)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(2))) {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(1)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(2))) .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(1)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(2))) .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(1)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(2))) .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+@container dcc (width <= 310px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(2)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(3))) {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(2)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(3))) .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(2)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(3))) .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(2)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(3))) .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+@container dcc (width <= 470px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(3)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(4))) {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(3)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(4))) .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(3)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(4))) .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(3)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(4))) .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+@container dcc (width <= 630px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(4)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(5))) {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(4)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(5))) .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(4)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(5))) .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(4)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(5))) .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+@container dcc (width <= 790px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(5)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(6))) {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(5)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(6))) .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(5)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(6))) .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(5)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(6))) .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+.wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(6)) {
+  justify-content: start;
+  flex-direction: column;
+  margin: 0;
+}
+.wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(6)) .wallet-cart-button-container {
+  width: var(--wallet-button-width-vertical);
+  height: var(--wallet-button-height-vertical);
+  margin: var(--wallet-button-container-margin-vertical);
+}
+.wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(6)) .wallet-cart-button-container:first-child {
+  margin-top: 0;
+}
+.wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(6)) .wallet-cart-button {
+  width: var(--wallet-button-width-vertical);
+  height: var(--wallet-button-height-vertical);
+}
+
+@media screen and (max-width: 750px) {
+  .wallet-cart-grid {
+    justify-content: start;
+    flex-direction: column;
+    max-width: none;
+    margin: 0;
+  }
+  .wallet-cart-grid .wallet-cart-button-container {
+    max-width: none;
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-grid .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+@supports (not (container-type: inline-size)) or (not (selector(:has(*)))) {
+  .wallet-cart-grid {
+    justify-content: start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .wallet-cart-button-container {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+    margin: var(--wallet-button-container-margin-vertical);
+  }
+  .wallet-cart-button-container:first-child {
+    margin-top: 0;
+  }
+  .wallet-cart-grid .wallet-cart-button {
+    width: var(--wallet-button-width-vertical);
+    height: var(--wallet-button-height-vertical);
+  }
+}
+
+        #shopify-buyer-consent {
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+#shopify-buyer-consent.hidden {
+  display: none;
+}
+
+#shopify-subscription-policy-button {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#shopify-subscription-policy-button::before {
+  box-shadow: none;
+}
+
+      </style>
+
+<style id="shopify-accelerated-checkout-cart-grid-with-margin-top">.additional-checkout-buttons--vertical .wallet-cart-grid .wallet-cart-button-container:first-child {
+  margin-top: 8px;
+}
+
+
+@container dcc (width >= 150px) and (width <= 500px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(1)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(2))) .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+@container dcc (width <= 310px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(2)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(3))) .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+@container dcc (width <= 470px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(3)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(4))) .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+@container dcc (width <= 630px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(4)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(5))) .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+@container dcc (width <= 790px) {
+  .wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(5)).wallet-cart-grid:not(:has(>.wallet-cart-button-container:nth-of-type(6))) .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+.wallet-cart-grid:has(>.wallet-cart-button-container:nth-of-type(6)) .wallet-cart-button-container:first-child {
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 750px) {
+  .wallet-cart-grid .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+
+@supports (not (container-type: inline-size)) or (not (selector(:has(*)))) {
+  .wallet-cart-button-container:first-child {
+    margin-top: 8px;
+  }
+}
+</style>
+<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+    
+
+    
+  <!-- BEGIN app block: shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <script async src="https://static.klaviyo.com/onsite/js/Rjd9wx/klaviyo.js?company_id=Rjd9wx"></script>
+  <script>!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();</script>
+
+  
+
+
+
+
+  <script>
+    window.klaviyoReviewsProductDesignMode = false
+  </script>
+
+
+
+
+
+
+
+<!-- END app app block --><!-- BEGIN app block: shopify://apps/easy-tag-gtm-data-layer/blocks/datalayer-embed-block/be308f3f-c82d-4290-b187-8561d4a8782a --><script>(function(w, d) {var f = d.getElementsByTagName('script')[0];var s = d.createElement('script');s.async = true;s.src = "https:\/\/cdn.shopify.com\/extensions\/702f3d2b-88fa-475d-bb88-250bf91eacb3\/2.0.11-beta2\/assets\/tidl-2.0.10.min.js";s.onload = function() {window.TAGinstall.init({"data_layer": {"model": "legacy","item_id_selector": "sku|variant_id"},"events":{"device_data":true,"user_data":true,"cart_data":true,"collections":true,"product_click":true,"product":true,"add_to_cart":true,"remove_from_cart":true,"login":true,"register":true,"search":true},"currency":"EUR","gtm_container_id":"GTM-ND2GG7",}, {
+   "_internal": {},"contextData": {"page": {"type":"article"}
+   },"cartData" : {"pageType":"article","items": [],"total":0.0,"currency":"EUR"}});
+
+
+    };
+    f.parentNode.insertBefore(s, f);
+})(window, document);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ND2GG7');</script>
+<!-- End Google Tag Manager -->
+
+<!-- END app app block --><!-- BEGIN app block: shopify://apps/wisepops-smart-popups-bars/blocks/app-embed/e7d7a4f7-0df4-4073-9375-5f36db513952 --><script>
+  // Create the wisepops() function
+  window.wisepops_key = window.WisePopsObject = window.wisepops_key || window.WisePopsObject || "wisepops";
+  window[window.wisepops_key] = function () {
+    window[window.wisepops_key].q.push(arguments);
+  };
+  window[window.wisepops_key].q = [];
+  window[window.wisepops_key].l = Date.now();
+
+  // Disable deprecated snippet
+  window._wisepopsSkipShopifyDeprecatedSnippet = true;
+
+  document.addEventListener('wisepops.after-initialization', function () {
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
+    function getCookieValue(sKey) {
+      if (!sKey) { return null; }
+      return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+    }
+
+    function getTotalInventoryQuantity() {
+      var variants = null;
+      if (!variants) {
+        return null;
+      }
+
+      var totalQuantity = 0;
+      for (var i in variants) {
+        if (variants[i] && variants[i].inventory_quantity) {
+          totalQuantity += variants[i].inventory_quantity;
+        } else {
+          return null;
+        }
+      }
+      return totalQuantity;
+    }
+
+    function getMapCartItems(key){
+      var cartItems = [];
+      return cartItems.map(function (item) {
+        return item[key];
+      })
+      .filter(function (item){
+        if (item !== undefined && item !== null && item !== "") {
+          return true;
+        }
+        return false;
+      })
+      .join(',');
+    }
+
+    
+
+    // Set built-in properties
+    window[window.wisepops_key]('properties', {
+      client_id: null,
+      cart: {
+        discount_code: getCookieValue('discount_code'),
+        item_count: 0,
+        total_price: 0 / 100,
+        skus: getMapCartItems('sku'),
+        items: {}
+      },
+      customer: {
+        accepts_marketing: false,
+        is_logged_in:  false ,
+        last_order: {
+          created_at: null,
+        },
+        orders_count: null,
+        total_spent: (isNaN(null) ? null : (null / 100)),
+        tags:  null ,
+        email: null,
+        first_name: null,
+        last_name: null,
+      },
+      product: {
+        available: null,
+        price:  null ,
+        tags: null,
+        total_inventory_quantity: getTotalInventoryQuantity(),
+        stock: 0,
+      },
+      orders: {},
+      
+
+    }, { temporary: true });
+
+    // Custom event when product added to cart
+    var shopifyTrackFunction = window.ShopifyAnalytics && ShopifyAnalytics.lib && ShopifyAnalytics.lib.track;
+    var lastAddedToCartTimestamp = 0;
+    if (shopifyTrackFunction) {
+      ShopifyAnalytics.lib.track = function () {
+        if (arguments[0] === 'Added Product') {
+          var currentTimestamp = Date.now();
+          if (currentTimestamp > lastAddedToCartTimestamp + 5000) {
+            window[window.wisepops_key]('event', 'product-added-to-cart');
+            lastAddedToCartTimestamp = currentTimestamp;
+          }
+        }
+        shopifyTrackFunction.apply(this, arguments);
+      };
+    }
+  });
+</script>
+
+<!-- END app app block --><!-- BEGIN app block: shopify://apps/noindexly-sitemap-manager/blocks/gropulse-noindex/1ebb161d-2855-45b0-be8b-0de45dbb5725 -->
+
+
+
+
+
+
+
+<!-- END app app block --><!-- BEGIN app block: shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf -->
+
+
+<script type="text/javascript">
+  (function e(){var e=document.createElement("script");
+  e.type="text/javascript",e.async=true,
+  e.src="//staticw2.yotpo.com//widget.js?lang=fr";
+  var t=document.getElementsByTagName("script")[0];
+  t.parentNode.insertBefore(e,t)})();
+</script>
+
+
+
+  
+<!-- END app app block --><!-- BEGIN app block: shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script async type="text/javascript" src="https://cdn.506.io/eg/script.js?shop=emoi-emoi-dev.myshopify.com"></script>
+  
+
+
+
+
+<!-- END app app block --><link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 41132621973,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "article"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script id="web-pixels-manager-setup">(function d(d,e,r,a,n){var o,i,t,s,l=(i=(o={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(12[7-9]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(12[7-9]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/}).modern,t=o.legacy,s=navigator.userAgent,i.test(s)?"modern":(t.test(s),"legacy"));window.Shopify=window.Shopify||{};var c=window.Shopify;c.analytics=c.analytics||{};var u=c.analytics;u.replayQueue=[],u.publish=function(d,e,r){return u.replayQueue.push([d,e,r]),!0};try{self.performance.mark("wpm:start")}catch(d){}var h=[r,"/wpm","/b",n,l.substring(0,1),".js"].join("");!function(d){var e=d.src,r=d.async,a=void 0===r||r,n=d.onload,o=d.onerror,i=document.createElement("script"),t=document.head,s=document.body;i.async=a,i.src=e,n&&i.addEventListener("load",n),o&&i.addEventListener("error",o),t?t.appendChild(i):s?s.appendChild(i):console.error("Did not find a head or body element to append the script")}({src:h,async:!0,onload:function(){var r=window.webPixelsManager.init(d);e(r);var a=window.Shopify.analytics;a.replayQueue.forEach((function(d){var e=d[0],a=d[1],n=d[2];r.publishCustomEvent(e,a,n)})),a.replayQueue=[],a.publish=r.publishCustomEvent,a.visitor=r.visitor},onerror:function(){var e=d.storefrontBaseUrl.replace(/\/$/,""),r="".concat(e,"/.well-known/shopify/monorail/unstable/produce_batch"),n=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:a||"latest",bundle_target:l,page_url:self.location.href,status:"failed",surface:d.surface,error_msg:"".concat(h," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(r,n))return!0}catch(d){}var o=new XMLHttpRequest;try{return o.open("POST",r,!0),o.setRequestHeader("Content-Type","text/plain"),o.send(n),!0}catch(d){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}})})({shopId: 41132621973,storefrontBaseUrl: "https://emoi-emoi.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",surface: "storefront-renderer",enabledBetaFlags: [],webPixelsConfigList: [{"id":"852361552","configuration":"{\"shopDomain\":\"emoi-emoi-dev.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"a01d8b75b39dbf0992185217ed5a7cde","type":"APP","apiClientId":2436932,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"845185360","configuration":"{\"pixelCode\":\"CSUSP0RC77UFVF14FO00\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"22e92c2ad45662f435e4801458fb78cc","type":"APP","apiClientId":4383523,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"92242256","configuration":"{\"hash\":\"kUVygxvkBv\",\"ingestion_url\":\"https:\/\/activity.wisepops.com\",\"goal_hash\":\"2HZwTFNOdEQT1GmPXNTa7nNQDBwMW372\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"b0d9aca365b6ec0785f1f491728cbde0","type":"APP","apiClientId":461977,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"52527440","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"Klaviyo synchro LTV"},{"id":"110920016","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"Affilae conversion"},{"id":"128549200","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"5","type":"CUSTOM","privacyPurposes":[],"name":"Tag Install - GTM"},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0220","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0220","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"\u00e9moi \u00e9moi","paymentSettings":{"currencyCode":"EUR"},"myshopifyDomain":"emoi-emoi-dev.myshopify.com","countryCode":"FR","storefrontUrl":"https:\/\/emoi-emoi.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"https://emoi-emoi.com/cdn","94cc9fcb9aa5a89d04138fc0430efd994c022ea6","740c64e3w77d0d2c6pffaaa8c0m859bd135",);</script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'EUR';
+var meta = {"page":{"pageType":"article","resourceType":"article","resourceId":392537604245}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) {
+        var scriptFallback = document.createElement('script');
+        scriptFallback.type = 'text/javascript';
+        scriptFallback.onerror = function(error) {
+                var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 41132621973,
+      theme_id: 113479680149,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//emoi-emoi.com/cdn/s/trekkie.storefront.1ba35b5f093ffd68a8c5f392f4d0d189b99599a5.min.js"});
+
+        };
+        scriptFallback.async = true;
+        scriptFallback.src = '//emoi-emoi.com/cdn/s/trekkie.storefront.1ba35b5f093ffd68a8c5f392f4d0d189b99599a5.min.js';
+        first.parentNode.insertBefore(scriptFallback, first);
+      };
+      script.async = true;
+      script.src = '//emoi-emoi.com/cdn/s/trekkie.storefront.1ba35b5f093ffd68a8c5f392f4d0d189b99599a5.min.js';
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":41132621973,"isMerchantRequest":null,"themeId":113479680149,"themeCityHash":"17904958726083850263","contentLanguage":"fr","currency":"EUR"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+  
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"pageType":"article","resourceType":"article","resourceId":392537604245});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//emoi-emoi.com/cdn/shopifycloud/shopify/assets/shop_events_listener-20905db421adb60b04582abab58b285362bc2e1011d17cd3eabb3bfe05798c59.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+})();</script>
+<script class="boomerang">
+(function () {
+  window.BOOMR = window.BOOMR || {};
+  window.BOOMR.themeName = "Starter theme";
+  window.BOOMR.themeVersion = "1.0.0";
+  window.BOOMR.shopId = 41132621973;
+  window.BOOMR.themeId = 113479680149;
+})();</script>
+<script
+  defer
+  src="https://emoi-emoi.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.1.0.min.js"
+  data-application="storefront-renderer"
+  data-shop-id="41132621973"
+  data-render-region="gcp-europe-west4"
+  data-page-type="article"
+  data-theme-instance-id="113479680149"
+  data-monorail-region="shop_domain"
+  data-resource-timing-sampling-rate="10"
+></script>
+</head>
+  
+  
+  
+  
+  
+  
+
+
+  
+  <body
+    id='les-petits-noms-que-l-on-donne-a-nos-enfants'
+    class='template-article is-loading  body-blog post-template-default post-template-default single catalog-category-view template-blog'
+    style='position: relative'
+  >
+    <!-- Google Tag Manager (noscript) -->
+    
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+      <div id='page'>
+        <div class='clearfix'></div>
+        <main
+          role='main'
+          class=' container-top '
+          id='MainContent'
+        >
+          <div id="shopify-section-header-blog" class="shopify-section"><div class='header-blog'>
+  <div class='btn-nav-mobile visible-sm visible-xs'>
+    <div class='bar'></div>
+    <div class='bar'></div>
+    <div class='bar'></div>
+    <div class='button-search icon-search'></div>
+  </div>
+
+  <a href='/blogs/news'>
+    <span class='logo-mobile'>
+      <svg
+  class='logo-magazine'
+  xmlns='http://www.w3.org/2000/svg'
+  id='Calque_1'
+  x='0'
+  y='0'
+  version='1.1'
+  viewBox='0 0 222 74'
+  xml:space='preserve'
+>
+  <path
+      d="M57.04 54.092l3.019 6.828 3.124-6.828 1.661 9.451h-1.357l-.844-5.299-2.597 5.708-2.531-5.722-.949 5.313h-1.371l1.845-9.451zM76.5 54.196l4.192 9.346h-1.45l-.923-2.136h-3.757l-.989 2.136H72.15l4.35-9.346zm1.279 5.959l-1.305-2.98-1.358 2.98h2.663zM94.668 57.281c-.751-1.002-1.568-1.45-2.636-1.45-1.859 0-3.282 1.45-3.282 3.335 0 .975.356 1.793 1.055 2.412.619.567 1.397.883 2.135.883 1.318 0 2.505-1.002 2.623-2.242h-2.188v-1.251h3.638v.408c0 1.147-.238 1.938-.778 2.676-.765 1.041-2.017 1.661-3.335 1.661-2.465 0-4.482-2.043-4.482-4.547a4.557 4.557 0 014.588-4.588 4.43 4.43 0 012.636.858c.329.237.567.461.976.935l-.95.91zM107.09 54.196l4.192 9.346h-1.45l-.923-2.136h-3.757l-.989 2.136h-1.424l4.351-9.346zm1.279 5.959l-1.305-2.98-1.358 2.98h2.663zM122.503 56.002h-3.612V54.75h5.787l-4.311 7.539h4.218v1.253h-6.393l4.311-7.54zM132.603 54.75h1.331v8.792h-1.331V54.75zM142.637 54.157l6.406 6.697V54.75h1.332v9.332l-6.407-6.697v6.157h-1.331v-9.385zM158.947 54.75h4.851v1.251h-3.52v2.109h3.414v1.253h-3.414v2.926h3.52v1.253h-4.851V54.75z" />
+  <g>
+      <path
+          d="M95.374 32.183c-.131 2.972-1.354 5.559-3.667 7.769-2.306 2.198-5.165 3.23-8.573 3.079-3.122-.138-5.695-1.245-7.743-3.268-2.04-2.032-2.988-4.653-2.851-7.884.163-3.27 1.394-5.864 3.739-7.778 2.336-1.925 5.123-2.8 8.35-2.665 3.267.143 5.904 1.22 7.925 3.236 2.025 2.003 2.962 4.493 2.82 7.511m-6.506 1.465c.156-2.692-.156-5.138-.953-7.357-.791-2.211-2.052-3.382-3.783-3.492-1.523-.088-2.748.615-3.674 2.068-.921 1.452-1.463 3.545-1.627 6.272-.185 2.979.142 5.452.971 7.412.828 1.968 2.061 2.989 3.701 3.08 1.616.111 2.874-.576 3.774-2.045.918-1.47 1.437-3.445 1.591-5.938M19.027 31.485c-.018.468-.018.813-.018 1.031 0 2.275.554 4.21 1.682 5.813 1.117 1.584 2.623 2.38 4.527 2.38 1.958 0 3.883-.844 5.771-2.549.384-.324.66-.513.823-.513.424 0 .623.238.623.693 0 .354-.483.983-1.446 1.899-.974.916-2.154 1.613-3.555 2.103-1.411.454-2.86.699-4.363.699-3.299 0-5.861-1.007-7.73-3.023-1.87-2.016-2.79-4.375-2.79-7.096 0-3.277 1.058-6.025 3.201-8.252 2.132-2.216 4.802-3.319 7.99-3.319 3.016 0 5.298 1 6.871 3.026 1.569 2.011 2.348 3.932 2.348 5.757 0 .569-.14.919-.453 1.039-.301.107-1.289.17-2.981.17l-10.5.142zm.155-1.776c2.387.049 3.753.067 4.133.067 1.83 0 2.942-.13 3.351-.408.408-.245.623-.778.623-1.55 0-1.336-.387-2.508-1.137-3.508-.762-1.037-1.676-1.541-2.721-1.541-2.479 0-3.901 2.313-4.249 6.94M36.679 24.024h-1.38v-1.497h1.473c1.905 0 5.364 0 6.338-1.227v4.991h.096c1.268-2.75 4.343-4.328 7.473-4.328 2.737 0 5.077 1.347 5.954 4.328 1.542-2.795 4.295-4.328 7.473-4.328 3.918 0 6.062 2.188 6.062 7.226v12.277h1.383v1.576h-8.946v-1.576h1.123V27.797c0-2.807-.464-3.63-2.191-3.63-3.179 0-4.904 4.459-4.904 5.263v12.037h1.231v1.576h-8.932v-1.576h1.258v-13.67c0-2.807-.805-3.55-2.175-3.575-3.205-.103-4.906 4.403-4.906 5.207v12.037h1.084v1.576h-8.895v-1.576h1.38V24.024zM97.324 22.671h1.466c1.89 0 5.324 0 6.287-1.218v20.013h1.381v1.576h-9.135v-1.576h1.38V23.984h-1.38v-1.313zM101.892 12.103a2.85 2.85 0 012.853 2.872 2.848 2.848 0 01-2.853 2.851 2.851 2.851 0 01-2.858-2.851 2.853 2.853 0 012.858-2.872M22.199 18.455c3.191-3.403 3.895-5.574 3.731-6.473-.186-1.058 1.119-1.641 2.086-1.543.536.056 1.029.207 1.446.606.417.405.63.872.63 1.391 0 .982-.843 2.094-2.548 3.322-1.317.983-1.694 1.243-2.878 2.209-.272.231-1.401 1.224-1.764 1.208-.305-.018-.573-.177-.748-.307-.139-.111-.139-.175.045-.413M198.753 32.183c-.149 2.972-1.359 5.559-3.682 7.769-2.301 2.198-5.16 3.23-8.569 3.079-3.126-.138-5.699-1.245-7.749-3.268-2.035-2.032-2.988-4.653-2.831-7.884.151-3.27 1.387-5.864 3.729-7.778 2.335-1.925 5.124-2.8 8.339-2.665 3.277.143 5.915 1.22 7.945 3.236 2.017 2.003 2.947 4.493 2.818 7.511m-6.509 1.465c.154-2.692-.158-5.138-.958-7.357-.79-2.211-2.061-3.382-3.785-3.492-1.526-.088-2.74.615-3.674 2.068-.916 1.452-1.461 3.545-1.625 6.272-.182 2.979.142 5.452.968 7.412.828 1.968 2.069 2.989 3.704 3.08 1.618.111 2.865-.576 3.778-2.045.911-1.47 1.435-3.445 1.592-5.938M122.405 31.485a17.18 17.18 0 00-.029 1.031c0 2.275.557 4.21 1.689 5.813 1.113 1.584 2.627 2.38 4.53 2.38 1.956 0 3.871-.844 5.766-2.549.388-.324.652-.513.821-.513.416 0 .633.238.633.693 0 .354-.498.983-1.454 1.899-.971.916-2.16 1.613-3.563 2.103a14.037 14.037 0 01-4.353.699c-3.298 0-5.862-1.007-7.729-3.023-1.869-2.016-2.798-4.375-2.798-7.096 0-3.277 1.068-6.025 3.203-8.252 2.126-2.216 4.803-3.319 7.998-3.319 3.002 0 5.288 1 6.875 3.026 1.565 2.011 2.343 3.932 2.343 5.757 0 .569-.138.919-.455 1.039-.305.107-1.298.17-2.988.17l-10.489.142zm.141-1.776c2.388.049 3.763.067 4.146.067 1.819 0 2.933-.13 3.346-.408.41-.245.622-.778.622-1.55 0-1.336-.389-2.508-1.151-3.508-.746-1.037-1.656-1.541-2.707-1.541-2.48 0-3.897 2.313-4.256 6.94M140.045 24.024h-1.374v-1.497h1.465c1.917 0 5.366 0 6.347-1.227v4.991h.095c1.27-2.75 4.338-4.328 7.473-4.328 2.731 0 5.077 1.347 5.963 4.328 1.534-2.795 4.281-4.328 7.463-4.328 3.921 0 6.067 2.188 6.067 7.226v12.277h1.381v1.576h-8.948v-1.576h1.128V27.797c0-2.807-.475-3.63-2.193-3.63-3.188 0-4.898 4.459-4.898 5.263v12.037h1.225v1.576h-8.936v-1.576h1.264v-13.67c0-2.807-.816-3.55-2.187-3.575-3.196-.103-4.897 4.403-4.897 5.207v12.037h1.084v1.576h-8.896v-1.576h1.374V24.024zM200.705 22.671h1.45c1.893 0 5.324 0 6.296-1.218v20.013h1.373v1.576h-9.118v-1.576h1.364V23.984h-1.364v-1.313zM205.263 12.103a2.853 2.853 0 012.855 2.872 2.851 2.851 0 01-2.855 2.851 2.858 2.858 0 01-2.862-2.851 2.86 2.86 0 012.862-2.872M125.572 18.455c3.184-3.403 3.894-5.574 3.727-6.473-.192-1.058 1.124-1.641 2.086-1.543.533.056 1.028.207 1.448.606.419.405.629.872.629 1.391 0 .982-.842 2.094-2.543 3.322-1.323.983-1.699 1.243-2.885 2.209-.277.231-1.406 1.224-1.765 1.208-.305-.018-.568-.177-.739-.307-.145-.111-.145-.175.042-.413"
+          class="st0" />
+  </g>
+</svg>
+
+    </span>
+  </a>
+
+  <div class='blog-main-menu'>
+    <ul class='navigation-header'>
+      <div class='navigation-items'>
+        <div class='logo'>
+          <a href='/blogs/news'>
+            <svg
+  class='logo-magazine'
+  xmlns='http://www.w3.org/2000/svg'
+  id='Calque_1'
+  x='0'
+  y='0'
+  version='1.1'
+  viewBox='0 0 222 74'
+  xml:space='preserve'
+>
+  <path
+      d="M57.04 54.092l3.019 6.828 3.124-6.828 1.661 9.451h-1.357l-.844-5.299-2.597 5.708-2.531-5.722-.949 5.313h-1.371l1.845-9.451zM76.5 54.196l4.192 9.346h-1.45l-.923-2.136h-3.757l-.989 2.136H72.15l4.35-9.346zm1.279 5.959l-1.305-2.98-1.358 2.98h2.663zM94.668 57.281c-.751-1.002-1.568-1.45-2.636-1.45-1.859 0-3.282 1.45-3.282 3.335 0 .975.356 1.793 1.055 2.412.619.567 1.397.883 2.135.883 1.318 0 2.505-1.002 2.623-2.242h-2.188v-1.251h3.638v.408c0 1.147-.238 1.938-.778 2.676-.765 1.041-2.017 1.661-3.335 1.661-2.465 0-4.482-2.043-4.482-4.547a4.557 4.557 0 014.588-4.588 4.43 4.43 0 012.636.858c.329.237.567.461.976.935l-.95.91zM107.09 54.196l4.192 9.346h-1.45l-.923-2.136h-3.757l-.989 2.136h-1.424l4.351-9.346zm1.279 5.959l-1.305-2.98-1.358 2.98h2.663zM122.503 56.002h-3.612V54.75h5.787l-4.311 7.539h4.218v1.253h-6.393l4.311-7.54zM132.603 54.75h1.331v8.792h-1.331V54.75zM142.637 54.157l6.406 6.697V54.75h1.332v9.332l-6.407-6.697v6.157h-1.331v-9.385zM158.947 54.75h4.851v1.251h-3.52v2.109h3.414v1.253h-3.414v2.926h3.52v1.253h-4.851V54.75z" />
+  <g>
+      <path
+          d="M95.374 32.183c-.131 2.972-1.354 5.559-3.667 7.769-2.306 2.198-5.165 3.23-8.573 3.079-3.122-.138-5.695-1.245-7.743-3.268-2.04-2.032-2.988-4.653-2.851-7.884.163-3.27 1.394-5.864 3.739-7.778 2.336-1.925 5.123-2.8 8.35-2.665 3.267.143 5.904 1.22 7.925 3.236 2.025 2.003 2.962 4.493 2.82 7.511m-6.506 1.465c.156-2.692-.156-5.138-.953-7.357-.791-2.211-2.052-3.382-3.783-3.492-1.523-.088-2.748.615-3.674 2.068-.921 1.452-1.463 3.545-1.627 6.272-.185 2.979.142 5.452.971 7.412.828 1.968 2.061 2.989 3.701 3.08 1.616.111 2.874-.576 3.774-2.045.918-1.47 1.437-3.445 1.591-5.938M19.027 31.485c-.018.468-.018.813-.018 1.031 0 2.275.554 4.21 1.682 5.813 1.117 1.584 2.623 2.38 4.527 2.38 1.958 0 3.883-.844 5.771-2.549.384-.324.66-.513.823-.513.424 0 .623.238.623.693 0 .354-.483.983-1.446 1.899-.974.916-2.154 1.613-3.555 2.103-1.411.454-2.86.699-4.363.699-3.299 0-5.861-1.007-7.73-3.023-1.87-2.016-2.79-4.375-2.79-7.096 0-3.277 1.058-6.025 3.201-8.252 2.132-2.216 4.802-3.319 7.99-3.319 3.016 0 5.298 1 6.871 3.026 1.569 2.011 2.348 3.932 2.348 5.757 0 .569-.14.919-.453 1.039-.301.107-1.289.17-2.981.17l-10.5.142zm.155-1.776c2.387.049 3.753.067 4.133.067 1.83 0 2.942-.13 3.351-.408.408-.245.623-.778.623-1.55 0-1.336-.387-2.508-1.137-3.508-.762-1.037-1.676-1.541-2.721-1.541-2.479 0-3.901 2.313-4.249 6.94M36.679 24.024h-1.38v-1.497h1.473c1.905 0 5.364 0 6.338-1.227v4.991h.096c1.268-2.75 4.343-4.328 7.473-4.328 2.737 0 5.077 1.347 5.954 4.328 1.542-2.795 4.295-4.328 7.473-4.328 3.918 0 6.062 2.188 6.062 7.226v12.277h1.383v1.576h-8.946v-1.576h1.123V27.797c0-2.807-.464-3.63-2.191-3.63-3.179 0-4.904 4.459-4.904 5.263v12.037h1.231v1.576h-8.932v-1.576h1.258v-13.67c0-2.807-.805-3.55-2.175-3.575-3.205-.103-4.906 4.403-4.906 5.207v12.037h1.084v1.576h-8.895v-1.576h1.38V24.024zM97.324 22.671h1.466c1.89 0 5.324 0 6.287-1.218v20.013h1.381v1.576h-9.135v-1.576h1.38V23.984h-1.38v-1.313zM101.892 12.103a2.85 2.85 0 012.853 2.872 2.848 2.848 0 01-2.853 2.851 2.851 2.851 0 01-2.858-2.851 2.853 2.853 0 012.858-2.872M22.199 18.455c3.191-3.403 3.895-5.574 3.731-6.473-.186-1.058 1.119-1.641 2.086-1.543.536.056 1.029.207 1.446.606.417.405.63.872.63 1.391 0 .982-.843 2.094-2.548 3.322-1.317.983-1.694 1.243-2.878 2.209-.272.231-1.401 1.224-1.764 1.208-.305-.018-.573-.177-.748-.307-.139-.111-.139-.175.045-.413M198.753 32.183c-.149 2.972-1.359 5.559-3.682 7.769-2.301 2.198-5.16 3.23-8.569 3.079-3.126-.138-5.699-1.245-7.749-3.268-2.035-2.032-2.988-4.653-2.831-7.884.151-3.27 1.387-5.864 3.729-7.778 2.335-1.925 5.124-2.8 8.339-2.665 3.277.143 5.915 1.22 7.945 3.236 2.017 2.003 2.947 4.493 2.818 7.511m-6.509 1.465c.154-2.692-.158-5.138-.958-7.357-.79-2.211-2.061-3.382-3.785-3.492-1.526-.088-2.74.615-3.674 2.068-.916 1.452-1.461 3.545-1.625 6.272-.182 2.979.142 5.452.968 7.412.828 1.968 2.069 2.989 3.704 3.08 1.618.111 2.865-.576 3.778-2.045.911-1.47 1.435-3.445 1.592-5.938M122.405 31.485a17.18 17.18 0 00-.029 1.031c0 2.275.557 4.21 1.689 5.813 1.113 1.584 2.627 2.38 4.53 2.38 1.956 0 3.871-.844 5.766-2.549.388-.324.652-.513.821-.513.416 0 .633.238.633.693 0 .354-.498.983-1.454 1.899-.971.916-2.16 1.613-3.563 2.103a14.037 14.037 0 01-4.353.699c-3.298 0-5.862-1.007-7.729-3.023-1.869-2.016-2.798-4.375-2.798-7.096 0-3.277 1.068-6.025 3.203-8.252 2.126-2.216 4.803-3.319 7.998-3.319 3.002 0 5.288 1 6.875 3.026 1.565 2.011 2.343 3.932 2.343 5.757 0 .569-.138.919-.455 1.039-.305.107-1.298.17-2.988.17l-10.489.142zm.141-1.776c2.388.049 3.763.067 4.146.067 1.819 0 2.933-.13 3.346-.408.41-.245.622-.778.622-1.55 0-1.336-.389-2.508-1.151-3.508-.746-1.037-1.656-1.541-2.707-1.541-2.48 0-3.897 2.313-4.256 6.94M140.045 24.024h-1.374v-1.497h1.465c1.917 0 5.366 0 6.347-1.227v4.991h.095c1.27-2.75 4.338-4.328 7.473-4.328 2.731 0 5.077 1.347 5.963 4.328 1.534-2.795 4.281-4.328 7.463-4.328 3.921 0 6.067 2.188 6.067 7.226v12.277h1.381v1.576h-8.948v-1.576h1.128V27.797c0-2.807-.475-3.63-2.193-3.63-3.188 0-4.898 4.459-4.898 5.263v12.037h1.225v1.576h-8.936v-1.576h1.264v-13.67c0-2.807-.816-3.55-2.187-3.575-3.196-.103-4.897 4.403-4.897 5.207v12.037h1.084v1.576h-8.896v-1.576h1.374V24.024zM200.705 22.671h1.45c1.893 0 5.324 0 6.296-1.218v20.013h1.373v1.576h-9.118v-1.576h1.364V23.984h-1.364v-1.313zM205.263 12.103a2.853 2.853 0 012.855 2.872 2.851 2.851 0 01-2.855 2.851 2.858 2.858 0 01-2.862-2.851 2.86 2.86 0 012.862-2.872M125.572 18.455c3.184-3.403 3.894-5.574 3.727-6.473-.192-1.058 1.124-1.641 2.086-1.543.533.056 1.028.207 1.448.606.419.405.629.872.629 1.391 0 .982-.842 2.094-2.543 3.322-1.323.983-1.699 1.243-2.885 2.209-.277.231-1.406 1.224-1.765 1.208-.305-.018-.568-.177-.739-.307-.145-.111-.145-.175.042-.413"
+          class="st0" />
+  </g>
+</svg>
+
+          </a>
+        </div>
+        
+  <li class='cats-item cats-item-rencontres'>
+    <a href='/blogs/news/tagged/rencontres' title='blogs.catgories.link_title Rencontres'>
+      Rencontres
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-declarations'>
+    <a href='/blogs/news/tagged/declarations' title='blogs.catgories.link_title Déclarations'>
+      Déclarations
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-mamas-love'>
+    <a href='/blogs/news/tagged/mamas-love' title='blogs.catgories.link_title Mamas Love'>
+      Mamas Love
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-la-vie-de-parents'>
+    <a href='/blogs/news/tagged/la-vie-de-parent' title='blogs.catgories.link_title La vie de parents'>
+      La vie de parents
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-secrets'>
+    <a href='/blogs/news/tagged/secrets' title='blogs.catgories.link_title Secrets'>
+      Secrets
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-prenoms'>
+    <a href='/blogs/news/tagged/prenoms' title='blogs.catgories.link_title Prénoms'>
+      Prénoms
+    </a>
+  </li>
+
+
+      </div>
+      <div class='navigation-social'>
+        <li class='search'>
+          <form action='/search' method='get' role='search' id='search_mini_form' class='form-search-header'>
+  <input
+    type='search'
+    name='q'
+    class='input-text input-search'
+    autocomplete='off'
+    id='search'
+    value=''
+    placeholder='Rechercher'
+  >
+
+  <input type='hidden' name='type' value='article'>
+
+  <button type='submit' class='btn-reset btn-search'>
+    <span class='icon-search'></span>
+  </button>
+  <div class='predictive-search-wrapper hidden-sm hidden-xs'>
+    <div class='predictive-search'>
+      <div class='predictive-search__title'>
+        Produits
+      </div>
+      <ul id='predictive-search-results' class='predictive-search__list' role='listbox'></ul>
+    </div>
+    <button type='submit' class='predictive-search__button'>
+      Rechercher “
+      <span class='predictive-search__query'></span>
+      ”
+    </button>
+  </div>
+</form>
+
+          <div class='button-search icon-search'></div>
+        </li>
+        <a href='/' class='button-shop'>
+          <span>Shop</span>
+          <img class='logo-emoi' src='//emoi-emoi.com/cdn/shop/t/6/assets/icon-logo-white.svg?v=169364479414022397261678186932' alt=''>
+        </a>
+        <p class='social-text'>Suivez-nous !</p>
+        <ul class='social-icons'>
+    <li class="item">
+        <a href="https://www.instagram.com/emoi_emoi" class="s-icon instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox='0 0 520 511.9' xmlns='http://www.w3.org/2000/svg'>
+      <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+    </svg><span class="sr-only">Instagram</span>
+        </a>
+    </li>
+
+    
+<li class="item">
+            <a href="https://www.facebook.com/emoiemoi" class="s-icon facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg
+      class='icon-facebook'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      viewbox='0 0 10 16'
+      preserveAspectRatio='xMidYMid meet'
+    >
+      <path fill="rgb(27,31,35)" fill-rule="evenodd" d="M 9.5 3C 9.5 3 7.5 3 7.5 3 7.2 3 6.5 3.47 6.5 4 6.5 4 6.5 6 6.5 6 6.5 6 9.5 6 9.5 6 9.5 6 9.5 9 9.5 9 9.5 9 6.5 9 6.5 9 6.5 9 6.5 16 6.5 16 6.5 16 3.5 16 3.5 16 3.5 16 3.5 9 3.5 9 3.5 9 0.5 9 0.5 9 0.5 9 0.5 6 0.5 6 0.5 6 3.5 6 3.5 6 3.5 6 3.5 4 3.5 4 3.5 1.79 5.46-0 7.56-0 7.56-0 9.5-0 9.5-0 9.5-0 9.5 3 9.5 3Z"/>
+    </svg><span class="sr-only">Facebook</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+            <a href="https://www.pinterest.com/emoiemoi" class="s-icon pinterest" target="_blank" rel="noopener" aria-label="Pinterest"><svg
+      class='icon-pinterest'
+      version='1.1'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      x='0px'
+      y='0px'
+      viewBox='0 0 15 20'
+      enable-background='new 0 0 15 20'
+      xml:space='preserve'
+    >
+      <path fill="#1B1F23" d="M6.2,13.2C5.7,16,5,18.6,3.2,20C2.6,15.8,4,12.7,4.7,9.4C3.6,7.5,4.8,3.6,7.1,4.5c2.9,1.2-2.5,7.2,1.1,7.9
+          c3.7,0.8,5.3-6.7,2.9-9.2c-3.3-3.5-9.8-0.1-9,5c0.2,1.2,1.4,1.6,0.5,3.3C0.6,11.1-0.1,9.3,0,7c0.1-3.8,3.3-6.5,6.5-6.9
+        c4-0.5,7.8,1.5,8.4,5.5c0.6,4.5-1.8,9.3-6.2,8.9C7.6,14.4,7.1,13.8,6.2,13.2z"/>
+    </svg><span class="sr-only">Pinterest</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+            <a href="https://www.youtube.com/user/emoiemoiParis" class="s-icon youtube" target="_blank" rel="noopener" aria-label="YouTube"><svg
+      class='icon-youtube'
+      version='1.1'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      viewBox='0 0 66 47'
+    >
+      <path d="M54.7,0h-44C4.8,0,0,5.2,0,11.4v26.2c0,6.3,4.8,11.4,10.7,11.4h44c5.9,0,10.7-5.1,10.7-11.4V11.4C65.4,5.2,60.6,0,54.7,0z
+       M44.2,25.6L26.4,36.5c-1,0.6-1.8,0.1-1.8-1.1V13.6c0-1.2,0.8-1.7,1.8-1.1l17.8,10.9C45.2,24,45.2,25,44.2,25.6z"/>
+    </svg><span class="sr-only">Youtube</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+        <a href="https://wa.me/33952364848" class="s-icon whatsapp" target="_blank" rel="noopener" aria-label="whatsapp"><svg
+      class='icon-whatsapp'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      preserveAspectRatio='xMidYMid'
+      viewBox='0 0 14 14'
+    >
+      <path d="M9.54461 0.204334C9.73103 0.260062 9.91744 0.315789 10.1039 0.390093C10.2903 0.464396 10.4767 0.5387 10.6445 0.631579C10.8123 0.705882 10.9987 0.798762 11.1478 0.910217C11.3342 1.02167 11.4834 1.13313 11.6511 1.24458C11.8003 1.35604 11.9494 1.48607 12.0985 1.63467C12.2477 1.76471 12.3782 1.89474 12.5087 2.04334C12.6391 2.19195 12.751 2.35913 12.8815 2.50774C12.9933 2.67492 13.1052 2.84211 13.1984 3.00929C13.2916 3.17647 13.3848 3.34365 13.4594 3.52941C13.5526 3.71517 13.6272 3.90093 13.6831 4.08669C13.739 4.27245 13.7949 4.4582 13.8509 4.64396C13.8881 4.8483 13.9254 5.03406 13.9441 5.21981C13.9814 5.42415 14 5.62848 14 5.81424C14 6.01858 14 6.20433 13.9814 6.39009C13.9814 6.59443 13.9441 6.78019 13.9254 6.98452C13.8881 7.18885 13.8509 7.37461 13.7949 7.56037C13.739 7.74613 13.6831 7.93189 13.6085 8.11765C13.5526 8.30341 13.4594 8.48916 13.3848 8.65635C13.2916 8.82353 13.1984 9.00929 13.0866 9.17647C12.9933 9.34365 12.8815 9.49226 12.751 9.65944C12.6391 9.80805 12.5087 9.95666 12.3782 10.1053C12.2477 10.2539 12.0985 10.3839 11.9494 10.5139C11.8003 10.644 11.6511 10.774 11.4834 10.8854C11.3156 10.9969 11.1478 11.1084 10.9987 11.2012L10.9055 11.257C10.7563 11.3313 10.6072 11.4056 10.4581 11.4799C10.2716 11.5542 10.0852 11.6285 9.91744 11.6842C9.73103 11.7585 9.54461 11.7957 9.33955 11.8514C9.15313 11.8885 8.96671 11.9257 8.76165 11.9628H8.72437H8.70573C8.53795 11.9814 8.35153 12 8.16511 12C7.97869 12 7.77363 12 7.58722 12C7.4008 11.9814 7.19574 11.9628 6.99068 11.9257C6.80426 11.8885 6.5992 11.8514 6.41278 11.7957C6.30093 11.7771 6.18908 11.7399 6.05859 11.6842C5.94674 11.6471 5.81625 11.6099 5.70439 11.5542C5.5739 11.517 5.46205 11.4613 5.3502 11.4056C5.23835 11.3498 5.1265 11.2941 5.01465 11.2198C4.9028 11.1641 4.80959 11.1084 4.73502 11.0526C4.64181 10.9969 4.56724 10.9598 4.49268 10.904L4.45539 10.8669C4.38083 10.8111 4.28762 10.7554 4.21305 10.6811C4.15712 10.644 4.1012 10.6068 4.04527 10.5511L1.13715 10.6811H0.913449L0.61518 10.6997H0.41012L0 10.7183L0.20506 10.3653L0.298269 10.1796L0.428762 9.95666L0.447403 9.93808L0.559254 9.73375L2.06924 7.13313C2.0506 7.05882 2.03196 6.98452 2.03196 6.92879L2.01332 6.78019L1.99467 6.68731V6.63158C1.97603 6.52012 1.97603 6.40867 1.95739 6.31579L1.97603 6.29721C1.95739 6.20433 1.95739 6.09288 1.95739 5.98142C1.95739 5.85139 1.95739 5.72136 1.97603 5.59133C1.97603 5.47988 1.99467 5.34984 2.01332 5.21981C2.03196 5.08978 2.0506 4.95975 2.06924 4.82972C2.10652 4.69969 2.12517 4.56966 2.16245 4.4582C2.21838 4.27245 2.2743 4.08669 2.34887 3.90093C2.42344 3.69659 2.498 3.52941 2.57257 3.36223C2.66578 3.17647 2.75899 3.00929 2.87084 2.84211C2.96405 2.67492 3.0759 2.50774 3.20639 2.35913C3.31824 2.19195 3.44873 2.04334 3.57923 1.91331C3.72836 1.76471 3.85885 1.63467 4.00799 1.50464C4.15712 1.37461 4.30626 1.24458 4.47403 1.13313C4.64181 1.0031 4.80959 0.910217 4.97736 0.817337C5.14514 0.705882 5.31292 0.631579 5.49933 0.5387C5.66711 0.464396 5.85353 0.390093 6.03995 0.334365C6.22636 0.260062 6.41278 0.204334 6.61784 0.167183C6.80426 0.111455 7.00932 0.0743034 7.19574 0.0557276C7.38216 0.0371517 7.58722 0.0185759 7.79228 0.0185759V0C7.97869 0 8.18375 0 8.37017 0.0185759C8.57523 0.0371517 8.76165 0.0557276 8.96671 0.0928793C9.15313 0.111455 9.35819 0.167183 9.54461 0.204334ZM4.08256 9.28793H4.30626H4.38083H4.41811L4.51132 9.26935L4.58589 9.34365L4.62317 9.38081L4.67909 9.41796C4.75366 9.49226 4.82823 9.56656 4.9028 9.62229C4.97736 9.69659 5.05193 9.75232 5.1265 9.80805C5.20107 9.86378 5.29427 9.9195 5.38748 9.97523C5.46205 10.0495 5.55526 10.0867 5.62983 10.1424C5.72304 10.1796 5.81625 10.2353 5.90945 10.2724C5.96538 10.3096 6.03995 10.3467 6.09587 10.3653H6.11451L6.17044 10.4025C6.26365 10.4396 6.3755 10.4768 6.45007 10.4954C6.54328 10.5325 6.63648 10.5511 6.74834 10.5882C6.89747 10.6254 7.06525 10.6625 7.21438 10.6811C7.36352 10.7183 7.51265 10.7368 7.68043 10.7368C7.82956 10.7554 7.97869 10.7554 8.14647 10.7554C8.29561 10.7368 8.44474 10.7368 8.59387 10.7183C8.76165 10.6997 8.91079 10.6625 9.05992 10.6254C9.20905 10.5882 9.35819 10.5511 9.50732 10.4954C9.65646 10.4582 9.80559 10.4025 9.93608 10.3282C10.0852 10.2724 10.2157 10.1981 10.3648 10.1238C10.4953 10.031 10.6258 9.95666 10.7563 9.86378C10.8868 9.7709 10.9987 9.67802 11.1292 9.56656C11.241 9.47368 11.3529 9.36223 11.4647 9.25077C11.5579 9.13932 11.6698 9.02786 11.763 8.89783C11.8562 8.7678 11.9494 8.63777 12.024 8.50774C12.0985 8.37771 12.1731 8.24768 12.2477 8.09907C12.3222 7.96904 12.3782 7.82043 12.4341 7.67183C12.49 7.5418 12.5273 7.39319 12.5832 7.22601C12.6205 7.0774 12.6578 6.92879 12.6764 6.78019C12.6951 6.63158 12.7137 6.4644 12.7324 6.31579C12.751 6.16718 12.751 6 12.7324 5.85139C12.7324 5.70279 12.7324 5.57276 12.7137 5.42415L12.6951 5.387C12.6764 5.23839 12.6578 5.08978 12.6205 4.9226C12.5832 4.77399 12.5459 4.62539 12.49 4.47678C12.4341 4.32817 12.3782 4.19814 12.3222 4.04954C12.2663 3.9195 12.1917 3.7709 12.0985 3.64087C11.9494 3.36223 11.763 3.10217 11.5579 2.87926C11.3715 2.65635 11.1478 2.45201 10.9241 2.26625L10.8868 2.24768C10.7563 2.1548 10.6258 2.06192 10.4953 1.96904C10.3648 1.89474 10.2344 1.82043 10.0852 1.74613C9.95473 1.6904 9.80559 1.6161 9.65646 1.56037C9.52597 1.52322 9.37683 1.46749 9.20905 1.43034C9.05992 1.37461 8.89214 1.35604 8.76165 1.31889C8.59387 1.30031 8.44474 1.28173 8.29561 1.26316C8.12783 1.26316 7.97869 1.26316 7.82956 1.26316C7.66178 1.26316 7.51265 1.28173 7.36352 1.30031C7.19574 1.31889 7.0466 1.35604 6.89747 1.37461C6.74834 1.41176 6.5992 1.46749 6.45007 1.50464C6.30093 1.56037 6.1518 1.6161 6.02131 1.6904C5.87217 1.74613 5.74168 1.82043 5.59254 1.89474C5.46205 1.96904 5.33156 2.06192 5.20107 2.1548C5.07057 2.24768 4.95872 2.34056 4.82823 2.43344C4.71638 2.54489 4.60453 2.65635 4.51132 2.7678C4.39947 2.87926 4.28762 2.99071 4.19441 3.12074L4.15712 3.17647C4.08256 3.26935 4.00799 3.3808 3.93342 3.49226C3.85885 3.62229 3.78429 3.7709 3.70972 3.90093C3.63515 4.04954 3.57923 4.19814 3.5233 4.32817C3.46738 4.47678 3.43009 4.62539 3.37417 4.77399C3.35553 4.88545 3.33688 4.97833 3.31824 5.07121C3.2996 5.16409 3.28096 5.25697 3.26232 5.36842C3.24367 5.47988 3.24367 5.57276 3.22503 5.66563C3.22503 5.75851 3.22503 5.86997 3.22503 5.96285C3.20639 6.05573 3.22503 6.16718 3.22503 6.26006C3.22503 6.35294 3.24367 6.4644 3.24367 6.55728C3.26232 6.65015 3.28096 6.74303 3.2996 6.85449C3.31824 6.94737 3.33688 7.04025 3.35553 7.13313L3.37417 7.18885V7.20743V7.24458L3.39281 7.33746L3.35553 7.41176L3.33688 7.44892L3.31824 7.48607L3.2996 7.50464L3.13182 7.82043L2.98269 8.06192L2.77763 8.43344L2.21838 9.38081L3.97071 9.3065L4.06391 9.28793H4.08256Z" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09589 2.35925C5.08923 2.78649 4.77232 3.69671 4.95874 4.71838C5.07059 5.33138 5.29429 5.94439 5.68577 6.68742C6.07725 7.43045 6.58057 8.13633 7.12119 8.69361C8.57525 10.1797 10.9241 9.91962 10.1412 8.61931C9.74968 8.0063 9.52598 7.50476 9.52598 7.50476C9.52598 7.50476 9.3582 7.15182 9.02265 7.35615C8.66846 7.57906 8.3329 7.82055 8.16513 7.78339C7.90414 7.74624 5.85354 5.12705 6.6365 4.71838C6.99069 4.5512 7.60587 4.34686 7.34489 3.91962C7.15847 3.60383 6.48736 2.4707 6.48736 2.4707C6.48736 2.4707 6.35687 2.22922 6.09589 2.35925Z" fill="white"/>
+    </svg><span class="sr-only">Whatsapp</span>
+        </a>
+    </li>
+
+        
+
+  </ul>
+      </div>
+    </ul>
+  </div>
+</div>
+</div>
+          <div id="shopify-section-template--23050078388560__main" class="shopify-section"><div class='single-container big-image'>
+  <div class='all-container-article'>
+    
+    <div class='content-article loop'>
+      <div class='preview-article no-image'>
+        <div class='content-preview'>
+          <p class='post-metas'>
+            
+            <a href='/blogs/news/tagged/mamas-love' class='category-article'>
+              <span>Mamas Love</span>
+            </a>
+          </p>
+          <h1 class='blog-title--xl title-article'>Les petits noms que l’on donne à nos enfants…</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='content' class='narrowcolumn content-article'>
+  <div class='post type-post'>
+    <div class='share-article'>
+  <div class='comments-number trans-bg-color'></div>
+  <ul class='share-list'>
+    <li class='trans-bg-color'>
+      <a
+        class='facebook icon-facebook'
+        target='_blank'
+        href='http://www.facebook.com/sharer.php?u=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants&amp;t=Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6'
+      ></a>
+    </li>
+    <li class='trans-bg-color'>
+      <a
+        class='twitter icon-twitter'
+        target='_blank'
+        href='http://twitter.com/home?status=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants'
+      ></a>
+    </li>
+    <li class='trans-bg-color'>
+      <a
+        class='pinterest icon-pinterest'
+        target='_blank'
+        href='http://pinterest.com/pin/create/button/?url=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants&amp;media=//emoi-emoi.com/cdn/shop/articles/246-pre_CC_81nom-_lindseybadenhop-3_470x470_crop_center.png?v=1630570384&amp;description=Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6-Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6'
+      ></a>
+    </li>
+    <li class='trans-bg-color'>
+      <a class='whatsapp icon-whatsapp' target='_blank' href='https://wa.me/33952364848'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          xmlns:xlink='http://www.w3.org/1999/xlink'
+          preserveAspectRatio='xMidYMid'
+          viewBox='0 0 15 15'
+        >
+          <path d="M9.54461 0.204334C9.73103 0.260062 9.91744 0.315789 10.1039 0.390093C10.2903 0.464396 10.4767 0.5387 10.6445 0.631579C10.8123 0.705882 10.9987 0.798762 11.1478 0.910217C11.3342 1.02167 11.4834 1.13313 11.6511 1.24458C11.8003 1.35604 11.9494 1.48607 12.0985 1.63467C12.2477 1.76471 12.3782 1.89474 12.5087 2.04334C12.6391 2.19195 12.751 2.35913 12.8815 2.50774C12.9933 2.67492 13.1052 2.84211 13.1984 3.00929C13.2916 3.17647 13.3848 3.34365 13.4594 3.52941C13.5526 3.71517 13.6272 3.90093 13.6831 4.08669C13.739 4.27245 13.7949 4.4582 13.8509 4.64396C13.8881 4.8483 13.9254 5.03406 13.9441 5.21981C13.9814 5.42415 14 5.62848 14 5.81424C14 6.01858 14 6.20433 13.9814 6.39009C13.9814 6.59443 13.9441 6.78019 13.9254 6.98452C13.8881 7.18885 13.8509 7.37461 13.7949 7.56037C13.739 7.74613 13.6831 7.93189 13.6085 8.11765C13.5526 8.30341 13.4594 8.48916 13.3848 8.65635C13.2916 8.82353 13.1984 9.00929 13.0866 9.17647C12.9933 9.34365 12.8815 9.49226 12.751 9.65944C12.6391 9.80805 12.5087 9.95666 12.3782 10.1053C12.2477 10.2539 12.0985 10.3839 11.9494 10.5139C11.8003 10.644 11.6511 10.774 11.4834 10.8854C11.3156 10.9969 11.1478 11.1084 10.9987 11.2012L10.9055 11.257C10.7563 11.3313 10.6072 11.4056 10.4581 11.4799C10.2716 11.5542 10.0852 11.6285 9.91744 11.6842C9.73103 11.7585 9.54461 11.7957 9.33955 11.8514C9.15313 11.8885 8.96671 11.9257 8.76165 11.9628H8.72437H8.70573C8.53795 11.9814 8.35153 12 8.16511 12C7.97869 12 7.77363 12 7.58722 12C7.4008 11.9814 7.19574 11.9628 6.99068 11.9257C6.80426 11.8885 6.5992 11.8514 6.41278 11.7957C6.30093 11.7771 6.18908 11.7399 6.05859 11.6842C5.94674 11.6471 5.81625 11.6099 5.70439 11.5542C5.5739 11.517 5.46205 11.4613 5.3502 11.4056C5.23835 11.3498 5.1265 11.2941 5.01465 11.2198C4.9028 11.1641 4.80959 11.1084 4.73502 11.0526C4.64181 10.9969 4.56724 10.9598 4.49268 10.904L4.45539 10.8669C4.38083 10.8111 4.28762 10.7554 4.21305 10.6811C4.15712 10.644 4.1012 10.6068 4.04527 10.5511L1.13715 10.6811H0.913449L0.61518 10.6997H0.41012L0 10.7183L0.20506 10.3653L0.298269 10.1796L0.428762 9.95666L0.447403 9.93808L0.559254 9.73375L2.06924 7.13313C2.0506 7.05882 2.03196 6.98452 2.03196 6.92879L2.01332 6.78019L1.99467 6.68731V6.63158C1.97603 6.52012 1.97603 6.40867 1.95739 6.31579L1.97603 6.29721C1.95739 6.20433 1.95739 6.09288 1.95739 5.98142C1.95739 5.85139 1.95739 5.72136 1.97603 5.59133C1.97603 5.47988 1.99467 5.34984 2.01332 5.21981C2.03196 5.08978 2.0506 4.95975 2.06924 4.82972C2.10652 4.69969 2.12517 4.56966 2.16245 4.4582C2.21838 4.27245 2.2743 4.08669 2.34887 3.90093C2.42344 3.69659 2.498 3.52941 2.57257 3.36223C2.66578 3.17647 2.75899 3.00929 2.87084 2.84211C2.96405 2.67492 3.0759 2.50774 3.20639 2.35913C3.31824 2.19195 3.44873 2.04334 3.57923 1.91331C3.72836 1.76471 3.85885 1.63467 4.00799 1.50464C4.15712 1.37461 4.30626 1.24458 4.47403 1.13313C4.64181 1.0031 4.80959 0.910217 4.97736 0.817337C5.14514 0.705882 5.31292 0.631579 5.49933 0.5387C5.66711 0.464396 5.85353 0.390093 6.03995 0.334365C6.22636 0.260062 6.41278 0.204334 6.61784 0.167183C6.80426 0.111455 7.00932 0.0743034 7.19574 0.0557276C7.38216 0.0371517 7.58722 0.0185759 7.79228 0.0185759V0C7.97869 0 8.18375 0 8.37017 0.0185759C8.57523 0.0371517 8.76165 0.0557276 8.96671 0.0928793C9.15313 0.111455 9.35819 0.167183 9.54461 0.204334ZM4.08256 9.28793H4.30626H4.38083H4.41811L4.51132 9.26935L4.58589 9.34365L4.62317 9.38081L4.67909 9.41796C4.75366 9.49226 4.82823 9.56656 4.9028 9.62229C4.97736 9.69659 5.05193 9.75232 5.1265 9.80805C5.20107 9.86378 5.29427 9.9195 5.38748 9.97523C5.46205 10.0495 5.55526 10.0867 5.62983 10.1424C5.72304 10.1796 5.81625 10.2353 5.90945 10.2724C5.96538 10.3096 6.03995 10.3467 6.09587 10.3653H6.11451L6.17044 10.4025C6.26365 10.4396 6.3755 10.4768 6.45007 10.4954C6.54328 10.5325 6.63648 10.5511 6.74834 10.5882C6.89747 10.6254 7.06525 10.6625 7.21438 10.6811C7.36352 10.7183 7.51265 10.7368 7.68043 10.7368C7.82956 10.7554 7.97869 10.7554 8.14647 10.7554C8.29561 10.7368 8.44474 10.7368 8.59387 10.7183C8.76165 10.6997 8.91079 10.6625 9.05992 10.6254C9.20905 10.5882 9.35819 10.5511 9.50732 10.4954C9.65646 10.4582 9.80559 10.4025 9.93608 10.3282C10.0852 10.2724 10.2157 10.1981 10.3648 10.1238C10.4953 10.031 10.6258 9.95666 10.7563 9.86378C10.8868 9.7709 10.9987 9.67802 11.1292 9.56656C11.241 9.47368 11.3529 9.36223 11.4647 9.25077C11.5579 9.13932 11.6698 9.02786 11.763 8.89783C11.8562 8.7678 11.9494 8.63777 12.024 8.50774C12.0985 8.37771 12.1731 8.24768 12.2477 8.09907C12.3222 7.96904 12.3782 7.82043 12.4341 7.67183C12.49 7.5418 12.5273 7.39319 12.5832 7.22601C12.6205 7.0774 12.6578 6.92879 12.6764 6.78019C12.6951 6.63158 12.7137 6.4644 12.7324 6.31579C12.751 6.16718 12.751 6 12.7324 5.85139C12.7324 5.70279 12.7324 5.57276 12.7137 5.42415L12.6951 5.387C12.6764 5.23839 12.6578 5.08978 12.6205 4.9226C12.5832 4.77399 12.5459 4.62539 12.49 4.47678C12.4341 4.32817 12.3782 4.19814 12.3222 4.04954C12.2663 3.9195 12.1917 3.7709 12.0985 3.64087C11.9494 3.36223 11.763 3.10217 11.5579 2.87926C11.3715 2.65635 11.1478 2.45201 10.9241 2.26625L10.8868 2.24768C10.7563 2.1548 10.6258 2.06192 10.4953 1.96904C10.3648 1.89474 10.2344 1.82043 10.0852 1.74613C9.95473 1.6904 9.80559 1.6161 9.65646 1.56037C9.52597 1.52322 9.37683 1.46749 9.20905 1.43034C9.05992 1.37461 8.89214 1.35604 8.76165 1.31889C8.59387 1.30031 8.44474 1.28173 8.29561 1.26316C8.12783 1.26316 7.97869 1.26316 7.82956 1.26316C7.66178 1.26316 7.51265 1.28173 7.36352 1.30031C7.19574 1.31889 7.0466 1.35604 6.89747 1.37461C6.74834 1.41176 6.5992 1.46749 6.45007 1.50464C6.30093 1.56037 6.1518 1.6161 6.02131 1.6904C5.87217 1.74613 5.74168 1.82043 5.59254 1.89474C5.46205 1.96904 5.33156 2.06192 5.20107 2.1548C5.07057 2.24768 4.95872 2.34056 4.82823 2.43344C4.71638 2.54489 4.60453 2.65635 4.51132 2.7678C4.39947 2.87926 4.28762 2.99071 4.19441 3.12074L4.15712 3.17647C4.08256 3.26935 4.00799 3.3808 3.93342 3.49226C3.85885 3.62229 3.78429 3.7709 3.70972 3.90093C3.63515 4.04954 3.57923 4.19814 3.5233 4.32817C3.46738 4.47678 3.43009 4.62539 3.37417 4.77399C3.35553 4.88545 3.33688 4.97833 3.31824 5.07121C3.2996 5.16409 3.28096 5.25697 3.26232 5.36842C3.24367 5.47988 3.24367 5.57276 3.22503 5.66563C3.22503 5.75851 3.22503 5.86997 3.22503 5.96285C3.20639 6.05573 3.22503 6.16718 3.22503 6.26006C3.22503 6.35294 3.24367 6.4644 3.24367 6.55728C3.26232 6.65015 3.28096 6.74303 3.2996 6.85449C3.31824 6.94737 3.33688 7.04025 3.35553 7.13313L3.37417 7.18885V7.20743V7.24458L3.39281 7.33746L3.35553 7.41176L3.33688 7.44892L3.31824 7.48607L3.2996 7.50464L3.13182 7.82043L2.98269 8.06192L2.77763 8.43344L2.21838 9.38081L3.97071 9.3065L4.06391 9.28793H4.08256Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09589 2.35925C5.08923 2.78649 4.77232 3.69671 4.95874 4.71838C5.07059 5.33138 5.29429 5.94439 5.68577 6.68742C6.07725 7.43045 6.58057 8.13633 7.12119 8.69361C8.57525 10.1797 10.9241 9.91962 10.1412 8.61931C9.74968 8.0063 9.52598 7.50476 9.52598 7.50476C9.52598 7.50476 9.3582 7.15182 9.02265 7.35615C8.66846 7.57906 8.3329 7.82055 8.16513 7.78339C7.90414 7.74624 5.85354 5.12705 6.6365 4.71838C6.99069 4.5512 7.60587 4.34686 7.34489 3.91962C7.15847 3.60383 6.48736 2.4707 6.48736 2.4707C6.48736 2.4707 6.35687 2.22922 6.09589 2.35925Z" fill="white"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class=' article-content  '>
+      <div class='entry single-post-entry'>
+        
+          <p> </p>
+<p><img class="alignnone size-full wp-image-434657822" src="https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-pre%CC%81nom-@lindseybadenhop-3.png" alt="" width="883" height="881" srcset="https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3.png 883w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-470x469.png 470w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-150x150.png 150w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-768x766.png 768w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-600x599.png 600w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-218x218.png 218w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-235x235.png 235w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-200x200.png 200w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-500x500.png 500w, https://mag.emoi-emoi.com/wp-content/uploads/2020/10/246-prénom-@lindseybadenhop-3-300x300.png 300w" sizes="(max-width: 883px) 100vw, 883px"><br> Photo : @lindseybadenhop</p>
+<p>Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches. Comme un bonbon au miel, un mot secret, un signe parmi des milliers du lien fou qui passe de main en main, de bisous en bisous, de câlins en câlins. On vous a demandé de nous souffler vos petits noms à vous. Et on fond d’amour de les partager avec vous. </p>
+<p> </p>
+<p><strong>Les intemporels :</strong></p>
+<p><strong>Ceux qui se posent de génération en génération, de famille en famille, de vous à lui.</strong></p>
+<p>Bel amour<br> Bébé chou<br> Bébé love<br> Ma douce<br> Ma doudouce<br> Ma jolie belle<br> Ma beauté<br> Ma vie<br> Mon amour<br> Mon amoureux<br> Mon amourette<br> Mon bébé<br> Mon bébé d’amour<br> Mon doudou<br> Mon joli cœur<br> Mon mignon<br> Mon petit<br> Mon toupetit<br> Mon petit prince<br> Mon trésor<br> Mon soleil <br> Mon rayon de soleil<br> Mon arc-en-ciel<br> Petit chou<br> Petit cœur</p>
+<p><strong>Les petits noms tout doux :</strong></p>
+<p><strong>Comme des sucres, des tendresses du bout des lèvres, des adoucisseurs de pleurs. Et de nuits blanches aussi.</strong></p>
+<p>Bebou<br> Bebouille<br> Bibou<br> Biboune<br> Bibounette<br> Bidou<br> Boubou<br> Bounoush<br> Bouchon<br> Chouchou<br> Choupi<br> Choupinette<br> Coquinette<br> Crapouillou<br> Doudou<br> Doudi.e<br> Doubidou<br> Frimousse<br> Ma bouille<br> Loulou.tte<br> Loulette<br> Loupidou<br> Mamour<br> Mimi<br> Minouche<br> Mini chou<br> Moumine<br> Ma poupi<br> Ma loutte<br> Ma moucherette<br> Ma ninette<br> Ma zizoune.tte<br> Mon doux<br> Mon pipou<br> Mon crapoun<br> Nanou /Ninou<br> Pililou<br> Pitchounet.te<br> Titou<br> Zouzou</p>
+<p><strong>Les petits noms d’animaux (le chat est à l’honneur !) :</strong></p>
+<p><strong>Ceux qui convoquent les petits animaux que nous sommes, guidés par notre instinct et nos désirs protecteurs.</strong></p>
+<p>Chaton <br> Chatchat<br> Chatbidou<br> Bébé chat<br> Bébé chaton<br> Mimi chat<br> Mon chat<br> Mon chatloup<br> Petit Chat<br> Bébé loup<br> Petit loup<br> Mon crapaud<br> Mon lapin<br> Jojo lapin<br> Lapinouten<br> Lapinours<br> Nounours<br> Minours<br> Poussin<br> Poussinette<br> Ma poulette<br> Tipoulet<br> Ma belette<br> Ma crevette<br> Ma loutre<br> Ma luciole<br> Ma petite tortue<br> Mon asticot d’amour<br> Mon chameau<br> Mon hibou<br> Mon hérisson<br> Mon kidi / Mon kidou<br> Mon koala<br> Mon ouistiti<br> Mon titi <br> Petit panda</p>
+<p> </p>
+<p><strong>Les gourmands :</strong></p>
+<p><strong>Ceux qui nous donnent envie de les manger, de les croquer, à toutes les sauces et à toutes les heures. Sans jamais être rassasié.es !</strong></p>
+<p>Bébé sucre<br> Sucre d’orge<br> Cacao<br> Chouquette<br> Choucroute<br> Cracote<br> Coquillette<br> Chamallow<br> Guimauve<br> Noisette<br> Ma croquette<br> Ma cacahuète<br> Ma petite chataigne<br> Ma pomme d’amour<br> Ma saucisse<br> Ma nouille<br> Mon chou fleur<br> Mon petit beurre<br> Mon petit caramel<br> Mon caramel mou<br> Mon petit gigot<br> Mon kinder surprise<br> Merguez<br> Paupiette<br> Pépito<br> Petit Kiwi<br> Sushi</p>
+<p> </p>
+<p><strong>Les petits noms à rallonge :</strong></p>
+<p><b>Ceux qui nous appartiennent de A à Z, qui prennent des kilomètres mais vont direct au cœur.</b></p>
+<p>Boule d’amour<br> Chachounet en chocolat / au Nutella<br> Chatounet d’amour<br> Chatouminou<br> Chouchou la bavouille<br> Chouchoubidou<br> Choupichouette<br> Doudou d’amour<br> Doudounette<br> Kiki ou Kikidoudou<br> Ma chérie douce<br> Ma poupée adorée<br> Ma poussinette d’amour infini<br> Mon petit monsieur<br> Mon bébé d’amour joli<br> Mon cœur-cœur<br> Mon tinamour<br> Pépère <br> Petit cœur de  maman<br> Petit bonhomme de mon cœur<br> Petite poupette<br> Pipounours</p>
+<p><strong>Les juste-entre-nous / juste-pour-rire :</strong></p>
+<p><strong>Ceux qui nous font rire, qui dédramatisent, qui rapprochent et qui mettent de l’humour dans l’amour.</strong></p>
+<p>Caca boudin<br> Boule puante<br> Crotte-crotte<br> Ma boule<br> Ma terreur nocturne<br> Mon petit glouton<br> Mon ptit prout<br> Sac à prouts</p>
+<p><strong>Les originaux :</strong></p>
+<p><strong>Ceux qui sont 100% homemade, 100% private joke, 100% vous, 100% lui.</strong></p>
+<p>Aston petit bonhomme<br> Biboule<br> Bésette<br> Boudha<br> Boudi Bouda<br> Bouillette<br> Doum<br> Fishstick<br> La mousse<br> Ma brindille<br> Ma doonette<br> Ma gluglu<br> Ma goulette<br> Ma petite gibelette<br> Mon cœur de beurre<br> Mon petit mammifère<br> Mon petit zoz<br> Munchkin<br> Nénette<br> Nounou petites cuisses<br> Octopus<br> Pépin<br> Petit gloumy<br> Poischiche<br> Pousse-Pousse<br> Progéniture<br> Sharpei<br> Youyou<br> Zouz<br> Zézette<br> Zizi</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container-tags' id='container-share'>
+  <div class='author'>
+    <span>
+      Publié le
+      <time datetime="2021-06-10T10:30:00Z">10 juin 2021</time>
+    </span>
+    <span class='hidden-xs'>-</span>
+    <span>
+      Ecrit par
+      <a href='#'>Amandine</a>
+    </span>
+  </div>
+</div>
+<div class='share-container-single'>
+  <p class='title'>Partager cet article</p>
+  <ul>
+    <li>
+      <a
+        href='http://www.facebook.com/sharer.php?u=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants&amp;t=Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6'
+        class='container-social'
+      >
+        <div class='icon-facebook icon-social'></div>
+      </a>
+    </li>
+    <li>
+      <a
+        href='http://pinterest.com/pin/create/button/?url=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants&amp;media=//emoi-emoi.com/cdn/shop/articles/246-pre_CC_81nom-_lindseybadenhop-3_470x470_crop_center.png?v=1630570384&amp;description=Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6-Les+petits+noms+que+l%E2%80%99on+donne+%C3%A0+nos+enfants%E2%80%A6'
+        class='container-social'
+      >
+        <div class='icon-pinterest icon-social'></div>
+      </a>
+    </li>
+    <li>
+      <a
+        href='http://twitter.com/home?status=https://emoi-emoi.com%2Fblogs%2Fnews%2Fles-petits-noms-que-lon-donne-a-nos-enfants'
+        class='container-social'
+      >
+        <div class='icon-twitter icon-social'></div>
+      </a>
+    </li>
+    <li>
+      <a href='https://wa.me/33981847170' class='container-social'>
+        <svg
+          class='icon-whatsapp icon-social'
+          xmlns='http://www.w3.org/2000/svg'
+          xmlns:xlink='http://www.w3.org/1999/xlink'
+          preserveAspectRatio='xMidYMid'
+          viewBox='0 0 12 12'
+        >
+          <path d="M9.54461 0.204334C9.73103 0.260062 9.91744 0.315789 10.1039 0.390093C10.2903 0.464396 10.4767 0.5387 10.6445 0.631579C10.8123 0.705882 10.9987 0.798762 11.1478 0.910217C11.3342 1.02167 11.4834 1.13313 11.6511 1.24458C11.8003 1.35604 11.9494 1.48607 12.0985 1.63467C12.2477 1.76471 12.3782 1.89474 12.5087 2.04334C12.6391 2.19195 12.751 2.35913 12.8815 2.50774C12.9933 2.67492 13.1052 2.84211 13.1984 3.00929C13.2916 3.17647 13.3848 3.34365 13.4594 3.52941C13.5526 3.71517 13.6272 3.90093 13.6831 4.08669C13.739 4.27245 13.7949 4.4582 13.8509 4.64396C13.8881 4.8483 13.9254 5.03406 13.9441 5.21981C13.9814 5.42415 14 5.62848 14 5.81424C14 6.01858 14 6.20433 13.9814 6.39009C13.9814 6.59443 13.9441 6.78019 13.9254 6.98452C13.8881 7.18885 13.8509 7.37461 13.7949 7.56037C13.739 7.74613 13.6831 7.93189 13.6085 8.11765C13.5526 8.30341 13.4594 8.48916 13.3848 8.65635C13.2916 8.82353 13.1984 9.00929 13.0866 9.17647C12.9933 9.34365 12.8815 9.49226 12.751 9.65944C12.6391 9.80805 12.5087 9.95666 12.3782 10.1053C12.2477 10.2539 12.0985 10.3839 11.9494 10.5139C11.8003 10.644 11.6511 10.774 11.4834 10.8854C11.3156 10.9969 11.1478 11.1084 10.9987 11.2012L10.9055 11.257C10.7563 11.3313 10.6072 11.4056 10.4581 11.4799C10.2716 11.5542 10.0852 11.6285 9.91744 11.6842C9.73103 11.7585 9.54461 11.7957 9.33955 11.8514C9.15313 11.8885 8.96671 11.9257 8.76165 11.9628H8.72437H8.70573C8.53795 11.9814 8.35153 12 8.16511 12C7.97869 12 7.77363 12 7.58722 12C7.4008 11.9814 7.19574 11.9628 6.99068 11.9257C6.80426 11.8885 6.5992 11.8514 6.41278 11.7957C6.30093 11.7771 6.18908 11.7399 6.05859 11.6842C5.94674 11.6471 5.81625 11.6099 5.70439 11.5542C5.5739 11.517 5.46205 11.4613 5.3502 11.4056C5.23835 11.3498 5.1265 11.2941 5.01465 11.2198C4.9028 11.1641 4.80959 11.1084 4.73502 11.0526C4.64181 10.9969 4.56724 10.9598 4.49268 10.904L4.45539 10.8669C4.38083 10.8111 4.28762 10.7554 4.21305 10.6811C4.15712 10.644 4.1012 10.6068 4.04527 10.5511L1.13715 10.6811H0.913449L0.61518 10.6997H0.41012L0 10.7183L0.20506 10.3653L0.298269 10.1796L0.428762 9.95666L0.447403 9.93808L0.559254 9.73375L2.06924 7.13313C2.0506 7.05882 2.03196 6.98452 2.03196 6.92879L2.01332 6.78019L1.99467 6.68731V6.63158C1.97603 6.52012 1.97603 6.40867 1.95739 6.31579L1.97603 6.29721C1.95739 6.20433 1.95739 6.09288 1.95739 5.98142C1.95739 5.85139 1.95739 5.72136 1.97603 5.59133C1.97603 5.47988 1.99467 5.34984 2.01332 5.21981C2.03196 5.08978 2.0506 4.95975 2.06924 4.82972C2.10652 4.69969 2.12517 4.56966 2.16245 4.4582C2.21838 4.27245 2.2743 4.08669 2.34887 3.90093C2.42344 3.69659 2.498 3.52941 2.57257 3.36223C2.66578 3.17647 2.75899 3.00929 2.87084 2.84211C2.96405 2.67492 3.0759 2.50774 3.20639 2.35913C3.31824 2.19195 3.44873 2.04334 3.57923 1.91331C3.72836 1.76471 3.85885 1.63467 4.00799 1.50464C4.15712 1.37461 4.30626 1.24458 4.47403 1.13313C4.64181 1.0031 4.80959 0.910217 4.97736 0.817337C5.14514 0.705882 5.31292 0.631579 5.49933 0.5387C5.66711 0.464396 5.85353 0.390093 6.03995 0.334365C6.22636 0.260062 6.41278 0.204334 6.61784 0.167183C6.80426 0.111455 7.00932 0.0743034 7.19574 0.0557276C7.38216 0.0371517 7.58722 0.0185759 7.79228 0.0185759V0C7.97869 0 8.18375 0 8.37017 0.0185759C8.57523 0.0371517 8.76165 0.0557276 8.96671 0.0928793C9.15313 0.111455 9.35819 0.167183 9.54461 0.204334ZM4.08256 9.28793H4.30626H4.38083H4.41811L4.51132 9.26935L4.58589 9.34365L4.62317 9.38081L4.67909 9.41796C4.75366 9.49226 4.82823 9.56656 4.9028 9.62229C4.97736 9.69659 5.05193 9.75232 5.1265 9.80805C5.20107 9.86378 5.29427 9.9195 5.38748 9.97523C5.46205 10.0495 5.55526 10.0867 5.62983 10.1424C5.72304 10.1796 5.81625 10.2353 5.90945 10.2724C5.96538 10.3096 6.03995 10.3467 6.09587 10.3653H6.11451L6.17044 10.4025C6.26365 10.4396 6.3755 10.4768 6.45007 10.4954C6.54328 10.5325 6.63648 10.5511 6.74834 10.5882C6.89747 10.6254 7.06525 10.6625 7.21438 10.6811C7.36352 10.7183 7.51265 10.7368 7.68043 10.7368C7.82956 10.7554 7.97869 10.7554 8.14647 10.7554C8.29561 10.7368 8.44474 10.7368 8.59387 10.7183C8.76165 10.6997 8.91079 10.6625 9.05992 10.6254C9.20905 10.5882 9.35819 10.5511 9.50732 10.4954C9.65646 10.4582 9.80559 10.4025 9.93608 10.3282C10.0852 10.2724 10.2157 10.1981 10.3648 10.1238C10.4953 10.031 10.6258 9.95666 10.7563 9.86378C10.8868 9.7709 10.9987 9.67802 11.1292 9.56656C11.241 9.47368 11.3529 9.36223 11.4647 9.25077C11.5579 9.13932 11.6698 9.02786 11.763 8.89783C11.8562 8.7678 11.9494 8.63777 12.024 8.50774C12.0985 8.37771 12.1731 8.24768 12.2477 8.09907C12.3222 7.96904 12.3782 7.82043 12.4341 7.67183C12.49 7.5418 12.5273 7.39319 12.5832 7.22601C12.6205 7.0774 12.6578 6.92879 12.6764 6.78019C12.6951 6.63158 12.7137 6.4644 12.7324 6.31579C12.751 6.16718 12.751 6 12.7324 5.85139C12.7324 5.70279 12.7324 5.57276 12.7137 5.42415L12.6951 5.387C12.6764 5.23839 12.6578 5.08978 12.6205 4.9226C12.5832 4.77399 12.5459 4.62539 12.49 4.47678C12.4341 4.32817 12.3782 4.19814 12.3222 4.04954C12.2663 3.9195 12.1917 3.7709 12.0985 3.64087C11.9494 3.36223 11.763 3.10217 11.5579 2.87926C11.3715 2.65635 11.1478 2.45201 10.9241 2.26625L10.8868 2.24768C10.7563 2.1548 10.6258 2.06192 10.4953 1.96904C10.3648 1.89474 10.2344 1.82043 10.0852 1.74613C9.95473 1.6904 9.80559 1.6161 9.65646 1.56037C9.52597 1.52322 9.37683 1.46749 9.20905 1.43034C9.05992 1.37461 8.89214 1.35604 8.76165 1.31889C8.59387 1.30031 8.44474 1.28173 8.29561 1.26316C8.12783 1.26316 7.97869 1.26316 7.82956 1.26316C7.66178 1.26316 7.51265 1.28173 7.36352 1.30031C7.19574 1.31889 7.0466 1.35604 6.89747 1.37461C6.74834 1.41176 6.5992 1.46749 6.45007 1.50464C6.30093 1.56037 6.1518 1.6161 6.02131 1.6904C5.87217 1.74613 5.74168 1.82043 5.59254 1.89474C5.46205 1.96904 5.33156 2.06192 5.20107 2.1548C5.07057 2.24768 4.95872 2.34056 4.82823 2.43344C4.71638 2.54489 4.60453 2.65635 4.51132 2.7678C4.39947 2.87926 4.28762 2.99071 4.19441 3.12074L4.15712 3.17647C4.08256 3.26935 4.00799 3.3808 3.93342 3.49226C3.85885 3.62229 3.78429 3.7709 3.70972 3.90093C3.63515 4.04954 3.57923 4.19814 3.5233 4.32817C3.46738 4.47678 3.43009 4.62539 3.37417 4.77399C3.35553 4.88545 3.33688 4.97833 3.31824 5.07121C3.2996 5.16409 3.28096 5.25697 3.26232 5.36842C3.24367 5.47988 3.24367 5.57276 3.22503 5.66563C3.22503 5.75851 3.22503 5.86997 3.22503 5.96285C3.20639 6.05573 3.22503 6.16718 3.22503 6.26006C3.22503 6.35294 3.24367 6.4644 3.24367 6.55728C3.26232 6.65015 3.28096 6.74303 3.2996 6.85449C3.31824 6.94737 3.33688 7.04025 3.35553 7.13313L3.37417 7.18885V7.20743V7.24458L3.39281 7.33746L3.35553 7.41176L3.33688 7.44892L3.31824 7.48607L3.2996 7.50464L3.13182 7.82043L2.98269 8.06192L2.77763 8.43344L2.21838 9.38081L3.97071 9.3065L4.06391 9.28793H4.08256Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09589 2.35925C5.08923 2.78649 4.77232 3.69671 4.95874 4.71838C5.07059 5.33138 5.29429 5.94439 5.68577 6.68742C6.07725 7.43045 6.58057 8.13633 7.12119 8.69361C8.57525 10.1797 10.9241 9.91962 10.1412 8.61931C9.74968 8.0063 9.52598 7.50476 9.52598 7.50476C9.52598 7.50476 9.3582 7.15182 9.02265 7.35615C8.66846 7.57906 8.3329 7.82055 8.16513 7.78339C7.90414 7.74624 5.85354 5.12705 6.6365 4.71838C6.99069 4.5512 7.60587 4.34686 7.34489 3.91962C7.15847 3.60383 6.48736 2.4707 6.48736 2.4707C6.48736 2.4707 6.35687 2.22922 6.09589 2.35925Z" fill="white"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<div class='related-content'>
+  <h3 class='blog-title--lg'>A lire aussi</h3>
+  <ul class='clearfix'>
+    
+      
+        
+          
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+            
+              
+                <li>
+                  <a href='/blogs/news/cadeaux-pou'>
+                    
+                      <img
+                        data-src='//emoi-emoi.com/cdn/shop/articles/24W_Charm_-_Numero_6_1_8_2_3_0_9_-_Etoile_-_Pur_Beurre_-_Arc-en-ciel_-_Des_-_Carte_a_jouer_-_Bisou_magique_-_Ma_brioche_-_Pepite_-_Ourson_-_L_amour_est_declare_-_chemise_denim_emoi_em_390x390_crop_center.jpg?v=1733158749'
+                        alt='10 cadeaux qui parleront aux mamans'
+                        width='100%'
+                        class='lazyload'
+                      >
+                    
+                  </a>
+                  
+                  <a class='category-article' href='/blogs/news/tagged/declarations'>
+                    Déclarations
+                  </a>
+                  <a href='/blogs/news/cadeaux-pou' class='related-title' rel='bookmark' title='10 cadeaux qui parleront aux mamans'>
+                    10 cadeaux qui parleront aux mamans
+                  </a>
+                  <p class='related-subtitle'>
+                    
+                      Parce qu'elle mérite des déclas qui lui disent Je t'aime, merci, t'es super, je t'ai dit que t'étais super ?... on vous part [...]
+                    
+                  </p>
+                </li>
+                
+                
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+                <li>
+                  <a href='/blogs/news/claire-mondray-accepter-le-desequilibre-en-devenant-mere'>
+                    
+                      <img
+                        data-src='//emoi-emoi.com/cdn/shop/articles/IMG_9957_390x390_crop_center.jpg?v=1730727617'
+                        alt='Claire Mondray, accepter le déséquilibre en devenant mère.'
+                        width='100%'
+                        class='lazyload'
+                      >
+                    
+                  </a>
+                  
+                  <a class='category-article' href='/blogs/news/tagged/mamas-love'>
+                    Mamas Love
+                  </a>
+                  <a href='/blogs/news/claire-mondray-accepter-le-desequilibre-en-devenant-mere' class='related-title' rel='bookmark' title='Claire Mondray, accepter le déséquilibre en devenant mère.'>
+                    Claire Mondray, accepter le déséquilibre en devenant mère.
+                  </a>
+                  <p class='related-subtitle'>
+                    
+                       
+
+ 
+Lire et écouter Claire Mondray, c'est sentir le soleil vous caresser la joue même sous un ciel gris. Créatrice de conte [...]
+                    
+                  </p>
+                </li>
+                
+                
+        
+      
+    
+      
+        
+          
+            
+              
+            
+          
+        
+      
+    
+      
+        
+          
+            
+              
+                <li>
+                  <a href='/blogs/news/clarisse-votre-coach-perinee-et-body-heureux-1'>
+                    
+                      <img
+                        data-src='//emoi-emoi.com/cdn/shop/articles/image00001_390x390_crop_center.jpg?v=1729243679'
+                        alt='Clarisse, la coach qui rend les périnées heureux'
+                        width='100%'
+                        class='lazyload'
+                      >
+                    
+                  </a>
+                  
+                  <a class='category-article' href='/blogs/news/tagged/mamas-love'>
+                    Mamas Love
+                  </a>
+                  <a href='/blogs/news/clarisse-votre-coach-perinee-et-body-heureux-1' class='related-title' rel='bookmark' title='Clarisse, la coach qui rend les périnées heureux'>
+                    Clarisse, la coach qui rend les périnées heureux
+                  </a>
+                  <p class='related-subtitle'>
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Sur Instagram, Clarisse fait du bien à notre périnée. En le rendant heureux, elle active  to [...]
+                    
+                  </p>
+                </li>
+                
+                
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+</div>
+
+<div class='clear'></div>
+
+<script type='application/ld+json'>
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": " 
+ Photo : @lindseybadenhop
+Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches. Comme un bonbon au miel, un mot secret, un signe parmi des milliers du lien fou qui passe de main en main, de bisous en bisous, de câlins en câlins. On vous a demandé de nous souffler vos petits noms à vous. Et on fond d’amour de les partager avec vous. 
+ 
+Les intemporels :
+Ceux qui se posent de génération en génération, de famille en famille, de vous à lui.
+Bel amour Bébé chou Bébé love Ma douce Ma doudouce Ma jolie belle Ma beauté Ma vie Mon amour Mon amoureux Mon amourette Mon bébé Mon bébé d’amour Mon doudou Mon joli cœur Mon mignon Mon petit Mon toupetit Mon petit prince Mon trésor Mon soleil  Mon rayon de soleil Mon arc-en-ciel Petit chou Petit cœur
+Les petits noms tout doux :
+Comme des sucres, des tendresses du bout des lèvres, des adoucisseurs de pleurs. Et de nuits blanches aussi.
+Bebou Bebouille Bibou Biboune Bibounette Bidou Boubou Bounoush Bouchon Chouchou Choupi Choupinette Coquinette Crapouillou Doudou Doudi.e Doubidou Frimousse Ma bouille Loulou.tte Loulette Loupidou Mamour Mimi Minouche Mini chou Moumine Ma poupi Ma loutte Ma moucherette Ma ninette Ma zizoune.tte Mon doux Mon pipou Mon crapoun Nanou /Ninou Pililou Pitchounet.te Titou Zouzou
+Les petits noms d’animaux (le chat est à l’honneur !) :
+Ceux qui convoquent les petits animaux que nous sommes, guidés par notre instinct et nos désirs protecteurs.
+Chaton  Chatchat Chatbidou Bébé chat Bébé chaton Mimi chat Mon chat Mon chatloup Petit Chat Bébé loup Petit loup Mon crapaud Mon lapin Jojo lapin Lapinouten Lapinours Nounours Minours Poussin Poussinette Ma poulette Tipoulet Ma belette Ma crevette Ma loutre Ma luciole Ma petite tortue Mon asticot d’amour Mon chameau Mon hibou Mon hérisson Mon kidi / Mon kidou Mon koala Mon ouistiti Mon titi  Petit panda
+ 
+Les gourmands :
+Ceux qui nous donnent envie de les manger, de les croquer, à toutes les sauces et à toutes les heures. Sans jamais être rassasié.es !
+Bébé sucre Sucre d’orge Cacao Chouquette Choucroute Cracote Coquillette Chamallow Guimauve Noisette Ma croquette Ma cacahuète Ma petite chataigne Ma pomme d’amour Ma saucisse Ma nouille Mon chou fleur Mon petit beurre Mon petit caramel Mon caramel mou Mon petit gigot Mon kinder surprise Merguez Paupiette Pépito Petit Kiwi Sushi
+ 
+Les petits noms à rallonge :
+Ceux qui nous appartiennent de A à Z, qui prennent des kilomètres mais vont direct au cœur.
+Boule d’amour Chachounet en chocolat / au Nutella Chatounet d’amour Chatouminou Chouchou la bavouille Chouchoubidou Choupichouette Doudou d’amour Doudounette Kiki ou Kikidoudou Ma chérie douce Ma poupée adorée Ma poussinette d’amour infini Mon petit monsieur Mon bébé d’amour joli Mon cœur-cœur Mon tinamour Pépère  Petit cœur de  maman Petit bonhomme de mon cœur Petite poupette Pipounours
+Les juste-entre-nous / juste-pour-rire :
+Ceux qui nous font rire, qui dédramatisent, qui rapprochent et qui mettent de l’humour dans l’amour.
+Caca boudin Boule puante Crotte-crotte Ma boule Ma terreur nocturne Mon petit glouton Mon ptit prout Sac à prouts
+Les originaux :
+Ceux qui sont 100% homemade, 100% private joke, 100% vous, 100% lui.
+Aston petit bonhomme Biboule Bésette Boudha Boudi Bouda Bouillette Doum Fishstick La mousse Ma brindille Ma doonette Ma gluglu Ma goulette Ma petite gibelette Mon cœur de beurre Mon petit mammifère Mon petit zoz Munchkin Nénette Nounou petites cuisses Octopus Pépin Petit gloumy Poischiche Pousse-Pousse Progéniture Sharpei Youyou Zouz Zézette Zizi
+ 
+ 
+ 
+ ",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://emoi-emoi.com"
+    },
+    "headline": "Les petits noms que l’on donne à nos enfants…",
+    
+      "description": "Il y a le prénom qu’on leur donne. Et il y a ces petits noms qui sortent spontanément de nos bouches.  On vous a demandé de nous souffler vos petits noms à vous. Et on fond d’amour de les partager avec vous. ",
+    
+    
+      
+      "image": [
+        "https://emoi-emoi.com/cdn/shop/articles/246-pre_CC_81nom-_lindseybadenhop-3_883x.png?v=1630570384"
+      ],
+    
+    "datePublished": "2021-06-10T12:30:00Z",
+    "dateCreated": "2020-10-23T10:06:13Z",
+    "author": {
+      "@type": "Person",
+      "name": "Wordpress"
+    },
+    "publisher": {
+      "@type": "Organization",
+      
+      
+        "logo": {
+          "@type": "ImageObject",
+          "height": "281",
+          "url": "https://emoi-emoi.com/cdn/shop/files/logo_540x.webp?v=1716797343",
+          "width": "540"
+        },
+      
+      "name": "émoi émoi"
+    }
+  }
+</script>
+</div>
+        </main>
+      </div>
+
+      <div id="shopify-section-footer-blog" class="shopify-section"><div class='container container-push'>
+  <div class='newsletter-submit'>
+    <h2 class='blog-title--lg'>
+      Faites partie de la famille !
+    </h2>
+    <p class='description'>
+      Nouveautés en avant-première, exclus, photos #tropchaton, de l’amour, de l’amour, toujours de l’amour (et des boulettes, aussi).
+    </p>
+
+    <div class='block-newsletter'>
+      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" />
+        <div class='col-form'>
+          <div class='ph-form'>
+            
+            
+              <div class='wrap-newsletter'>
+                <button
+                  onclick="document.getElementById('newsletter-please-wait').setAttribute('style', '')"
+                  type='submit'
+                  name='commit'
+                  id='submit_email_newsletter'
+                  class='le-button btn-black'
+                >
+                  OK
+                </button>
+                <input type='hidden' name='contact[tags]' value='newsletter'>
+                <input
+                  type='email'
+                  class='input-text required-entry validate-email'
+                  name='contact[email]'
+                  id='Email'
+                  value=''
+                  placeholder='Votre e-mail'
+                  autocorrect='off'
+                  autocapitalize='off'
+                >
+              </div>
+              <div id='newsletter-please-wait' style='display: none;' class='subscribe-loader'>
+                <div class='loader'>
+                  <svg
+      class='small-loader'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      x='0px'
+      y='0px'
+      viewBox='0 0 23 22.8'
+      enable-background='new 0 0 23 22.8'
+      xml:space='preserve'
+    >
+      <path d="M17.7,17.2c-6.6,6.1-16.5,0-14.2-8.7C6.1-0.9,19.6,2.4,20,11.3c0.1,1.9,3.1,1.9,3,0C22.4-0.7,6.7-4.4,1.1,6.4
+              c-2.5,4.8-0.6,10.7,3.4,14c4.6,3.8,11.1,2.7,15.2-1.1C21.2,18,19.1,15.9,17.7,17.2L17.7,17.2z"/>
+    </svg>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class='footer-reinsurance'>
+  <div class='container'>
+    <h2 class='blog-title--lg'>Nos dernières capsules</h2>
+    <div class='c-slider js-cover-slider' data-prev-next-button='false' data-group-cells='3'>
+      <div class='js-cover-item c-card col-12 col-md-4'>
+        <img
+          class='c-card__thumbnail'
+          src='//emoi-emoi.com/cdn/shop/files/mag-400x400px-1_c11b6b9f-eabf-4754-82c3-7ecf105b6939_400x400_crop_center.jpg?v=1702403274'
+          alt=''
+        >
+        <div class='c-card__content'>
+          <p class='c-card__title'>Bijoux</p>
+          <a href='/collections/bijoux' class='c-card__link'>
+            <span>Découvrir</span>
+          </a>
+        </div>
+      </div>
+
+      <div class='js-cover-item c-card col-12 col-md-4'>
+        <img
+          class='c-card__thumbnail'
+          src='//emoi-emoi.com/cdn/shop/files/24WxZeta-BasketsAdulteBeta-vert-EnfantVelcro-vertZetaxemoiemoi-LepantalonPalou-LepantalonPhoenix-bleunuit-LesweatSonnyenpolaire-LesweatSven-creme_nuit23_18232web_bbaabcfb-9c91-4b10-9579-e2dcf89da761_400x400_crop_center.jpg?v=1721827078'
+          alt=''
+        >
+        <div class='c-card__content'>
+          <p class='c-card__title'>Duos</p>
+          <a href='/collections/nos-duos-iconiques' class='c-card__link'>
+            <span>Découvrir</span>
+          </a>
+        </div>
+      </div>
+
+      <div class='js-cover-item c-card col-12 col-md-4'>
+        <img
+          class='c-card__thumbnail'
+          src='//emoi-emoi.com/cdn/shop/files/mag-400x400px-3_400x400_crop_center.jpg?v=1702403277'
+          alt=''
+        >
+        <div class='c-card__content'>
+          <p class='c-card__title'>Le jean</p>
+          <a href='https://emoi-emoi.com/pages/le-jean-qui-vous-aime' class='c-card__link'>
+            <span>Découvrir</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class='footer'>
+  <div class='container'>
+    <div class='row no-row-mobile'>
+      <div class='content-logo col-md-4 col-sm-12'>
+        <a href='/' class='button-shop'>
+          <span>Shop</span>
+          <img class='logo-emoi' src='//emoi-emoi.com/cdn/shop/t/6/assets/icon-logo-white.svg?v=169364479414022397261678186932' alt='emoi emoi'>
+        </a>
+      </div>
+      <div class='col-md-8 col-sm-12'>
+        <ul class='navigation-footer'>
+          
+  <li class='cats-item cats-item-rencontres'>
+    <a href='/blogs/news/tagged/rencontres' title='blogs.catgories.link_title Rencontres'>
+      Rencontres
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-declarations'>
+    <a href='/blogs/news/tagged/declarations' title='blogs.catgories.link_title Déclarations'>
+      Déclarations
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-mamas-love'>
+    <a href='/blogs/news/tagged/mamas-love' title='blogs.catgories.link_title Mamas Love'>
+      Mamas Love
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-la-vie-de-parents'>
+    <a href='/blogs/news/tagged/la-vie-de-parent' title='blogs.catgories.link_title La vie de parents'>
+      La vie de parents
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-secrets'>
+    <a href='/blogs/news/tagged/secrets' title='blogs.catgories.link_title Secrets'>
+      Secrets
+    </a>
+  </li>
+
+  <li class='cats-item cats-item-prenoms'>
+    <a href='/blogs/news/tagged/prenoms' title='blogs.catgories.link_title Prénoms'>
+      Prénoms
+    </a>
+  </li>
+
+
+        </ul>
+      </div>
+    </div>
+    <div class='row no-row-mobile'>
+      <div class='col-md-4 col-sm-12 copyright'>
+        © 2025 émoi émoi / Site par
+        <a
+          href='http://wwww.colorz.fr'
+          target='_blank'
+        >
+          Colorz
+        </a>
+      </div>
+      <div class='col-md-8 col-sm-12 social-footer'>
+        <span class='social-text'>Suivez-nous !</span>
+        <ul class='social-icons'>
+    <li class="item">
+        <a href="https://www.instagram.com/emoi_emoi" class="s-icon instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox='0 0 520 511.9' xmlns='http://www.w3.org/2000/svg'>
+      <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+    </svg><span class="sr-only">Instagram</span>
+        </a>
+    </li>
+
+    
+<li class="item">
+            <a href="https://www.facebook.com/emoiemoi" class="s-icon facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg
+      class='icon-facebook'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      viewbox='0 0 10 16'
+      preserveAspectRatio='xMidYMid meet'
+    >
+      <path fill="rgb(27,31,35)" fill-rule="evenodd" d="M 9.5 3C 9.5 3 7.5 3 7.5 3 7.2 3 6.5 3.47 6.5 4 6.5 4 6.5 6 6.5 6 6.5 6 9.5 6 9.5 6 9.5 6 9.5 9 9.5 9 9.5 9 6.5 9 6.5 9 6.5 9 6.5 16 6.5 16 6.5 16 3.5 16 3.5 16 3.5 16 3.5 9 3.5 9 3.5 9 0.5 9 0.5 9 0.5 9 0.5 6 0.5 6 0.5 6 3.5 6 3.5 6 3.5 6 3.5 4 3.5 4 3.5 1.79 5.46-0 7.56-0 7.56-0 9.5-0 9.5-0 9.5-0 9.5 3 9.5 3Z"/>
+    </svg><span class="sr-only">Facebook</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+            <a href="https://www.pinterest.com/emoiemoi" class="s-icon pinterest" target="_blank" rel="noopener" aria-label="Pinterest"><svg
+      class='icon-pinterest'
+      version='1.1'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      x='0px'
+      y='0px'
+      viewBox='0 0 15 20'
+      enable-background='new 0 0 15 20'
+      xml:space='preserve'
+    >
+      <path fill="#1B1F23" d="M6.2,13.2C5.7,16,5,18.6,3.2,20C2.6,15.8,4,12.7,4.7,9.4C3.6,7.5,4.8,3.6,7.1,4.5c2.9,1.2-2.5,7.2,1.1,7.9
+          c3.7,0.8,5.3-6.7,2.9-9.2c-3.3-3.5-9.8-0.1-9,5c0.2,1.2,1.4,1.6,0.5,3.3C0.6,11.1-0.1,9.3,0,7c0.1-3.8,3.3-6.5,6.5-6.9
+        c4-0.5,7.8,1.5,8.4,5.5c0.6,4.5-1.8,9.3-6.2,8.9C7.6,14.4,7.1,13.8,6.2,13.2z"/>
+    </svg><span class="sr-only">Pinterest</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+            <a href="https://www.youtube.com/user/emoiemoiParis" class="s-icon youtube" target="_blank" rel="noopener" aria-label="YouTube"><svg
+      class='icon-youtube'
+      version='1.1'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      viewBox='0 0 66 47'
+    >
+      <path d="M54.7,0h-44C4.8,0,0,5.2,0,11.4v26.2c0,6.3,4.8,11.4,10.7,11.4h44c5.9,0,10.7-5.1,10.7-11.4V11.4C65.4,5.2,60.6,0,54.7,0z
+       M44.2,25.6L26.4,36.5c-1,0.6-1.8,0.1-1.8-1.1V13.6c0-1.2,0.8-1.7,1.8-1.1l17.8,10.9C45.2,24,45.2,25,44.2,25.6z"/>
+    </svg><span class="sr-only">Youtube</span>
+            </a>
+        </li>
+
+        
+<li class="item">
+        <a href="https://wa.me/33952364848" class="s-icon whatsapp" target="_blank" rel="noopener" aria-label="whatsapp"><svg
+      class='icon-whatsapp'
+      xmlns='http://www.w3.org/2000/svg'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      preserveAspectRatio='xMidYMid'
+      viewBox='0 0 14 14'
+    >
+      <path d="M9.54461 0.204334C9.73103 0.260062 9.91744 0.315789 10.1039 0.390093C10.2903 0.464396 10.4767 0.5387 10.6445 0.631579C10.8123 0.705882 10.9987 0.798762 11.1478 0.910217C11.3342 1.02167 11.4834 1.13313 11.6511 1.24458C11.8003 1.35604 11.9494 1.48607 12.0985 1.63467C12.2477 1.76471 12.3782 1.89474 12.5087 2.04334C12.6391 2.19195 12.751 2.35913 12.8815 2.50774C12.9933 2.67492 13.1052 2.84211 13.1984 3.00929C13.2916 3.17647 13.3848 3.34365 13.4594 3.52941C13.5526 3.71517 13.6272 3.90093 13.6831 4.08669C13.739 4.27245 13.7949 4.4582 13.8509 4.64396C13.8881 4.8483 13.9254 5.03406 13.9441 5.21981C13.9814 5.42415 14 5.62848 14 5.81424C14 6.01858 14 6.20433 13.9814 6.39009C13.9814 6.59443 13.9441 6.78019 13.9254 6.98452C13.8881 7.18885 13.8509 7.37461 13.7949 7.56037C13.739 7.74613 13.6831 7.93189 13.6085 8.11765C13.5526 8.30341 13.4594 8.48916 13.3848 8.65635C13.2916 8.82353 13.1984 9.00929 13.0866 9.17647C12.9933 9.34365 12.8815 9.49226 12.751 9.65944C12.6391 9.80805 12.5087 9.95666 12.3782 10.1053C12.2477 10.2539 12.0985 10.3839 11.9494 10.5139C11.8003 10.644 11.6511 10.774 11.4834 10.8854C11.3156 10.9969 11.1478 11.1084 10.9987 11.2012L10.9055 11.257C10.7563 11.3313 10.6072 11.4056 10.4581 11.4799C10.2716 11.5542 10.0852 11.6285 9.91744 11.6842C9.73103 11.7585 9.54461 11.7957 9.33955 11.8514C9.15313 11.8885 8.96671 11.9257 8.76165 11.9628H8.72437H8.70573C8.53795 11.9814 8.35153 12 8.16511 12C7.97869 12 7.77363 12 7.58722 12C7.4008 11.9814 7.19574 11.9628 6.99068 11.9257C6.80426 11.8885 6.5992 11.8514 6.41278 11.7957C6.30093 11.7771 6.18908 11.7399 6.05859 11.6842C5.94674 11.6471 5.81625 11.6099 5.70439 11.5542C5.5739 11.517 5.46205 11.4613 5.3502 11.4056C5.23835 11.3498 5.1265 11.2941 5.01465 11.2198C4.9028 11.1641 4.80959 11.1084 4.73502 11.0526C4.64181 10.9969 4.56724 10.9598 4.49268 10.904L4.45539 10.8669C4.38083 10.8111 4.28762 10.7554 4.21305 10.6811C4.15712 10.644 4.1012 10.6068 4.04527 10.5511L1.13715 10.6811H0.913449L0.61518 10.6997H0.41012L0 10.7183L0.20506 10.3653L0.298269 10.1796L0.428762 9.95666L0.447403 9.93808L0.559254 9.73375L2.06924 7.13313C2.0506 7.05882 2.03196 6.98452 2.03196 6.92879L2.01332 6.78019L1.99467 6.68731V6.63158C1.97603 6.52012 1.97603 6.40867 1.95739 6.31579L1.97603 6.29721C1.95739 6.20433 1.95739 6.09288 1.95739 5.98142C1.95739 5.85139 1.95739 5.72136 1.97603 5.59133C1.97603 5.47988 1.99467 5.34984 2.01332 5.21981C2.03196 5.08978 2.0506 4.95975 2.06924 4.82972C2.10652 4.69969 2.12517 4.56966 2.16245 4.4582C2.21838 4.27245 2.2743 4.08669 2.34887 3.90093C2.42344 3.69659 2.498 3.52941 2.57257 3.36223C2.66578 3.17647 2.75899 3.00929 2.87084 2.84211C2.96405 2.67492 3.0759 2.50774 3.20639 2.35913C3.31824 2.19195 3.44873 2.04334 3.57923 1.91331C3.72836 1.76471 3.85885 1.63467 4.00799 1.50464C4.15712 1.37461 4.30626 1.24458 4.47403 1.13313C4.64181 1.0031 4.80959 0.910217 4.97736 0.817337C5.14514 0.705882 5.31292 0.631579 5.49933 0.5387C5.66711 0.464396 5.85353 0.390093 6.03995 0.334365C6.22636 0.260062 6.41278 0.204334 6.61784 0.167183C6.80426 0.111455 7.00932 0.0743034 7.19574 0.0557276C7.38216 0.0371517 7.58722 0.0185759 7.79228 0.0185759V0C7.97869 0 8.18375 0 8.37017 0.0185759C8.57523 0.0371517 8.76165 0.0557276 8.96671 0.0928793C9.15313 0.111455 9.35819 0.167183 9.54461 0.204334ZM4.08256 9.28793H4.30626H4.38083H4.41811L4.51132 9.26935L4.58589 9.34365L4.62317 9.38081L4.67909 9.41796C4.75366 9.49226 4.82823 9.56656 4.9028 9.62229C4.97736 9.69659 5.05193 9.75232 5.1265 9.80805C5.20107 9.86378 5.29427 9.9195 5.38748 9.97523C5.46205 10.0495 5.55526 10.0867 5.62983 10.1424C5.72304 10.1796 5.81625 10.2353 5.90945 10.2724C5.96538 10.3096 6.03995 10.3467 6.09587 10.3653H6.11451L6.17044 10.4025C6.26365 10.4396 6.3755 10.4768 6.45007 10.4954C6.54328 10.5325 6.63648 10.5511 6.74834 10.5882C6.89747 10.6254 7.06525 10.6625 7.21438 10.6811C7.36352 10.7183 7.51265 10.7368 7.68043 10.7368C7.82956 10.7554 7.97869 10.7554 8.14647 10.7554C8.29561 10.7368 8.44474 10.7368 8.59387 10.7183C8.76165 10.6997 8.91079 10.6625 9.05992 10.6254C9.20905 10.5882 9.35819 10.5511 9.50732 10.4954C9.65646 10.4582 9.80559 10.4025 9.93608 10.3282C10.0852 10.2724 10.2157 10.1981 10.3648 10.1238C10.4953 10.031 10.6258 9.95666 10.7563 9.86378C10.8868 9.7709 10.9987 9.67802 11.1292 9.56656C11.241 9.47368 11.3529 9.36223 11.4647 9.25077C11.5579 9.13932 11.6698 9.02786 11.763 8.89783C11.8562 8.7678 11.9494 8.63777 12.024 8.50774C12.0985 8.37771 12.1731 8.24768 12.2477 8.09907C12.3222 7.96904 12.3782 7.82043 12.4341 7.67183C12.49 7.5418 12.5273 7.39319 12.5832 7.22601C12.6205 7.0774 12.6578 6.92879 12.6764 6.78019C12.6951 6.63158 12.7137 6.4644 12.7324 6.31579C12.751 6.16718 12.751 6 12.7324 5.85139C12.7324 5.70279 12.7324 5.57276 12.7137 5.42415L12.6951 5.387C12.6764 5.23839 12.6578 5.08978 12.6205 4.9226C12.5832 4.77399 12.5459 4.62539 12.49 4.47678C12.4341 4.32817 12.3782 4.19814 12.3222 4.04954C12.2663 3.9195 12.1917 3.7709 12.0985 3.64087C11.9494 3.36223 11.763 3.10217 11.5579 2.87926C11.3715 2.65635 11.1478 2.45201 10.9241 2.26625L10.8868 2.24768C10.7563 2.1548 10.6258 2.06192 10.4953 1.96904C10.3648 1.89474 10.2344 1.82043 10.0852 1.74613C9.95473 1.6904 9.80559 1.6161 9.65646 1.56037C9.52597 1.52322 9.37683 1.46749 9.20905 1.43034C9.05992 1.37461 8.89214 1.35604 8.76165 1.31889C8.59387 1.30031 8.44474 1.28173 8.29561 1.26316C8.12783 1.26316 7.97869 1.26316 7.82956 1.26316C7.66178 1.26316 7.51265 1.28173 7.36352 1.30031C7.19574 1.31889 7.0466 1.35604 6.89747 1.37461C6.74834 1.41176 6.5992 1.46749 6.45007 1.50464C6.30093 1.56037 6.1518 1.6161 6.02131 1.6904C5.87217 1.74613 5.74168 1.82043 5.59254 1.89474C5.46205 1.96904 5.33156 2.06192 5.20107 2.1548C5.07057 2.24768 4.95872 2.34056 4.82823 2.43344C4.71638 2.54489 4.60453 2.65635 4.51132 2.7678C4.39947 2.87926 4.28762 2.99071 4.19441 3.12074L4.15712 3.17647C4.08256 3.26935 4.00799 3.3808 3.93342 3.49226C3.85885 3.62229 3.78429 3.7709 3.70972 3.90093C3.63515 4.04954 3.57923 4.19814 3.5233 4.32817C3.46738 4.47678 3.43009 4.62539 3.37417 4.77399C3.35553 4.88545 3.33688 4.97833 3.31824 5.07121C3.2996 5.16409 3.28096 5.25697 3.26232 5.36842C3.24367 5.47988 3.24367 5.57276 3.22503 5.66563C3.22503 5.75851 3.22503 5.86997 3.22503 5.96285C3.20639 6.05573 3.22503 6.16718 3.22503 6.26006C3.22503 6.35294 3.24367 6.4644 3.24367 6.55728C3.26232 6.65015 3.28096 6.74303 3.2996 6.85449C3.31824 6.94737 3.33688 7.04025 3.35553 7.13313L3.37417 7.18885V7.20743V7.24458L3.39281 7.33746L3.35553 7.41176L3.33688 7.44892L3.31824 7.48607L3.2996 7.50464L3.13182 7.82043L2.98269 8.06192L2.77763 8.43344L2.21838 9.38081L3.97071 9.3065L4.06391 9.28793H4.08256Z" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.09589 2.35925C5.08923 2.78649 4.77232 3.69671 4.95874 4.71838C5.07059 5.33138 5.29429 5.94439 5.68577 6.68742C6.07725 7.43045 6.58057 8.13633 7.12119 8.69361C8.57525 10.1797 10.9241 9.91962 10.1412 8.61931C9.74968 8.0063 9.52598 7.50476 9.52598 7.50476C9.52598 7.50476 9.3582 7.15182 9.02265 7.35615C8.66846 7.57906 8.3329 7.82055 8.16513 7.78339C7.90414 7.74624 5.85354 5.12705 6.6365 4.71838C6.99069 4.5512 7.60587 4.34686 7.34489 3.91962C7.15847 3.60383 6.48736 2.4707 6.48736 2.4707C6.48736 2.4707 6.35687 2.22922 6.09589 2.35925Z" fill="white"/>
+    </svg><span class="sr-only">Whatsapp</span>
+        </a>
+    </li>
+
+        
+
+  </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+    
+    <script>
+  window.mwGroupedProductsObjects = {
+    product: null,
+    cart: {"note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"EUR","items_subtotal_price":0,"cart_level_discount_applications":[],"checkout_charge_amount":0},
+    template_name: "article",
+    shop: {
+      domain: "emoi-emoi-dev.myshopify.com",
+      money_format : "{{amount_with_comma_separator}}€",
+      money_with_currency_format : "{{amount_with_comma_separator}}€ EUR"
+    }
+  };
+</script>
+
+
+    
+
+    <script src='//emoi-emoi.com/cdn/shop/t/6/assets/bundle.js?v=36556417964849647011736512269'></script>
+
+    
+
+    <script defer type='text/javascript'>
+      !(function (e) {
+        if (!window.pintrk) {
+          window.pintrk = function () {
+            window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+          };
+          var n = window.pintrk;
+          (n.queue = []), (n.version = '3.0');
+          var t = document.createElement('script');
+          (t.async = !0), (t.src = e);
+          var r = document.getElementsByTagName('script')[0];
+          r.parentNode.insertBefore(t, r);
+        }
+      })('https://s.pinimg.com/ct/core.js');
+
+      pintrk('load', '2612628857170', {em: ''});
+      pintrk('page');
+    </script>
+
+    
+
+    <!-- STARTING AFFILAE TRACKING CODE -->
+
+    <script type='text/javascript'>
+      var _ae = {
+        pid: '66ab5e5ae8674cc2cf408b50',
+      };
+      (function () {
+        var element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.async = true;
+        element.src = '//static.affilae.com/ae-v3.5.js';
+        var scr = document.getElementsByTagName('script')[0];
+        scr.parentNode.insertBefore(element, scr);
+      })();
+    </script>
+    <!-- ENDING AFFILAE TRACKING CODE -->
+
+    <script>
+      window.shopUrl = 'https://emoi-emoi.com';
+      window.routes = {
+        cart_add_url: '/cart/add',
+        cart_change_url: '/cart/change',
+        cart_update_url: '/cart/update',
+        cart_url: '/cart',
+        predictive_search_url: '/search/suggest',
+      };
+    </script>
+  <div id="shopify-block-AN2k5QkMvdUJ0UDFZd__8171265131012698934" class="shopify-block shopify-app-block">
+
+<input class="OrichiAppEmbed" type="hidden">
+<input
+  class="OrichiCustomerTags"
+  type="hidden"
+  value="" />
+<input
+  class="OrichiCustomerEmail"
+  type="hidden"
+  value="" />
+
+
+
+
+  <script async src="https://cdn.shopify.com/extensions/a3114d09-e90e-49e1-8efc-22f2e41a9cad/oc-quantity-breaks-limit-295/assets/front.min.js"></script>
+
+
+<script>
+  var orichiDiscount = {
+    productJSPath: 'https://cdn.shopify.com/extensions/a3114d09-e90e-49e1-8efc-22f2e41a9cad/oc-quantity-breaks-limit-295/assets/productpage.min.js',
+    cartJSPath: 'https://cdn.shopify.com/extensions/a3114d09-e90e-49e1-8efc-22f2e41a9cad/oc-quantity-breaks-limit-295/assets/cartajax.min.js'
+  }
+</script>
+
+
+
+<script>
+  
+    window.orichiDiscountSettingData = {"setting":{"Id":17884,"ShopId":17631,"Active":false,"ShowDescription":true,"ShowDiscountedPrice":true,"ShowDiscountProductPage":true,"LayoutInProductPage":1,"ShowColumnTotal":true,"TextDiscount":"Discount","TextDiscountPrice":"Discount Price","TextQuantityBreaks":"🔥 Buy more, save more! 🔥","TextTotalAmount":"Total Amount","WidthLayout":0.0,"TextQuantity":"Quantity","CustomCssProductPage":null,"TextPlus":"+","CustomJsProductPage":null,"TextBuy":"Buy","UseAjaxCart":true,"ShowNotiOnCart":true,"UseDiscountCodeOnCart":false,"TextNotiOnCart":"Buy {Quantity} + discount {PercentOrPrice}","DisCountCodePrefix":null,"UseUpdateOnCartPage":false,"CustomCssCart":null,"CustomJsCart":null,"TextEach":"/each","TableFontSizeHeading":"15","TablePadding":"10","TableBorderSize":"1","PlanNumber":2,"StartFreeTrial":0,"TextPrice":"Price","HideBanner":null,"IsEnableAppEmbed":true,"IsClosePopupEnableAppEmbed":false,"StartFreeTrialAdvanced":0,"LimitOrderValueStatus":false,"MinTotalOrderValue":0,"MaxTotalOrderValue":0,"LimitOrderQuantityStatus":false,"MinTotalQuantityValue":0,"MaxTotalQuantityValue":0,"PopupLimitOrderIsNotValid":"Order is not valid","LimitOrderTextButtonOk":"OK","LimitOrderBackgroundColorButtonOk":"#000000","LimitOrderTextColorButtonOk":"#FFFFFF","TextMaxSubTotalValue":"You can only choose maximum of {maximum} for the subtotal value","TextMinSubTotalValue":"You have to choose minimum of {minimum} for the subtotal value","TextMaxProductInTotal":"You can only choose maximum of {maximum} products in total","TextMinProductInTotal":"You have to choose minimum of {minimum} products in total","PopupLitmitOrderTextColor":"#000000","CheckoutLimitOrderIsNotValid":"Order is not valid","LimitOrderBackgroundColorButtonCheckout":"#000000","LimitOrderTextColorButtonCheckout":"#FFFFFF","Currency":"EUR","IsClosedStore":false,"TextMinCollection":"You have to choose minimum of {minimum} for the {collection_name}","TextMaxCollection":"You can only choose maximum of {maximum} for the {collection_name}","TextMaxCollectionTotalPurchased":"You have already bought {total_purchased} of {collection_name} before. You can only buy maximum of {maximum} for the {collection_name}.","ShowLimitTableOnCartPage":false,"ShowDiscountTag":false,"TypeOfTag":0,"TagPosition":0,"TagMessage":"{PercentOrPrice} off","TagSize":"50","TagFontSize":"11","TagBorderSize":"1","TagCornerRadius":"4","TagTextColor":"#000000","TagBackgroundColor":"#F7CA00","TagBorderColor":"#000000","UpSellOnCartColor":"#FF0000","UpSellOnCartBackground":"#FFFFFF","PlanType":1,"ThemeCustomDiscountId":0,"ClassThemeTableDiscount":null,"LastVoteIsClosedDate":null,"TextPerTotal":"/total","TextLimitPurchaseSeparately":"You can not buy different products from collection {collection_name} at the same time","ShopName":"Nathalie Fargeon","ApplyShopifyDiscountCode":0,"LimitCollectionTextSpecificQuantity":"You have to choose {specific_quantity} products of {collection_name}","LimitTypeOrder":0,"SpecificQuantityAllowToChooseOrder":null,"TextSpecificQuantity":"You have to choose {specific_quantity} products in total","IsUninstalled":null,"PricePlan":null,"TextDiscountRange":"From {min_price} to {original_price}","TextColorDiscountRange":null,"StartFreeTrialStarter":0,"UseDiscountCodeOnCheckoutPage":null},"setting2":{"Id":17886,"ShopId":17631,"CheckLimitProPage":true,"CheckLimitCartPage":true,"TextPurchaseLimit":"Purchase limit","TextMinimum":"Minimum","TextMaximum":"Maximum","TextQuantity":"Quantity","TextMinimumLimitText":"Vous devez ajouter au minimum {minimum} produits","TextMaximumLimitText":"Vous ne pouvez ajouter ce produit que {maximum} fois au panier","TextQuantityMaximumLimitText":"You already have {quantity} of this product in your cart. You can only choose maximum of {maximum} products in total. ","UseSettingsForTheme":null,"CartWrapper":null,"CheckoutButton":null,"CartSubtotal":null,"AddToCartFrom":null,"AjaxCart":null,"AjaxCartSubtotal":null,"FormAddToCartSelector":null,"TextOop":"Oops!","TextMinMaxRequired":"{min} or {max} {product_title}","TextPleaseFix":"Please fix these cart errors before checking out","TextDismiss":"Dismiss","TextUpdateCart":"Update Cart","TextBundling":"Bundling","AutoUpSale":false,"TextUpSale":"Buy {quantitymore} more and get {priceorpercent} off","CustomCssAlert":null,"CustomJsAlert":null,"FontSizeDiscountTitle":"16","TextColorDiscountTitle":"#000000","TextColorHeading":"#000000","BackgroundColorHeading":"#F7CA00","CardTheme":0,"FontSizeItemInTable":"14","TextColorItemInTable":"#000000","BackgroundColorItemInTable":"#FFFFFF","TextGet":"get","TextOff":"off","FontSizeCard":"14","TextColorCard":"#000000","BackgroundColorCard":"#F7CA00","TextMinimumProductTitle":"Vous devez ajouter {product_title} au minimum {minimum} fois","TextMaximumProductTitle":"Vous ne pouvez ajouter {product_title} que {maximum} fois au panier","TextMinimumCartQuantity":"This discount is applied to the total quantity of products in your cart","TextMinimumSameProductQuantity":"This discount is applied to the total quantity of this product in your cart","TextMinimumSameProductVariantQuantity":"This discount is applied to the total quantity of the same variant of this product in your cart","TextApply":"Apply","TextBaseOn":"Base on","TextDiscountCode":"Discount code","TextDiscountCodeNotAvailable":"Discount code isn’t available","FontSizeTitlePurchaseLimit":"16","TextColorTitlePurchaseLimit":"#000000","FontSizeLimitTable":"14","TextColorLimitTable":"#000000","BackgroundColorLimitTable":"#F7CA00","ShowDiscountedPriceEachCard":false,"TextDiscountedPriceEachCard":"Total: {total_amount} ({price_per_item}/each)","LimitUsageTextMaximumProductsInTotal":"You have already bought {total_purchased} of this product. You can only buy maximum of {maximum} products in total.","LimitUsageTextMaximumProductTitle":"You have already bought {total_purchased} {product_title}. You can only buy maximum of {maximum} {product_title}.","ShowLimitTableOnCartPage":false,"LimitProductTextMultipleProducts":"You have to choose {multiple} products","LimitProductTextMultipleProductTitle":"You have to choose {multiple} {product_title}","DiscountCodeApply":null,"LimitProductTextSpecificQuantity":"You have to choose {specific_quantity} products","LimitProductTextAlertSpecificQuantity":"You have to choose {specific_quantity} {product_title}","CodeLanguage":null},"parameters":[],"discountTag":{"Id":5218,"ShopId":17631,"ShowDiscountTag":false,"TypeOfTag":1,"TagPosition":0,"TagMessage":"{PercentOrPrice} off","TagSize":"50","TagFontSize":"11","TagBorderSize":"1","TagCornerRadius":"4","TagTextColor":"#000000","TagBackgroundColor":"#F7CA00","TagBorderColor":"#000000","CreatedDate":"2023-05-16T15:10:03.803","LastModifiedDate":null}};
+  
+</script>
+
+</div><div id="shopify-block-Ad3lHck9Ccldkb2R1R__12526071353035850722" class="shopify-block shopify-app-block">
+  <script defer src="https://app.backinstock.org/widget/31250_1726477214.js?category=bis&v=6"></script>
+
+
+<script id="back-in-stock-helper-embedded">
+  // Back in Stock: Customer Alerts helper script
+  var _BISConfig = _BISConfig || {};
+
+  
+
+  
+</script>
+
+
+</div></body>
+</html>

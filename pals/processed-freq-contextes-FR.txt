@@ -1,0 +1,5 @@
+target	frequency
+regex=\b(bébés?)\b	970
+bébé	814
+bébés	156
+

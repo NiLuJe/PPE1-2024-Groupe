@@ -1,229 +1,43 @@
-        Vous êtes ici
+   Med Sci (Paris) 2021 ; 37 : 317–319
 
-   Accueil / Articles / Dans la tête des bébés
-
-                             Dans la tête des bébés
-
-   Dossier
---
-   Le rôle des inégalités dans la prise en charge des AVC
-   Vidéo
-   Tête de bébé
-   Comment les bébés apprennent à parler
-   Article
-   [IMG]
---
-        Vous êtes ici
-
-   Accueil / Articles / Dans la tête des bébés
-   Vivant
-   Sociétés
---
-   article
-
-                             Dans la tête des bébés
-
-   15.01.2018, par
---
-   Temps de lecture : 13 minutes
-   Grâce à l'oculométrie ou eyetracking, les chercheurs peuvent suivre le
-   regard du bébé. Un bon moyen de savoir ce qui l'intéresse ou le surprend.
-   Cyril FRESILLON / LSCP / ENS / EHESS / CNRS Photothèque
-   Partager
---
-   l'apprentissage chez le nourrisson. Des maths au langage, les expériences
-   imaginées par les chercheurs mettent en lumière les surprenantes capacités
-   cognitives des bébés. Cet article fait partie du Top 10 des contenus les
-   plus lus sur notre site cette année.
+À l’âge de 8 mois, les bébés ont déjà intégré la grammaire de leur langue
+maternelle
 
 --
-   l’enfant ne le connaît pas déjà – c’est un mot plausible de la langue
-   française, et l’objectif d’Anne Christophe, qui a imaginé cette
-   expérience, est justement de savoir comment les bébés apprennent les mots
-   nouveaux.
+   les mots non fréquents, représentant les mots de contenu
+   (…gekafimugenafifogebi…), un paradigme précédemment utilisé par d’autres
+   chercheurs [4, 8]. Ainsi, les bébés écoutaient un flux sonore dans cette
+   mini-langue pendant 4 minutes, mais l’intensité sonore augmentait
+   progressivement pendant les 15 premières secondes et diminuait pendant les
+--
+   artificielle (la perception de l’agencement initial et final des mots de
+   fonction par rapport aux mots de contenu devenait impossible). Nous avons
+   réalisé six expériences, avec six groupes de bébés ; ils ont tous été
+   familiarisés avec la même mini-langue, mais les items tests différaient
+   dans chaque groupe, selon la nouveauté ou la familiarité des mots de
+   fonction et des mots de contenu (Figure 1B). Pour tous les groupes, nous
+   avons présenté aux bébés des courtes « phrases » (items tests) dans cette
+   langue artificielle, dont la moitié suivait l’ordre des mots du français
+   (mot fréquent initial), et l’autre moitié l’ordre des mots du japonais
+--
+             six expériences.                                                 
 
+   Les résultats de cette expérience ont montré, d’une part, que les bébés de
+   8 mois ont une préférence (temps de regard plus longs) pour les phrases
+   comportant un ordre des mots typique du français, et d’autre part, qu’ils
 --
+             expériences. Les barres horizontales représentent la moyenne du  
+             groupe ; les points connectés représentent les résultats         
+             individuels pour chaque bébé participant. NS : non significatif. 
 
-   Nous sommes au babylab de l’École normale supérieure, rue d’Ulm à Paris.
-   Ici, plus de mille bébés viennent tous les ans se prêter aux exercices
-   imaginés par les chercheurs du laboratoire de sciences cognitives et
-   psycholinguistique (LSCP)1. Leur objectif : comprendre comment les
-   tout-petits apprennent leur langue maternelle. « On a longtemps pensé que
-   le bébé apprenait le langage brique après brique, de façon progressive :
-   d’abord les phonèmesFermerDeux sons sont des phonèmes si, dans un mot, la
-   substitution de l’un par l’autre entraîne un changement de sens. Par
+   Nous avons donc montré que les bébés ont des connaissances des bases de la
+   grammaire de leur langue native plusieurs mois avant de produire leurs
+   premiers mots. Les bébés francophones de 8 mois savent déjà que les mots
+   fréquents sont des mots grammaticaux qui apparaissent en début de syntagme
+   en français, et qui ne peuvent pas être remplacés par de nouveaux
 --
-   Cette petite fille de 6 mois est équipée d'un casque muni d'électrodes.
-   Les électro-encéphalogrammes permettent aux chercheurs de voir le cerveau
-   fonctionner durant les tâches proposées aux bébés.
-   CNRS Le Journal [ Submit ]
-   Cette petite fille de 6 mois est équipée d'un casque muni d'électrodes.
-   Les électro-encéphalogrammes permettent aux chercheurs de voir le cerveau
-   fonctionner durant les tâches proposées aux bébés.
-   Nicolas BAKER / LPP / CNRS Photothèque
-   Nicolas BAKER / LPP / CNRS Photothèque
---
-   Partager
-
-   Le bébé possède en effet, dès les premiers mois de vie, des notions de
-   syntaxe et une capacité d’abstraction qui lui permettent de
-   « déconstruire » la langue et d’en repérer les briques. Il connaît la
---
-   grammaticaux », les « le », « la », « un », « une », que l’on place devant
-   les noms – ce qui a surpris bien des chercheurs car, de fait, rares sont
-   les bébés qui emploient ces articles lorsqu’ils commencent à parler. « On
-   pense que tous ces indices, additionnés au contexte dans lequel le mot est
-   prononcé et aux mots qu’il connaît déjà dans la phrase, permettent au bébé
-   de déduire le sens des nouveaux mots qu’il rencontre. »
-
-Regard, pupille... : les signaux indirects
-
-   Mais comment savoir ce que le bébé sait ? Par définition, il ne parle pas,
-   et est donc bien incapable de dire aux chercheurs ce qu’il a compris ou
-   pas de l’exercice qu’on lui propose. Surtout, on ne peut pas lui expliquer
---
-    
-
-   Comment savoir ce que le bébé sait ? Par définition, il ne parle pas, et
-   est donc bien incapable de dire aux chercheurs ce qu’il comprend de
-   l’exercice qu’on lui propose.
---
-   résultat différent. ».
-
-   Chez le bébé, plusieurs indices peuvent être le signe d’une attention
-   redoublée : le rythme cardiaque qui s’accélère, l’augmentation de la
-   vitesse de succion, mais aussi l’allongement du temps de regard ou encore
-   la dilatation de la pupille mesurés grâce à l’oculométrie (comme pour
-   l’adulte, la pupille du bébé s’agrandit lorsqu’il se concentre).
-   L’oculométrie détermine également avec précision quelle zone de l’écran le
-   bébé regarde, une information précieuse qui permet notamment aux
-   chercheurs de repérer lorsque le bébé anticipe une situation.
-
-   Grâce aux bracelets placés sur chaque poignet, ce bébé contrôle à distance
-   les mouvements du clown sur l’écran face à lui.
-   CNRS Le Journal [ Submit ]
-   Grâce aux bracelets placés sur chaque poignet, ce bébé contrôle à distance
-   les mouvements du clown sur l’écran face à lui.
-   Lisa Jacquey/ Goal-Robots project/LPP
---
-   etc. –, la marionnette s’agite à droite de l’écran. » Résultat : dès l’âge
-   de six mois, et après quelques minutes d’exercice, quand deux nouveaux
-   objets identiques se présentent à l’écran, le bébé porte son regard du
-   côté gauche de l’écran avant même que la marionnette ne se montre ! « Cela
-   signifie que le bébé est capable de manipuler très tôt dans sa vie un
-   concept abstrait comme le concept de “même”, en déduit le chercheur. En
-   revanche, nous n’avons pour le moment aucun résultat significatif pour la
-   notion de “différent” chez les bébés de 6 à 14 mois que nous avons
-   testés. »
-
-Quand les bébés ont la bosse des maths
-
-   Plus les chercheurs avancent, plus ils découvrent la richesse des
-   connaissances que le bébé possède dès le plus jeune âge. Mais de là à
-   imaginer qu’il a aussi la bosse des maths... « Dès les premières études
-   contrôlées menées au début des années 2000, on a pu montrer que le bébé
-   avait des bases mathématiques relativement solides, raconte Véronique
-   Izard, chercheuse au Laboratoire psychologie de la perception3  à
-   l'université Paris-Descartes. Il sait, par exemple, distinguer entre de
-   grands nombres et faire des opérations. » À six mois, le bébé est ainsi
-   capable de faire la différence entre un groupe de huit points figurés à
-   l’écran et un groupe de 16 points (soit un rapport de 1 à 2), à neuf mois
-   il sait distinguer entre un groupe de 8 points et un groupe de 12 points
-   (soit un rapport de 2 à 3). Autre exercice bluffant : un bébé à qui l’on
-   montre un groupe de 5 points qui vont se cacher derrière un gros carré
-   noir, puis un deuxième groupe de 5 points qui vont se cacher derrière le
---
-   et sa collègue Arlette Streri ont pu montrer que les nourrissons de moins
-   de trois jours savaient déjà distinguer entre de grands nombres dans un
-   rapport de 1 à 3 ! En revanche, les bébés, quel que soit leur âge,
-   semblent incapables de distinguer de plus petits nombres – ils ne font par
-   exemple pas la différence entre 2 et 6 ou entre 2 et 4 – alors que les
---
-
-   Lorsqu’il n’obtient pas de résultat, le chercheur est en effet incapable
-   de savoir si c’est parce que le bébé ne possède pas la notion abordée ou
-   si l’exercice proposé est mal conçu. « La question “Qu’est-ce qui
-   intéresse les bébés ?” est cruciale pour nos expériences, explique
-   Véronique Izard. Il ne faut pas que l’exercice soit trop facile, parce que
-   le bébé s’en désintéressera tout de suite, ni trop compliqué. Autant vous
-   dire que nous passons beaucoup de temps à mettre au point nos
-   protocoles ! »
---
-   Plus onéreuse, et plus lourde à utiliser, l’imagerie cérébrale vient en
-   renfort des études comportementales en offrant un point de vue inédit
-   sur le cerveau du bébé. Ghislaine Dehaene, responsable de l’équipe
-   neuro-imagerie du développement au centre d’imagerie Neurospin4, a été
-   parmi les premières à utiliser l’électroencéphalographie (EEG) et
---
-
-   La question que se pose Ghislaine Dehaene est la suivante : d’où part le
-   cerveau humain pour acquérir le langage, les maths… ? « Le bébé n’a pas un
-   gros cerveau et pourtant il est très performant. On pense que c’est parce
-   qu’il y a une organisation cérébrale spécifique dès le départ, explique la
-   chercheuse. On le voit avec l’imagerie : les bébés de 0 à 6 mois, que nous
-   observons dans des tâches d’acquisition du langage et de reconnaissance
-   des visages essentiellement, présentent des réseaux cérébraux très
---
-   de ce que les scientifiques avaient longtemps supposé, à savoir que le
-   cerveau à la naissance n’était pas organisé, et que les connexions se
-   faisaient progressivement, grâce à l’interaction du bébé avec son
-   environnement.
-
---
-   Cette organisation cérébrale serait présente chez le fœtus dès le dernier
-   trimestre de grossesse, comme l’ont montré les expériences menées chez des
-   bébés prématurés nés à six mois de grossesse et testés directement dans
-   leur incubateur. « Pour le confirmer, on a utilisé la spectroscopie dans
-   le proche infrarouge, un dispositif non invasif et sans risque, comme tous
-   les autres dispositifs d’imagerie : des diodes posées sur la tête du bébé
-   envoient à travers son crâne très fin une lumière dont la longueur d’onde
-   est absorbée par le sang lorsqu’il est chargé d’oxygène. Cela permet de
-   repérer quelle région du cerveau s’active lorsque l’on fait faire de
-   petits exercices au bébé. » L’un des exercices imaginés consiste à
-   discriminer les phonèmes « ba » et « ga », très proches à l’oreille et
-   pour cause : la durée de la consonne lorsqu’on la prononce est d’à peine
---
-   Christophe. Certes, d’autres animaux que l’homme naissent avec des
-   mécanismes spécialisés essentiels à la survie dans leur niche écologique :
-   grâce à eux, les bébés oies sont ainsi capables d’apprendre dès les
-   premières semaines de vie la carte du ciel nocturne qui leur servira lors
-   de leur première migration. « Mais rien de comparable à la complexité des
---
-   affirment en chœur les chercheurs.
-
-   À l'issue de sa participation, le bébé se voit remettre un certificat de
-   membre d’honneur du babylab.
-   CNRS Le Journal [ Submit ]
-   À l'issue de sa participation, le bébé se voit remettre un certificat de
-   membre d’honneur du babylab.
-   Cyril FRESILLON / LSCP / ENS / EHESS / CNRS Photothèque
---
-   Retour au babylab de la rue d’Ulm. Nino a bien travaillé. Après dix
-   minutes passées dans la cabine plongée dans le noir – difficile de capter
-   plus longtemps l’attention d’un bébé de cet âge –, il peut enfin galoper
-   d’un bout à l’autre de la pièce et en explorer tous les recoins.
-   Anne-Caroline Fiévet, la responsable du babylab, lui remet solennellement
---
-   marquer le coup : sans les milliers de parents volontaires qui font la
-   démarche chaque année, la dizaine de babylabs actifs en France auraient
-   bien du mal à faire avancer la recherche sur la cognition des bébés.
-
-   Notes
---
-   11/02/2022
-   Cécile Charrier, des synapses plein la tête
-   Bébés
-   [IMG]
-   Article
---
-   Blog
-   04/05/2016
-   Les papas des bébés
-
-  Auteur
---
-  Mots-clés
-
-   Bébés cerveau apprentissage cognition babylab Langage organisation
-   cérébrale Mathématiques
+             expériences. Les barres horizontales représentent la moyenne du  
+             groupe ; les points connectés représentent les résultats         
+             individuels pour chaque bébé participant. NS : non significatif. 
+   Dans le texte
 
