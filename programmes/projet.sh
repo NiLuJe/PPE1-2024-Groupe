@@ -12,7 +12,6 @@ BASE_DIR="$(readlink -f "${SCRIPT_NAME%/*}/..")"
 # Répertoire avec les différents scripts
 PROG_DIR="${BASE_DIR}/programmes"
 
-# TODO: Merge bigram
 # TODO: Link vers les résultats PALS depuis tableaux/index.html?
 # TODO: Wordcloud
 # NOTE: Quid de la gestion des mots composés (concordancier en particulier?)
@@ -137,7 +136,7 @@ while read -r line ; do
 	OUTPUT_CON_REL="concordances/${TABLE_LANG}-${file_idx}.html"
 	OUTPUT_CON="${BASE_DIR}/${OUTPUT_CON_REL}"
 	OUTPUT_BIGRAM_REL="contextes/${TABLE_LANG}-${file_idx}-bigram-freq.txt"
-	OUTPUT_BIGRAM="${BASE_DIR}/${OUTPUT_CTX_REL}"
+	OUTPUT_BIGRAM="${BASE_DIR}/${OUTPUT_BIGRAM_REL}"
 	bigram_cell="<a href=\"../${OUTPUT_BIGRAM_REL}\">${OUTPUT_BIGRAM_REL}</a>"
 
 	# On va avoir besoin de la sortie de cURL...
