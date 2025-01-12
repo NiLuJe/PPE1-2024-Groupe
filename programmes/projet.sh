@@ -270,11 +270,6 @@ while read -r line ; do
 		# Mais on a quand même une ligne à générer pour cette page, donc on continue l'itération jusqu'au bout
 	fi
 
-	# Besoin de l'option -e pour qu'echo gère les caractères de controle en version échappée
-	# IDX | URL | STATUS | CHARSET | WC
-	# En TSV:
-	#echo -e "${line_nb}\t${line}\t${http_status}\t${page_encoding}\t${word_count}"
-
 	# Si le lien est malformé, on corrige la chose pour notre href...
 	if [[ ! ${line} =~ ^https?:// ]] ; then
 		# Et on espère que ça passe en HTTPS :D
