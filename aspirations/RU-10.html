@@ -1,0 +1,747 @@
+
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJ8J5G9');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="google-site-verification" content="4-UGTSds8HSbdOM-bmQbMfAW2EraYxFDnNodlP9f9uk" />
+    <script type="text/javascript">
+        function redirect(){
+            if (location.hash && location.hash.startsWith('#filter')) window.location = "/courses/redirect"+location.hash
+        }
+        redirect();
+        window.onhashchange = redirect;
+        
+    </script>
+    <title>
+Дети и Наука
+</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#40e1b8">
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="facebook-domain-verification" content="afdlp4yly3m2xdg9m1kvzifr8mjdyq" />-->
+    <meta name="yandex-verification" content="99f6646c967bb623" />
+    
+    
+    <!-- <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" rel="stylesheet"> -->
+    <script crossorigin="anonymous" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="/static/css/main.css"> -->
+    
+    <link href="/static/scss/courses.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function () {
+                setTimeout(()=>{
+                    $(this).find(':submit').prop('disabled', true);
+                })
+            });
+            $('form').bind('invalid-form.validate', function () {
+                $(this).find(':submit').prop('disabled', false);
+            });
+        });
+    </script>
+    
+<script type="text/javascript"></script>
+<style>
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .__project-card-text-height {
+        min-height: 46%;
+    }
+
+    .custom_rounded {
+        border-radius: 1rem;
+    }
+    #projects .custom_rounded{
+        border-radius: 3rem;
+        height: 180px;
+    }
+
+    #header{
+        position: relative;
+    }
+    #header video{
+        position: relative;
+        z-index: 4;
+    }
+    #header .fig1{
+        position: absolute;
+        top: 279px;
+        right: -105px;
+        z-index: 5;
+    }
+    #header .fig2{
+        position: absolute;
+        top: 305px;
+        right: 399px;
+        z-index: 5;
+    }
+    #header .fig3{
+        position: absolute;
+        top: 22px;
+        right: 341px;
+        z-index: 1;
+    }
+
+    #ads{
+        position: relative;
+    }
+    #ads .fig4{
+        position: absolute;
+        bottom: -95px;
+        right: -265px;
+    }
+
+    #teachers{
+        position: relative;
+    }
+    #teachers .fig4{
+        position: absolute;
+        top: -160px;
+        right: -315px;
+        transform: rotate(270deg);
+    }
+
+    #sponsors{
+        position: relative;
+    }
+    #sponsors .fig1{
+        position: absolute;
+        top: -160px;
+        right: -290px;
+        transform: scale(-1,1);
+        z-index: -1;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-weight: normal;
+    }
+
+.text_truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* COOKIES */
+    .cookies-alert{
+        background-color: #ddd;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 20;
+        font-size: 14px;
+    }
+    .cookies-alert__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    @media (max-width: 1499px){
+        #header .fig1{
+            top: 240px;
+            right: -105px;
+        }
+        #header .fig2{
+            top: 266px;
+            right: 306px;
+        }
+        #header .fig3{
+            top: 33px;
+            right: 255px;
+        }
+    }
+    @media (max-width: 991px){
+        #header .fig1{
+            width: 230px;
+            height: 130px;
+            top: 227px;
+            right: -71px;
+        }
+        #header .fig2{
+            width: 130px;
+            height: 65px;
+            top: 250px;
+            right: 244px;
+        }
+        #header .fig3{
+            width: 290px;
+            height: 150px;
+            top: 63px;
+            right: 189px;
+        }
+    }
+    @media (min-width: 768px) {
+        .custom_rounded {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #header .fig1{
+            display: none !important;
+        }
+        #header .fig2{
+            display: none !important;
+        }
+        #header .fig3{
+            display: none !important;
+        }
+        .video-wrapper {
+            margin-left: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+            border-radius: 100%;
+        }
+    }
+</style>
+<script type="text/javascript">
+
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    function getHtml () {
+        return `
+        <div class="cookies-alert cookies-alert--js">
+            <div class="cookies-alert__container container">
+                <div class="cookies-alert__left">
+                    <span>
+                        Продолжая использовать сайт Дети и Наука, вы тем самым подтверждаете, что были проинформированы об использовании файлов cookie сайтом и соглашаетесь с их использованием. <a class="text-secondary" href="/cookie/" target="_blank" rel="nofollow">
+                        Подробнее
+                        </a>
+                    </span>
+                </div>
+                <div class="cookies-alert__right ml-2 w-25">
+                    <button class="btn btn-primary text-white cookies-alert__btn cookies-alert__btn--js ml-2">
+                        Ок
+                    </button>              
+                </div>
+            </div>
+        </div>
+        `
+    }
+
+    document.addEventListener('DOMContentLoaded', cookieNotify);
+    const expires = 86400;
+
+    function cookieNotify() {
+        if(!getCookie('visit')) {
+            document.querySelector('body').insertAdjacentHTML('beforeend', getHtml())
+            const cookiesAlert = document.querySelector('.cookies-alert--js')
+            const cookiesBtn = document.querySelector('.cookies-alert__btn--js')
+
+            cookiesBtn.addEventListener('click', function setCookie() {
+                document.cookie=`visit=true; max-age=${expires}`;
+                cookiesAlert.remove();
+            })
+        }
+    }
+</script>
+
+</head>
+
+<body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(46556604, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46556604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ8J5G9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    
+
+
+    
+<div class="container mt-3 mb-5">
+<div class="row" id="header">
+    <div class="col-12 col-sm-7 col-md-6 text-secondary">
+        <div class="my-5">
+            <img class='w-75' src="/static/img/logo.yellow.full.svg" alt="Дети и наука" width='250'/>
+            <h1 class="d-none">Дети и наука</h1>
+        </div>
+        <div class="my-5">
+            <h3><span class="my-3">Системное образование</span></h3>
+            <p>для детей и родителей, нацеленных <br/>на высокий результат</p>
+        </div>
+        <div class="my-5">
+            <div class="row navigation px-3">
+                <!-- SOC ICONS -->
+                <div class="col course-soc-icon text-center ml-2 ml-md-0">
+                    <a href="tel:+7(499)938-89-70" target="_blank">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="37px" height="37px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <path style='fill:#114e9c !important;'d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0C114.625,0,0,114.625,0,256
+                                s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+                                c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.405,8.5l-13.688,13.688
+                                c-49.75-13.469-88.781-52.5-102.219-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+                                c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+                                c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.345,173.156,70.781
+                                c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.062,402.062,351.656,398.719,341.594z"/>
+                        </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col course-soc-icon text-center">
+                    <a href="mailto:classes@childrenscience.ru">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="37px" height="37px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <g id="circle_4_">
+                                    <g>
+                                        <path style="fill:#ba202e !important;" d="M32,0C14.327,0,0,14.327,0,32s14.327,32,32,32s32-14.327,32-32S49.673,0,32,0z M32,62C15.432,62,2,48.568,2,32.001
+                                            C2,15.432,15.432,2,32,2c16.568,0,30,13.432,30,30.001C62,48.568,48.568,62,32,62z"/>
+                                    </g>
+                                </g>
+                                <g id="mail">
+                                    <g>
+                                        <path style="fill:#ba202e !important;" d="M46,21H18c-1.104,0-2,0.896-2,2v18c0,1.104,0.896,2,2,2h28c1.104,0,2-0.896,2-2V23C48,21.896,47.104,21,46,21z
+                                            M44.205,23L32,35L19.891,23H44.205z M18,41V24.006l9.589,9.589L20.061,41H18z M22.985,41l6.081-5.927l1.58,1.579
+                                            c0.781,0.781,2.047,0.781,2.829,0l1.531-1.531L41.087,41H22.985z M46,41h-1.939l-7.527-7.405L46,24.128V41z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="col course-soc-icon text-center">
+                    <a href="https://rutube.ru/channel/39775265/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 470 470" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g><path style="opacity:1; fill: #0b1d38 !important" d="M 227.5,-0.5 C 232.5,-0.5 237.5,-0.5 242.5,-0.5C 320.798,4.39184 382.964,38.3918 429,101.5C 454.788,140.363 468.622,183.03 470.5,229.5C 470.5,233.167 470.5,236.833 470.5,240.5C 463.873,338.287 416.54,408.453 328.5,451C 300.845,462.584 272.178,469.084 242.5,470.5C 237.5,470.5 232.5,470.5 227.5,470.5C 149.202,465.608 87.0358,431.608 41,368.5C 15.2117,329.637 1.37832,286.97 -0.5,240.5C -0.5,236.833 -0.5,233.167 -0.5,229.5C 6.12683,131.713 53.4602,61.5468 141.5,19C 169.155,7.41645 197.822,0.916455 227.5,-0.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #f21240 !important" d="M 368.5,82.5 C 384.389,81.1848 395.222,87.8515 401,102.5C 403.883,117.9 398.383,129.066 384.5,136C 366.828,140.581 354.661,134.414 348,117.5C 345.563,100.37 352.397,88.7036 368.5,82.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #010c28 !important" d="M 305.5,134.5 C 236.833,134.5 168.167,134.5 99.5,134.5C 132.327,133.167 165.493,132.5 199,132.5C 232.167,132.667 265.333,132.833 298.5,133C 302.346,132.99 304.679,133.49 305.5,134.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #fdfdfd !important" d="M 99.5,134.5 C 168.167,134.5 236.833,134.5 305.5,134.5C 336.067,137.9 353.234,154.9 357,185.5C 357.849,201.863 357.516,218.196 356,234.5C 354.874,253.617 345.708,267.117 328.5,275C 323.055,276.649 317.722,278.483 312.5,280.5C 329.577,302.904 346.244,325.571 362.5,348.5C 343.007,349.497 323.34,349.83 303.5,349.5C 287.833,326.833 272.167,304.167 256.5,281.5C 222.337,280.502 188.004,280.168 153.5,280.5C 152.502,303.327 152.169,326.327 152.5,349.5C 134.833,349.5 117.167,349.5 99.5,349.5C 99.5,277.833 99.5,206.167 99.5,134.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #0b1c37 !important" d="M 287.5,182.5 C 295.73,182.173 300.897,185.84 303,193.5C 303.667,202.833 303.667,212.167 303,221.5C 302.29,227.305 299.123,230.638 293.5,231.5C 247.336,230.501 201.003,230.168 154.5,230.5C 154.5,214.833 154.5,199.167 154.5,183.5C 199.003,183.832 243.336,183.499 287.5,182.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #0c132b !important" d="M 287.5,182.5 C 243.336,183.499 199.003,183.832 154.5,183.5C 154.5,199.167 154.5,214.833 154.5,230.5C 201.003,230.168 247.336,230.501 293.5,231.5C 246.876,232.49 200.209,232.823 153.5,232.5C 153.5,215.833 153.5,199.167 153.5,182.5C 198.167,182.5 242.833,182.5 287.5,182.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #99a0ac !important" d="M 153.5,280.5 C 153.5,303.833 153.5,327.167 153.5,350.5C 135.326,350.83 117.326,350.497 99.5,349.5C 117.167,349.5 134.833,349.5 152.5,349.5C 152.169,326.327 152.502,303.327 153.5,280.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #070922 !important" d="M 153.5,280.5 C 188.004,280.168 222.337,280.502 256.5,281.5C 222.5,281.5 188.5,281.5 154.5,281.5C 154.831,304.673 154.498,327.673 153.5,350.5C 153.5,327.167 153.5,303.833 153.5,280.5 Z"/></g>
+                            <g><path style="opacity:1; fill: #808593 !important" d="M 362.5,348.5 C 363.043,348.56 363.376,348.893 363.5,349.5C 343.337,350.828 323.337,350.828 303.5,349.5C 323.34,349.83 343.007,349.497 362.5,348.5 Z"/></g>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="col course-soc-icon text-center">
+                    <a href="https://www.youtube.com/childrenscience" target="_blank">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-455 257 48 48" enable-background="new -455 257 48 48" xml:space="preserve"> <path style="fill:#d42428 !important;" d="M-431,257.013c13.248,0,23.987,10.74,23.987,23.987s-10.74,23.987-23.987,23.987s-23.987-10.74-23.987-23.987 S-444.248,257.013-431,257.013z M-419.185,275.093c-0.25-1.337-1.363-2.335-2.642-2.458c-3.054-0.196-6.119-0.355-9.178-0.357 c-3.059-0.002-6.113,0.154-9.167,0.347c-1.284,0.124-2.397,1.117-2.646,2.459c-0.284,1.933-0.426,3.885-0.426,5.836 s0.142,3.903,0.426,5.836c0.249,1.342,1.362,2.454,2.646,2.577c3.055,0.193,6.107,0.39,9.167,0.39c3.058,0,6.126-0.172,9.178-0.37 c1.279-0.124,2.392-1.269,2.642-2.606c0.286-1.93,0.429-3.879,0.429-5.828C-418.756,278.971-418.899,277.023-419.185,275.093z M-433.776,284.435v-7.115l6.627,3.558L-433.776,284.435z"></path> </svg>
+                    </a>
+                </div>
+                <div class="col course-soc-icon text-center">
+                    <a href="http://vk.com/childrenscience" target="_blank">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path style="fill:#1976d2 !important;" d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path> </svg>
+                    </a>
+                </div>
+                
+                <div class="col course-soc-icon text-center">
+                    <a href="https://t.me/din_live" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="1.8 1.2 50 50" preserveAspectRatio="none" style="enable-background:new 0 0 53.4 53.4;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:none;}
+                    </style>
+                    <g>
+                        <rect x="-0.2" y="0.1" class="st0" width="53.8" height="53.4"></rect>
+                        <path d="M49.7,16.5c1.3,3.1,2,6.3,2,9.7s-0.7,6.6-2,9.7c-1.3,3.1-3.1,5.7-5.3,8c-2.2,2.2-4.9,4-8,5.3c-3.1,1.3-6.3,2-9.7,2   c-3.4,0-6.6-0.7-9.7-2s-5.7-3.1-8-5.3c-2.2-2.2-4-4.9-5.3-8c-1.3-3.1-2-6.3-2-9.7s0.7-6.6,2-9.7c1.3-3.1,3.1-5.7,5.3-8   c2.2-2.2,4.9-4,8-5.3s6.3-2,9.7-2c3.4,0,6.6,0.7,9.7,2c3.1,1.3,5.7,3.1,8,5.3C46.6,10.8,48.3,13.5,49.7,16.5z M34.8,37.7l4.1-19.3   c0.2-0.8,0.1-1.4-0.3-1.8c-0.4-0.4-0.8-0.4-1.4-0.2l-24.1,9.3c-0.5,0.2-0.9,0.4-1.1,0.7c-0.2,0.3-0.2,0.5-0.1,0.7   c0.1,0.2,0.4,0.4,0.9,0.5l6.2,1.9l14.3-9c0.4-0.3,0.7-0.3,0.9-0.2c0.1,0.1,0.1,0.2-0.1,0.4L22.5,31.3L22,37.7   c0.4,0,0.8-0.2,1.3-0.6l3-2.9l6.2,4.6C33.8,39.5,34.5,39.1,34.8,37.7z"></path>
+                    </g>
+                    </svg>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="m-auto mb-sm-3 mb-md-auto  col-md-6 col-5 d-none d-sm-block">
+        <div class='video-wrapper'>
+            <video class="custom_rounded d-block" src="/media/courses/header_video_3.mp4" autoplay loop muted width="320" height="">
+                <source src="/media/courses/header_video_3.mp4" type='video/mp4'>
+                Извините, видео не может быть воспроизведено в вашем браузере :(
+            </video>
+        </div>
+    </div>
+    <img class="fig1 d-block" src="/static/img/main_figure1.png" alt="figure" width="365" height="200">
+    <img class="fig2 d-block" src="/static/img/main_figure2.png" alt="figure" width="200" height="100">
+    <img class="fig3 d-block" src="/static/img/main_figure3.png" alt="figure" width="370" height="200">
+</div>
+<div class="row mt-5 pt-3">
+<div class="col-12 mt-4" id="projects">
+    <div class="row">
+    
+        
+            
+                <div class="col-12 col-md-6 mb-5 d-flex flex-column">
+            
+                
+                    
+                        <h2 class="text-secondary">Поддержка обучения</h2> 
+                     
+                
+                
+                    <a href="https://childrenscience.ru/courses/" class="js-project-link d-block my-2">
+                        <div class="w-100 position-relative bg-light p-3 custom_rounded">
+                            <img src="/media/projects/logos/din.courses.svg" class="my-3" style="height:40px; max-width:100%" alt="Дети и наука.Курсы"/>
+                            <p class="text-truncate overflow-hidden" style="max-height: 70px; white-space: normal;">Открытые и бесплатные видеоуроки для школьников и педагогов со всего мира. Курсы сопровождены методическими материалами и конспектами.</p>
+                        </div>
+                    </a>
+                
+            </div>
+        
+    
+        
+            
+                <div class="col-12 col-md-6 mb-5 d-flex flex-column">
+            
+                
+                    
+                        <h2 class="text-secondary">Обучение детей</h2> 
+                     
+                
+                
+                    <a href="https://classes.childrenscience.ru/" class="js-project-link d-block my-2">
+                        <div class="w-100 position-relative bg-light p-3 custom_rounded">
+                            <img src="/media/projects/logos/ДиН.Классы.svg" class="my-3" style="height:40px; max-width:100%" alt="Дети и наука.Классы"/>
+                            <p class="text-truncate overflow-hidden" style="max-height: 70px; white-space: normal;">Наша цель — вырастить людей, способных к самостоятельной, внутренне мотивированной и результативной интеллектуальной и творческой деятельности.</p>
+                        </div>
+                    </a>
+                
+            </div>
+        
+    
+    </div>
+</div>
+
+<div class="col-12 my-4" id="ads">
+    <div class="row">
+        
+    
+    
+        <div class="col-12 mb-4 d-flex flex-column">
+    
+    
+        <div class="w-100 mb-5 mt-3 rounded advertisement_image" style="background: url('/media/courses/ads/Подзаголовок_2-min.png') top center no-repeat; background-size: cover !important; height: 200px"></div>
+    
+    
+        <h3 class="text-secondary">Хотите открыть школу? Давайте сделаем это вместе!</h3>
+    
+    
+        <p class="font-weight-light">Предложение для собственников помещений. Полная линейка образовательных продуктов для детей от 3 до 15 лет.</p>
+    
+    
+        <a class="btn btn-secondary text-white font-weight-bold mt-auto align-self-start" href="https://classes.childrenscience.ru/partnership">Узнать подробности</a>
+    
+    </div>
+    
+    </div>
+</div>
+
+
+<div class="col-12 mb-5" id="teachers">
+    <img class="fig4 d-block" src="/static/img/main_figure4.png" alt="figure" width="510" height="280">
+    <h2 class="text-secondary">Наши авторы</h2>
+    <div class="row">
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/authorsav.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Алексей Владимирович Савватеев</h4>
+            <p><p>Проректор Университета Дмитрия Пожарского, доктор физико-математических наук</p>
+<p>Математик и&nbsp;преподает математику взрослым:
+в&nbsp;УДП, в&nbsp;МФТИ и&nbsp;в&nbsp;других университетах России.</p>
+<p>А&nbsp;еще он&nbsp;читает лекции для детей в&nbsp;Филипповской школе, рассказывая пятиклассникам про математику&nbsp;&mdash; большую и&nbsp;настоящую!
+</p></p>
+            
+                <p>
+                    Автор курса
+                    
+                        <a href="/courses/sav/">«100 уроков математики для детей»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/redactorevk.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Станислав Владимирович Дробышевский</h4>
+            <p>Антрополог, кандидат биологических наук, доцент кафедры антропологии биологического факультета МГУ им. М.&nbsp;В.&nbsp;Ломоносова, педагог и&nbsp;популяризатор науки, научный редактор портала <a href="http://antropogenez.ru/">Антропогенез.ру</a>. Автор множества статей и&nbsp;монографий об&nbsp;эволюции человека.</p>
+            
+            
+                Редактор курса
+                    
+                        <a href="/courses/evk/">«Эволюция, глава 3. Происхождение человека»</a>
+                    
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/author_B8KSDJP.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Михаил Александрович Никитин</h4>
+            <p>Автор книги «Происхождение жизни. От туманности до клетки», научный сотрудник НИИ физико-химической биологии имени А. Н. Белозерского МГУ имени М. В. Ломоносова.</p><p>В 2014 году был награжден Литературной премией им. Александра Беляева за цикл статей «Биогенез», опубликованный в журнале «Химия и жизнь».</p>
+            
+                <p>
+                    Автор курса
+                    
+                        <a href="/courses/evn/">«Эволюция, глава 2. Развитие жизни на Земле»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/IMG_0474_2.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Роман Борисович Соловьев</h4>
+            <p>Учитель с 20-летним стажем. Магистр психологии и педагогики. Создатель курсов пропедевтики естествознания для дошкольников и младших школьников.</p>
+            
+                <p>
+                    Автор курса
+                    
+                        <a href="/courses/environment0/">«Окружающий мир»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/_DSC5218_2_CNmHluw.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Александр Евгеньевич Доброчаев</h4>
+            <p>Кандидат биологических наук, преподаватель школы "Интеллектуал" с 2003 года, заведующий кафедрой биологии.</p>
+            
+                <p>
+                    Автор курсов
+                    
+                        <a href="/courses/mrd/">«Морфология растений»</a>, 
+                    
+                        <a href="/courses/ard/">«Анатомия растений»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/IMG_0498_2.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Екатерина Валериевна Богомолова</h4>
+            <p>Кандидат биологических наук, доцент биологического факультета МГУ, преподаватель школы "Интеллектуал".</p>
+            
+                <p>
+                    Автор курса
+                    
+                        <a href="/courses/zbp/">«Зоология беспозвоночных»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/IMG_0722_2_HO2oR4i.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Елена Викторовна Батаева</h4>
+            <p>Кандидат педагогических наук (специальность — методика преподавания химии). Доцент кафедры общей химии МГУ. Преподаватель и заведующая кафедрой химии школы «Интеллектуал».</p>
+            
+                <p>
+                    Автор курсов
+                    
+                        <a href="/courses/inorganic_chemistry/">«Неорганическая химия»</a>, 
+                    
+                        <a href="/courses/chemical_experiment/">«Химия. Материалы для самостоятельного обучения»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="my-3" style="background: url('/media/courses/persons/author_mfe.jpg') top center no-repeat; border-radius:50%; width: 200px; height:200px; background-size: cover !important;"></div>
+            <h4 class="text-secondary">Дмитрий Эммануилович Шноль</h4>
+            <p>Учитель математики школ &laquo;Интеллектуал&raquo;, &laquo;Летово&raquo;.</p>
+            
+                <p>
+                    Автор курса
+                    
+                        <a href="/courses/mfe/">«Нестрашная математика для всех»</a>
+                    
+                </p>
+            
+            
+            </p>
+        </div>
+    
+    </div>
+</div>
+<div class="col-12 mb-5" id="sponsors">
+    <img class="fig1 d-block" src="/static/img/main_figure1.png" alt="figure" width="365" height="200">
+    <h2 class="text-secondary">Нас поддерживают</h2>
+                <div class="row align-items-center">
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="https://www.sap.com/cis/index.html" target="_blank">
+                        <img src="/media/courses/sponsors/SAP-Logo.svg" class="mw-100 d-block" style="max-height: 60px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="http://www.rushydro.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/NewLogo_RH_horizont_Rus1.jpg" class="mw-100 d-block" style="max-height: 70px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="https://www.fbk.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/38c16408c97c066548808d1934f45db9.png" class="mw-100 d-block" style="max-height: 80px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="http://президентскиегранты.рф" target="_blank">
+                        <img src="/media/courses/sponsors/pgrants_logo_gp.png" class="mw-100 d-block" style="max-height: 110px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="https://www.lester.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/logo-lester.png" class="mw-100 d-block" style="max-height: 40px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="https://sch-int.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/int_sponsor.png" class="mw-100 d-block" style="max-height: 90px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="http://cpm.dogm.mos.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/cpm_logotext.jpg" class="mw-100 d-block" style="max-height: 80px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    
+                        <img src="/media/courses/sponsors/ano.png" class="mw-100 d-block" style="max-height: 45px;"/>
+                    
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    <a href="http://s-and-e.ru/" target="_blank">
+                        <img src="/media/courses/sponsors/rfson.png" class="mw-100 d-block" style="max-height: 100px;"/>
+                    </a>
+                </div>
+            
+                <div class="col-6 col-md-4" style="max-height: 100px">
+                    
+                        <img src="/media/courses/sponsors/Мавлютов.png" class="mw-100 d-block" style="max-height: 100px;"/>
+                    
+                </div>
+            
+            </div>
+</div>
+</div>
+</div>
+
+
+<div class="bg-dark">
+    <div class="container py-5 text-white">
+        <div class="row">
+            <div class="col-8 col-md-3">
+                <a href="/"><img src="/static/img/logo.dark.line.svg"></a>
+                <p class="mt-5"><small>&copy; Фонд развития детского научного творчества «Дети и&nbsp;наука», 2020.</small></p>
+            </div>
+            <div class="col-12 col-md-4 offset-md-1">
+                <p><a href="/courses/about/" class="text-reset">О фонде</a></p>
+                <p><a href="/official" class="text-reset">Официальная информация</a></p>
+                <p><a href="/support" class="text-reset">Поддержать фонд</a></p>
+                <p><a href="/educational_info" class="text-reset">Сведения об образовательной организации</a></p>
+            </div>
+            <div class="col-12 col-md-4 ">
+                <p><a href="#projects" class="text-reset">Проекты фонда</a></p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var rotation = 15;
+var duration = 100;
+$(".js-project-link").hover(function(){$('.animated-square', this).animateRotate(rotation, duration)}, function(){$('.animated-square', this).animateRotate(0, duration)})
+
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+  return this.each(function() {
+    var $elem = $(this);
+
+    $({deg: 0}).animate({deg: angle}, {
+      duration: duration,
+      easing: easing,
+      step: function(now) {
+        $elem.css({
+           transform: 'rotate(' + now + 'deg)'
+         });
+      },
+      complete: complete || $.noop
+    });
+  });
+};
+</script>
+
+    
+
+    <!-- RoiStat counter -->
+    <script>
+        (function(w, d, s, h, id) {
+            w.roistatProjectId = id; w.roistatHost = h;
+            var p = d.location.protocol == "https:" ? "https://" : "http://";
+            var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+            var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com', '4a63676450e37a59e1217ed3dc0ac9b9');
+    </script>
+    <!-- /RoiStat counter -->
+</body>
+
+</html>
+

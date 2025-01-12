@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Projet PPE1 2024-2025 - Tableau RU</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css" />
+	</head>
+	<body>
+		<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+			<div id="navbar-ppe" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="../index.html"> Accueil </a>
+					<a class="navbar-item is-active" href="index.html"> Tableaux </a>
+					<a class="navbar-item" href="../wordcloud/index.html"> Nuages </a>
+					<a class="navbar-item" href="../code.html"> Scripts </a>
+					<a class="navbar-item" href="../conclusion.html"> Bilan </a>
+					<a class="navbar-item" href="../team.html"> Équipe </a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="section">
+			<div class="container">
+				<div class="hero has-text-centered">
+					<div class="hero-body">
+						<h1 class="title">Projet PPE1 2024-2025</h1>
+					</div>
+				</div>
+				<nav class="tabs is-centered">
+					<ul>
+						<li><a href="tableau-fr.html">FR</a></li>
+						<li><a href="tableau-en.html">EN</a></li>
+						<li><a href="tableau-ru.html">RU</a></li>
+					</ul>
+				</nav>
+				<div class="box">
+					<div class="table-container">
+					<table class="table is-bordered is-striped is-hoverable mx-auto">
+						<thead>
+							<tr>
+								<th><abbr title="Numéro de ligne">N°</abbr></th>
+								<th>URL</th>
+								<th><abbr title="Code HTTP">HTTP</abbr></th>
+								<th>Encodage</th>
+								<th><abbr title="Code HTML de la page">HTML</abbr></th>
+								<th><abbr title="Texte brut de la page">Texte</abbr></th>
+								<th><abbr title="Compte des mots (pertinents / total)">Mots</abbr></th>
+								<th><abbr title="Compte des bigrammes (pertinents / total)">Bigrammes</abbr></th>
+								<th><abbr title="Fréquence d'occurrence des bigrammes">Fréquence</abbr></th>
+								<th><abbr title="Occurrences en contexte">Contexte</abbr></th>
+								<th>Concordancier</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B1%D1%91%D0%BD%D0%BE%D0%BA">https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B1%D1%91%D0%BD%D0%BE%D0%BA</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-01.html">aspirations/RU-01.html</a></td>
+								<td><a href="../dumps-text/RU-01.txt">dumps-text/RU-01.txt</a></a></td>
+								<td>41 / 5044</td>
+								<td>81 / 4233</td>
+								<td><a href="../contextes/RU-01-bigram-freq.txt">contextes/RU-01-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-01.txt">contextes/RU-01.txt</a></td>
+								<td><a href=../concordances/RU-01.html>concordances/RU-01.html</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><a href="https://www.ivi.tv/watch/rebenok">https://www.ivi.tv/watch/rebenok</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-02.html">aspirations/RU-02.html</a></td>
+								<td><a href="../dumps-text/RU-02.txt">dumps-text/RU-02.txt</a></a></td>
+								<td>4 / 2073</td>
+								<td>8 / 1823</td>
+								<td><a href="../contextes/RU-02-bigram-freq.txt">contextes/RU-02-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-02.txt">contextes/RU-02.txt</a></td>
+								<td><a href=../concordances/RU-02.html>concordances/RU-02.html</a></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><a href="https://www.unicef.org/eca/ru/%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE/%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5-%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0/%D1%8D%D1%82%D0%B0%D0%BF%D1%8B-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F-%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0">https://www.unicef.org/eca/ru/%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE/%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5-%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0/%D1%8D%D1%82%D0%B0%D0%BF%D1%8B-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F-%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-03.html">aspirations/RU-03.html</a></td>
+								<td><a href="../dumps-text/RU-03.txt">dumps-text/RU-03.txt</a></a></td>
+								<td>22 / 1992</td>
+								<td>47 / 1841</td>
+								<td><a href="../contextes/RU-03-bigram-freq.txt">contextes/RU-03-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-03.txt">contextes/RU-03.txt</a></td>
+								<td><a href=../concordances/RU-03.html>concordances/RU-03.html</a></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><a href="https://www.emcmos.ru/articles/chto-chuvstvuet-rebyonok-vo-vremya-rodov/">https://www.emcmos.ru/articles/chto-chuvstvuet-rebyonok-vo-vremya-rodov/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-04.html">aspirations/RU-04.html</a></td>
+								<td><a href="../dumps-text/RU-04.txt">dumps-text/RU-04.txt</a></a></td>
+								<td>3 / 1524</td>
+								<td>6 / 1430</td>
+								<td><a href="../contextes/RU-04-bigram-freq.txt">contextes/RU-04-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-04.txt">contextes/RU-04.txt</a></td>
+								<td><a href=../concordances/RU-04.html>concordances/RU-04.html</a></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><a href="https://www.1rnd.ru/news/obshchestvo/u-pary-v-rostovskoy-oblasti-rodilsya-chetyrnadtsatyy-rebyenok/">https://www.1rnd.ru/news/obshchestvo/u-pary-v-rostovskoy-oblasti-rodilsya-chetyrnadtsatyy-rebyenok/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-05.html">aspirations/RU-05.html</a></td>
+								<td><a href="../dumps-text/RU-05.txt">dumps-text/RU-05.txt</a></a></td>
+								<td>2 / 503</td>
+								<td>4 / 458</td>
+								<td><a href="../contextes/RU-05-bigram-freq.txt">contextes/RU-05-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-05.txt">contextes/RU-05.txt</a></td>
+								<td><a href=../concordances/RU-05.html>concordances/RU-05.html</a></td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><a href="https://www.gosuslugi.ru/help/faq/login_child/1022766">https://www.gosuslugi.ru/help/faq/login_child/1022766</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-06.html">aspirations/RU-06.html</a></td>
+								<td><a href="../dumps-text/RU-06.txt">dumps-text/RU-06.txt</a></a></td>
+								<td>N/A / 11</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><a href="https://www.un.org/ru/global-issues/children">https://www.un.org/ru/global-issues/children</a></td>
+								<td><span class="has-text-danger">403</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><a href="https://childrenplus.ru/">https://childrenplus.ru/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-08.html">aspirations/RU-08.html</a></td>
+								<td><a href="../dumps-text/RU-08.txt">dumps-text/RU-08.txt</a></a></td>
+								<td>30 / 538</td>
+								<td>73 / 467</td>
+								<td><a href="../contextes/RU-08-bigram-freq.txt">contextes/RU-08-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-08.txt">contextes/RU-08.txt</a></td>
+								<td><a href=../concordances/RU-08.html>concordances/RU-08.html</a></td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><a href="https://xn--e1aglkf7g.xn--d1acj3b/">https://xn--e1aglkf7g.xn--d1acj3b/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-09.html">aspirations/RU-09.html</a></td>
+								<td><a href="../dumps-text/RU-09.txt">dumps-text/RU-09.txt</a></a></td>
+								<td>31 / 1880</td>
+								<td>64 / 1750</td>
+								<td><a href="../contextes/RU-09-bigram-freq.txt">contextes/RU-09-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-09.txt">contextes/RU-09.txt</a></td>
+								<td><a href=../concordances/RU-09.html>concordances/RU-09.html</a></td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><a href="https://childrenscience.ru/">https://childrenscience.ru/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-10.html">aspirations/RU-10.html</a></td>
+								<td><a href="../dumps-text/RU-10.txt">dumps-text/RU-10.txt</a></a></td>
+								<td>10 / 384</td>
+								<td>18 / 373</td>
+								<td><a href="../contextes/RU-10-bigram-freq.txt">contextes/RU-10-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-10.txt">contextes/RU-10.txt</a></td>
+								<td><a href=../concordances/RU-10.html>concordances/RU-10.html</a></td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td><a href="https://miloserdie.help/projects/proekt-podderzhki-osobogo-detstva-deti-pro/">https://miloserdie.help/projects/proekt-podderzhki-osobogo-detstva-deti-pro/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-11.html">aspirations/RU-11.html</a></td>
+								<td><a href="../dumps-text/RU-11.txt">dumps-text/RU-11.txt</a></a></td>
+								<td>19 / 585</td>
+								<td>38 / 527</td>
+								<td><a href="../contextes/RU-11-bigram-freq.txt">contextes/RU-11-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-11.txt">contextes/RU-11.txt</a></td>
+								<td><a href=../concordances/RU-11.html>concordances/RU-11.html</a></td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td><a href="https://deti-bela.ru/">https://deti-bela.ru/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-12.html">aspirations/RU-12.html</a></td>
+								<td><a href="../dumps-text/RU-12.txt">dumps-text/RU-12.txt</a></a></td>
+								<td>22 / 2083</td>
+								<td>50 / 1797</td>
+								<td><a href="../contextes/RU-12-bigram-freq.txt">contextes/RU-12-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-12.txt">contextes/RU-12.txt</a></td>
+								<td><a href=../concordances/RU-12.html>concordances/RU-12.html</a></td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td><a href="https://xn--80ajufr.xn--d1acj3b/">https://xn--80ajufr.xn--d1acj3b/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-13.html">aspirations/RU-13.html</a></td>
+								<td><a href="../dumps-text/RU-13.txt">dumps-text/RU-13.txt</a></a></td>
+								<td>4 / 719</td>
+								<td>8 / 609</td>
+								<td><a href="../contextes/RU-13-bigram-freq.txt">contextes/RU-13-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-13.txt">contextes/RU-13.txt</a></td>
+								<td><a href=../concordances/RU-13.html>concordances/RU-13.html</a></td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td><a href="https://xn--66-kmc.xn--80aafey1amqq.xn--d1acj3b/">https://xn--66-kmc.xn--80aafey1amqq.xn--d1acj3b/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-14.html">aspirations/RU-14.html</a></td>
+								<td><a href="../dumps-text/RU-14.txt">dumps-text/RU-14.txt</a></a></td>
+								<td>8 / 825</td>
+								<td>16 / 716</td>
+								<td><a href="../contextes/RU-14-bigram-freq.txt">contextes/RU-14-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-14.txt">contextes/RU-14.txt</a></td>
+								<td><a href=../concordances/RU-14.html>concordances/RU-14.html</a></td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td><a href="https://www.sberbank.com/ru/person/bank_cards/debit/sberkarta_kids">https://www.sberbank.com/ru/person/bank_cards/debit/sberkarta_kids</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-15.html">aspirations/RU-15.html</a></td>
+								<td><a href="../dumps-text/RU-15.txt">dumps-text/RU-15.txt</a></a></td>
+								<td>N/A / 63</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td><a href="https://dvc.fondvera.ru/">https://dvc.fondvera.ru/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-16.html">aspirations/RU-16.html</a></td>
+								<td><a href="../dumps-text/RU-16.txt">dumps-text/RU-16.txt</a></a></td>
+								<td>27 / 2060</td>
+								<td>58 / 1924</td>
+								<td><a href="../contextes/RU-16-bigram-freq.txt">contextes/RU-16-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-16.txt">contextes/RU-16.txt</a></td>
+								<td><a href=../concordances/RU-16.html>concordances/RU-16.html</a></td>
+							</tr>
+							<tr>
+								<td>17</td>
+								<td><a href="https://det.org.ru/">https://det.org.ru/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>windows-1251</td>
+								<td><a href="../aspirations/RU-17.html">aspirations/RU-17.html</a></td>
+								<td><a href="../dumps-text/RU-17.txt">dumps-text/RU-17.txt</a></a></td>
+								<td>N/A / 1615</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>18</td>
+								<td><a href="https://www.company.rt.ru/press/news_social/d472042/">https://www.company.rt.ru/press/news_social/d472042/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>windows-1251</td>
+								<td><a href="../aspirations/RU-18.html">aspirations/RU-18.html</a></td>
+								<td><a href="../dumps-text/RU-18.txt">dumps-text/RU-18.txt</a></a></td>
+								<td>N/A / 1370</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>19</td>
+								<td><a href="https://www.gazeta.ru/family/2024/10/07/19864561.shtml">https://www.gazeta.ru/family/2024/10/07/19864561.shtml</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-19.html">aspirations/RU-19.html</a></td>
+								<td><a href="../dumps-text/RU-19.txt">dumps-text/RU-19.txt</a></a></td>
+								<td>22 / 1205</td>
+								<td>44 / 1193</td>
+								<td><a href="../contextes/RU-19-bigram-freq.txt">contextes/RU-19-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-19.txt">contextes/RU-19.txt</a></td>
+								<td><a href=../concordances/RU-19.html>concordances/RU-19.html</a></td>
+							</tr>
+							<tr>
+								<td>20</td>
+								<td><a href="http://duma.gov.ru/news/60572/">http://duma.gov.ru/news/60572/</a></td>
+								<td><span class="has-text-danger">000</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>21</td>
+								<td><a href="https://www.oiguskantsler.ee/ru/%D0%BF%D1%80%D0%B0%D0%B2%D0%B0-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0-2">https://www.oiguskantsler.ee/ru/%D0%BF%D1%80%D0%B0%D0%B2%D0%B0-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0-2</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-21.html">aspirations/RU-21.html</a></td>
+								<td><a href="../dumps-text/RU-21.txt">dumps-text/RU-21.txt</a></a></td>
+								<td>72 / 6303</td>
+								<td>154 / 6139</td>
+								<td><a href="../contextes/RU-21-bigram-freq.txt">contextes/RU-21-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-21.txt">contextes/RU-21.txt</a></td>
+								<td><a href=../concordances/RU-21.html>concordances/RU-21.html</a></td>
+							</tr>
+							<tr>
+								<td>22</td>
+								<td><a href="https://www.gosuslugi.ru/help/faq/login_child/2754">https://www.gosuslugi.ru/help/faq/login_child/2754</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-22.html">aspirations/RU-22.html</a></td>
+								<td><a href="../dumps-text/RU-22.txt">dumps-text/RU-22.txt</a></a></td>
+								<td>N/A / 11</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>23</td>
+								<td><a href="https://m.business-gazeta.ru/news/659613">https://m.business-gazeta.ru/news/659613</a></td>
+								<td><span class="has-text-danger">000</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>24</td>
+								<td><a href="https://oxu.az/ru/obshestvo/yunis-nuzhdaetsya-v-povtornoj-operacii-iz-za-bolej-rebenok-ne-mozhet-ni-est-ni-pit">https://oxu.az/ru/obshestvo/yunis-nuzhdaetsya-v-povtornoj-operacii-iz-za-bolej-rebenok-ne-mozhet-ni-est-ni-pit</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-24.html">aspirations/RU-24.html</a></td>
+								<td><a href="../dumps-text/RU-24.txt">dumps-text/RU-24.txt</a></a></td>
+								<td>1 / 1304</td>
+								<td>2 / 1077</td>
+								<td><a href="../contextes/RU-24-bigram-freq.txt">contextes/RU-24-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-24.txt">contextes/RU-24.txt</a></td>
+								<td><a href=../concordances/RU-24.html>concordances/RU-24.html</a></td>
+							</tr>
+							<tr>
+								<td>25</td>
+								<td><a href="https://tengrinews.kz/kazakhstan_news/perepisyivalsya-detmi-ombudsmen-dinara-zakieva-otreagirovala-559461/">https://tengrinews.kz/kazakhstan_news/perepisyivalsya-detmi-ombudsmen-dinara-zakieva-otreagirovala-559461/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-25.html">aspirations/RU-25.html</a></td>
+								<td><a href="../dumps-text/RU-25.txt">dumps-text/RU-25.txt</a></a></td>
+								<td>11 / 2177</td>
+								<td>22 / 1774</td>
+								<td><a href="../contextes/RU-25-bigram-freq.txt">contextes/RU-25-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-25.txt">contextes/RU-25.txt</a></td>
+								<td><a href=../concordances/RU-25.html>concordances/RU-25.html</a></td>
+							</tr>
+							<tr>
+								<td>26</td>
+								<td><a href="https://muz-tv.ru/news/shura-obyasnil-pochemu-ne-mozhet-imet-detey-vsegda-hotel-semyu/">https://muz-tv.ru/news/shura-obyasnil-pochemu-ne-mozhet-imet-detey-vsegda-hotel-semyu/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-26.html">aspirations/RU-26.html</a></td>
+								<td><a href="../dumps-text/RU-26.txt">dumps-text/RU-26.txt</a></a></td>
+								<td>14 / 885</td>
+								<td>28 / 800</td>
+								<td><a href="../contextes/RU-26-bigram-freq.txt">contextes/RU-26-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-26.txt">contextes/RU-26.txt</a></td>
+								<td><a href=../concordances/RU-26.html>concordances/RU-26.html</a></td>
+							</tr>
+							<tr>
+								<td>27</td>
+								<td><a href="https://www.sb.by/articles/logoped-rasskazala-pochemu-multiki-vredyat-rechevomu-razvitiyu-rebenka.html">https://www.sb.by/articles/logoped-rasskazala-pochemu-multiki-vredyat-rechevomu-razvitiyu-rebenka.html</a></td>
+								<td><span class="has-text-danger">403</span></td>
+								<td>UTF-8</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>28</td>
+								<td><a href="https://bloknot-volgograd.ru/news/vnedorozhnik-sbil-9-letnyuyu-devochku-v-volgograds-1814245">https://bloknot-volgograd.ru/news/vnedorozhnik-sbil-9-letnyuyu-devochku-v-volgograds-1814245</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-28.html">aspirations/RU-28.html</a></td>
+								<td><a href="../dumps-text/RU-28.txt">dumps-text/RU-28.txt</a></a></td>
+								<td>1 / 1851</td>
+								<td>2 / 1611</td>
+								<td><a href="../contextes/RU-28-bigram-freq.txt">contextes/RU-28-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-28.txt">contextes/RU-28.txt</a></td>
+								<td><a href=../concordances/RU-28.html>concordances/RU-28.html</a></td>
+							</tr>
+							<tr>
+								<td>29</td>
+								<td><a href="https://verstka.media/izdatelstvo-eksmo-snyalo-s-prodazh-knigu-deti-ireny-iz-za-donosa-z-kanala">https://verstka.media/izdatelstvo-eksmo-snyalo-s-prodazh-knigu-deti-ireny-iz-za-donosa-z-kanala</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-29.html">aspirations/RU-29.html</a></td>
+								<td><a href="../dumps-text/RU-29.txt">dumps-text/RU-29.txt</a></a></td>
+								<td>9 / 799</td>
+								<td>20 / 682</td>
+								<td><a href="../contextes/RU-29-bigram-freq.txt">contextes/RU-29-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-29.txt">contextes/RU-29.txt</a></td>
+								<td><a href=../concordances/RU-29.html>concordances/RU-29.html</a></td>
+							</tr>
+							<tr>
+								<td>30</td>
+								<td><a href="https://novayagazeta.ee/articles/2025/01/11/rossiiskie-aviakompanii-obiazali-besplatno-sazhat-detei-v-samoletakh-riadom-s-roditeliami-ili-drugimi-soprovozhdaiushchimi-news">https://novayagazeta.ee/articles/2025/01/11/rossiiskie-aviakompanii-obiazali-besplatno-sazhat-detei-v-samoletakh-riadom-s-roditeliami-ili-drugimi-soprovozhdaiushchimi-news</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-30.html">aspirations/RU-30.html</a></td>
+								<td><a href="../dumps-text/RU-30.txt">dumps-text/RU-30.txt</a></a></td>
+								<td>3 / 125</td>
+								<td>6 / 113</td>
+								<td><a href="../contextes/RU-30-bigram-freq.txt">contextes/RU-30-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-30.txt">contextes/RU-30.txt</a></td>
+								<td><a href=../concordances/RU-30.html>concordances/RU-30.html</a></td>
+							</tr>
+							<tr>
+								<td>31</td>
+								<td><a href="https://www.philips.ru/c-e/mo/parents-guide/comforting/skolko-dolzhen-spat-rebyonok.html">https://www.philips.ru/c-e/mo/parents-guide/comforting/skolko-dolzhen-spat-rebyonok.html</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-31.html">aspirations/RU-31.html</a></td>
+								<td><a href="../dumps-text/RU-31.txt">dumps-text/RU-31.txt</a></a></td>
+								<td>10 / 3258</td>
+								<td>22 / 2794</td>
+								<td><a href="../contextes/RU-31-bigram-freq.txt">contextes/RU-31-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-31.txt">contextes/RU-31.txt</a></td>
+								<td><a href=../concordances/RU-31.html>concordances/RU-31.html</a></td>
+							</tr>
+							<tr>
+								<td>32</td>
+								<td><a href="https://dagpravda.ru/zdorove/osobennyj-rebjonok-mechtaet-zhit-kak-vse/">https://dagpravda.ru/zdorove/osobennyj-rebjonok-mechtaet-zhit-kak-vse/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-32.html">aspirations/RU-32.html</a></td>
+								<td><a href="../dumps-text/RU-32.txt">dumps-text/RU-32.txt</a></a></td>
+								<td>20 / 2705</td>
+								<td>42 / 2242</td>
+								<td><a href="../contextes/RU-32-bigram-freq.txt">contextes/RU-32-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-32.txt">contextes/RU-32.txt</a></td>
+								<td><a href=../concordances/RU-32.html>concordances/RU-32.html</a></td>
+							</tr>
+							<tr>
+								<td>33</td>
+								<td><a href="https://kurganobl.ru/assets/files/detstvo/formi_ustroistva_sirot.pdf">https://kurganobl.ru/assets/files/detstvo/formi_ustroistva_sirot.pdf</a></td>
+								<td><span class="has-text-danger">000</span></td>
+								<td>N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>34</td>
+								<td><a href="https://kdb2tver.ru/tsentr-detskoj-nevrologii-i-mr/informatsiya-dlya-roditelej/37-09-06-17-1">https://kdb2tver.ru/tsentr-detskoj-nevrologii-i-mr/informatsiya-dlya-roditelej/37-09-06-17-1</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-34.html">aspirations/RU-34.html</a></td>
+								<td><a href="../dumps-text/RU-34.txt">dumps-text/RU-34.txt</a></a></td>
+								<td>17 / 3055</td>
+								<td>34 / 2948</td>
+								<td><a href="../contextes/RU-34-bigram-freq.txt">contextes/RU-34-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-34.txt">contextes/RU-34.txt</a></td>
+								<td><a href=../concordances/RU-34.html>concordances/RU-34.html</a></td>
+							</tr>
+							<tr>
+								<td>35</td>
+								<td><a href="https://www.rbc.ru/life/news/631350729a7947234e6c2fcd">https://www.rbc.ru/life/news/631350729a7947234e6c2fcd</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-35.html">aspirations/RU-35.html</a></td>
+								<td><a href="../dumps-text/RU-35.txt">dumps-text/RU-35.txt</a></a></td>
+								<td>21 / 1601</td>
+								<td>42 / 1524</td>
+								<td><a href="../contextes/RU-35-bigram-freq.txt">contextes/RU-35-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-35.txt">contextes/RU-35.txt</a></td>
+								<td><a href=../concordances/RU-35.html>concordances/RU-35.html</a></td>
+							</tr>
+							<tr>
+								<td>36</td>
+								<td><a href="https://xn--90aivcdt6dxbc.xn--p1ai/articles/questions/social-protection/bezopasnost/kak-obyasnit-rebenku-chto-nelzya-ukhodit-s-neznakomtsami/">https://xn--90aivcdt6dxbc.xn--p1ai/articles/questions/social-protection/bezopasnost/kak-obyasnit-rebenku-chto-nelzya-ukhodit-s-neznakomtsami/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-36.html">aspirations/RU-36.html</a></td>
+								<td><a href="../dumps-text/RU-36.txt">dumps-text/RU-36.txt</a></a></td>
+								<td>7 / 783</td>
+								<td>14 / 743</td>
+								<td><a href="../contextes/RU-36-bigram-freq.txt">contextes/RU-36-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-36.txt">contextes/RU-36.txt</a></td>
+								<td><a href=../concordances/RU-36.html>concordances/RU-36.html</a></td>
+							</tr>
+							<tr>
+								<td>37</td>
+								<td><a href="https://baby-sleep.ru/articles/kak-igrat-s-rebenkom-v-1-5-2-goda/">https://baby-sleep.ru/articles/kak-igrat-s-rebenkom-v-1-5-2-goda/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-37.html">aspirations/RU-37.html</a></td>
+								<td><a href="../dumps-text/RU-37.txt">dumps-text/RU-37.txt</a></a></td>
+								<td>9 / 2648</td>
+								<td>18 / 2513</td>
+								<td><a href="../contextes/RU-37-bigram-freq.txt">contextes/RU-37-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-37.txt">contextes/RU-37.txt</a></td>
+								<td><a href=../concordances/RU-37.html>concordances/RU-37.html</a></td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td><a href="https://www.bondibon.ru/advice/igry-i-zanyatiya-s-novorozhdennym-rebenkom/">https://www.bondibon.ru/advice/igry-i-zanyatiya-s-novorozhdennym-rebenkom/</a></td>
+								<td><span class="has-text-danger">403</span></td>
+								<td>UTF-8</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></a></td>
+								<td>N/A / N/A</td>
+								<td>N/A / N/A</td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+								<td><span class="has-text-danger">N/A</span></td>
+							</tr>
+							<tr>
+								<td>39</td>
+								<td><a href="https://toldot.com/jfamily/children/children-ask_7067.html">https://toldot.com/jfamily/children/children-ask_7067.html</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-39.html">aspirations/RU-39.html</a></td>
+								<td><a href="../dumps-text/RU-39.txt">dumps-text/RU-39.txt</a></a></td>
+								<td>34 / 2789</td>
+								<td>74 / 2605</td>
+								<td><a href="../contextes/RU-39-bigram-freq.txt">contextes/RU-39-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-39.txt">contextes/RU-39.txt</a></td>
+								<td><a href=../concordances/RU-39.html>concordances/RU-39.html</a></td>
+							</tr>
+							<tr>
+								<td>40</td>
+								<td><a href="https://www.forbes.ru/forbeslife/513667-kluc-k-procnoj-svazi-kak-osoboe-vrema-pomozet-ukrepit-otnosenia-s-rebenkom">https://www.forbes.ru/forbeslife/513667-kluc-k-procnoj-svazi-kak-osoboe-vrema-pomozet-ukrepit-otnosenia-s-rebenkom</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-40.html">aspirations/RU-40.html</a></td>
+								<td><a href="../dumps-text/RU-40.txt">dumps-text/RU-40.txt</a></a></td>
+								<td>12 / 2323</td>
+								<td>26 / 2220</td>
+								<td><a href="../contextes/RU-40-bigram-freq.txt">contextes/RU-40-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-40.txt">contextes/RU-40.txt</a></td>
+								<td><a href=../concordances/RU-40.html>concordances/RU-40.html</a></td>
+							</tr>
+							<tr>
+								<td>41</td>
+								<td><a href="https://kuzbass.aif.ru/incidents/molotkom-i-kulakami-v-kuzbasse-izbili-zhenshchinu-s-rebyonkom-na-rukah">https://kuzbass.aif.ru/incidents/molotkom-i-kulakami-v-kuzbasse-izbili-zhenshchinu-s-rebyonkom-na-rukah</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-41.html">aspirations/RU-41.html</a></td>
+								<td><a href="../dumps-text/RU-41.txt">dumps-text/RU-41.txt</a></a></td>
+								<td>6 / 1129</td>
+								<td>12 / 1006</td>
+								<td><a href="../contextes/RU-41-bigram-freq.txt">contextes/RU-41-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-41.txt">contextes/RU-41.txt</a></td>
+								<td><a href=../concordances/RU-41.html>concordances/RU-41.html</a></td>
+							</tr>
+							<tr>
+								<td>42</td>
+								<td><a href="https://www.postpartum.net/ru/mother-infant-bonding-its-not-always-instant/">https://www.postpartum.net/ru/mother-infant-bonding-its-not-always-instant/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-42.html">aspirations/RU-42.html</a></td>
+								<td><a href="../dumps-text/RU-42.txt">dumps-text/RU-42.txt</a></a></td>
+								<td>4 / 2028</td>
+								<td>10 / 1857</td>
+								<td><a href="../contextes/RU-42-bigram-freq.txt">contextes/RU-42-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-42.txt">contextes/RU-42.txt</a></td>
+								<td><a href=../concordances/RU-42.html>concordances/RU-42.html</a></td>
+							</tr>
+							<tr>
+								<td>43</td>
+								<td><a href="https://www.aviasales.ru/psgr/article/kids-checklist">https://www.aviasales.ru/psgr/article/kids-checklist</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-43.html">aspirations/RU-43.html</a></td>
+								<td><a href="../dumps-text/RU-43.txt">dumps-text/RU-43.txt</a></a></td>
+								<td>16 / 1723</td>
+								<td>33 / 1604</td>
+								<td><a href="../contextes/RU-43-bigram-freq.txt">contextes/RU-43-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-43.txt">contextes/RU-43.txt</a></td>
+								<td><a href=../concordances/RU-43.html>concordances/RU-43.html</a></td>
+							</tr>
+							<tr>
+								<td>44</td>
+								<td><a href="https://fondvera.ru/news/kak-govorit-s-rebenkom-o-smerti/">https://fondvera.ru/news/kak-govorit-s-rebenkom-o-smerti/</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>UTF-8</td>
+								<td><a href="../aspirations/RU-44.html">aspirations/RU-44.html</a></td>
+								<td><a href="../dumps-text/RU-44.txt">dumps-text/RU-44.txt</a></a></td>
+								<td>8 / 1142</td>
+								<td>16 / 1029</td>
+								<td><a href="../contextes/RU-44-bigram-freq.txt">contextes/RU-44-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-44.txt">contextes/RU-44.txt</a></td>
+								<td><a href=../concordances/RU-44.html>concordances/RU-44.html</a></td>
+							</tr>
+							<tr>
+								<td>45</td>
+								<td><a href="https://itec-academy.ru/newsamparticles/razvivayushchie-zanyatiya-s-rebenkom-2-3-let">https://itec-academy.ru/newsamparticles/razvivayushchie-zanyatiya-s-rebenkom-2-3-let</a></td>
+								<td><span class="has-text-success">200</span></td>
+								<td>utf-8</td>
+								<td><a href="../aspirations/RU-45.html">aspirations/RU-45.html</a></td>
+								<td><a href="../dumps-text/RU-45.txt">dumps-text/RU-45.txt</a></a></td>
+								<td>6 / 1100</td>
+								<td>12 / 1017</td>
+								<td><a href="../contextes/RU-45-bigram-freq.txt">contextes/RU-45-bigram-freq.txt</a></td>
+								<td><a href="../contextes/RU-45.txt">contextes/RU-45.txt</a></td>
+								<td><a href=../concordances/RU-45.html>concordances/RU-45.html</a></td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fas fa-brands fa-github"></i>
+					</span>
+					<span>
+						<a href="https://github.com/NiLuJe/PPE1-2024-Groupe">Dépôt GH du projet</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fi fi-fr"></i>
+					</span>
+					<span>
+						<a href="https://github.com/Inesmartins1912">Inès</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fi fi-us"></i>
+					</span>
+					<span>
+						<a href="https://github.com/NiLuJe">Damien</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fi fi-ru"></i>
+					</span>
+					<span>
+						<a href="https://github.com/ElisaLEPLUVIER">Elisa</a>
+					</span>
+				</span>
+			</div>
+		</footer>
+	</body>
+</html>
