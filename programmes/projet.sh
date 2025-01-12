@@ -191,7 +191,7 @@ while read -r line ; do
 		fi
 
 		# Si la page n'est pas en UTF-8, on convertit
-		if [ "${page_encoding^^}" != "UTF-8" ] ; then
+		if [ "${page_encoding^^}" != "UTF-8" ] && [ "${page_encoding^^}" != "N/A" ] ; then
 			>&2 echo "Transcodage de ${page_encoding^^} vers UTF-8 pour la page ${line}"
 			# Si la conversion échoue en tentant d'honorer l'encodage cible, on va laisser uconv se débrouiller sans le préciser...
 			${UCONV_BIN} -f "${page_encoding}" -t "UTF-8" -x Any-NFC --callback escape-unicode "${OUTPUT_HTML}" -o "${OUTPUT_HTML}.uconv" ||
