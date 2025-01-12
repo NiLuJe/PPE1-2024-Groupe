@@ -292,10 +292,8 @@ while read -r line ; do
 								<td>${page_encoding}</td>
 								<td>${scraping_cell}</td>
 								<td>${dump_cell}</a></td>
-								<td>${word_count}</td>
-								<td>${match_count}</td>
-								<td>${bigram_count}</td>
-								<td>${match_bigram_count}</td>
+								<td>${match_count} / ${word_count}</td>
+								<td>${match_bigram_count} / ${bigram_count}</td>
 								<td>${bigram_cell}</td>
 								<td>${context_cell}</td>
 								<td>${concordance_cell}</td>

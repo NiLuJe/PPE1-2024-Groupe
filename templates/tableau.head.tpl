@@ -42,9 +42,7 @@
 								<th>HTML</th>
 								<th>Texte Brut</th>
 								<th>Mots</th>
-								<th>Pertinents</th>
 								<th>Bigrammes</th>
-								<th>Pertinents</th>
 								<th>Fréquence</th>
 								<th>Contexte</th>
 								<th>Concordancier</th>
