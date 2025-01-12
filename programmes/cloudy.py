@@ -52,6 +52,11 @@ def main(pals_ctx: str | Path, image: str | Path):
 	# Et on enregistre l'image
 	wc.to_file(image)
 
+	# Pour le fun, on en génère un second avec l'algo de base ;).
+	wc = WordCloud(background_color="black", width=800, height=400, scale=2, max_words=200, stopwords=stop_words)
+	wc.generate(pals_ctx.with_name(pals_ctx.name.replace("processed-", "")).read_text())
+	wc.to_file(image.with_name("std-" + image.name))
+
 
 # Main entry-point
 if __name__ == "__main__":
