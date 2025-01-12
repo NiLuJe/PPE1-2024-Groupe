@@ -1,263 +1,696 @@
+   Link: /build/modern/js/initial-vendors.ff59ec7702db2ed8.js
+   Link: /build/modern/js/initial-helpers.a850ba7749e48093.js
+   Link: /build/modern/js/globals/handleFiganalytics.d3af1371e4c84155.js
+   Link: https://static.lefigaro.fr/figanalytics/figanalytics-short-ttl.js
+   Link: https://static.lefigaro.fr
+   Link: https://i.f1g.fr
+   Link: https://collector.appconsent.io
+   Link: https://cdn.appconsent.io/tcf2-clear/current/core.bundle.js
+   Link: https://www.googletagmanager.com
+   Link: https://cdn.appconsent.io
    Link: canonical
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Link: modulepreload
-   Les Numériques
-   Rechercher _____________________
+   Link: alternate
+   Aller au contenu                 
+   Menu
+   VENTE FLASH 4,99€/mois pendant 12 moisRechercher
+   Notre application
+   Soyez alerté en temps réel
+   avec l'application Le Figaro
+
+   Rubriques et services du Figaro
+
+     * Politique
+     * International
+     * Société
+     * Vox
+     * Économie
+     * Sport
+     * Faits divers
+     * Culture
+     * Voyage
+     * Style
+     * Madame
+     * Vin
    [ Submit ]
-     * *  * Forum connexion
-   En ce moment :
-   [ ] Afficher plus Afficher moins Podcast Soldes 2025 Nvidia RTX 50 CES
-   2025 en direct GoPro Hero 13 Passion Gaming Duel gonfleurs Astuces Google
-   Forfaits box Durabilité Forfaits mobiles Nos labos
-   tous les produits
-     * Téléphonie
-     * TV
-     * Audio
-     * Maison
-     * Santé & Sport
-     * Informatique
-     * Photo
-     * Gaming
-     * Vélos & Trottinettes
-     * Auto & Moto
-     * Science & Espace
-     * Société numérique
-   Et aussi
-     * 🔥 Bons plans
-     * Tests
-     * Actualités
-     * Comparatifs & guides d'achat
-     * Tech+durable
+
+   [ Submit ]
+
+   Rubriques et services du Figaro
+
+     * Le Figaro Live
+     * Le Figaro Magazine
+     * La Vérification
+     * Le Figaro Étudiant
+     * Santé
+     * Sciences
+     * Fig Data
+     * Tech et web
+     * Bourse
+     * Le Figaro Immobilier
+     * Emploi
+     * Art de vivre
+     * Automobile
+     * Langue française
+     * Golf
+     * Histoire
+     * TVMag
+     * Programme TV
+     * Maison et Jardin
+     * Le Figaroscope
+     * Jeux
+     * Carnet du jour
+     * Guide achat
+     * Services
+     * Billetterie
+     * Podcasts
+     * La question du jour
+     * Le Figaro Store
+     * Les Voyages F
+     * À savoir en France
+
+   Nos journaux et magazines
+
+     * Le Figaro
+     * Le Figaro Magazine
+     * Madame Figaro
+     * TV Magazine
+
+   Les sites du Groupe Figaro
+
+     * Figaro Store
+     * TickeTac.com
+     * Le Particulier
+     * Météo Consult
+     * La chaîne météo
+     * Figaro Nautisme
+     * Les voyages F
+     * Cadremploi
+     * Le Figaro Emploi
+     * Immobilier
+     * Immoneuf
+     * Propriétés de France
+     * Achat Terrain
+     * Choose your boss
+     * Marco Vasco
+     * Maisons du voyage
+     * Gala
+     * Cross Le Figaro 2024
+   Se connecterMon compte
+     * Mon compte
+     * Mes newsletters
+     * Mes commentaires
+     * S'abonner
+     * Aide et contact
+     * Se déconnecter
+   Lire le PDF en ligneLire le journal
+   VENTE FLASH 4,99€/mois pendant 12 mois
+     * Cinéma
+     * Musique
+     * Théâtre
+     * Art-Expos
+     * Patrimoine
+     * Livres
+     * Langue française
+     * À la TV ce soir
+     * Télé
+     * Histoire
+     * Enchères
+     * Billetterie
+     * Cinéma
+     * Les festivals
+          * Cérémonie des César
+          * Cérémonie des Oscars
+          * Festival de Cannes
+     * Musique
+          * Le Live
+     * Billetterie
+          * Billetterie du Figaro: sélection Concert et Danse
+          * Plus de spectacles avec Ticketac
+     * Partenaires
+          * Harmonies universellesHarmonies universelles
+     * Théâtre
+     * Billetterie
+          * Billetterie du Figaro: sélection Théâtre
+          * Plus de spectacles avec Ticketac
+     * Livres
+     * BD
+          * L'actualité BD
+     * Langue française
+          * L'actu des mots
+          * Expressions
+          * Francophonie
+          * Testez vos connaissances
+          * La dictée
+     * Forum
+          * Conjugaison
+          * Grammaire
+          * Orthographe
+          * Expressions françaises
+          * Langue française
+     * Jouez avec les lettres
+          * L'appli Figaro Jeux sur iOS
+          * L'appli Figaro Jeux sur Android
+     * Liens utiles
+          * Citations
+          * Le conjugueur
+          * Dictionnaire
+     * Programme TV
+          * Programme TV ce soir
+          * En ce moment TV
+          * Grille câble Sat ADSL
+          * Grille TNT
+     * Actu
+          * Actu télé
+          * Buzz TV
+          * Audiences TV
+          * Séries
+          * People
+          * Télé-réalité
+          * Ce soir à la télé
+          * Miss France 2023
+     * Histoire
+     * Les dossiers
+          * La relations franco-allemande
+          * Centenaires 14-18
+     * Les hors-séries
+          * Le D-day, débarquement
+          * Napoléon, la bataille de France
+          * Charlemagne, la renaissance de l'Occident
+          * Les étrusques : ils ont dominé Rome
+   Passer la publicité
+   Passer la publicité
+   Publicité
+    1. Accueil 
+    2. Culture 
+    3. Théâtre
+
+Dirty Dancing : la comédie musicale en version française ne laisse pas bébé dans
+                                    son coin
+
+   Par Simon Pierre
+   Publié le 20 décembre 2024 à 13h35, mis à jour le 20 décembre 2024 à 18h10
+   Suivre
+   Sujets
+     * Dirty Dancing
+     * Spectacles
+     * Lire dans l’app
+     * Copier le lien
+       Lien copié
+     * Mail
+     * Facebook
+     * X
+     * Linkedin
+     * Messenger
+     * WhatsApp
+   Dans cette comédie musicale, l’actrice Justine Marec et le danseur Michael
+   O’Reilly reprennent les rôles de Bébé et Johnny Castle. Dans cette comédie
+   musicale, l’actrice Justine Marec et le danseur Michael O’Reilly
+   reprennent les rôles de Bébé et Johnny Castle.
+   Dans cette comédie musicale, l’actrice Justine Marec et le danseur Michael
+   O’Reilly reprennent les rôles de Bébé et Johnny Castle. Laura Gilli
+
+   CRITIQUE - Calqué sur le film de 1987 avec Patrick Swayze et Jennifer
+   Gray, ce spectacle délicieusement kitsch est présenté au Dôme de Paris
+   jusqu’au 26 janvier.
+
+   Passer la publicité
+
+   Chemisiers noués, chaussures de cuir lustré, jupes à pois virevoltantes et
+   pantalons taille haute, la comédie musicale Dirty Dancing  emporte le
+   public dans l’insouciance de l’été 1963. Une époque où les séjours dans
+   des complexes comme Kellerman’s incarnaient le rêve américain.
+
+   Le rideau s’ouvre sur cette reprise en langue française du spectacle
+   inspiré par le film de 1987. «Bébé», incarnée par Justine Marec,  arrive
+   avec sa famille, Houseman, sur le lieu de vacances. « Mais c’est affreux.
+   Maman j’aurais dû apporter mes chaussons de danse rose », lance Lisa, la
+   sœur de Bébé. « Tu ne vas tout de même pas en faire une maladie », lui
+   répond son père médecin. Ne vous lancez pas dans le jeu des sept erreurs :
+   la première scène introduit une reproduction fidèle du film. Les répliques
+   et les gestes sont répétés comme des pas de danse, jusqu’à cette bretelle
+   qui glisse sur l’épaule de Bébé lors de la scène dans la rivière. 
+
+   Dirty Dancing est aussi une histoire de précision. Surtout quand la jeune
+   fille, plutôt préoccupée à son arrivée par les pays sous-développés, doit
+   réaliser à la fin de son séjour le porté qui deviendra le plus culte du
+   cinéma.
+
+   Côté costume, la production reprend, à quelques exceptions près, ceux du
+   film signé Eleanor Bergstein (qui produit depuis 2004 les adaptations sur
+   scène de son histoire). C’est délicieusement kitsch. Les hommes riches,
+   costumes légers et cravates fines, rappellent l’allure soignée de John F.
+   Kennedy. Tandis que les femmes de la même classe, robes cintrées et
+   coiffures volumineuses, incarnent le charme intemporel de Jackie. Penny,
+   la danseuse qui attire l’œil des riches clients, séduit par son glamour
+   hollywoodien, lui donnant parfois des airs de Marylin Monroe, coiffure
+   blonde et robes satinées. Johnny Castle, quant à lui, est bien dans son
+   costume du marginal charismatique à la James Dean, blouson en cuir et
+   pantalon moulant.
+
+   Michael O’Reilly sur scène, dans le rôle de Johnny Castle. Laura Gilli
+
+Un faux pas linguistique
+
+   Si le comble pour un danseur est de s’emmêler les pieds sur la piste,
+   celui de Dirty Dancing serait de ne pas répéter à la perfection les
+   répliques que les doubleurs français de l’époque se sont bien appropriées.
+   Lorsque Johnny entre en scène, sous les acclamations du public, pour une
+   réunion improvisée dans le restaurant du complexe estival, le show connaît
+   son premier faux pas. La carrure imposante de Michael O’Reilly ne laisse
+   personne indifférent. Mais ses répliques en français n’ont pas la même
+   saveur que celles prononcées par feu Patrick Swayze. L’accent de l’Anglais
+   de 27 ans, contraste avec l’élégance et la fluidité de sa danse. Ce
+   personnage, qui apporte une critique implicite au film sur les inégalités
+   sociales de l’époque, aurait sans doute mérité une interprétation vocale
+   aussi soignée que ses mouvements dont on admire la fluidité. 
+
+   Après plus d’une heure et demie de show coloré et dansant, sur la voix
+   soul du chanteur Allen Hoist, la scène culte du film arrive enfin. Alors
+   que Johnny a été licencié la veille, il revient par surprise lors de la
+   traditionnelle soirée dansante. Avec son accent british, il prononce alors
+   cette réplique dont tous les spectateurs se souvenaient : «On ne laisse
+   pas Bébé dans un coin. » Le final est à la hauteur des attentes des fans
+   du film. Le rythme effervescent du The time of my life, résonne. Johnny
+   guide Bébé dans une série de pas qui la mène au centre de la scène. Elle
+   s’élance alors dans les bras de son partenaire, qui la soulève à bout de
+   bras, avant de la faire tourner à 360 degrés. Justine Marec profite alors,
+   tout sourire, des applaudissements.
+
+   » Dirty Dancing - L’histoire originale sur scène, au Dôme de Paris
+   jusqu’au 26 janvier, de 38,20 à 86,50 euros.
+
+   ACHETEZ VOS PLACES AVEC LE FIGARO
+
+      
+
+   Passer la publicité
+   Passer la publicité
+   Passer la publicité
+   La rédaction vous conseille
+     * L'hôtel qui a inspiré Dirty Dancing est parti en fumée
+     * La comédie musicale Dirty Dancing, la danse par amour
+     * Dirty Dancing : une suite avec Jennifer Grey en chantier pour faire
+       oublier le remake raté
+     * TV ce soir : retrouver notre sélection du jour
+   Passer la publicité
+   Publicité
+
+   Dirty Dancing : la comédie musicale en version française ne laisse pas
+   bébé dans son coin
+
+   S'ABONNER
+   Fermer
+
+   Partager via :
+
+     * Mail
+     * Facebook
+     * X
+     * WhatsApp
+     * Copier le lien
+       Lien copié
+     * Messenger
+   Commentez
+   [ Submit ]
+   [ Submit ]
+
+   Plus d'options
+
+   Imprimer l'article Signaler une faute d'orthographe
+   S'abonner
+   Passer la publicité
+   Passer la publicité
+   Aucun commentaire
+
+   Il n'y a actuellement aucun commentaire concernant cet article.
+   Soyez le premier à donner votre avis !
+
+   J'écris un commentaire
+   Passer la publicité
+   À lire aussi
+
+Kev Adams, Gad Elmaleh, Alban Ivanov, Artus… La ruée vers les comedy clubs
+
+   Kev Adams, Gad Elmaleh, Alban Ivanov, Artus… La ruée vers les comedy
+   clubsKev Adams, Gad Elmaleh, Alban Ivanov, Artus… La ruée vers les comedy
+   clubs
+
+   ENQUÊTE - Venu des États-Unis, le genre se développe dans les grandes
+   villes en France. Enquête sur un phénomène qui séduit même la classe
+   politique.
+
+Sylvie Testud, François Cluzet, Laure Calamy, Jacques Weber… Les grands noms
+dominent l’affiche au théâtre en ce début d’année
+
+   Sylvie Testud, François Cluzet, Laure Calamy, Jacques Weber… Les grands
+   noms dominent l’affiche au théâtre en ce début d’annéeSylvie Testud,
+   François Cluzet, Laure Calamy, Jacques Weber… Les grands noms dominent
+   l’affiche au théâtre en ce début d’année
+
+   SÉLECTION - Pour cette rentrée de janvier, des comédiens renommés
+   occuperont les planches. Voici les recommandations de nos critiques.
+
+Théâtre: Lacrima ou les enfers d'un paradis
+
+   Théâtre: Lacrima ou les enfers d'un paradisThéâtre: Lacrima ou les enfers
+   d'un paradis
+
+   CRITIQUE - En suivant les petites mains qui cousent la robe de mariée de
+   la princesse d’Angleterre, Caroline Guiela Nguyen raconte l’envers d’un
+   conte de fées. Une pièce captivante à voir à l’Odéon, aux Ateliers
+   Berthier.
+
+  Sur le même thème
+
+    1. Eric Carmen, l’auteur du tube All By Myself, est mort à 74 ans
+
+       Eric Carmen, l’auteur du tube All By Myself, est mort à 74 ansEric
+       Carmen, l’auteur du tube All By Myself, est mort à 74 ans
+
+       Le chanteur et compositeur américain «s’est éteint dans son sommeil,
+       ce week-end». On lui doit la bande originale de Footlose et de Dirty
+       Dancing.
+
+    2. Natacha Campana: «Dans l'obscurité, on chante fort et même un peu faux»
+
+       Natacha Campana: «Dans l'obscurité, on chante fort et même un peu
+       faux»Natacha Campana: «Dans l'obscurité, on chante fort et même un peu
+       faux»
+
+       INTERVIEW - Après avoir rêvé et s'être préparée pour devenir danseuse
+       de comédie musicale, Natacha Campana a lancé L'Écran Pop au Grand Rex,
+       à Paris, un karaoké dédié aux musicals.
+
+    3. Dirty Dancing: le blouson de Patrick Swayze vendu à plus de 57.000 euros
+
+       Dirty Dancing: le blouson de Patrick Swayze vendu à plus de 57.000
+       eurosDirty Dancing: le blouson de Patrick Swayze vendu à plus de
+       57.000 euros
+
+       ENCHÈRES - La veste en cuir que portait l'acteur dans le film culte de
+       1987 a été vendue vendredi pour 62.500 dollars lors d'une vente en
+       ligne à Los Angeles. Parmi d'autres objets ayant appartenu à la star,
+       la planche de surf de Bodhi dans Point Break est également partie pour
+       une somme avoisinante.
+
+    4. Jennifer Grey ne jouera pas dans le remake de Dirty Dancing
+
+       Jennifer Grey ne jouera pas dans le remake de Dirty DancingJennifer
+       Grey ne jouera pas dans le remake de Dirty Dancing
+
+       VIDÉO - Le film culte qui fit rêver plus d'une génération s'apprête à
+       être réadapté en comédie musicale pour ABC. L'interprète de Bébé dans
+       le film de 1987 a été contactée pour rejouer dans cette nouvelle
+       version, mais elle a refusé.
+
+    5. Dirty Dancing, le remake écrit par l'un des créateurs de Glee
+
+       Dirty Dancing, le remake écrit par l'un des créateurs de GleeDirty
+       Dancing, le remake écrit par l'un des créateurs de Glee
+
+       Brad Falchuk va s'occuper du scénario de la nouvelle version du film
+       culte, dont la sortie est prévue pour l'été 2013.
+
+   Passer la publicité
+   Plus de services
+   L'actualité à ne pas manquer
+     * Résultats des élections
+     * Covid-19
+     * Guerre en Ukraine
+     * Tension Iran-Etats Unis
+     * Corée-Du-Nord
+     * Actualité politique en temps réel
+     * Analyses, débats politiques et sociétaux
+     * Actualité et réseaux sociaux
+   Programme TV
+     * TV ce soir
+     * Programme TV en ce moment
+     * Programme TV TNT
+     * Séries Netflix, HBO, OCS et TV
+     * Election et photos Miss France 2024
+     * Programme TV Canalsat
+     * Programme TV Free
+     * Programme TV SFR
+     * Actu people
+   Sport
+     * Calendriers et résultats des matchs en direct
+     * Euro 2024
+     * Jeux olympiques
+     * Actualité cyclisme
+     * Résultats, classement général Tour de France
+     * Classement Ligue 1
+     * Classement Top 14
+     * Transferts football
+     * Coupe du monde de football
+     * Ballon d'Or France Football
+   Madame
+     * Horoscope du jour
+     * Guide du mariage
+     * Recettes de cuisine
+     * Brigitte Macron
+     * Actu mode
+     * Apéritif dînatoire
+     * Recette pâte à crêpe
+     * Tendance bijoux
+     * Meghan Markle
+     * Gainer son corps
+   Santé
+     * Fiches et guides des médicaments
+     * Astuces et conseils bien-être
+     * Santé et sexualité
+     * Index des maladies
+     * Conseils alimentation, nutrition et santé
+     * L'encyclopédie des organes
+     * Conseils en psychologie
+     * La pollution va t-elle nous tuer ?
+     * Apnée du sommeil : Comment mieux dormir ?
+     * 15 mythes sur les vertus des aliments
+   Guide d'achat
+     * Guide d'achat maison et jardin
+     * Guide d'achat santé et beauté
+     * Guide d’achat high-tech
+     * Guide d'achat smartphones et tablettes
+     * Comment choisir le meilleur extracteur de jus ?
+     * Quelle est la meilleure montre connectée ?
+     * Quel est le meilleur home cinéma sans fil ?
+     * Comparatif semelle gel
+     * Quel épilateur électrique choisir ?
+     * Bons plans
+     * Meilleurs VPN de 2023
+   Éducation et orientation
+     * Résultats Bac
+     * Révisions du Bac
+     * Parcoursup
+     * Annuaire des écoles de commerce
+     * Les entreprises qui recrutent
+     * Trouver un stage
+     * Résultats Brevet des collèges
+     * Classement des écoles de commerce
+     * Trouver une alternance
+     * Agenda étudiant : JPO, salons…
+   Culture
+     * Succession de Johnny Hallyday
+     * Sorties cinéma
+     * Guide arts et expositions
+     * Actualité musicale
+     * Actualité jeux-vidéo
+     * Citations et proverbes
+     * Réservation de spectacles et théâtre
+     * Sortir à Paris
+     * Histoire de France
+     * Langue française
+   Codes promos et réductions
+     * Code promo adidas
+     * Code promo AliExpress
+     * Code promo ASOS
+     * Code promo Bouygues Telecom
+     * Code promo Cdiscount
+     * Code promo Mano Mano
+     * Code promo Nike
+     * Code promo Samsung
+     * Code promo SHEIN
+     * Code promo Uber Eats
+   Offres d'emploi
+     * Toutes les offres d'emploi
+     * Emploi à Paris
+     * Emploi à Lyon
+     * Emploi à Toulouse
+     * Emploi à Nantes
+     * Emploi à Bordeaux
+     * Emploi commercial
+     * Emploi contrôleur de gestion
+     * Emploi logistique
+     * Emploi communication
+     * Nos fiches métiers
+   Annonces immobilières
+     * Annonces immobilières
+     * Achat appartement Paris
+     * Achat appartement Nice
+     * Achat appartement Cannes
+     * Achat appartement Bordeaux
+     * Achat appartement Lyon
+     * Achat appartement Aix-en-provence
+     * Achat maison Bordeaux
+     * Achat maison Marseille
+     * Achat maison Montpellier
+   Économie argent et finances
+     * Simulateur de seuil de richesse
+     * Actualité économique et analyses
+     * Impôts sur le revenu : simulateur
+     * Palmarès des villes où investir dans l'immobilier
+     * Studios et 2-pièces : les loyers ville par ville
+     * Calculer l'impôt à payer
+     * Barême des droits de succession et donation
+     * Indice de référence des loyers (IRL)
+     * En France, les hauts revenus sont-ils tous des «riches»?
+     * Carte familles nombreuses : jusqu’à 75 % de réduction sur les billets
+       de train
+   Voyage
+     * Guide des croisières
+     * Guide voyage Jordanie
+     * Guide voyage Namibie
+     * Guide voyage Maroc
+     * Guide voyage New York
+     * Guide voyage Birmanie
+     * Guide voyage Lille
+     * Guide voyage Antilles
+     * Guide voyage Japon
+     * Guide voyage Amsterdam
+   Les magazines Figaro
+     * Le Figaro Magazine
+     * Madame Figaro
+     * Le Figaro
+     * Le Figaro Hors-Série
+     * Le Figaro Histoire
+     * TV Magazine
+     * F, l'art de vivre
+   Figaro Services
+     * Bons plans
+     * TV, home cinéma et vidéo
+     * Sport et mobilité
+     * Santé et beauté
+     * Maison, jardin et bricolage
+     * High tech et informatique
+     * Jeux vidéo et consoles
      * Streaming
-     * Science & Espace
-     * Comparateurs
-   Communauté Accéder au forum
-   Rechercher _____________________
-   [ Submit ]
-   Connexion
-   Publicité, votre contenu continue ci-dessous
-   Publicité
-    1. Accueil
-    2. Santé & Sport
+     * Smartphones et tablettes
+     * Casques, enceintes et platines
+     * A savoir en France
+     * Annonces légales
+   Vin
+     * Tous les vins
+     * Primeurs
+     * Comprendre le vin
+     * Tops et sélections
+     * Domaines et vignerons
+     * Economie du vin
+     * Foire aux vins
+     * Bière et brasseries
+     * Spititueux
+     * Terroir et viticulture
+   Résultats des élections législatives 2024 par département
+     * Résultats des législatives 2024 Hauts-de-Seine
+     * Résultats des législatives 2024 Seine-Saint-Denis
+     * Résultats des législatives 2024 Val-de-Marne
+     * Résultats des législatives 2024 Val-d'Oise
+     * Résultats des législatives 2024 Yvelines
+     * Résultats des législatives 2024 Var
+     * Résultats des législatives 2024 Alpes-Maritimes
+     * Résultats des législatives 2024 Essonne
+     * Résultats des législatives 2024 Nord
+   Résultats des élections législatives 2024 par région
+     * Résultats des législatives 2024 Auvergne-Rhône-Alpes
+     * Résultats des législatives 2024 Bourgogne-Franche-Comté
+     * Résultats des législatives 2024 Bretagne
+     * Résultats des législatives 2024 Centre-Val de Loire
+     * Résultats des législatives 2024 Corse
+     * Résultats des législatives 2024 Grand Est
+     * Résultats des législatives 2024 Hauts-de-France
+     * Résultats des législatives 2024 Ile-de-France
+     * Résultats des législatives 2024 Normandie
+     * Résultats des législatives 2024 Nouvelle-Aquitaine
+     * Résultats des législatives 2024 Occitanie
+     * Résultats des législatives 2024 Pays de la Loire
+     * Résultats des législatives 2024 Provence-Alpes-Côte d'Azur
+   Résultats des élections législatives 2024 par ville
+     * Résultats des législatives 2024 Paris
+     * Résultats des législatives 2024 Marseille
+     * Résultats des législatives 2024 Lyon
+     * Résultats des législatives 2024 Toulouse
+     * Résultats des législatives 2024 Nice
+     * Résultats des législatives 2024 Nantes
+     * Résultats des législatives 2024 Montpellier
+     * Résultats des législatives 2024 Strasbourg
+     * Résultats des législatives 2024 Bordeaux
+     * Résultats des législatives 2024 Lille
+     * Résultats des législatives 2024 Rennes
+     * Résultats des législatives 2024 Reims
+     * Résultats des législatives 2024 Saint-Étienne
+   Le Figaro : Editions locales
+     * Le Figaro Bordeaux
+     * Le Figaro Lyon
+     * Le Figaro Nantes
+     * Le Figaro Nice
+   [IMG]
+   [IMG]
+   Suivez l’actu en temps réel avec l’application Le Figaro
+   Vous avez choisi de refuser les cookies
+   Et pourtant, la publicité personnalisée est un moyen de soutenir le
+   travail de notre rédaction qui s’engage à vous proposer chaque jour une
+   information de qualité. En acceptant les cookies, vous pourrez accéder aux
+   contenus et fonctionnalités gratuites que propose notre site.
 
-     Berceaux connectés : quand la surveillance de bébé devient un objectif
-                                 technologique
+   À tout moment, vous pouvez modifier vos choix via le bouton “paramétrer
+   les cookies” en bas de page.
 
-   Par Ophélie Maillot (@maillot_ophelie)
-   Publié le 10/01/25 à 09h39
-   Partager :
-   Commenter 
-   3
+   Accepter les cookies ou Refuser et s'abonner
+   Nos liens utiles
+     * Nos applications mobiles
+     * Suivre Le Figaro sur Google Actu
+     * Le Figaro Bordeaux
+     * Le Figaro Lyon
+     * Le Figaro Marseille
+     * Le Figaro Nantes
+     * Le Figaro Nice
+     * Les vidéos Figaro Live
+     * Les podcasts du Figaro
+     * Les programmes TV
+     * Les résultats sportifs
+     * Carnet du jour
+     * Figaro Store
+     * Jeux
+   Le Figaro
+   Le Kiosque
 
-   Le salon du CES de Las Vegas regorge d’innovations tech. Parmi elles, les
-   berceaux connectés ne passent pas inaperçus. Que ce soit pour endormir
-   bébé ou le surveiller à distance, ces berceaux tentent de faciliter la vie
-   des jeunes parents.
+   Le Figaro
 
-   Publicité, votre contenu continue ci-dessous
-   Publicité
+   Lire ce numéro
+   Abonnement
+     * Découvrez toutes les offres
 
-   La puériculture n’est pas boudée par la technologie, loin de là. Pour
-   rassurer ou aider les jeunes parents dans leur tâches quotidiennes, des
-   innovations fleurissent çà et là. Parmi elles : les berceaux connectés.
-   S’ils ne sont pas nouveaux, la tendance semble s’affirmer un peu plus et
-   les allées du CES 2025 de Las Vegas en compte quelques-uns. Deux sortent
-   des sentiers battus.
+       Les articles en illimité à partir de 0,99€ sans engagement
 
-Un berceau automatique pour endormir bébé
-
-   Le Rise, du constructeur Elvie, est un 2-en-1. L’appareil est à la fois un
-   transat et un berceau. Dans sa première forme, le Rise berce le bébé de
-   façon autonome pour l’aider à se calmer et à s’endormir. Une fois attaché
-   dans le transat, le parent peut lancer les balancements via le panneau de
-   commande situé sur le Rise.
-
-   Publicité, votre contenu continue ci-dessous
-
-   Le Elvie Rise est à la fois transat et à la fois berceau.
-
-   Le Elvie Rise est à la fois transat et à la fois berceau.
-
-   Une application est également disponible pour gérer les mouvements. Il est
-   possible de les lancer et de les arrêter à distance et de gérer leur
-   vitesse et leur amplitude. Un mode personnalisé permet aussi au parent de
-   balancer lui-même le Rise pour enregistrer cette cadence et la maintenir
-   automatiquement par la suite.
-
-   Une fois bébé endormi, le transat connecté se transforme en berceau. La
-   transition serait des plus fluides pour ne pas le réveiller. Cette
-   polyvalence permet aux parents d’endormir leur enfant et de le placer
-   ensuite en position allongée – recommandée lorsqu’il dort – sans le
-   réveiller. Le Rise de Elvie enregistre le temps passé en mode berceau, et
-   donc normalement le temps de sommeil. Un capteur détecte en effet la
-   présence du bébé dans le berceau et jusqu’à ce que ses parents l’en
-   enlèvent.
-
-   Publicité, votre contenu continue ci-dessous
-
-   Il se transforme en berceau une fois bébé endormi.
-
-   Il se transforme en berceau une fois bébé endormi.
-
-   Le suivi du bébé est très succinct, mais permet de comptabiliser les
-   heures de sommeil. D’autres peuvent être ajoutées manuellement via
-   l’application.
-
-   Le berceau Rise est sur batterie. Il peut donc être facilement déplacé. En
-   revanche, seules 3 à 4 heures de balancement sont possibles ; ce qui est
-   un peu faible. Quoi qu’il en soit, les parents intéressés devront
-   débourser 800 $.
-
-Un lit connecté pour surveiller son enfant sous tous les angles
-
-   Dans les couloirs du CES 2025, Bosch expose, lui aussi, un berceau
-   connecté. Son utilité est tout autre : surveiller bébé pendant son
-   sommeil.
-
-   Le bras surplombant le lit délivre un tas d'information sur la santé du
-   bébé.
-
-   Le bras surplombant le lit délivre un tas d'information sur la santé du
-   bébé.
-
-   Pour ce faire, le lit est surplombé d’un bras équipé d’un tas de
-   technologies. Une caméra surveille l’enfant et retransmet les images en
-   direct sur l’application ou d’autres objets connectés de la maison.
-
-   Le bras est aussi doté d’un tas de capteurs. Le lit relève la température
-   ambiante et l’humidité présente dans la pièce et un microphone enregistre
-   les bruits du bébé. S’il se réveille, il est possible de lancer une
-   berceuse à distance pour le calmer.
-
-   Les informations sur la santé de bébé sont consultables sur une
-   application spécialement développée par Bosch.
-
-   Les informations sur la santé de bébé sont consultables sur une
-   application spécialement développée par Bosch.
-
-   Pour aller plus loin encore, le lit Bosch est capable de relever la
-   fréquence cardiaque du bébé et sa respiration. Comme pour les images
-   filmées par la caméra, toutes ces données sont retransmises directement
-   sur l'application. Si le but de ce lit connecté est de rassurer les jeunes
-   parents, nous pouvons tout de même nous poser la question d’une
-   surveillance extrême de l’enfant, au risque même de créer plus de stress
-   qu’autre chose.
-
-   Publicité, votre contenu continue ci-dessous
-
-   Suivez toute l'actualité des Numériques sur Google Actualités et sur la
-   chaîne WhatsApp des Numériques
-
-   CES 2025 – Les plus importantes annonces high-tech de l'année dévoilées à
-   Las Vegas !
-
-   CES 2025 – Les plus importantes annonces high-tech de l'année dévoilées à
-   Las Vegas !
-
-   Partager :
-   Commenter 
-   Ophélie Maillot
-   @maillot_ophelie
-
-   Si elle est arrivée aux Nums, c’est sûrement un coup du destin ou de
-   Mercure… Sa mission : tester les robots-pâtissiers, à moins qu’elle ne se
-   perde dans la pampa argentine lors d’un trip improvisé.
-
-   Découvrir d'autres vidéos
-   Publications qui peuvent vous intéresser Ultrahuman bagues  CES 2025 1
-   NEWS : Divers santé
-   CES 2025 – L'Ultrahuman Rare ajoute une touche de luxe au monde des bagues
-   connectées
-   il y a 3 jours
-   Une application française révolutionne le diagnostic de l'apnée du sommeil
-   avec l'IA et un smartphone  CES 2025
-   NEWS : Divers santé
-   CES 2025 – Une app française révolutionne le diagnostic de l'apnée du
-   sommeil avec l'IA et un smartphone
-   il y a 3 jours
-   CES 2025 — Se maquiller en quelques secondes grâce à la réalité mixte  CES
-   2025
-   NEWS : Divers santé
-   Se maquiller en quelques secondes grâce à la réalité mixte
-   il y a 4 jours
-   Circular Ring 2  CES 2025
-   NEWS : Divers santé
-   Circular Ring 2 : la bague connectée s'offre une nouvelle fonction vitale
-   il y a 5 jours
-   L'Oréal  CES 2025
-   NEWS : Divers santé
-   L'Oréal dégaine un dispositif capable d'analyser le vieillissement de la
-   peau
-   il y a 5 jours
-   CES 2025 – Withings dévoile un miroir futuriste pour suivre sa santé ! 
-   CES 2025
-   NEWS : Divers santé
-   Withings dévoile un miroir futuriste pour suivre votre santé
-   il y a 5 jours
-   Lelo Dot Travel 
-   Test : Stimulateur clitoridien
-   Sextoy Lelo Dot : non, ce n’est pas la taille qui compte !
-   17:00
-   Soldes d'hiver 2025 – Les vrais bons plans en montres connectées, sport et
-   santé 
-   NEWS : Santé & Sport
-   Soldes d'hiver 2025 – Les vrais bons plans en montres connectées, sport et
-   santé
-   Hier à 14:30
-   Withings Thermo : un thermomètre temporal connecté simple et précis 
-   NEWS : Thermomètre
-   Ce thermomètre présente le meilleur rapport qualité / prix de notre
-   comparatif
-   il y a 2 jours
-   [ Submit ] [ Submit ] [ Submit ]
-
-   Suivez-nous
-
-     * *  *  *  *  * * Les rubriques
-     * Les marques
-     * Téléchargement
-     * Contact
-     * FAQ
-     * La rédaction
-     * Comparaison de prix
-     * Partenaires techniques
-     * EISA
-   Abonnez-vous à la Newsletter _____________________
-   ok
-     * Mentions légales
-     * Politique de protection des données personnelles
-     * Gérer Utiq
-     * Conditions Générales d’Utilisation
-     * FAQ - Vos choix concernant l'utilisation de cookie
+     * Gérer votre abonnement
+     * Mon compte
+     * Résilier votre abonnement
+   Applications mobiles
+     * Le Figaro : iPhone | Android
+     * Le Figaro Jeux : iPhone | Android
+     * Le Kiosque Le Figaro : iPhone | Android
+     * Le Figaro Cuisine : iPhone | Android
+   Nos newsletters
+   Inscrivez-vous aux newsletters
+   Suivez-nous sur :
      * Paramétrer les cookies
-     * Tout droits réservés © 2025
+     * Plan du site
+     * Confidentialité
+     * CGU
+     * CGV
+     * Info cookies
+     * Charte
+     * Aide et contact
+     * Mentions légales
+     * Abonnements
+     * Newsletter
+     * Publicité
+     * Sitemap
