@@ -6,6 +6,7 @@
 		<title>Projet PPE1 2024-2025 - Tableau %LANG%</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css" />
 	</head>
 	<body>
 		<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">

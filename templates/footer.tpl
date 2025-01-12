@@ -12,10 +12,28 @@
 				•
 				<span class="icon-text">
 					<span class="icon">
-						<i class="fas fa-brands fa-github"></i>
+						<i class="fi fi-fr"></i>
 					</span>
 					<span>
-						<a href="https://github.com/NiLuJe">NiLuJe</a>
+						<a href="https://github.com/Inesmartins1912">Inès</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fi fi-us"></i>
+					</span>
+					<span>
+						<a href="https://github.com/NiLuJe">Damien</a>
+					</span>
+				</span>
+				•
+				<span class="icon-text">
+					<span class="icon">
+						<i class="fi fi-ru"></i>
+					</span>
+					<span>
+						<a href="https://github.com/ElisaLEPLUVIER">Elisa</a>
 					</span>
 				</span>
 			</div>
