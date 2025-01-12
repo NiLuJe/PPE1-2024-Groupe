@@ -142,7 +142,13 @@
 							target="_blank"
 							rel="noreferrer noopener"
 							>make_pals_corpus.sh</a
-						>. Le script PALS en lui-même est appelé via un sous-module git du dépôt.
+						>. Le script PALS en lui-même est appelé via un sous-module git du dépôt. Comme indiqué dans les
+						commentaires, l'étape de la tokenisation pose de grandes questions ;). Idéalement, la méthode
+						devrait être adapté aux spécificités de la langue sur laquelle on travaille. Même remarque pour
+						la segmentation en phrases! Dans l'esprit du DIY, on a choisi ici de s'en tenir à une approche
+						rudimentaire avec des outils *nix. Si l'on prend l'exemple du français, on va dans notre corpus
+						souvent trouver une variante contractée du mot "petit", sous la forme "p'tit", qui sera séparée
+						à la tokenisation en "p" + "tit"...
 					</p>
 				</div>
 			</div>
