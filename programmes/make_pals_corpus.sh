@@ -34,7 +34,8 @@ LANG="${LANG^^}"
 OUTPUT_TXT_REL="dumps-text/${LANG}-*.txt"
 OUTPUT_TXT="${BASE_DIR}/${OUTPUT_TXT_REL}"
 OUTPUT_TXT_PAL="${BASE_DIR}/pals/dumps-text-${LANG}.txt"
-OUTPUT_CTX_REL="contextes/${LANG}-*.txt"
+# NOTE: On ne veut *pas* les bigrammes, qui suivent un schéma "LL-dd-bigram-freq.txt" ;).
+OUTPUT_CTX_REL="contextes/${LANG}-??.txt"
 OUTPUT_CTX="${BASE_DIR}/${OUTPUT_CTX_REL}"
 OUTPUT_CTX_PAL="${BASE_DIR}/pals/contextes-${LANG}.txt"
 
